@@ -12,28 +12,54 @@ import ServicesIntro from "../components/ServicesIntro/ServicesIntro";
 import Stats from "../components/Stats/Stats";
 import Team from "../components/Team/Team";
 import BackToTop from "../components/BackToTop/BackToTop";
+import ScrollReveal from "../components/ScrollReveal/ScrollReveal";
 
 function Home() {
   return (
     <>
-      
+      <ScrollReveal>
       <Navbar />
+      </ScrollReveal>
+      <ScrollReveal>
       <Hero />
+      </ScrollReveal>
+      <ScrollReveal>
       <ServicesIntro />
+      </ScrollReveal>
+      <ScrollReveal>
       <Stats />
+      </ScrollReveal>
+      <ScrollReveal>
       <Sectors />
+      </ScrollReveal>
+      <ScrollReveal>
       <CTA />
+      </ScrollReveal>
+      <ScrollReveal>
       <Process />
+      </ScrollReveal>
+      <ScrollReveal>
       <Team/>
+      </ScrollReveal>
+      <ScrollReveal>
       <Partners/>  
+      </ScrollReveal>
       <Insights/> 
+      <ScrollReveal>
       <FinalCTA/>
+      </ScrollReveal>
+      <ScrollReveal>
       <Contact />
+      </ScrollReveal>
+      <ScrollReveal>
       <Footer />
+      </ScrollReveal>
+      <ScrollReveal>
       <BackToTop />
-    
-    </>
+    </ScrollReveal>
+</>    
   );
 }
+
 
 export default Home;
