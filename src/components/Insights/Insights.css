@@ -1,0 +1,293 @@
+.insights {
+  width: 100%;
+  padding: 150px 0;
+
+  background: transparent;
+  color: #1c1c1c;
+}
+
+.insights__container {
+  width: min(92%, 1200px);
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.insights__header {
+  margin-bottom: 70px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+
+.insights__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: fit-content;
+
+    padding: 0.5rem 1rem;
+    margin-bottom: 16px;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid var(--color-cinnabar);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.insights__eyebrow::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    background: var(--color-cinnabar);
+
+    border-radius: 50%;
+}
+
+.insights__header h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================
+   View All
+========================= */
+
+.insights__all {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #1c1c1c;
+
+  color: #1c1c1c;
+
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.insights__all span {
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.insights__all:hover {
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.insights__all:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   Grid
+========================= */
+
+.insights__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.insight-card {
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #f1f1ef;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   Image
+========================= */
+
+.insight-card__image {
+  position: relative;
+
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+}
+
+.insight-card__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.insight-card:hover
+.insight-card__image img {
+  transform: scale(1.05);
+}
+
+
+
+
+/* =========================
+   Content
+========================= */
+
+.insight-card__content {
+  padding: 28px 26px 30px;
+}
+
+.insight-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 20px;
+
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.insight-card__meta span:first-child {
+  color: #e63946;
+}
+
+.insight-card__meta span:last-child {
+  color: #777;
+}
+
+.insight-card h3 {
+  min-height: 70px;
+
+  margin: 0 0 28px;
+
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.insight-card__read {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.insight-card__read span {
+  color: #e63946;
+
+  font-size: 1rem;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 850px) {
+  .insights__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .insights__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-card__image {
+    height: 360px;
+  }
+
+  .insight-card h3 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .insights {
+    padding: 100px 0;
+  }
+
+  .insights__header {
+    margin-bottom: 50px;
+  }
+
+  .insight-card__image {
+    height: 280px;
+  }
+}

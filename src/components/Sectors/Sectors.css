@@ -1,0 +1,525 @@
+/* =========================================
+   INDUSTRIES
+========================================= */
+
+.industries {
+    width: 100%;
+    padding: 140px 0;
+    background: transparent;
+}
+
+.industries__container {
+    position: relative;
+
+    width: 760px;
+    height: 760px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   CENTER — ELEVEN 11
+========================================= */
+
+.industries__main {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 300px;
+    height: 300px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(255, 255, 255, 0.5),
+            transparent 42%
+        ),
+        rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(17, 17, 17, 0.1),
+        0 0 50px rgba(230, 57, 70, 0.07);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   CENTER TYPOGRAPHY
+========================================= */
+
+.industries__main-small {
+    margin-bottom: 10px;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+.industries__main-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 600;
+
+    line-height: 0.8;
+}
+
+.industries__main-subtitle {
+    margin-top: 25px;
+
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.55;
+}
+
+/* =========================================
+   INDUSTRY SECTORS LAYER
+========================================= */
+
+.industries__sectors {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+.industries__sector-name {
+    display: block;
+    width: 105px;
+
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.05;
+
+    text-align: center;
+}
+
+.industry-circle {
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   INDUSTRY CIRCLES
+========================================= */
+
+.industry-circle {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 145px;
+    height: 145px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 35px rgba(17, 17, 17, 0.08),
+        0 0 25px rgba(230, 57, 70, 0.04);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    color: var(--color-black);
+
+    z-index: 3;
+
+   
+        flex-direction: column;
+}
+
+
+/* =========================================
+   SIX POSITIONS
+========================================= */
+
+/* 12 o'clock */
+
+.industry-circle--1 {
+    transform:
+        translate(-50%, -50%)
+        translateY(-305px);
+}
+
+
+/* 2 o'clock */
+
+.industry-circle--2 {
+    transform:
+        translate(-50%, -50%)
+        translate(265px, -152px);
+}
+
+
+/* 4 o'clock */
+
+.industry-circle--3 {
+    transform:
+        translate(-50%, -50%)
+        translate(265px, 152px);
+}
+
+
+/* 6 o'clock */
+
+.industry-circle--4 {
+    transform:
+        translate(-50%, -50%)
+        translateY(305px);
+}
+
+
+/* 8 o'clock */
+
+.industry-circle--5 {
+    transform:
+        translate(-50%, -50%)
+        translate(-265px, 152px);
+}
+
+
+/* 10 o'clock */
+
+.industry-circle--6 {
+    transform:
+        translate(-50%, -50%)
+        translate(-265px, -152px);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .industries__container {
+        transform: scale(0.85);
+        transform-origin: center;
+        margin-top: -60px;
+        margin-bottom: -60px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .industries {
+        padding: 80px 0;
+    }
+
+    .industries__container {
+        width: 500px;
+        height: 500px;
+
+        transform: scale(0.7);
+    }
+
+}
+
+/* =========================================
+   CONNECTION LINES
+========================================= */
+
+.industries__connections {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.connection-line {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 305px;
+    height: 1px;
+
+    transform-origin: left center;
+
+    background: linear-gradient(
+        to right,
+        rgba(28, 28, 28, 0.18),
+        rgba(255, 255, 255, 0.45),
+        rgba(28, 28, 28, 0.08)
+    );
+
+    opacity: 0.55;
+}
+
+
+/* 12 o'clock */
+.connection-line--1 {
+    transform: rotate(-90deg);
+}
+
+
+/* 2 o'clock */
+.connection-line--2 {
+    transform: rotate(-30deg);
+}
+
+
+/* 4 o'clock */
+.connection-line--3 {
+    transform: rotate(30deg);
+}
+
+
+/* 6 o'clock */
+.connection-line--4 {
+    transform: rotate(90deg);
+}
+
+
+/* 8 o'clock */
+.connection-line--5 {
+    transform: rotate(150deg);
+}
+
+
+/* 10 o'clock */
+.connection-line--6 {
+    transform: rotate(210deg);
+}
+
+/* =========================================
+   INDUSTRY ICON
+========================================= */
+
+.industries__sector-icon {
+    display: block;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 14px;
+
+    color: var(--sector-accent);
+
+    stroke: currentColor;
+    stroke-width: 1.8;
+
+    opacity: 1;
+
+    flex-shrink: 0;
+
+    
+}
+
+/* =========================================
+   REPEATING SECTOR ANIMATION
+========================================= */
+
+.industry-circle {
+    opacity: 0;
+
+    animation:
+        sectorFadeCycle 10s ease-in-out infinite;
+}
+
+/* Stagger */
+
+.industry-circle--1 {
+    animation-delay: 0s;
+}
+
+.industry-circle--2 {
+    animation-delay: 0.35s;
+}
+
+.industry-circle--3 {
+    animation-delay: 0.7s;
+}
+
+.industry-circle--4 {
+    animation-delay: 1.05s;
+}
+
+.industry-circle--5 {
+    animation-delay: 1.4s;
+}
+
+.industry-circle--6 {
+    animation-delay: 1.75s;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes sectorFadeCycle {
+
+    /* Fade in */
+    0% {
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    /* Stay visible */
+    72% {
+        opacity: 1;
+    }
+
+    /* Fade out */
+    88% {
+        opacity: 0;
+    }
+
+    /* Wait before restarting */
+    100% {
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.industries__heading {
+    width: min(92%, 1200px);
+    margin: 0 auto 70px;
+
+    text-align: left;
+}
+
+.industries__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid rgba(242, 140, 40, 0.35);
+    border-radius: 999px;
+
+    background: rgba(217, 217, 217, 0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* Cinnabar dot */
+
+.industries__eyebrow::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--color-cinnabar);
+}
+
+
+
+.industries__heading h2 {
+    max-width: 900px;
+
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+
+    color: var(--color-charcoal);
+}
+
+/* Description */
+
+.industries__heading p {
+    max-width: 600px;
+
+    margin: 25px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    color: rgba(28, 28, 28, 0.65);
+}

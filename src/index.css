@@ -1,0 +1,94 @@
+:root {
+    --color-cinnabar: #D94801;
+    --color-stone: #BDBDBD;
+    --color-charcoal: #1C1C1C;
+    --color-off-white: #D9D9D9;
+    --color-black: #111111;
+
+    --font-display: "Cormorant Garamond", serif;
+    --font-body: "Manrope", sans-serif;
+
+    --container-width: 1280px;
+
+    --page-padding-desktop: 64px;
+    --page-padding-tablet: 40px;
+    --page-padding-mobile: 20px;
+
+    --space-section: 140px;
+    --space-xl: 96px;
+    --space-lg: 64px;
+    --space-md: 32px;
+    --space-sm: 16px;
+    --space-xs: 8px;
+
+    --border-subtle: rgba(17, 17, 17, 0.15);
+
+    --transition-fast: 200ms ease;
+    --transition-medium: 400ms ease;
+    --transition-slow: 800ms ease;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: var(--font-body);
+    color: var(--color-black);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* ================================
+   GLOBAL SITE BACKGROUND
+================================ */
+
+#root {
+    position: relative;
+    min-height: 100vh;
+    isolation: isolate;
+}
+
+#root::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse 70% 45% at 50% 0%,
+            rgba(255, 255, 255, 0.45),
+            transparent 70%
+        ),
+        radial-gradient(
+            ellipse 45% 35% at 85% 35%,
+            rgba(255, 255, 255, 0.18),
+            transparent 70%
+        ),
+        linear-gradient(
+            180deg,
+            #6A7C92 0%,
+            #AAB6C2 28%,
+            #CDD3DA 52%,
+            #E3E5E7 72%,
+            #D9D9D9 100%
+        );
+}

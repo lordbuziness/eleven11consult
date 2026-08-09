@@ -1,0 +1,278 @@
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("../../assets/images/Heroimage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===========================
+   Image Fade
+=========================== */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to right,
+        rgba(217, 217, 217, 0.95) 0%,
+        rgba(217, 217, 217, 0.85) 25%,
+        rgba(217, 217, 217, 0.55) 45%,
+        rgba(217, 217, 217, 0.15) 65%,
+        transparent 80%
+    );
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 30%;
+
+    z-index: 2;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(217, 217, 217, 0.08) 20%,
+        rgba(217, 217, 217, 0.25) 45%,
+        rgba(217, 217, 217, 0.65) 70%,
+        rgba(217, 217, 217, 0.9) 88%,
+        #D9D9D9 100%
+    );
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* ===========================
+   Hero Container
+=========================== */
+
+.hero__container {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(92%, 1200px);
+    min-height: 100vh;
+
+    margin-left: 2rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 560px;
+
+    /* Move content slightly upward so everything fits */
+    padding-top: clamp(180px, 24vh, 300px);
+}
+
+
+/* ===========================
+   Hero Content
+=========================== */
+
+
+.hero__content {
+    position: absolute;
+
+    top: clamp(180px, 24vh, 300px);
+    left: 0;
+
+    width: 100%;
+
+    opacity: 0;
+
+    transition: opacity 3s ease-in-out;
+
+    pointer-events: none;
+}
+
+.hero__content.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ===========================
+   Eyebrow
+=========================== */
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid ;
+    border-radius: 999px;
+
+    background: rgba(217, 217, 217, 0.12);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.hero__eyebrow-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    background: var(--color-cinnabar);
+
+    border-radius: 50%;
+}
+
+
+/* ===========================
+   Headline
+=========================== */
+
+.hero h1 {
+    margin-bottom: 2rem;
+
+    font-family: var(--font-display);
+    font-weight: 600;
+
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 0.95;
+
+    color: var(--color-black);
+}
+
+
+/* ===========================
+   Description
+=========================== */
+
+.hero__description {
+    max-width: 450px;
+
+    margin-bottom: 2rem;
+
+    font-family: var(--font-body);
+    font-weight: 400;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: var(--color-charcoal);
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.hero__buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 3rem;
+
+    padding-bottom: 20px;
+}
+
+.hero__btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.7rem 1.3rem;
+
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    color: var(--color-black);
+
+    text-decoration: none;
+
+    border: 1.5px solid var(--color-cinnabar);
+    border-radius: 999px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero__btn:hover {
+    background: var(--color-cinnabar);
+    color: var(--color-offwhite);
+
+    transform: translateY(-2px);
+}
+
+
+/* ===========================
+   Button Underline
+=========================== */
+
+.hero__btn-underline {
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 35px;
+    height: 2px;
+
+    background: var(--color-cinnabar);
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Active Slide */
+
+.hero__buttons--slide-0
+.hero__btn--primary
+.hero__btn-underline,
+
+.hero__buttons--slide-1
+.hero__btn--secondary
+.hero__btn-underline {
+    opacity: 1;
+}
+
+
+/* Hover */
+
+.hero__btn:hover .hero__btn-underline {
+    opacity: 1;
+    background: var(--color-black);
+}

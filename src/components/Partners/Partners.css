@@ -1,0 +1,363 @@
+.partners {
+  width: 100%;
+  padding: 140px 0;
+
+  background: transparent;
+
+  overflow: hidden;
+}
+
+.partners__container {
+  width: min(92%, 1200px);
+  margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.partners__header {
+    width: min(92%, 1200px);
+    margin: 0 auto 70px;
+
+    text-align: left;
+}
+
+/* Eyebrow */
+
+.partners__header span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid rgba(242, 140, 40, 0.35);
+    border-radius: 999px;
+
+    background: rgba(217, 217, 217, 0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Cinnabar dot */
+
+.partners__header span::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--color-cinnabar);
+}
+
+/* Main heading */
+
+.partners__header h2 {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+
+    color: var(--color-charcoal);
+}
+
+/* Description */
+
+.partners__header p {
+    max-width: 600px;
+
+    margin: 25px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    color: rgba(28, 28, 28, 0.65);
+}
+
+/* =========================
+   Solar System
+========================= */
+
+.solar-system {
+    position: relative;
+
+    width: 520px;
+    height: 520px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Center
+========================= */
+
+.sun {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fd7e14;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 35px rgba(253, 126, 20, 0.22);
+
+    z-index: 100;
+}
+
+.sun h3 {
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.sun span {
+    margin-top: 7px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+
+    letter-spacing: 0.15em;
+}
+
+
+
+
+/* =========================
+   Orbit Rings
+========================= */
+
+.orbit {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(28, 28, 28, 0.08);
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   Inner Ring
+========================= */
+
+.orbit-inner {
+    width: 230px;
+    height: 230px;
+
+    animation: orbitClockwise 32s linear infinite;
+}
+
+
+/* =========================
+   Outer Ring
+========================= */
+
+.orbit-outer {
+    width: 440px;
+    height: 440px;
+
+    animation: orbitCounter 48s linear infinite;
+}
+
+
+/* =========================
+   Partner Logos
+========================= */
+
+.planet {
+    position: absolute;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid rgba(253, 126, 20, 0.28);
+
+    box-shadow:
+        0 8px 20px rgba(17, 17, 17, 0.07);
+}
+
+.planet img {
+    width: 52%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   Inner Ring — 4 Logos
+========================= */
+
+.inner-1 {
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inner-2 {
+    right: -31px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inner-3 {
+    bottom: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inner-4 {
+    left: -31px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   Outer Ring — 5 Logos
+========================= */
+
+.outer-1 {
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.outer-2 {
+    top: 18%;
+    right: 4%;
+}
+
+.outer-3 {
+    bottom: 8%;
+    right: 20%;
+}
+
+.outer-4 {
+    bottom: 8%;
+    left: 20%;
+}
+
+.outer-5 {
+    top: 18%;
+    left: 4%;
+}
+
+
+/* =========================
+   Orbit Animation
+========================= */
+
+@keyframes orbitClockwise {
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbitCounter {
+
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+
+/* =========================
+   Keep Logos Upright
+========================= */
+
+.orbit-inner .planet img {
+    animation: keepUpright 32s linear infinite;
+}
+
+.orbit-outer .planet img {
+    animation: keepUprightReverse 48s linear infinite;
+}
+
+@keyframes keepUpright {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes keepUprightReverse {
+
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

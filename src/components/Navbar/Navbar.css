@@ -1,0 +1,132 @@
+/* ===========================
+   Premium Floating Navbar
+=========================== */
+
+.navbar{
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    width:min(1320px,92%);
+
+    transform:translateX(-50%);
+
+    padding:0.9rem 2rem;
+
+    
+    font-family: inter, sans-serif;
+
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    z-index:1000;
+
+    border-radius:22px;
+
+    transition:
+        padding .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+@keyframes navReveal{
+    from{
+        opacity:0;
+        transform:translateY(-25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.navbar__logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: inter, sans-serif;
+}
+
+.navbar__links{
+    display:flex;
+    align-items:center;
+    gap:2.5rem;
+    list-style:none;
+    font-size:.1rem;
+    font-weight:800;
+    font-family: var(--font-body);
+}
+
+.navbar__links a{
+    text-decoration:none;
+   color: var(--color-charcoal);
+    font-size:.99rem;
+    font-weight:800;
+    font-family: var(--font-display);
+
+    transition:.3s ease;
+}
+
+.navbar__links a:hover{
+    color: var(--color-cinnabar);
+    transform:translateY(-2px);
+}
+
+.navbar__links svg{
+    font-size:1.1rem;
+}
+
+/* ===========================
+   Floating Glass Container
+=========================== */
+
+.navbar::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    background:transparent;
+
+    backdrop-filter:blur(0);
+
+    transition:.35s ease;
+
+    z-index:-1;
+}
+
+.navbar.scrolled::before{
+
+    background:rgba(255,255,255,0.55);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08),
+        inset 0 1px rgba(255,255,255,0.5);
+}
+.navbar{
+
+    padding:1.5rem 4vw;
+}
+
+.navbar.scrolled{
+    padding:0.75rem 2rem;
+}

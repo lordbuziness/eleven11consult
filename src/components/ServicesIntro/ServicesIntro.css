@@ -1,0 +1,249 @@
+.services-intro {
+    width: 100%;
+    background: transparent;
+    padding: 120px 0;
+    color: #1c1c1c;
+}
+
+
+/* ===========================
+   Container
+=========================== */
+
+.services-intro__container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+
+/* ===========================
+   Heading
+=========================== */
+
+.services-intro__heading {
+    margin-bottom: 60px;
+}
+
+.services-intro__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: fit-content;
+
+    padding: 0.5rem 1rem;
+    margin-bottom: 16px;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid var(--color-cinnabar);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.services-intro__eyebrow::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    background: var(--color-cinnabar);
+
+    border-radius: 50%;
+}
+
+.services-intro__heading h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-black);
+}
+
+
+/* ===========================
+   Service Grid
+=========================== */
+
+.services-intro__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+/* ===========================
+   Service Cards
+=========================== */
+
+.services-intro__card {
+    min-height: 360px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    /* Glass */
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 24px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    /* Faint cinnabar/orange glow */
+    box-shadow:
+        0 8px 30px rgba(230, 57, 70, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* ================================
+   CARD HOVER
+================================ */
+
+.services-intro__card:hover {
+    transform: translateY(-10px);
+
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(230, 57, 70, 0.35);
+
+    box-shadow:
+        0 18px 45px rgba(230, 57, 70, 0.18),
+        0 0 35px rgba(230, 57, 70, 0.10);
+}
+
+
+
+/* ================================
+   INFOGRAPHIC / ICON
+================================ */
+
+.services-intro__icon {
+    margin-bottom: auto;
+
+    color: var(--color-cinnabar);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+}
+
+
+.services-intro__icon svg {
+    width: 72px;
+    height: 72px;
+
+    stroke-width: 1.25;
+
+}
+
+
+/* ===========================
+   Card Titles
+=========================== */
+
+.services-intro__card h3 {
+    margin: 0 0 16px;
+
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    color: var(--color-black);
+}
+
+
+/* ===========================
+   Card Description
+=========================== */
+
+.services-intro__card p {
+    max-width: 320px;
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.7;
+
+    color: var(--color-charcoal);
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 800px) {
+
+    .services-intro__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-intro__card {
+        min-height: 300px;
+    }
+}
+
+.services-intro__explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-top: 24px;
+
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    color: var(--color-black);
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.services-intro__explore span {
+    font-size: 1.1rem;
+    color: var(--color-cinnabar);
+
+    transition: transform 0.3s ease;
+}
+
+.services-intro__explore:hover {
+    color: var(--color-cinnabar);
+    gap: 12px;
+}
+
+.services-intro__explore:hover span {
+    transform: translateX(4px);
+}
