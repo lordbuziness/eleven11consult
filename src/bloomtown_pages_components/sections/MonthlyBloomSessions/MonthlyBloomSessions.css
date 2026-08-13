@@ -1,0 +1,479 @@
+
+
+/* =========================================
+   MONTHLY BLOOM SESSIONS
+========================================= */
+
+.bloomtown-monthly {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 6% 140px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.18),
+            transparent 38%
+        ),
+        #07543f;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-monthly__header {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+
+.bloomtown-monthly__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #f8d878;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.bloomtown-monthly__title {
+    margin: 0;
+
+    color: #f8f3e8;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+}
+
+
+.bloomtown-monthly__title em {
+    color: #d4a017;
+
+    font-weight: 400;
+}
+
+
+.bloomtown-monthly__intro {
+    max-width: 620px;
+
+    margin: 28px auto 0;
+
+    color: rgba(248, 243, 232, 0.82);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.bloomtown-monthly__timeline {
+    position: relative;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   EXTENDED NUMBERLINE
+========================================= */
+
+.bloomtown-monthly__line {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 23px;
+
+    /*
+       EXTENDS PAST FIRST AND LAST DOT
+    */
+
+    left: -7%;
+    right: -7%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b8860b,
+            #d4a017,
+            #f8d878,
+            #d4a017,
+            #b8860b
+        );
+
+    box-shadow:
+        0 0 12px rgba(212, 160, 23, 0.35);
+}
+
+
+/* =========================================
+   SESSIONS
+========================================= */
+
+.bloomtown-monthly__sessions {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   SESSION
+========================================= */
+
+.bloomtown-monthly__session {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   MARKER
+========================================= */
+
+.bloomtown-monthly__marker {
+    position: relative;
+
+    height: 48px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+.bloomtown-monthly__number {
+    position: absolute;
+
+    top: -28px;
+
+    color: #f8d878;
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.bloomtown-monthly__dot {
+    position: relative;
+
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #07543f;
+
+    border: 3px solid #d4a017;
+
+    box-shadow:
+        0 0 0 5px rgba(212, 160, 23, 0.12),
+        0 0 20px rgba(212, 160, 23, 0.35);
+}
+
+
+.bloomtown-monthly__dot-inner {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #f8d878;
+}
+
+
+/* =========================================
+   CONNECTOR
+========================================= */
+
+.bloomtown-monthly__connector {
+    width: 2px;
+    height: 32px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d4a017,
+            rgba(212, 160, 23, 0.2)
+        );
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.bloomtown-monthly__card {
+    width: 100%;
+
+    min-height: 290px;
+
+    padding: 38px 28px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8f3e8,
+            #eadbb4
+        );
+
+    border: 1px solid rgba(248, 216, 120, 0.55);
+
+    box-shadow:
+        0 22px 45px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.bloomtown-monthly__card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 55px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.bloomtown-monthly__icon {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d4a017,
+            #b8860b
+        );
+
+    color: #4b2d1c;
+
+    box-shadow:
+        0 8px 20px rgba(75, 45, 28, 0.15);
+}
+
+
+.bloomtown-monthly__icon svg {
+    width: 31px;
+    height: 31px;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.bloomtown-monthly__card h3 {
+    margin: 0 0 16px;
+
+    color: #4b2d1c;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.55rem;
+
+    font-weight: 800;
+
+    line-height: 1.05;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.bloomtown-monthly__card p {
+    max-width: 280px;
+
+    margin: 0;
+
+    color: #76553d;
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .bloomtown-monthly {
+        padding: 100px 30px;
+    }
+
+    .bloomtown-monthly__sessions {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 55px;
+    }
+
+    .bloomtown-monthly__line {
+        display: none;
+    }
+
+    .bloomtown-monthly__marker {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .bloomtown-monthly {
+        padding: 85px 20px;
+    }
+
+    .bloomtown-monthly__header {
+        margin-bottom: 60px;
+    }
+
+    .bloomtown-monthly__sessions {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .bloomtown-monthly__card {
+        min-height: auto;
+
+        padding: 35px 25px;
+    }
+
+    .bloomtown-monthly__line {
+        display: block;
+
+        top: 0;
+        bottom: 0;
+
+        left: 13px;
+        right: auto;
+
+        width: 3px;
+        height: auto;
+    }
+
+    .bloomtown-monthly__session {
+        align-items: flex-start;
+
+        padding-left: 45px;
+    }
+
+    .bloomtown-monthly__marker {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        height: auto;
+    }
+
+    .bloomtown-monthly__number {
+        top: -22px;
+
+        left: 34px;
+
+        white-space: nowrap;
+    }
+
+    .bloomtown-monthly__connector {
+        display: none;
+    }
+
+    .bloomtown-monthly__card {
+        width: 100%;
+    }
+}
+

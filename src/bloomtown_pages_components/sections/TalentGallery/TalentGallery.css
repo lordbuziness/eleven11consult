@@ -1,0 +1,455 @@
+/* =========================================
+   BLOOMTOWN TALENT GALLERY
+========================================= */
+
+.bloomtown-gallery {
+    position: relative;
+    width: 100%;
+    padding: 115px 6% 120px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.1),
+            transparent 42%
+        ),
+        #f8f3e8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-gallery__header {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.bloomtown-gallery__eyebrow {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.bloomtown-gallery__title {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(3rem, 5vw, 4.6rem);
+    font-weight: 700;
+    line-height: 0.95;
+}
+
+.bloomtown-gallery__title em {
+    color: #b8860b;
+    font-weight: 400;
+}
+
+.bloomtown-gallery__intro {
+    max-width: 570px;
+
+    margin: 24px auto 0;
+
+    color: #76553d;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.bloomtown-gallery__slider {
+    position: relative;
+
+    width: min(720px, 82%);
+    height: 340px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 18px 40px rgba(75, 45, 28, 0.15);
+}
+
+
+/* =========================================
+   IMAGE FRAME
+========================================= */
+
+.bloomtown-gallery__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center 100%;
+
+    transform: scale(1.02);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s ease;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.bloomtown-gallery__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1.02);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.8s ease;
+}
+
+
+/* =========================================
+   EDGE FADE
+========================================= */
+
+.bloomtown-gallery__fade {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 16%;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.bloomtown-gallery__fade--left {
+    left: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f8f3e8 0%,
+            rgba(248, 243, 232, 0.55) 25%,
+            rgba(248, 243, 232, 0) 100%
+        );
+}
+
+.bloomtown-gallery__fade--right {
+    right: 0;
+
+    background:
+        linear-gradient(
+            270deg,
+            #f8f3e8 0%,
+            rgba(248, 243, 232, 0.55) 25%,
+            rgba(248, 243, 232, 0) 100%
+        );
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.bloomtown-gallery__controls {
+    margin: 24px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+.bloomtown-gallery__arrow {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border-radius: 50%;
+    border: 1px solid rgba(184, 134, 11, 0.4);
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: #4b2d1c;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.bloomtown-gallery__arrow svg {
+    width: 19px;
+    height: 19px;
+}
+
+.bloomtown-gallery__arrow:hover {
+    transform: translateY(-2px);
+
+    background: #d4a017;
+    border-color: #d4a017;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SLIDE NUMBER
+========================================= */
+
+.bloomtown-gallery__counter {
+    min-width: 70px;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.bloomtown-gallery__caption {
+    margin: 12px 0 55px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   METRICS
+========================================= */
+
+.bloomtown-gallery__metrics {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border: 1px solid rgba(184, 134, 11, 0.2);
+
+    box-shadow:
+        0 15px 35px rgba(75, 45, 28, 0.07);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.bloomtown-gallery__metric {
+    position: relative;
+
+    min-height: 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.bloomtown-gallery__metric strong {
+    color: #b8860b;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 3rem;
+    font-weight: 600;
+
+    line-height: 0.9;
+}
+
+.bloomtown-gallery__metric span {
+    max-width: 130px;
+
+    margin-top: 10px;
+
+    color: #76553d;
+
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   METRIC DIVIDER
+========================================= */
+
+.bloomtown-gallery__metric-divider {
+    position: absolute;
+
+    top: 10px;
+    right: 0;
+
+    width: 1px;
+    height: 60px;
+
+    background: rgba(184, 134, 11, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .bloomtown-gallery {
+        padding: 90px 25px 100px;
+    }
+
+    .bloomtown-gallery__slider {
+        width: min(650px, 92%);
+        height: 300px;
+    }
+
+    .bloomtown-gallery__metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .bloomtown-gallery__metric-divider {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .bloomtown-gallery {
+        padding: 75px 18px 85px;
+    }
+
+    .bloomtown-gallery__header {
+        margin-bottom: 40px;
+    }
+
+    .bloomtown-gallery__title {
+        font-size: 3rem;
+    }
+
+    .bloomtown-gallery__intro {
+        font-size: 0.88rem;
+    }
+
+    .bloomtown-gallery__slider {
+        width: 94%;
+        height: 250px;
+
+        border-radius: 20px;
+    }
+
+    .bloomtown-gallery__image-wrap {
+        border-radius: 20px;
+    }
+
+    .bloomtown-gallery__fade {
+        width: 20%;
+    }
+
+    .bloomtown-gallery__controls {
+        margin-top: 18px;
+        gap: 12px;
+    }
+
+    .bloomtown-gallery__arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bloomtown-gallery__caption {
+        margin-bottom: 40px;
+    }
+
+    .bloomtown-gallery__metrics {
+        padding: 25px 10px;
+
+        border-radius: 18px;
+
+        gap: 20px 5px;
+    }
+
+    .bloomtown-gallery__metric strong {
+        font-size: 2.5rem;
+    }
+
+    .bloomtown-gallery__metric span {
+        font-size: 0.55rem;
+    }
+}

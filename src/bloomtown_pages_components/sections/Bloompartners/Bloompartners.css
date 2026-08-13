@@ -1,0 +1,186 @@
+/* =========================================
+   BLOOMTOWN PARTNERS
+========================================= */
+
+.bloomtown-partners {
+    width: 100%;
+    padding: 120px 6% 130px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(212, 160, 23, 0.12),
+            transparent 45%
+        ),
+        #f8f3e8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-partners__header {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.bloomtown-partners__eyebrow {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.bloomtown-partners__title {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+}
+
+.bloomtown-partners__title em {
+    color: #b8860b;
+    font-weight: 400;
+}
+
+.bloomtown-partners__intro {
+    max-width: 520px;
+    margin: 24px auto 0;
+
+    color: #76553d;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VIEWPORT
+========================================= */
+
+.bloomtown-partners__viewport {
+    width: min(1080px, 100%);
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TRACK
+========================================= */
+
+.bloomtown-partners__track {
+    display: flex;
+
+    width: 133.3333%;
+
+    transition:
+        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+
+    will-change: transform;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.bloomtown-partners__card {
+    flex: 0 0 25%;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD INNER
+========================================= */
+
+.bloomtown-partners__card-inner {
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(184, 134, 11, 0.18);
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.10);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #4b2d1c;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .bloomtown-partners {
+        padding: 90px 25px 100px;
+    }
+
+    .bloomtown-partners__card-inner {
+        height: 150px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .bloomtown-partners {
+        padding: 75px 18px 85px;
+    }
+
+    .bloomtown-partners__header {
+        margin-bottom: 40px;
+    }
+
+    .bloomtown-partners__title {
+        font-size: 3rem;
+    }
+
+    .bloomtown-partners__intro {
+        font-size: 0.88rem;
+    }
+
+    .bloomtown-partners__card-inner {
+        height: 125px;
+        border-radius: 20px;
+    }
+}

@@ -173,15 +173,26 @@ function Hero() {
 
         <div className="bloomtown-hero__ticket-buttons">
 
-            <button className="bloomtown-hero__ticket">
-                <span>Adult</span>
-                <strong>₦10,000</strong>
-            </button>
+            
+<a
+    className="bloomtown-hero__ticket"
+    href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---adult-ticket-nbzfnh"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <span>Adult</span>
+    <strong>₦10,000</strong>
+</a>
 
-            <button className="bloomtown-hero__ticket">
+
+
+            <a className="bloomtown-hero__ticket"
+            href= "https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---childrens-ticket-yctrmc"
+            target="_blank"
+    rel="noopener noreferrer">
                 <span>Child (4–17)</span>
                 <strong>₦5,000</strong>
-            </button>
+            </a>
 
         </div>
 

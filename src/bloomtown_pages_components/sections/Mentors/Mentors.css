@@ -1,0 +1,365 @@
+
+
+
+/* =========================================
+   BLOOMTOWN MENTORS
+========================================= */
+
+.bloomtown-mentors {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 6% 140px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.18),
+            transparent 40%
+        ),
+        #f8f3e8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-mentors__header {
+    max-width: 720px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+
+.bloomtown-mentors__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.bloomtown-mentors__title {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+}
+
+
+.bloomtown-mentors__title em {
+    color: #b8860b;
+
+    font-weight: 400;
+}
+
+
+.bloomtown-mentors__intro {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: #76553d;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MENTOR RAIL
+========================================= */
+
+.bloomtown-mentors__rail {
+    position: relative;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   STRAIGHT LINE
+========================================= */
+
+.bloomtown-mentors__line {
+    position: absolute;
+
+    z-index: 0;
+
+    top: 120px;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4a017 8%,
+            #d4a017 92%,
+            transparent
+        );
+}
+
+
+/* =========================================
+   MENTOR LIST
+========================================= */
+
+.bloomtown-mentors__list {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   MENTOR
+========================================= */
+
+.bloomtown-mentors__mentor {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PORTRAIT
+========================================= */
+
+.bloomtown-mentors__portrait {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    padding: 7px;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d878,
+            #d4a017,
+            #b8860b
+        );
+
+    box-shadow:
+        0 15px 35px rgba(75, 45, 28, 0.18);
+}
+
+
+.bloomtown-mentors__portrait::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(248, 243, 232, 0.75);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.bloomtown-mentors__portrait img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.bloomtown-mentors__mentor h3 {
+    margin: 25px 0 6px;
+
+    color: #4b2d1c;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.bloomtown-mentors__mentor p {
+    margin: 0;
+
+    color: #a8780f;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.bloomtown-mentors__portrait {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.bloomtown-mentors__mentor:hover .bloomtown-mentors__portrait {
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 22px 45px rgba(75, 45, 28, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .bloomtown-mentors {
+        padding: 100px 30px;
+    }
+
+    .bloomtown-mentors__list {
+        gap: 20px;
+    }
+
+    .bloomtown-mentors__portrait {
+        width: 155px;
+        height: 155px;
+    }
+
+    .bloomtown-mentors__line {
+        top: 102px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .bloomtown-mentors {
+        padding: 85px 20px 100px;
+    }
+
+    .bloomtown-mentors__header {
+        margin-bottom: 55px;
+    }
+
+    .bloomtown-mentors__rail {
+        overflow-x: auto;
+
+        padding: 20px 10px 35px;
+
+        scrollbar-width: thin;
+    }
+
+    .bloomtown-mentors__list {
+        width: max-content;
+
+        justify-content: flex-start;
+
+        gap: 35px;
+    }
+
+    .bloomtown-mentors__mentor {
+        width: 190px;
+
+        flex: 0 0 190px;
+    }
+
+    .bloomtown-mentors__portrait {
+        width: 175px;
+        height: 175px;
+    }
+
+    .bloomtown-mentors__line {
+        top: 108px;
+
+        left: 0;
+
+        width: 100%;
+
+        background:
+            linear-gradient(
+                90deg,
+                #d4a017,
+                #f8d878,
+                #d4a017
+            );
+    }
+}
