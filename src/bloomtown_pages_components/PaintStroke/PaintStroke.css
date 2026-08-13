@@ -1,0 +1,329 @@
+/* =========================================
+   CONTAINER
+========================================= */
+
+.paint-strokes {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    width: 100%;
+    max-width: 300px;
+
+    transform: translateX(-50px);
+}
+
+
+/* =========================================
+   FEATURE
+========================================= */
+
+.paint-stroke {
+    position: relative;
+
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+
+    animation: featureAppear 0.5s ease forwards;
+}
+
+
+/* =========================================
+   STAGGER
+========================================= */
+
+.paint-stroke:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.paint-stroke:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.paint-stroke:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.paint-stroke:nth-child(4) {
+    animation-delay: 2s;
+}
+
+
+/* =========================================
+   CIRCLE
+========================================= */
+
+.paint-stroke__circle {
+    position: relative;
+
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    margin-right: -12px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 8px 20px rgba(255, 255, 255, 0.28);
+
+    transform: scale(0);
+
+    animation:
+        circlePop 0.45s cubic-bezier(.17,.67,.3,1.4) forwards;
+
+    animation-delay: 0.3s;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.paint-stroke__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    transform: translateY(-12px);
+
+    opacity: 0;
+
+    animation: iconDrop 0.4s ease forwards;
+
+    animation-delay: 0.65s;
+}
+
+
+.paint-stroke__icon svg {
+    width: 25px;
+    height: 25px;
+
+    stroke-width: 2.5;
+}
+
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.paint-stroke__card {
+    position: relative;
+
+    z-index: 1;
+
+    flex: 0 0 300px;
+
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.32);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 24px rgba(255, 255, 255, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+
+    opacity: 0;
+
+    animation: cardReveal 0.55s ease forwards;
+
+    animation-delay: 1s;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+    overflow: hidden;
+
+    /* ACTUAL FADED LEFT EDGE */
+   -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 12%,
+    rgba(0, 0, 0, 0.65) 22%,
+    black 35%
+);
+
+mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 12%,
+    rgba(0, 0, 0, 0.65) 22%,
+    black 35%
+);
+    
+}
+/* =========================================
+   TEXT
+========================================= */
+.paint-stroke__card span {
+    position: relative;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation: textFade 0.5s ease forwards;
+
+    animation-delay: 1.35s;
+}
+
+/* =========================================
+   CIRCLE COLORS
+========================================= */
+
+.paint-stroke--emerald .paint-stroke__circle {
+    background: #2e8b57;
+}
+
+.paint-stroke--orange .paint-stroke__circle {
+    background: #f28c28;
+}
+
+.paint-stroke--brown .paint-stroke__circle {
+    background: #4b2d1c;
+}
+
+.paint-stroke--gold .paint-stroke__circle {
+    background: #d4a017;
+}
+
+
+/* =========================================
+   GLASS COLOR TINTS
+========================================= */
+
+.paint-stroke--emerald .paint-stroke__card {
+    background: rgba(46, 139, 87, 0.16);
+}
+
+.paint-stroke--orange .paint-stroke__card {
+    background: rgba(242, 140, 40, 0.16);
+}
+
+.paint-stroke--brown .paint-stroke__card {
+    background: rgba(75, 45, 28, 0.18);
+}
+
+.paint-stroke--gold .paint-stroke__card {
+    background: rgba(212, 160, 23, 0.16);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.paint-stroke:hover .paint-stroke__card {
+    transform: translateX(6px);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    box-shadow:
+        0 10px 28px rgba(255, 255, 255, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes circlePop {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes iconDrop {
+    from {
+        transform: translateY(-12px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes featureAppear {
+    to {
+        opacity: 1;
+    }
+}

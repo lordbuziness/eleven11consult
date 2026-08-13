@@ -1,0 +1,20 @@
+
+:root {
+    /* Surfaces */
+    --bloom-white: #ffffff;
+    --bloom-light: #fffaf2;
+
+    /* Glass */
+    --bloom-glass-white: rgba(255, 255, 255, 0.68);
+
+    /* Typography */
+    --bloom-brown: #5a321f;
+    --bloom-dark-brown: #321a10;
+
+    /* Interactive */
+    --bloom-orange: #f28c28;
+
+    /* Brand colors */
+    --bloom-emerald: #0e5327;
+    --bloom-gold: #e3b014;
+}

@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { Phone, House } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/ELEVEN_consult_logo.png";
 
 function Navbar() {
@@ -36,6 +37,10 @@ function Navbar() {
 
                 <li>
                     <a href="#services">Services</a>
+                </li>
+
+                 <li>
+                     <Link to="/bloomtown">Projects</Link>
                 </li>
 
                 <li>

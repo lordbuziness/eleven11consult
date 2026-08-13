@@ -1,0 +1,295 @@
+
+.bloomtown-background {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            155deg,
+            #6f4c18 0%,
+            #8e641d 12%,
+            #ad8227 23%,
+            #c1a33e 34%,
+            #a9ad61 43%,
+            #719b69 52%,
+            #3c855f 64%,
+            #167052 78%,
+            #07543f 90%,
+            #03382b 100%
+        );
+}
+
+/* =========================================
+   LARGE GOLDEN SUNLIGHT
+========================================= */
+
+.bloomtown-background__gold-glow {
+    position: absolute;
+
+    width: 85vw;
+    height: 85vw;
+
+    top: -30vw;
+    left: -25vw;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 205, 72, 0.62) 0%,
+            rgba(232, 177, 48, 0.38) 28%,
+            rgba(201, 157, 45, 0.18) 48%,
+            rgba(201, 157, 45, 0) 72%
+        );
+
+    filter: blur(45px);
+}
+
+/* =========================================
+   SOFT SUNLIT GREEN
+========================================= */
+
+.bloomtown-background__green-glow {
+    position: absolute;
+
+    width: 75vw;
+    height: 75vw;
+
+    top: 8%;
+    left: 18%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(177, 194, 102, 0.20) 0%,
+            rgba(111, 160, 103, 0.14) 30%,
+            rgba(72, 137, 91, 0.05) 55%,
+            rgba(72, 137, 91, 0) 72%
+        );
+
+    filter: blur(55px);
+}
+
+/* =========================================
+   CENTRAL LIGHT
+========================================= */
+
+.bloomtown-background__light {
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    top: -12%;
+    left: 12%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 223, 120, 0.18) 0%,
+            rgba(255, 213, 85, 0.08) 35%,
+            rgba(255, 213, 85, 0) 70%
+        );
+
+    filter: blur(35px);
+}
+
+/* =========================================
+   ATMOSPHERIC SHAPES
+========================================= */
+
+.bloomtown-background__shape {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.025);
+
+    opacity: 0.5;
+
+    filter: blur(1px);
+}
+
+/* Left atmospheric ring */
+
+.bloomtown-background__shape--left {
+    width: 32vw;
+    height: 32vw;
+
+    left: -14vw;
+    top: 18vh;
+}
+
+/* Right atmospheric ring */
+
+.bloomtown-background__shape--right {
+    width: 38vw;
+    height: 38vw;
+
+    right: -18vw;
+    top: 10vh;
+
+    border-width: 3px;
+
+    opacity: 0.035;
+}
+
+/* =========================================
+   FLORAL WATERMARKS
+========================================= */
+
+.bloomtown-background__watermarks {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.bloomtown-background__image {
+    position: absolute;
+
+    width: 320px;
+    height: auto;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    filter: blur(0.4px);
+}
+
+/* =========================================
+   FLOWER 1 — TOP LEFT
+========================================= */
+
+.bloomtown-background__image--1 {
+    width: 420px;
+
+    top: -120px;
+    left: -100px;
+
+    transform: rotate(-20deg);
+
+    opacity: 0.075;
+}
+
+/* =========================================
+   FLOWER 2 — TOP RIGHT
+========================================= */
+
+.bloomtown-background__image--2 {
+    width: 300px;
+
+    top: -70px;
+    right: -80px;
+
+    transform: rotate(35deg);
+
+    opacity: 0.045;
+}
+
+/* =========================================
+   FLOWER 3 — LEFT CENTER
+========================================= */
+
+.bloomtown-background__image--3 {
+    width: 270px;
+
+    top: 38%;
+    left: -120px;
+
+    transform: rotate(-45deg);
+
+    opacity: 0.035;
+}
+
+/* =========================================
+   FLOWER 4 — RIGHT CENTER
+========================================= */
+
+.bloomtown-background__image--4 {
+    width: 380px;
+
+    top: 45%;
+    right: -160px;
+
+    transform: rotate(55deg);
+
+    opacity: 0.055;
+}
+
+/* =========================================
+   FLOWER 5 — BOTTOM
+========================================= */
+
+.bloomtown-background__image--5 {
+    width: 430px;
+
+    bottom: -180px;
+    left: 30%;
+
+    transform: rotate(15deg);
+
+    opacity: 0.04;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+    .bloomtown-background__gold-glow {
+        width: 130vw;
+        height: 130vw;
+
+        top: -40vw;
+        left: -45vw;
+    }
+
+    .bloomtown-background__green-glow {
+        width: 110vw;
+        height: 110vw;
+
+        top: 5%;
+        left: 5%;
+    }
+
+    .bloomtown-background__light {
+        width: 90vw;
+        height: 90vw;
+
+        top: -15%;
+        left: -5%;
+    }
+
+    .bloomtown-background__shape--left {
+        width: 70vw;
+        height: 70vw;
+
+        left: -40vw;
+    }
+
+    .bloomtown-background__shape--right {
+        width: 80vw;
+        height: 80vw;
+
+        right: -45vw;
+    }
+}
+
