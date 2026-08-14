@@ -1,0 +1,302 @@
+
+/* =========================================
+   BLOOM AI HUB
+========================================= */
+
+.bloom-ai-hub {
+    position: relative;
+
+    width: 100%;
+    padding: 120px 6% 130px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.13),
+            transparent 45%
+        ),
+        #f8f3e8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloom-ai-hub__header {
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.bloom-ai-hub__eyebrow {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.bloom-ai-hub__title {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(3rem, 5vw, 4.5rem);
+
+    font-weight: 700;
+    line-height: 0.95;
+}
+
+.bloom-ai-hub__title em {
+    color: #b8860b;
+    font-weight: 400;
+}
+
+.bloom-ai-hub__intro {
+    max-width: 520px;
+
+    margin: 24px auto 0;
+
+    color: #76553d;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   THREE FLOATING CARDS
+========================================= */
+
+.bloom-ai-hub__cards {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 26px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.bloom-ai-hub__card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 38px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border:
+        1px solid rgba(184, 134, 11, 0.18);
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.10);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.bloom-ai-hub__card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 60px rgba(75, 45, 28, 0.16);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.bloom-ai-hub__icon {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07543f,
+            #167052
+        );
+
+    color: #ffcd48;
+
+    box-shadow:
+        0 12px 25px rgba(7, 84, 63, 0.20);
+}
+
+.bloom-ai-hub__icon svg {
+    width: 31px;
+    height: 31px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.bloom-ai-hub__card h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 700;
+
+    line-height: 1.05;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.bloom-ai-hub__card p {
+    max-width: 285px;
+
+    margin: 15px 0 0;
+
+    color: #76553d;
+
+    font-size: 0.84rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .bloom-ai-hub {
+        padding: 90px 25px 100px;
+    }
+
+    .bloom-ai-hub__cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .bloom-ai-hub__card:last-child {
+        grid-column: 1 / -1;
+
+        width: 50%;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .bloom-ai-hub {
+        padding: 75px 18px 85px;
+    }
+
+    .bloom-ai-hub__header {
+        margin-bottom: 45px;
+    }
+
+    .bloom-ai-hub__title {
+        font-size: 3rem;
+    }
+
+    .bloom-ai-hub__intro {
+        font-size: 0.88rem;
+    }
+
+    .bloom-ai-hub__cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .bloom-ai-hub__card:last-child {
+        width: 100%;
+    }
+
+    .bloom-ai-hub__card {
+        min-height: 245px;
+
+        padding: 32px 24px;
+
+        border-radius: 22px;
+    }
+
+    .bloom-ai-hub__icon {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 20px;
+    }
+
+    .bloom-ai-hub__card h3 {
+        font-size: 1.5rem;
+    }
+}
+

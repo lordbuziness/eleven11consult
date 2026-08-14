@@ -1,0 +1,534 @@
+ /* =========================================
+   BLOOMTOWN FOOTER
+========================================= */
+
+.bloomtown-footer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    color: #f8f3e8;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.18),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #03382b 0%,
+            #07543f 45%,
+            #0b644a 100%
+        );
+}
+
+
+/* =========================================
+   DECORATIVE GLOW
+========================================= */
+
+.bloomtown-footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 20%;
+    right: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 160, 23, 0.12),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CLOSING CTA
+========================================= */
+
+.bloomtown-footer__cta {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 120px 25px 110px;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+.bloomtown-footer__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #e8b130;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.bloomtown-footer__cta h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 700;
+
+    line-height: 0.85;
+
+    letter-spacing: -2px;
+}
+
+.bloomtown-footer__cta h2 em {
+    color: #e8b130;
+    font-weight: 400;
+}
+
+.bloomtown-footer__cta p {
+    max-width: 560px;
+
+    margin: 28px auto 35px;
+
+    color: rgba(248, 243, 232, 0.78);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.bloomtown-footer__cta-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    background: #e8b130;
+
+    color: #03382b;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.bloomtown-footer__cta-button:hover {
+    transform: translateY(-3px);
+
+    background: #ffcd48;
+
+    box-shadow:
+        0 12px 30px rgba(232, 177, 48, 0.25);
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.bloomtown-footer__main {
+    position: relative;
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    padding: 70px 6%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.1fr
+        1.5fr;
+
+    gap: 55px;
+
+    border-top:
+        1px solid rgba(232, 177, 48, 0.22);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.bloomtown-footer__brand {
+    max-width: 290px;
+}
+
+.bloomtown-footer__logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.bloomtown-footer__logo span {
+    font-size: 1.5rem;
+}
+
+.bloomtown-footer__brand p {
+    margin: 0;
+
+    color: rgba(248, 243, 232, 0.68);
+
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.bloomtown-footer__column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.bloomtown-footer__column h3 {
+    margin: 0 0 22px;
+
+    color: #e8b130;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.bloomtown-footer__column a,
+.bloomtown-footer__column span {
+    margin-bottom: 13px;
+
+    color: rgba(248, 243, 232, 0.72);
+
+    font-size: 0.82rem;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.bloomtown-footer__column a:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.bloomtown-footer__newsletter p {
+    margin: 0 0 20px;
+
+    color: rgba(248, 243, 232, 0.68);
+
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+}
+
+.bloomtown-footer__form {
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.bloomtown-footer__form input {
+    min-width: 0;
+    width: 100%;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(248, 243, 232, 0.2);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 0.75rem;
+}
+
+.bloomtown-footer__form input::placeholder {
+    color: rgba(248, 243, 232, 0.45);
+}
+
+.bloomtown-footer__form input:focus {
+    border-color: #e8b130;
+}
+
+.bloomtown-footer__form button {
+    flex-shrink: 0;
+
+    padding: 12px 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #e8b130;
+
+    color: #03382b;
+
+    cursor: pointer;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.bloomtown-footer__form button:hover {
+    transform: translateY(-2px);
+
+    background: #ffcd48;
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.bloomtown-footer__socials {
+    position: relative;
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    padding: 25px 6%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+    border-top:
+        1px solid rgba(232, 177, 48, 0.14);
+}
+
+.bloomtown-footer__socials a {
+    color: rgba(248, 243, 232, 0.62);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease;
+}
+
+.bloomtown-footer__socials a:hover {
+    color: #e8b130;
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.bloomtown-footer__bottom {
+    position: relative;
+
+    width: 100%;
+
+    padding: 22px 6%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(232, 177, 48, 0.14);
+}
+
+.bloomtown-footer__bottom span {
+    color: rgba(248, 243, 232, 0.45);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .bloomtown-footer__main {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 50px 40px;
+    }
+
+    .bloomtown-footer__brand {
+        max-width: 350px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .bloomtown-footer__cta {
+        padding: 90px 20px 80px;
+    }
+
+    .bloomtown-footer__cta h2 {
+        font-size: 4rem;
+    }
+
+    .bloomtown-footer__cta p {
+        font-size: 0.88rem;
+    }
+
+    .bloomtown-footer__main {
+        padding: 55px 25px;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .bloomtown-footer__brand {
+        max-width: 100%;
+    }
+
+    .bloomtown-footer__socials {
+        padding: 25px 18px;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+    .bloomtown-footer__bottom {
+        padding: 20px 18px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+    }
+
+    .bloomtown-footer__form {
+        max-width: 100%;
+    }
+}

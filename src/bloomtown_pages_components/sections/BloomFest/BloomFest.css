@@ -1,0 +1,295 @@
+
+/* =========================================
+   BLOOMTOWN FEST
+========================================= */
+
+.bloomtown-fest {
+    position: relative;
+
+    width: 100%;
+    min-height: 620px;
+
+    padding: 120px 6%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.bloomtown-fest__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 56, 43, 0.88),
+            rgba(3, 56, 43, 0.62),
+            rgba(75, 45, 28, 0.45)
+        );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.bloomtown-fest__content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1000px, 100%);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.bloomtown-fest__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #ffcd48;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.bloomtown-fest__title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    font-weight: 700;
+
+    line-height: 0.88;
+}
+
+.bloomtown-fest__title em {
+    color: #ffcd48;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.bloomtown-fest__intro {
+    width: min(650px, 100%);
+
+    margin: 28px auto 45px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   FEATURE PILLS
+========================================= */
+
+.bloomtown-fest__features {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   PILL
+========================================= */
+
+.bloomtown-fest__pill {
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    border:
+        1px solid rgba(255, 205, 72, 0.45);
+
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.bloomtown-fest__pill:hover {
+    transform: translateY(-4px);
+
+    background:
+        rgba(255, 205, 72, 0.2);
+
+    border-color: #ffcd48;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.bloomtown-fest__pill-icon {
+    width: 18px;
+    height: 18px;
+
+    color: #ffcd48;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.bloomtown-fest__pill span {
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .bloomtown-fest {
+        min-height: 580px;
+
+        padding: 100px 25px;
+    }
+
+    .bloomtown-fest__intro {
+        font-size: 0.92rem;
+
+        margin-bottom: 35px;
+    }
+
+    .bloomtown-fest__features {
+        gap: 10px;
+    }
+
+    .bloomtown-fest__pill {
+        min-height: 48px;
+
+        padding: 0 16px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .bloomtown-fest {
+        min-height: 650px;
+
+        padding: 80px 18px;
+    }
+
+    .bloomtown-fest__title {
+        font-size: 3.5rem;
+    }
+
+    .bloomtown-fest__intro {
+        font-size: 0.88rem;
+
+        line-height: 1.65;
+
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+    .bloomtown-fest__features {
+        gap: 9px;
+    }
+
+    .bloomtown-fest__pill {
+        min-height: 44px;
+
+        padding: 0 14px;
+
+        gap: 8px;
+    }
+
+    .bloomtown-fest__pill-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .bloomtown-fest__pill span {
+        font-size: 0.58rem;
+
+        letter-spacing: 0.8px;
+    }
+}
+

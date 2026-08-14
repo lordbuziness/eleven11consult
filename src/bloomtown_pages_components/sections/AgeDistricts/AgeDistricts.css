@@ -1,0 +1,256 @@
+
+/* =========================================
+   BLOOMTOWN AGE DISTRICTS
+========================================= */
+
+.bloomtown-age-districts {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 6% 130px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.12),
+            transparent 45%
+        ),
+        #f8f3e8;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-age-districts__header {
+    max-width: 700px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.bloomtown-age-districts__eyebrow {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.bloomtown-age-districts__title {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(3rem, 5vw, 4.5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+}
+
+.bloomtown-age-districts__title em {
+    color: #b8860b;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.bloomtown-age-districts__cards {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 26px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.bloomtown-age-districts__card {
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(184, 134, 11, 0.18);
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.10);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.bloomtown-age-districts__card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 60px rgba(75, 45, 28, 0.16);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.bloomtown-age-districts__image {
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.bloomtown-age-districts__image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.bloomtown-age-districts__card:hover
+.bloomtown-age-districts__image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.bloomtown-age-districts__content {
+    padding: 25px 25px 28px;
+
+    text-align: center;
+}
+
+.bloomtown-age-districts__content h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+}
+
+.bloomtown-age-districts__content span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #a8780f;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .bloomtown-age-districts {
+        padding: 95px 30px 105px;
+    }
+
+    .bloomtown-age-districts__cards {
+        gap: 18px;
+    }
+
+    .bloomtown-age-districts__image {
+        height: 250px;
+    }
+
+    .bloomtown-age-districts__content {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .bloomtown-age-districts {
+        padding: 80px 18px 90px;
+    }
+
+    .bloomtown-age-districts__header {
+        margin-bottom: 45px;
+    }
+
+    .bloomtown-age-districts__title {
+        font-size: 3rem;
+    }
+
+    .bloomtown-age-districts__cards {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .bloomtown-age-districts__image {
+        height: 280px;
+    }
+
+    .bloomtown-age-districts__card {
+        border-radius: 22px;
+    }
+}
+
