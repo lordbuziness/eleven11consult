@@ -116,31 +116,49 @@
 
     z-index: 1;
 
-    top: 23px;
-
     /*
-       EXTENDS PAST FIRST AND LAST DOT
+       Align with the center of the marker
     */
+    top: 13px;
 
-    left: -7%;
-    right: -7%;
+    left: 0;
+    right: 0;
 
     height: 3px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #b8860b,
-            #d4a017,
-            #f8d878,
-            #d4a017,
-            #b8860b
-        );
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #d4a017,
+        #f8d878,
+        #d4a017,
+        #b8860b
+    );
 
     box-shadow:
         0 0 12px rgba(212, 160, 23, 0.35);
 }
 
+/* Empty spaces underneath the markers */
+
+.bloomtown-monthly__line span:nth-child(2),
+.bloomtown-monthly__line span:nth-child(4),
+.bloomtown-monthly__line span:nth-child(6) {
+    background: transparent;
+
+    box-shadow: none;
+}
+
+/* Final segment */
+
+.bloomtown-monthly__line span:nth-child(7) {
+    background: linear-gradient(
+        90deg,
+        #f8d878,
+        #d4a017,
+        #b8860b
+    );
+}
 
 /* =========================================
    SESSIONS
@@ -216,9 +234,10 @@
     height: 26px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
+
+    box-sizing: border-box;
 
     border-radius: 50%;
 
@@ -232,6 +251,7 @@
 }
 
 
+
 .bloomtown-monthly__dot-inner {
     width: 8px;
     height: 8px;
@@ -239,8 +259,9 @@
     border-radius: 50%;
 
     background: #f8d878;
-}
 
+    display: block;
+}
 
 /* =========================================
    CONNECTOR
@@ -250,15 +271,14 @@
     width: 2px;
     height: 32px;
 
-    background:
-        linear-gradient(
-            to bottom,
-            #d4a017,
-            rgba(212, 160, 23, 0.2)
-        );
+    margin-top: -1px;
+
+    background: linear-gradient(
+        to bottom,
+        #d4a017,
+        rgba(212, 160, 23, 0.2)
+    );
 }
-
-
 /* =========================================
    CARD
 ========================================= */

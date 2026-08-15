@@ -75,16 +75,33 @@
 }
 
 
-/* =============================
-   Horizontal Timeline
-============================= */
+/* =========================================
+   HORIZONTAL TIMELINE
+========================================= */
 
-.process__timeline {
-  position: relative;
+.bloomtown-monthly__line {
+    position: absolute;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+    z-index: 1;
+
+    top: 36px;
+
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #d4a017,
+        #f8d878,
+        #d4a017,
+        #b8860b
+    );
+
+    box-shadow:
+        0 0 12px rgba(212, 160, 23, 0.35);
 }
 
 

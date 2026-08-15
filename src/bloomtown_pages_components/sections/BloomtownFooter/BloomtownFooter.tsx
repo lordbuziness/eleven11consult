@@ -1,5 +1,12 @@
 import "./BloomtownFooter.css";
 
+import {
+    FaFacebookF,
+    FaInstagram,
+} from "react-icons/fa";
+
+import bloomLogo from "../../asset/images/bloomlogo.svg";
+
 function BloomtownFooter() {
     return (
         <footer className="bloomtown-footer">
@@ -46,8 +53,10 @@ function BloomtownFooter() {
                 <div className="bloomtown-footer__brand">
 
                     <div className="bloomtown-footer__logo">
-                        <span>🌱</span>
-                        BLOOMTOWN
+                        <img
+                            src={bloomLogo}
+                            alt="BloomTown"
+                        />
                     </div>
 
                     <p>
@@ -149,26 +158,31 @@ function BloomtownFooter() {
                 SOCIALS
             ========================================= */}
 
-            <div className="bloomtown-footer__socials">
+            {/* =========================================
+    SOCIALS
+========================================= */}
 
-                <a href="#" aria-label="Instagram">
-                    Instagram
-                </a>
+<div className="bloomtown-footer__socials">
 
-                <a href="#" aria-label="Facebook">
-                    Facebook
-                </a>
+    <a
+        href="https://www.facebook.com/bloomtownafrica"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+    >
+        <FaFacebookF />
+    </a>
 
-                <a href="#" aria-label="TikTok">
-                    TikTok
-                </a>
+    <a
+        href="https://www.instagram.com/bloomtownafrica"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+    >
+        <FaInstagram />
+    </a>
 
-                <a href="#" aria-label="LinkedIn">
-                    LinkedIn
-                </a>
-
-            </div>
-
+</div>
 
             {/* =========================================
                 BOTTOM BAR

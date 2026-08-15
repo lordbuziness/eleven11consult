@@ -1,7 +1,7 @@
 
 import "./AgeDistricts.css";
 
-import bloomhero from "../../asset/images/bloomhero.png";
+import bloomhero from "../../asset/images/Bloomhero.jpg";
 import bloomhero1 from "../../asset/images/bloomhero1.jpg";
 import bloomhero2 from "../../asset/images/bloomhero2.jpg";
 

@@ -360,96 +360,141 @@
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 800px) {
-
-    .bloomtown-gallery {
-        padding: 90px 25px 100px;
-    }
-
-    .bloomtown-gallery__slider {
-        width: min(650px, 92%);
-        height: 300px;
-    }
-
-    .bloomtown-gallery__metrics {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .bloomtown-gallery__metric-divider {
-        display: none;
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 500px) {
 
     .bloomtown-gallery {
-        padding: 75px 18px 85px;
+        padding: 55px 14px 60px;
     }
 
+
+    /* ================================
+       HEADER
+    ================================ */
+
     .bloomtown-gallery__header {
-        margin-bottom: 40px;
+        max-width: 330px;
+
+        margin-bottom: 28px;
+    }
+
+    .bloomtown-gallery__eyebrow {
+        margin-bottom: 10px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 2px;
     }
 
     .bloomtown-gallery__title {
-        font-size: 3rem;
+        font-size: 2.15rem;
+
+        line-height: 0.98;
     }
 
     .bloomtown-gallery__intro {
-        font-size: 0.88rem;
+        max-width: 310px;
+
+        margin-top: 14px;
+
+        font-size: 0.76rem;
+
+        line-height: 1.5;
     }
+
+
+    /* ================================
+       IMAGE
+    ================================ */
 
     .bloomtown-gallery__slider {
-        width: 94%;
-        height: 250px;
+        width: 96%;
 
-        border-radius: 20px;
+        height: 205px;
+
+        border-radius: 15px;
+
+        box-shadow:
+            0 10px 24px rgba(75, 45, 28, 0.13);
     }
 
-    .bloomtown-gallery__image-wrap {
-        border-radius: 20px;
+    .bloomtown-gallery__image {
+        transform: scale(1.01);
     }
 
     .bloomtown-gallery__fade {
-        width: 20%;
+        width: 14%;
     }
 
+
+    /* ================================
+       CONTROLS
+    ================================ */
+
     .bloomtown-gallery__controls {
-        margin-top: 18px;
-        gap: 12px;
+        margin-top: 13px;
+
+        gap: 9px;
     }
 
     .bloomtown-gallery__arrow {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
+
+    .bloomtown-gallery__arrow svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .bloomtown-gallery__counter {
+        min-width: 55px;
+
+        font-size: 1rem;
+    }
+
+
+    /* ================================
+       CAPTION
+    ================================ */
 
     .bloomtown-gallery__caption {
-        margin-bottom: 40px;
+        margin: 8px 0 30px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 1.5px;
     }
 
+
+    /* ================================
+       METRICS
+    ================================ */
+
     .bloomtown-gallery__metrics {
-        padding: 25px 10px;
+        padding: 18px 7px;
 
-        border-radius: 18px;
+        border-radius: 14px;
 
-        gap: 20px 5px;
+        gap: 15px 3px;
+    }
+
+    .bloomtown-gallery__metric {
+        min-height: 60px;
     }
 
     .bloomtown-gallery__metric strong {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .bloomtown-gallery__metric span {
-        font-size: 0.55rem;
+        max-width: 95px;
+
+        margin-top: 7px;
+
+        font-size: 0.48rem;
+
+        letter-spacing: 0.8px;
+
+        line-height: 1.2;
     }
 }

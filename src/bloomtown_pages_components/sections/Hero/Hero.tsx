@@ -1,32 +1,47 @@
 import "./Hero.css";
 
-import bloomHero from "../../asset/images/bloomhero.png";
+import bloomHero from "../../asset/images/Bloomhero.jpg";
 import bloomLogo from "../../asset/images/bloomlogo.svg";
-import {CalendarDays,Clock3,Phone, MapPin,} from "lucide-react";
-import { FaFacebookF, FaInstagram,
+
+import {
+    CalendarDays,
+    Clock3,
+    Phone,
+    MapPin,
+} from "lucide-react";
+
+import {
+    FaFacebookF,
+    FaInstagram,
 } from "react-icons/fa";
+
 import PaintStrokes from "../../PaintStroke/PaintStroke";
+import BloomTownNavbar from "../../BloomTownNavbar/BloomTownNavbar";
+
 
 function Hero() {
     return (
         <section className="bloomtown-hero">
 
-            {/* Full-screen hero image */}
+            {/* NAVBAR */}
+            <BloomTownNavbar />
+
+            {/* HERO IMAGE */}
             <img
                 src={bloomHero}
                 alt=""
                 className="bloomtown-hero__image"
             />
 
-            {/* Hero content */}
+            {/* HERO CONTENT */}
             <div className="bloomtown-hero__content">
 
-                {/* BloomTown slogan */}
+                {/* SLOGAN */}
                 <p className="bloomtown-hero__slogan">
                     One Day. One Community. Endless Memories.
                 </p>
 
-                {/* BloomTown pill */}
+                {/* BLOOMTOWN LOGO */}
                 <div className="bloomtown-hero__card">
                     <img
                         src={bloomLogo}
@@ -34,178 +49,215 @@ function Hero() {
                         className="bloomtown-hero__logo"
                     />
                 </div>
+
+                {/* FEATURES */}
                 <div className="bloomtown-hero__features">
 
-    <PaintStrokes />
+                    <PaintStrokes />
 
-    <p className="paint-strokes__description">
-        A day of family fun, shopping, networking & unforgettable memories!
-    </p>
+                    <p className="paint-strokes__description">
+                        A day of family fun, shopping, networking & unforgettable memories!
+                    </p>
 
+                    <div className="paint-strokes__social">
 
-    <div className="paint-strokes__social">
+                        <div className="paint-strokes__social-links">
 
-    <div className="paint-strokes__social-links">
+                            <a
+                                href="https://www.facebook.com/bloomtownafrica"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="BloomTown Africa on Facebook"
+                            >
+                                <FaFacebookF />
+                            </a>
 
-        <a
-            href="https://www.facebook.com/bloomtownafrica"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="BloomTown Africa on Facebook"
-        >
-            <FaFacebookF/>
-        </a>
+                            <a
+                                href="https://www.instagram.com/bloomtownafrica"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="BloomTown Africa on Instagram"
+                            >
+                                <FaInstagram />
+                            </a>
 
-        <a
-            href="https://www.instagram.com/bloomtownafrica"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="BloomTown Africa on Instagram"
-        >
-            <FaInstagram />
-        </a>
+                        </div>
 
-    </div>
+                        <span className="paint-strokes__hashtag">
+                            #BloomTownFamilyFest2026
+                        </span>
 
-    <span className="paint-strokes__hashtag">
-        #BloomTownFamilyFest2026
-    </span>
+                    </div>
 
-</div>
-
-
-    
-
-</div>
-          <div className="bloomtown-hero__invitation">
-    <span>
-        Bring Your
-    </span>
-
-    <span className="bloomtown-hero__invitation-heart">
-        ♥
-    </span>
-
-    <strong>
-        Family And Friends
-    </strong>
-</div>
+                </div>
 
 
-                <div className="bloomtown-hero__event-card">
+                {/* FAMILY INVITATION */}
+                <div className="bloomtown-hero__invitation">
 
-    {/* Event Details */}
-    <div className="bloomtown-hero__event-details">
+                    <span>
+                        Bring Your
+                    </span>
 
-    <div className="bloomtown-hero__event-detail">
-        <CalendarDays className="bloomtown-hero__event-icon" />
+                    <span className="bloomtown-hero__invitation-heart">
+                        ♥
+                    </span>
 
-        <div>
-            <span className="bloomtown-hero__event-label">
-                DATE
-            </span>
+                    <strong>
+                        Family And Friends
+                    </strong>
 
-            <strong>
-                Sat, Oct 3, 2026
-            </strong>
-        </div>
-    </div>
+                </div>
 
 
-    <div className="bloomtown-hero__event-detail">
-        <Clock3 className="bloomtown-hero__event-icon" />
+                {/* =========================================
+                    EVENT + TICKETS
+                ========================================= */}
 
-        <div>
-            <span className="bloomtown-hero__event-label">
-                TIME
-            </span>
+                <div className="bloomtown-hero__event-wrapper">
 
-            <strong>
-                1:00 PM
-            </strong>
-        </div>
-    </div>
+                    {/* EVENT INFORMATION CARD */}
 
+                    <div className="bloomtown-hero__event-card">
 
-    <div className="bloomtown-hero__event-detail">
-        <MapPin className="bloomtown-hero__event-icon" />
+                        <div className="bloomtown-hero__event-details">
 
-        <div>
-            <span className="bloomtown-hero__event-label">
-                VENUE
-            </span>
+                            <div className="bloomtown-hero__event-detail">
 
-            <strong>
-                Sam Shonibare Playground, Surulere
-            </strong>
-        </div>
-    </div>
+                                <CalendarDays className="bloomtown-hero__event-icon" />
 
-    {/* Inquiries */}
-<div className="bloomtown-hero__event-detail">
+                                <div>
+                                    <span className="bloomtown-hero__event-label">
+                                        DATE
+                                    </span>
 
-    <Phone className="bloomtown-hero__event-icon" />
+                                    <strong>
+                                        Sat, Oct 3, 2026
+                                    </strong>
+                                </div>
 
-    <div>
-        <span className="bloomtown-hero__event-label">
-            INQUIRIES
-        </span>
-
-        <strong>
-            09166425251
-        </strong>
-    </div>
-
-</div>
-
-</div>
+                            </div>
 
 
+                            <div className="bloomtown-hero__event-detail">
 
-{/* Orange Ticket Section */}
-<div className="bloomtown-hero__ticket-section">
+                                <Clock3 className="bloomtown-hero__event-icon" />
 
-    <div className="bloomtown-hero__tickets">
+                                <div>
+                                    <span className="bloomtown-hero__event-label">
+                                        TIME
+                                    </span>
 
-        <h3 className="bloomtown-hero__tickets-title">
-            TICKET PRICING
-        </h3>
+                                    <strong>
+                                        1:00 PM
+                                    </strong>
+                                </div>
 
-        <div className="bloomtown-hero__ticket-buttons">
-
-            
-<a
-    className="bloomtown-hero__ticket"
-    href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---adult-ticket-nbzfnh"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <span>Adult</span>
-    <strong>₦10,000</strong>
-</a>
+                            </div>
 
 
+                            <div className="bloomtown-hero__event-detail">
 
-            <a className="bloomtown-hero__ticket"
-            href= "https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---childrens-ticket-yctrmc"
-            target="_blank"
-    rel="noopener noreferrer">
-                <span>Child (4–17)</span>
-                <strong>₦5,000</strong>
-            </a>
+                                <MapPin className="bloomtown-hero__event-icon" />
 
-        </div>
+                                <div>
+                                    <span className="bloomtown-hero__event-label">
+                                        VENUE
+                                    </span>
 
-        <div className="bloomtown-hero__under-four">
-            <span>Children Under 4</span>
-            <strong>FREE</strong>
-        </div>
+                                    <strong>
+                                        Sam Shonibare Playground, Surulere
+                                    </strong>
+                                </div>
 
-    </div>
+                            </div>
 
-</div>
-</div>
-</div>
+
+                            <div className="bloomtown-hero__event-detail">
+
+                                <Phone className="bloomtown-hero__event-icon" />
+
+                                <div>
+                                    <span className="bloomtown-hero__event-label">
+                                        INQUIRIES
+                                    </span>
+
+                                    <strong>
+                                        09166425251
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* =========================================
+                        TICKET CARD
+                    ========================================= */}
+
+                    <div className="bloomtown-hero__ticket-card">
+
+                        <h3 className="bloomtown-hero__tickets-title">
+                            TICKET PRICING
+                        </h3>
+
+
+                        <div className="bloomtown-hero__ticket-buttons">
+
+                            <a
+                                className="bloomtown-hero__ticket"
+                                href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---adult-ticket-nbzfnh"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span>
+                                    Adult
+                                </span>
+
+                                <strong>
+                                    ₦10,000
+                                </strong>
+                            </a>
+
+
+                            <a
+                                className="bloomtown-hero__ticket"
+                                href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---childrens-ticket-yctrmc"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span>
+                                    Child (4–17)
+                                </span>
+
+                                <strong>
+                                    ₦5,000
+                                </strong>
+                            </a>
+
+                        </div>
+
+
+                        <div className="bloomtown-hero__under-four">
+
+                            <span>
+                                Children Under 4
+                            </span>
+
+                            <strong>
+                                FREE
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
     );

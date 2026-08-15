@@ -1,0 +1,198 @@
+/* =========================================
+   BLOOMTOWN NAVBAR
+========================================= */
+
+.bloomtown-navbar {
+    position: fixed;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+    width: calc(100% - 80px);
+    max-width: 900px;
+
+    height: 52px;
+
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background: rgba(250, 245, 232, 0.88);
+
+    border: 1px solid rgba(207, 166, 74, 0.5);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 25px rgba(180, 120, 20, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    /* Fade behavior */
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+
+transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+
+/* =========================================
+   VISIBLE / HIDDEN STATES
+========================================= */
+
+.bloomtown-navbar--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.bloomtown-navbar--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.bloomtown-navbar__logo {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.bloomtown-navbar__logo img {
+    display: block;
+
+    width: 110px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   HAMBURGER
+========================================= */
+
+.bloomtown-navbar__menu {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(75, 45, 28, 0.25);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #4b2d1c;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.bloomtown-navbar__menu svg {
+    width: 20px;
+    height: 20px;
+
+    stroke-width: 2;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.bloomtown-navbar__menu:hover {
+    background: rgba(255, 255, 255, 0.65);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .bloomtown-navbar {
+        top: 14px;
+
+        width: calc(100% - 30px);
+
+        height: 48px;
+
+        padding: 4px 8px;
+    }
+
+    .bloomtown-navbar__logo img {
+        width: 100px;
+    }
+
+    .bloomtown-navbar__menu {
+        width: 36px;
+        height: 36px;
+    }
+
+    .bloomtown-navbar__menu svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .bloomtown-navbar {
+        width: calc(100% - 24px);
+
+        top: 12px;
+    }
+
+    .bloomtown-navbar__logo img {
+        width: 92px;
+    }
+}

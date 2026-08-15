@@ -1,3 +1,7 @@
+/* =========================================
+   BLOOMTOWN HERO
+========================================= */
+
 .bloomtown-hero {
     position: relative;
 
@@ -27,12 +31,44 @@
     object-position: 55% 35%;
 
     z-index: 0;
-
     pointer-events: none;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.05) 5%,
+        rgba(0, 0, 0, 0.10) 10%,
+        rgba(0, 0, 0, 0.15) 15%,
+        rgba(0, 0, 0, 0.20) 20%,
+        rgba(0, 0, 0, 0.25) 25%,
+        rgba(0, 0, 0, 0.30) 30%,
+        rgba(0, 0, 0, 0.40) 35%,
+        rgba(0, 0, 0, 0.50) 40%,
+        rgba(0, 0, 0, 0.65) 45%,
+        black 50%,
+        black 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.05) 5%,
+        rgba(0, 0, 0, 0.10) 10%,
+        rgba(0, 0, 0, 0.15) 15%,
+        rgba(0, 0, 0, 0.20) 20%,
+        rgba(0, 0, 0, 0.25) 25%,
+        rgba(0, 0, 0, 0.30) 30%,
+        rgba(0, 0, 0, 0.40) 35%,
+        rgba(0, 0, 0, 0.50) 40%,
+        rgba(0, 0, 0, 0.65) 45%,
+        black 50%,
+        black 100%
+    );
 }
 
+
 /* =========================================
-   BLOOMTOWN LOGO CARD
+   BLOOMTOWN LOGO
 ========================================= */
 
 .bloomtown-hero__card {
@@ -40,8 +76,8 @@
 
     z-index: 3;
 
-    top: 10%;
-    left: 80%;
+    top: 15%;
+    left: 15%;
 
     transform: translateX(-50%);
 
@@ -52,24 +88,17 @@
     align-items: center;
     justify-content: center;
 
-    /* Transparent white */
-    background: rgba(255, 255, 255, 0.68);
+    background: transparent;
 
-    /* Sleek glass edge */
-    border: 1px solid rgba(255, 255, 255, 0.75);
-
+    border: none;
     border-radius: 999px;
 
-    /* Soft shadow */
-    box-shadow: 0 8px 24px rgba(242, 140, 40, 0.16);
+    box-shadow: none;
 
-    /* Glass */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
-/* =========================================
-   BLOOMTOWN LOGO
-========================================= */
+
 
 .bloomtown-hero__logo {
     width: 230px;
@@ -82,6 +111,11 @@
     background: transparent;
     box-shadow: none;
 }
+
+
+/* =========================================
+   SLOGAN
+========================================= */
 
 .bloomtown-hero__slogan {
     position: absolute;
@@ -98,17 +132,20 @@
     width: max-content;
 
     color: #4b2e1f;
-
-    font-size: 1rem;
-    font-weight: 800;
+    
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 900;
     line-height: 1.2;
 
     white-space: nowrap;
     text-align: center;
 }
 
+
 /* =========================================
    EVENT INFORMATION CARD
+   COMPACT METALLIC GOLD
 ========================================= */
 
 .bloomtown-hero__event-card {
@@ -116,38 +153,50 @@
 
     z-index: 10;
 
-    left: 40px;
-    bottom: 20px;
+    left: 55%;
+    bottom: 150px;
 
-    width: 520px;
+    width: 500px;
 
-    padding: 18px 20px;
+    padding: 14px 16px;
 
     box-sizing: border-box;
 
-     background: rgba(255, 255, 255, 0.82);
+    background:
+        linear-gradient(
+            135deg,
+            #a8780f 0%,
+            #d4a017 18%,
+            #f8d878 32%,
+            #fff0a8 45%,
+            #d4a017 58%,
+            #f8d878 72%,
+            #a8780f 100%
+        );
 
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid #f8d878;
 
-    border-radius: 18px;
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.14),
-        0 4px 12px rgba(242, 140, 40, 0.08);
+        0 12px 28px rgba(75, 45, 28, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65),
+        inset 0 -1px 0 rgba(75, 45, 28, 0.25);
 }
 
 
 /* =========================================
-   DATE / TIME / VENUE
+   EVENT DETAILS
 ========================================= */
 
 .bloomtown-hero__event-details {
     display: grid;
 
-    grid-template-columns: 0.9fr 0.7fr 1.5fr 1fr;
+    grid-template-columns:
+        0.9fr
+        0.7fr
+        1.5fr
+        1fr;
 
     width: 100%;
 
@@ -155,15 +204,8 @@
 }
 
 
-/* INQUIRIES — BROWN */
-.bloomtown-hero__event-detail:nth-child(4)
-.bloomtown-hero__event-icon {
-    background: #4b2d1c;
-}
-
-
 /* =========================================
-   INDIVIDUAL EVENT ITEM
+   EVENT ITEM
 ========================================= */
 
 .bloomtown-hero__event-detail {
@@ -173,45 +215,76 @@
 
     justify-content: center;
 
-    gap: 5px;
+    gap: 4px;
 
     min-width: 0;
 
-    padding: 0 16px;
+    padding: 0 12px;
 
-    border-right: 1px solid rgba(75, 45, 28, 0.2);
+    border-right:
+        1px solid rgba(7, 84, 63, 0.55);
 }
 
 
-/* First column */
+/* FIRST */
 
 .bloomtown-hero__event-detail:first-child {
     padding-left: 0;
 }
 
 
-/* Last column */
+/* LAST */
 
 .bloomtown-hero__event-detail:last-child {
     padding-right: 0;
+
     border-right: none;
 }
 
 
 /* =========================================
-   LABEL
+   EVENT ICONS
+   ALL BLOOMTOWN GREEN
+========================================= */
+
+.bloomtown-hero__event-icon {
+    width: 30px;
+    height: 30px;
+
+    padding: 7px;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background: #07543f;
+
+    color: #f8d878;
+
+    margin-bottom: 2px;
+
+    box-shadow:
+        0 3px 7px rgba(75, 45, 28, 0.18),
+        inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================
+   EVENT LABEL
 ========================================= */
 
 .bloomtown-hero__event-label {
     display: block;
 
-    font-size: 0.58rem;
+    font-size: 0.54rem;
 
-    font-weight: 800;
+    font-weight: 900;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.3px;
 
-    color: #7a4a2a;
+    color: #07543f;
 }
 
 
@@ -222,94 +295,109 @@
 .bloomtown-hero__event-detail strong {
     display: block;
 
-    font-size: 0.78rem;
+    font-size: 0.72rem;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    line-height: 1.35;
+    line-height: 1.3;
 
     color: #4b2d1c;
 
     overflow-wrap: break-word;
 }
 
-/* =========================================
-   EVENT DIVIDER
-========================================= */
-
-.bloomtown-hero__event-divider {
-    width: 100%;
-    height: 1px;
-
-    margin: 16px 0;
-
-   
-    background: rgba(90, 50, 31, 0.18);
-}
-
-
-
-
 
 /* =========================================
-   TICKET SECTION
+   PREMIUM TICKET CARD
+   COMPACT
 ========================================= */
 
-.bloomtown-hero__ticket-section {
-    margin: 0 -20px -18px;
-    padding: 16px 20px 18px;
+.bloomtown-hero__ticket-card {
+    position: absolute;
 
-    background: transparent;
+    z-index: 10;
 
-    border: none;
+    right: 5%;
+    bottom: 7px;
 
-    backdrop-filter: none;
-}
-/* =========================================
-   TICKET PRICING
-========================================= */
-.bloomtown-hero__ticket {
-    background: var(--bloom-dark-brown);
-    border: 2px solid var(--bloom-dark-brown);
-    color: #ffffff;
+    width: 500px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123f2a 0%,
+            #0d3425 50%,
+            #123f2a 100%
+        );
+
+    border: 1px solid #d4a017;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 24px rgba(18, 63, 42, 0.3),
+        0 0 16px rgba(212, 160, 23, 0.15);
 }
 
 
 /* =========================================
-   TICKET PRICING TITLE
+   TICKET TITLE
 ========================================= */
 
 .bloomtown-hero__tickets-title {
-    margin: 0;
+    margin: 0 0 7px;
 
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    font-family: "Cormorant Garamond", Georgia, serif;
 
-    color: var(--bloom-brown);
+    font-size: 0.9rem;
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4b8 0%,
+            #d4a017 35%,
+            #fff0a8 52%,
+            #b8860b 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 /* =========================================
    TICKET BUTTONS
+   THREE ROW STRUCTURE
 ========================================= */
 
 .bloomtown-hero__ticket-buttons {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
 
-    gap: 12px;
+    gap: 6px;
 
     width: 100%;
 }
 
 
 /* =========================================
-   TICKET BUTTON
+   PREMIUM METALLIC GOLD TICKET
 ========================================= */
 
 .bloomtown-hero__ticket {
+    position: relative;
+
     display: flex;
 
     align-items: center;
@@ -317,28 +405,67 @@
 
     width: 100%;
 
-    padding: 12px 14px;
+    min-height: 34px;
 
-    border: 2px solid var(--bloom-dark-brown);
+    padding: 6px 11px;
 
-    border-radius: 10px;
+    box-sizing: border-box;
 
-    background: var(--bloom-dark-brown);
+    border: 1px solid #f8d878;
 
-    color: var(--bloom-white);
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #a8780f 0%,
+            #d4a017 18%,
+            #fff0a8 40%,
+            #d4a017 58%,
+            #f8d878 76%,
+            #a8780f 100%
+        );
 
     cursor: pointer;
 
-    font-family: inherit;
+    font-family: "Inter", Arial, sans-serif;
+
+    text-decoration: none;
 
     box-shadow:
-        0 4px 10px rgba(50, 26, 16, 0.18);
+        0 3px 8px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        inset 0 -1px 0 rgba(75, 45, 28, 0.3);
 
     transition:
         transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* =========================================
+   METALLIC SHINE
+========================================= */
+
+.bloomtown-hero__ticket::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.35) 45%,
+            transparent 60%
+        );
+
+    pointer-events: none;
 }
 
 
@@ -347,11 +474,20 @@
 ========================================= */
 
 .bloomtown-hero__ticket span {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 0.78rem;
 
-    font-weight: 700;
+    font-weight: 900;
 
-    color: #ffffff;
+    color: #4b2d1c;
+
+    background: none;
+
+    -webkit-text-fill-color: #4b2d1c;
 }
 
 
@@ -360,33 +496,48 @@
 ========================================= */
 
 .bloomtown-hero__ticket strong {
-    font-size: 0.82rem;
+    position: relative;
+    z-index: 1;
 
-    font-weight: 800;
+    font-family: "Inter", Arial, sans-serif;
 
-    color: #ffffff;
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    color: #4b2d1c;
+
+    background: none;
+
+    -webkit-text-fill-color: #4b2d1c;
 }
 
 
 /* =========================================
-   HOVER
+   TICKET HOVER
 ========================================= */
 
 .bloomtown-hero__ticket:hover {
-    background: var(--bloom-orange);
-    border-color: var(--bloom-orange);
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 7px 16px rgba(0, 0, 0, 0.24),
+        0 0 14px rgba(248, 216, 120, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 
 /* =========================================
-   ACTIVE
+   TICKET ACTIVE
 ========================================= */
 
 .bloomtown-hero__ticket:active {
     transform: translateY(0);
 
     box-shadow:
-        0 3px 8px rgba(50, 26, 16, 0.18);
+        0 3px 7px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -400,89 +551,28 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 2px 12px 0;
+    padding: 5px 3px 0;
 
-    font-size: 0.68rem;
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.65rem;
 
     font-weight: 700;
 
-    color: var(--bloom-brown);
+    color: #f8d878;
 }
 
 
 .bloomtown-hero__under-four strong {
-    font-size: 0.68rem;
+    font-family: "Inter", Arial, sans-serif;
 
-    font-weight: 800;
+    font-size: 0.7rem;
 
-    color: var(--bloom-brown);
+    font-weight: 900;
+
+    color: #f8d878;
 }
 
-/* =========================================
-   FINAL TICKET BUTTON
-========================================= */
-
-.bloomtown-hero__ticket {
-    background: #321a10;
-    border: 2px solid #321a10;
-    color: #ffffff;
-}
-
-.bloomtown-hero__ticket span,
-.bloomtown-hero__ticket strong {
-    color: #ffffff;
-}
-
-
-/* HOVER */
-
-.bloomtown-hero__ticket:hover {
-    background: #f28c28;
-    border-color: #f28c28;
-    color: #ffffff;
-}
-
-.bloomtown-hero__ticket:hover span,
-.bloomtown-hero__ticket:hover strong {
-    color: #ffffff;
-}
-
-/* =========================================
-   EVENT INFO ICON
-========================================= */
-
-.bloomtown-hero__event-icon {
-    width: 34px;
-    height: 34px;
-
-    padding: 8px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    color: var(--bloom-dark-brown);
-}
-
-/* DATE — EMERALD */
-.bloomtown-hero__event-detail:nth-child(1)
-.bloomtown-hero__event-icon {
-    background: #2e8b57;
-}
-
-
-/* TIME — GOLD */
-.bloomtown-hero__event-detail:nth-child(2)
-.bloomtown-hero__event-icon {
-    background: #d4a017;
-}
-
-
-/* VENUE — ORANGE */
-.bloomtown-hero__event-detail:nth-child(3)
-.bloomtown-hero__event-icon {
-    background: #f28c28;
-}
 
 /* =========================================
    PAINT FEATURES
@@ -491,10 +581,10 @@
 .bloomtown-hero__features {
     position: absolute;
 
-    z-index: 5;
+    z-index: 10;
 
-    top: 30%;
-    right: 40px;
+    top: 35%;
+    right: 65%;
 
     width: 350px;
 
@@ -507,21 +597,27 @@
     position: relative;
 
     top: auto;
-    right: auto;
+    right: 15px;
 
     width: 100%;
+
     margin-left: 0;
 }
+
 
 .paint-strokes__description {
     margin: 12px 0 0;
 
     width: 300px;
 
-    color: #ffffff;
+    font-family: "inter", Arial, sans-serif;
 
-    font-size: 0.78rem;
-    font-weight: 700;
+    color: #4b2d1c;
+
+    font-size: .9rem;
+
+    font-weight: 900;
+
     line-height: 1.45;
 
     text-align: center;
@@ -535,61 +631,119 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 7px;
 
     text-align: center;
 }
 
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
 .paint-strokes__social-links {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     gap: 10px;
 }
 
+
+/* =========================================
+   SOCIAL ICON BUTTON
+========================================= */
+
 .paint-strokes__social-links a {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border-radius: 50%;
 
-    color: #ffffff;
+    /* BLOOMTOWN EMERALD */
+    background: #07543f;
 
-    background: rgba(255, 255, 255, 0.16);
+    /* METALLIC GOLD BORDER */
+    border: 1px solid #d4a017;
 
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #f8d878 !important;
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 3px 7px rgba(75, 45, 28, 0.18),
+        inset 0 1px 2px rgba(255, 255, 255, 0.35);
 
     transition:
         transform 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.paint-strokes__social-links svg {
+
+/* =========================================
+   SOCIAL ICON
+========================================= */
+
+.paint-strokes__social-links a svg {
     width: 16px;
     height: 16px;
+
+    color: #f8d878 !important;
+
+    fill: #f8d878 !important;
+
+    stroke: #f8d878 !important;
+
+    filter:
+        drop-shadow(0 1px 1px rgba(75, 45, 28, 0.35))
+        drop-shadow(0 0 2px rgba(248, 216, 120, 0.35));
 }
+
+
+/* =========================================
+   HOVER
+========================================= */
 
 .paint-strokes__social-links a:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.28);
+
+    background: #0a6b50;
+
+    border-color: #fff0a8;
+
+    box-shadow:
+        0 5px 12px rgba(75, 45, 28, 0.25),
+        0 0 8px rgba(248, 216, 120, 0.25);
 }
+
+
+/* =========================================
+   HASHTAG
+========================================= */
 
 .paint-strokes__hashtag {
-    color: #ffffff;
+    margin: 0;
 
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    font-weight: 900;
+
+    letter-spacing: 0.7px;
+
+    color: #4b2d1c;
+
+    -webkit-text-fill-color: #4b2d1c;
+
+    background: none;
+
+    filter: none;
 }
-
 
 /* =========================================
    FAMILY INVITATION
@@ -608,25 +762,35 @@
     width: 380px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     text-align: center;
 
     pointer-events: none;
 }
-.bloomtown-hero__invitation span:not(.bloomtown-hero__invitation-heart) {
+
+
+.bloomtown-hero__invitation span:not(
+    .bloomtown-hero__invitation-heart
+) {
     font-family: "Cormorant Garamond", Georgia, serif;
 
     font-size: 1.45rem;
+
     font-weight: 400;
+
     font-style: italic;
 
     text-transform: uppercase;
+
     letter-spacing: 2px;
 
     line-height: 1.1;
 }
+
 
 .bloomtown-hero__invitation strong {
     margin-top: 3px;
@@ -634,23 +798,164 @@
     font-family: "Cormorant Garamond", Georgia, serif;
 
     font-size: 2.15rem;
+
     font-weight: 800;
+
     font-style: italic;
 
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 
     line-height: 1;
 
-    background: linear-gradient(
-        135deg,
-        #fff4b8,
-        #d4a017,
-        #f8d878,
-        #b8860b
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #fff4b8,
+            #d4a017,
+            #f8d878,
+            #b8860b
+        );
 
     -webkit-background-clip: text;
+
     background-clip: text;
+
     -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 700px) {
+
+    .bloomtown-mentors {
+        padding: 60px 0 70px;
+        overflow: hidden;
+    }
+
+    .bloomtown-mentors__header {
+        max-width: 330px;
+        margin: 0 auto 35px;
+        padding: 0 18px;
+    }
+
+    .bloomtown-mentors__eyebrow {
+        margin-bottom: 10px;
+        font-size: 0.58rem;
+        letter-spacing: 2px;
+    }
+
+    .bloomtown-mentors__title {
+        font-size: 2.3rem;
+        line-height: 0.98;
+    }
+
+    .bloomtown-mentors__intro {
+        margin-top: 14px;
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+
+    /* =========================================
+       MOBILE CAROUSEL
+    ========================================= */
+
+    .bloomtown-mentors__rail {
+        width: 100%;
+        overflow: hidden;
+        padding: 15px 0 25px;
+    }
+
+
+    /* REMOVE DESKTOP TIMELINE */
+
+    .bloomtown-mentors__line {
+        display: none;
+    }
+
+
+    /* =========================================
+       INFINITE TRACK
+    ========================================= */
+
+    .bloomtown-mentors__list {
+        width: max-content;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 25px;
+
+        animation:
+            mentorsInfiniteScroll 28s linear infinite;
+    }
+
+
+    .bloomtown-mentors__mentor {
+        width: 135px;
+        flex: 0 0 135px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .bloomtown-mentors__portrait {
+        width: 125px;
+        height: 125px;
+
+        padding: 5px;
+
+        box-shadow:
+            0 10px 22px rgba(75, 45, 28, 0.15);
+    }
+
+
+    .bloomtown-mentors__portrait::after {
+        inset: 4px;
+    }
+
+
+    .bloomtown-mentors__mentor h3 {
+        margin: 15px 0 4px;
+
+        font-size: 1.05rem;
+        line-height: 1.05;
+    }
+
+
+    .bloomtown-mentors__mentor p {
+        font-size: 0.5rem;
+
+        letter-spacing: 0.8px;
+
+        line-height: 1.2;
+    }
+
+
+    @keyframes mentorsInfiniteScroll {
+
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(
+                calc(-50% - 12.5px)
+            );
+        }
+    }
+
+
+    .bloomtown-mentors__mentor:hover .bloomtown-mentors__portrait {
+        transform: none;
+
+        box-shadow:
+            0 10px 22px rgba(75, 45, 28, 0.15);
+    }
 }

@@ -4,7 +4,7 @@ import About from "../bloomtown_pages_components/sections/About/About";
 import Hero from "../bloomtown_pages_components/sections/Hero/Hero";
 import MonthlyBloomSessions from "../bloomtown_pages_components/sections/MonthlyBloomSessions/MonthlyBloomSessions";
 import Mentors from "../bloomtown_pages_components/sections/Mentors/Mentors";
-import SummerCamp from "../bloomtown_pages_components/sections/SummerCamp";
+import SummerCamp from "../bloomtown_pages_components/sections/SummerCamp/SummerCamp";
 import TalentGallery from "../bloomtown_pages_components/sections/TalentGallery/TalentGallery";
 import Bloompartner from "../bloomtown_pages_components/sections/Bloompartners/Bloompartners";
 import AgeDistricts from "../bloomtown_pages_components/sections/AgeDistricts/AgeDistricts";

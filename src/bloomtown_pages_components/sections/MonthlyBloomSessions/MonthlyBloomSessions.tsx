@@ -68,7 +68,6 @@ function MonthlyBloomSessions() {
 
                 {/* Extended numberline */}
                 <div className="bloomtown-monthly__line" />
-
                 <div className="bloomtown-monthly__sessions">
 
                     {sessions.map((session) => {
@@ -84,9 +83,7 @@ function MonthlyBloomSessions() {
                                 {/* Number + dot */}
                                 <div className="bloomtown-monthly__marker">
 
-                                    <span className="bloomtown-monthly__number">
-                                        {session.number}
-                                    </span>
+                                    
 
                                     <div className="bloomtown-monthly__dot">
                                         <div className="bloomtown-monthly__dot-inner" />
