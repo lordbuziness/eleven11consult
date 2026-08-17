@@ -1,11 +1,3 @@
-/* =========================================
-   FONT
-========================================= */
-
-/* =========================================
-   CONTAINER
-========================================= */
-
 .paint-strokes {
     display: flex;
     flex-direction: column;
@@ -16,11 +8,6 @@
 
     transform: translateX(-50px);
 }
-
-
-/* =========================================
-   FEATURE
-========================================= */
 
 .paint-stroke {
     position: relative;
@@ -35,11 +22,6 @@
 
     animation: featureAppear 0.5s ease forwards;
 }
-
-
-/* =========================================
-   STAGGER
-========================================= */
 
 .paint-stroke:nth-child(1) {
     animation-delay: 0.2s;
@@ -80,10 +62,11 @@
     align-items: center;
     justify-content: center;
 
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.95);
 
     box-shadow:
-        0 8px 20px rgba(255, 255, 255, 0.28);
+        0 6px 16px rgba(0, 0, 0, 0.22),
+        0 0 8px rgba(255, 255, 255, 0.2);
 
     transform: scale(0);
 
@@ -114,7 +97,6 @@
     animation-delay: 0.65s;
 }
 
-
 .paint-stroke__icon svg {
     width: 25px;
     height: 25px;
@@ -124,16 +106,23 @@
 
 
 /* =========================================
-   GLASS CARD
-   FADED NEAR CIRCLE → MATERIALIZES RIGHT
+   CELEBRATE ICON — GOLD ONLY
 ========================================= */
 
+.paint-stroke--gold .paint-stroke__icon,
+.paint-stroke--gold .paint-stroke__icon svg {
+    color: #d4a017;
+    stroke: #d4a017;
+}
+
+
 /* =========================================
-   GLASS CARD
+   CARD
 ========================================= */
 
 .paint-stroke__card {
     position: relative;
+
     z-index: 1;
 
     flex: 0 0 300px;
@@ -147,14 +136,14 @@
 
     border-radius: 16px;
 
-    border: 1px solid rgba(255, 255, 255, 0.32);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     box-shadow:
-        0 8px 24px rgba(255, 255, 255, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        0 6px 18px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
     opacity: 0;
 
@@ -167,6 +156,7 @@
 
     overflow: hidden;
 }
+
 
 /* =========================================
    CARD STAGGER
@@ -209,8 +199,6 @@
     opacity: 0;
 
     animation: textFade 0.5s ease forwards;
-
-    animation-delay: 1.35s;
 }
 
 
@@ -242,11 +230,11 @@
 /* PLAY — BLOOMTOWN EMERALD */
 
 .paint-stroke--emerald .paint-stroke__circle {
-    background: #2e8b57;
+    background: #07543f;
 }
 
 
-/* SHOP — METALLIC GOLD */
+/* SHOP — GOLD */
 
 .paint-stroke--orange .paint-stroke__circle {
     background: linear-gradient(
@@ -259,7 +247,7 @@
 }
 
 
-/* CONNECT — METALLIC BROWN */
+/* CONNECT — BROWN */
 
 .paint-stroke--brown .paint-stroke__circle {
     background: linear-gradient(
@@ -280,16 +268,17 @@
 
 
 /* =========================================
-   CARD COLORS
+   PLAY — BLOOMTOWN EMERALD
 ========================================= */
 
-
-/* -----------------------------------------
-   PLAY — EMERALD GLASS
------------------------------------------ */
-
 .paint-stroke--emerald .paint-stroke__card {
-    background: rgba(46, 139, 87, 0.22);
+    background: rgba(7, 84, 63, 0.78);
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 6px 18px rgba(7, 84, 63, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .paint-stroke--emerald .paint-stroke__card span {
@@ -297,24 +286,24 @@
 }
 
 
-/* -----------------------------------------
+/* =========================================
    SHOP — METALLIC GOLD
------------------------------------------ */
+========================================= */
 
 .paint-stroke--orange .paint-stroke__card {
     background: linear-gradient(
         135deg,
-        rgba(255, 244, 184, 0.72),
-        rgba(212, 160, 23, 0.78),
-        rgba(248, 216, 120, 0.72),
-        rgba(184, 134, 11, 0.78)
+        rgba(255, 244, 184, 0.88),
+        rgba(212, 160, 23, 0.92),
+        rgba(248, 216, 120, 0.88),
+        rgba(184, 134, 11, 0.92)
     );
 
-    border-color: rgba(255, 244, 184, 0.6);
+    border-color: rgba(255, 244, 184, 0.85);
 
     box-shadow:
-        0 8px 24px rgba(212, 160, 23, 0.22),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 7px 20px rgba(212, 160, 23, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 .paint-stroke--orange .paint-stroke__card span {
@@ -322,24 +311,24 @@
 }
 
 
-/* -----------------------------------------
-   CONNECT — METALLIC BROWN
------------------------------------------ */
+/* =========================================
+   CONNECT — BROWN
+========================================= */
 
 .paint-stroke--brown .paint-stroke__card {
     background: linear-gradient(
         135deg,
-        rgba(138, 98, 73, 0.75),
-        rgba(75, 45, 28, 0.82),
-        rgba(168, 121, 85, 0.75),
-        rgba(50, 26, 16, 0.82)
+        rgba(138, 98, 73, 0.88),
+        rgba(75, 45, 28, 0.94),
+        rgba(168, 121, 85, 0.88),
+        rgba(50, 26, 16, 0.94)
     );
 
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
 
     box-shadow:
-        0 8px 24px rgba(50, 26, 16, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        0 7px 20px rgba(50, 26, 16, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .paint-stroke--brown .paint-stroke__card span {
@@ -347,18 +336,18 @@
 }
 
 
-/* -----------------------------------------
-   CELEBRATE — WHITE GLASS
------------------------------------------ */
+/* =========================================
+   CELEBRATE — WHITE + GOLD
+========================================= */
 
 .paint-stroke--gold .paint-stroke__card {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.94);
 
-    border-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 1);
 
     box-shadow:
-        0 8px 24px rgba(255, 255, 255, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        0 7px 20px rgba(255, 255, 255, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .paint-stroke--gold .paint-stroke__card span {
@@ -374,7 +363,7 @@
     transform: translateX(6px);
 
     box-shadow:
-        0 10px 28px rgba(255, 255, 255, 0.28),
+        0 10px 28px rgba(0, 0, 0, 0.24),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -393,7 +382,6 @@
     }
 }
 
-
 @keyframes iconDrop {
     from {
         transform: translateY(-12px);
@@ -405,7 +393,6 @@
         opacity: 1;
     }
 }
-
 
 @keyframes cardReveal {
     from {
@@ -419,7 +406,6 @@
     }
 }
 
-
 @keyframes textFade {
     from {
         opacity: 0;
@@ -432,7 +418,6 @@
     }
 }
 
-
 @keyframes featureAppear {
     from {
         opacity: 0;
@@ -444,64 +429,44 @@
 }
 
 
-/* =========================================
-   MOBILE PAINT STROKES
-========================================= */
 
 @media (max-width: 700px) {
 
-    .paint-strokes {
-        width: 290px;
-        max-width: 90vw;
+    .bloomtown-hero__image {
+        position: absolute;
+        inset: 0;
 
-        transform: scale(0.78);
-        transform-origin: center;
+        width: 100%;
+        height: 100%;
 
-        margin: -18px 0 -20px;
-    }
+        object-fit: cover;
+        object-position: center top;
 
-    .paint-stroke {
-        transform-origin: center;
-    }
+        z-index: 0;
 
-    .paint-stroke__circle {
-        width: 52px;
-        height: 52px;
-    }
+        /* KEEP BOTTOM FADE */
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 65%,
+            rgba(0, 0, 0, 0.9) 75%,
+            rgba(0, 0, 0, 0.65) 85%,
+            rgba(0, 0, 0, 0.3) 93%,
+            transparent 100%
+        );
 
-    .paint-stroke__icon {
-        width: 30px;
-        height: 30px;
-    }
+        mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 65%,
+            rgba(0, 0, 0, 0.9) 75%,
+            rgba(0, 0, 0, 0.65) 85%,
+            rgba(0, 0, 0, 0.3) 93%,
+            transparent 100%
+        );
 
-    .paint-stroke__icon svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .paint-stroke__card {
-        min-width: 105px;
-        height: 38px;
-
-        padding: 0 12px;
-    }
-
-    .paint-stroke__card span {
-        font-size: 0.65rem;
-        letter-spacing: 1px;
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
     }
 }
 
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 380px) {
-
-    .paint-strokes {
-        transform: scale(0.68);
-
-        margin: -25px 0 -27px;
-    }
-}

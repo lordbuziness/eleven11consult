@@ -1,5 +1,4 @@
 
-import { useEffect, useState } from "react";
 import "./Bloompartners.css";
 
 import logo1 from "../../../assets/images/logo1.svg";
@@ -37,57 +36,18 @@ const partners = [
 ];
 
 function Bloompartner() {
-    const [visiblePartners, setVisiblePartners] = useState(() =>
-        partners.slice(0, 3)
-    );
-
-    const [isSliding, setIsSliding] = useState(false);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsSliding(true);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        if (!isSliding) return;
-
-        const timer = setTimeout(() => {
-            setVisiblePartners((current) => {
-
-                const currentNames = current.map(
-                    (partner) => partner.name
-                );
-
-                const nextPartner =
-                    partners.find(
-                        (partner) =>
-                            !currentNames.includes(partner.name)
-                    );
-
-                if (!nextPartner) {
-                    return current;
-                }
-
-                return [
-                    current[1],
-                    current[2],
-                    nextPartner,
-                ];
-            });
-
-            setIsSliding(false);
-        }, 900);
-
-        return () => clearTimeout(timer);
-    }, [isSliding]);
+    /*
+     * Duplicate the partners so the conveyor can
+     * continuously move without a visible reset.
+     */
+    const conveyorPartners = [...partners, ...partners];
 
     return (
         <section className="bloomtown-partners">
 
-            {/* HEADER */}
+            {/* =========================================
+                HEADER
+            ========================================= */}
 
             <div className="bloomtown-partners__header">
 
@@ -109,51 +69,41 @@ function Bloompartner() {
             </div>
 
 
-            {/* CAROUSEL */}
+            {/* =========================================
+                INFINITE CONVEYOR
+            ========================================= */}
 
             <div className="bloomtown-partners__viewport">
 
-                <div
-                    className={`bloomtown-partners__track ${
-                        isSliding
-                            ? "bloomtown-partners__track--sliding"
-                            : ""
-                    }`}
-                >
+                <div className="bloomtown-partners__track">
 
-                    {visiblePartners.map(
-                        (partner, index) => (
+                    {conveyorPartners.map((partner, index) => (
 
-                            <article
-                                className={`bloomtown-partners__card ${
-                                    index === 1
-                                        ? "bloomtown-partners__card--center"
-                                        : ""
-                                }`}
-                                key={partner.name}
-                            >
+                        <article
+                            className="bloomtown-partners__card"
+                            key={`${partner.name}-${index}`}
+                        >
 
-                                <div className="bloomtown-partners__card-inner">
+                            <div className="bloomtown-partners__card-inner">
 
-                                    <div className="bloomtown-partners__logo-circle">
+                                <div className="bloomtown-partners__logo-circle">
 
-                                        <img
-                                            src={partner.logo}
-                                            alt={`${partner.name} logo`}
-                                        />
-
-                                    </div>
-
-                                    <span className="bloomtown-partners__partner-name">
-                                        {partner.name}
-                                    </span>
+                                    <img
+                                        src={partner.logo}
+                                        alt={`${partner.name} logo`}
+                                    />
 
                                 </div>
 
-                            </article>
+                                <span className="bloomtown-partners__partner-name">
+                                    {partner.name}
+                                </span>
 
-                        )
-                    )}
+                            </div>
+
+                        </article>
+
+                    ))}
 
                 </div>
 
@@ -164,3 +114,4 @@ function Bloompartner() {
 }
 
 export default Bloompartner;
+

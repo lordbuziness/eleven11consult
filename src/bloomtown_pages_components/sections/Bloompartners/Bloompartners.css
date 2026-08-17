@@ -1,12 +1,15 @@
+
 /* =========================================
    BLOOMTOWN PARTNERS
 ========================================= */
 
 .bloomtown-partners {
     width: 100%;
-    padding: 120px 6% 130px;
+
+    padding: 120px 0 130px;
 
     box-sizing: border-box;
+
     overflow: hidden;
 
     background:
@@ -28,7 +31,11 @@
 
     margin: 0 auto 65px;
 
+    padding: 0 6%;
+
     text-align: center;
+
+    box-sizing: border-box;
 }
 
 
@@ -40,6 +47,7 @@
     color: #a8780f;
 
     font-size: 0.7rem;
+
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -89,52 +97,93 @@
 ========================================= */
 
 .bloomtown-partners__viewport {
-    width: min(1080px, 88vw);
-
-    margin: 0 auto;
+    width: 100%;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 
 /* =========================================
-   TRACK
+   EDGE FADE
+========================================= */
+
+.bloomtown-partners__viewport::before,
+.bloomtown-partners__viewport::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 10%;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.bloomtown-partners__viewport::before {
+    left: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f8f3e8,
+            rgba(248, 243, 232, 0)
+        );
+}
+
+
+.bloomtown-partners__viewport::after {
+    right: 0;
+
+    background:
+        linear-gradient(
+            270deg,
+            #f8f3e8,
+            rgba(248, 243, 232, 0)
+        );
+}
+
+
+/* =========================================
+   INFINITE TRACK
 ========================================= */
 
 .bloomtown-partners__track {
-
     display: flex;
 
-    /*
-     * 4 cards physically exist in the track.
-     *
-     * 3 are visible.
-     * 1 waits outside the right edge.
-     */
+    width: max-content;
 
-    width: 133.333333%;
-
-    transform: translateX(0);
+    align-items: stretch;
 
     will-change: transform;
+
+    animation:
+        partnersConveyor 28s linear infinite;
 }
 
 
-/* =========================================
-   SLIDE
-========================================= */
+/*
+ * Six partners exist in the first half
+ * and the exact same six exist in the second half.
+ *
+ * Moving exactly 50% creates the seamless loop.
+ */
 
-.bloomtown-partners__track--moving {
+@keyframes partnersConveyor {
 
-    transform: translateX(-25%);
+    from {
+        transform: translateX(0);
+    }
 
-    transition:
-        transform 0.9s cubic-bezier(
-            0.4,
-            0,
-            0.2,
-            1
-        );
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -143,54 +192,18 @@
 ========================================= */
 
 .bloomtown-partners__card {
+    flex: 0 0 300px;
 
-    /*
-     * Four cards in the physical track.
-     */
-
-    flex: 0 0 25%;
-
-    width: 25%;
+    width: 300px;
 
     padding: 12px;
 
     box-sizing: border-box;
-
-    transition:
-        transform 0.7s ease,
-        opacity 0.7s ease;
 }
 
 
 /* =========================================
-   CENTER CARD
-========================================= */
-
-.bloomtown-partners__card--center {
-
-    position: relative;
-
-    z-index: 3;
-
-    transform: scale(1.04);
-}
-
-
-/* =========================================
-   SIDE CARDS
-========================================= */
-
-.bloomtown-partners__card:not(
-    .bloomtown-partners__card--center
-) {
-
-    opacity: 0.82;
-
-    transform: scale(0.96);
-}
-
-/* =========================================
-   CARD INNER — BLOOMTOWN GREEN
+   CARD INNER
 ========================================= */
 
 .bloomtown-partners__card-inner {
@@ -199,9 +212,11 @@
     height: 180px;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 14px;
@@ -224,11 +239,29 @@
         inset 0 -3px 8px rgba(23, 107, 61, 0.3);
 
     overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 /* =========================================
-   SUBTLE GOLD SHINE
+   HOVER
+========================================= */
+
+.bloomtown-partners__card:hover
+.bloomtown-partners__card-inner {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(46, 139, 87, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================
+   GOLD SHINE
 ========================================= */
 
 .bloomtown-partners__card-inner::before {
@@ -252,10 +285,12 @@
 
     transform: skewX(-20deg);
 
-    animation: partnerShine 6s ease-in-out infinite;
+    animation:
+        partnerShine 6s ease-in-out infinite;
 
     pointer-events: none;
 }
+
 
 @keyframes partnerShine {
 
@@ -274,7 +309,7 @@
 
 
 /* =========================================
-   GOLD LOGO CIRCLE
+   LOGO CIRCLE
 ========================================= */
 
 .bloomtown-partners__logo-circle {
@@ -350,6 +385,7 @@
     text-transform: uppercase;
 }
 
+
 /* =========================================
    TABLET
 ========================================= */
@@ -357,23 +393,24 @@
 @media (max-width: 800px) {
 
     .bloomtown-partners {
-        padding: 90px 25px 100px;
+        padding: 90px 0 100px;
     }
 
-    .bloomtown-partners__viewport {
-        width: calc(100vw - 50px);
+    .bloomtown-partners__header {
+        margin-bottom: 45px;
     }
 
     .bloomtown-partners__card {
-        flex: 0 0 calc((100vw - 50px) / 3);
+        flex-basis: 240px;
 
-        width: calc((100vw - 50px) / 3);
+        width: 240px;
 
         padding: 8px;
     }
 
     .bloomtown-partners__card-inner {
         height: 150px;
+
         border-radius: 20px;
     }
 
@@ -386,6 +423,10 @@
         width: 44px;
         height: 44px;
     }
+
+    .bloomtown-partners__track {
+        animation-duration: 24s;
+    }
 }
 
 
@@ -396,11 +437,13 @@
 @media (max-width: 600px) {
 
     .bloomtown-partners {
-        padding: 75px 18px 85px;
+        padding: 75px 0 85px;
     }
 
     .bloomtown-partners__header {
         margin-bottom: 40px;
+
+        padding: 0 18px;
     }
 
     .bloomtown-partners__title {
@@ -411,14 +454,10 @@
         font-size: 0.88rem;
     }
 
-    .bloomtown-partners__viewport {
-        width: calc(100vw - 36px);
-    }
-
     .bloomtown-partners__card {
-        flex: 0 0 calc((100vw - 36px) / 3);
+        flex-basis: 190px;
 
-        width: calc((100vw - 36px) / 3);
+        width: 190px;
 
         padding: 6px;
     }
@@ -445,6 +484,24 @@
 
     .bloomtown-partners__partner-name {
         font-size: 0.72rem;
+
         letter-spacing: 0.7px;
     }
+
+    .bloomtown-partners__track {
+        animation-duration: 20s;
+    }
 }
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .bloomtown-partners__track {
+        animation: none;
+    }
+}
+
