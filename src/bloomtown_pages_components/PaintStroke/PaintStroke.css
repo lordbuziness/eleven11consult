@@ -442,3 +442,66 @@
         opacity: 1;
     }
 }
+
+
+/* =========================================
+   MOBILE PAINT STROKES
+========================================= */
+
+@media (max-width: 700px) {
+
+    .paint-strokes {
+        width: 290px;
+        max-width: 90vw;
+
+        transform: scale(0.78);
+        transform-origin: center;
+
+        margin: -18px 0 -20px;
+    }
+
+    .paint-stroke {
+        transform-origin: center;
+    }
+
+    .paint-stroke__circle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .paint-stroke__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paint-stroke__icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .paint-stroke__card {
+        min-width: 105px;
+        height: 38px;
+
+        padding: 0 12px;
+    }
+
+    .paint-stroke__card span {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .paint-strokes {
+        transform: scale(0.68);
+
+        margin: -25px 0 -27px;
+    }
+}

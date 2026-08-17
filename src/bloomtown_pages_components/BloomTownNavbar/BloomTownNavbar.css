@@ -38,14 +38,13 @@
         0 8px 25px rgba(180, 120, 20, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
-    /* Fade behavior */
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-transition:
-    opacity 0.4s ease,
-    visibility 0.4s ease;
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
 }
 
 
@@ -64,6 +63,7 @@ transition:
     visibility: hidden;
     pointer-events: none;
 }
+
 
 /* =========================================
    LOGO
@@ -91,12 +91,15 @@ transition:
 
 
 /* =========================================
-   HAMBURGER
+   HAMBURGER BUTTON
+   GOLD CIRCLE / BROWN ICON
 ========================================= */
 
 .bloomtown-navbar__menu {
-    width: 38px;
-    height: 38px;
+    position: relative;
+
+    width: 40px;
+    height: 40px;
 
     padding: 0;
 
@@ -106,34 +109,57 @@ transition:
 
     flex-shrink: 0;
 
-    border: 1px solid rgba(75, 45, 28, 0.25);
+    border: 2px solid #b8860b;
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.35);
+    /* Metallic gold */
+    background:
+        linear-gradient(
+            135deg,
+            #a8780f 0%,
+            #d4a017 20%,
+            #fff0a8 42%,
+            #d4a017 60%,
+            #f8d878 78%,
+            #a8780f 100%
+        );
 
     color: #4b2d1c;
 
     cursor: pointer;
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 5px 14px rgba(75, 45, 28, 0.20),
+        0 0 12px rgba(212, 160, 23, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -1px 0 rgba(75, 45, 28, 0.25);
 
     transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+        transform 0.25s ease,
+        filter 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
 /* =========================================
-   ICON
+   HAMBURGER ICON
 ========================================= */
 
 .bloomtown-navbar__menu svg {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
 
-    stroke-width: 2;
+    color: #4b2d1c;
+
+    stroke: #4b2d1c;
+
+    stroke-width: 2.8;
+
+    filter:
+        drop-shadow(
+            0 1px 1px rgba(255, 255, 255, 0.35)
+        );
 }
 
 
@@ -142,9 +168,23 @@ transition:
 ========================================= */
 
 .bloomtown-navbar__menu:hover {
-    background: rgba(255, 255, 255, 0.65);
+    transform: scale(1.08);
 
-    transform: scale(1.05);
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 8px 20px rgba(75, 45, 28, 0.25),
+        0 0 18px rgba(248, 216, 120, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.bloomtown-navbar__menu:active {
+    transform: scale(0.96);
 }
 
 
@@ -169,8 +209,8 @@ transition:
     }
 
     .bloomtown-navbar__menu {
-        width: 36px;
-        height: 36px;
+        width: 37px;
+        height: 37px;
     }
 
     .bloomtown-navbar__menu svg {
@@ -194,5 +234,15 @@ transition:
 
     .bloomtown-navbar__logo img {
         width: 92px;
+    }
+
+    .bloomtown-navbar__menu {
+        width: 36px;
+        height: 36px;
+    }
+
+    .bloomtown-navbar__menu svg {
+        width: 18px;
+        height: 18px;
     }
 }

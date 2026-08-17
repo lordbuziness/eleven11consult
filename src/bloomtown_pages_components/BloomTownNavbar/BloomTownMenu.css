@@ -1,0 +1,660 @@
+/* =========================================
+   BLOOMTOWN MENU
+   RIGHT SIDE DRAWER
+========================================= */
+
+.bloomtown-menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 40%;
+    height: 100vh;
+
+    z-index: 10000;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    color: #4b2d1c;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 255, 255, 0.45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(184, 134, 11, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0a8 0%,
+            #f8d878 28%,
+            #d4a017 60%,
+            #b8860b 100%
+        );
+
+    border-left:
+        1px solid rgba(75, 45, 28, 0.35);
+
+    box-shadow:
+        -15px 0 45px rgba(75, 45, 28, 0.25);
+
+    animation:
+        bloomtownMenuSlideIn 0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* =========================================
+   SLIDE IN
+========================================= */
+
+@keyframes bloomtownMenuSlideIn {
+
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   DECORATIVE GLOWS
+========================================= */
+
+.bloomtown-menu__glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.bloomtown-menu__glow--one {
+    width: 350px;
+    height: 350px;
+
+    top: -170px;
+    left: -180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.45),
+            transparent 70%
+        );
+}
+
+
+.bloomtown-menu__glow--two {
+    width: 450px;
+    height: 450px;
+
+    right: -250px;
+    bottom: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(75, 45, 28, 0.18),
+            transparent 70%
+        );
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bloomtown-menu__header {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 22px 30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.bloomtown-menu__logo-button {
+    width: 130px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.bloomtown-menu__logo-button img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.bloomtown-menu__close {
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #4b2d1c;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0a8,
+            #d4a017,
+            #b8860b
+        );
+
+    color: #4b2d1c;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(75, 45, 28, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.bloomtown-menu__close svg {
+    width: 21px;
+    height: 21px;
+
+    stroke-width: 2.5;
+}
+
+
+.bloomtown-menu__close:hover {
+    transform: rotate(90deg) scale(1.06);
+
+    box-shadow:
+        0 10px 25px rgba(75, 45, 28, 0.28),
+        0 0 16px rgba(255, 240, 168, 0.55);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.bloomtown-menu__content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 82%;
+
+    margin: auto;
+
+    padding: 30px 0 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.bloomtown-menu__eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #6b421f;
+
+    font-size: 0.62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2.5px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.bloomtown-menu__title {
+    margin: 0 0 28px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        5rem
+    );
+
+    font-weight: 700;
+
+    line-height: 0.82;
+
+    letter-spacing: -1.5px;
+
+    color: #4b2d1c;
+}
+
+
+.bloomtown-menu__title em {
+    display: block;
+
+    color: #07543f;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.bloomtown-menu__nav {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.bloomtown-menu__nav button {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 7px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        35px
+        1fr
+        25px;
+
+    align-items: center;
+
+    text-align: left;
+
+    border: none;
+
+    border-top:
+        1px solid rgba(75, 45, 28, 0.22);
+
+    background: transparent;
+
+    color: #4b2d1c;
+
+    cursor: pointer;
+
+    transition:
+        padding 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.bloomtown-menu__nav button:last-child {
+    border-bottom:
+        1px solid rgba(75, 45, 28, 0.22);
+}
+
+
+.bloomtown-menu__nav button span {
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    color: #8c6417;
+}
+
+
+.bloomtown-menu__nav button strong {
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.bloomtown-menu__nav button svg {
+    width: 17px;
+    height: 17px;
+
+    color: #07543f;
+
+    opacity: 0;
+
+    transform: translateX(-6px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.bloomtown-menu__nav button:hover {
+    padding-left: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.bloomtown-menu__nav button:hover svg {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.bloomtown-menu__cta {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 14px 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4b2d1c,
+            #6b421f
+        );
+
+    color: #fff0a8;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(75, 45, 28, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.bloomtown-menu__cta span {
+    font-size: 0.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+}
+
+
+.bloomtown-menu__cta svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.bloomtown-menu__cta:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 32px rgba(75, 45, 28, 0.3);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.bloomtown-menu__footer {
+    position: relative;
+
+    z-index: 2;
+
+    width: 82%;
+
+    margin: 0 auto;
+
+    padding: 18px 0 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-top:
+        1px solid rgba(75, 45, 28, 0.2);
+
+    color: #6b421f;
+
+    font-size: 0.6rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.bloomtown-menu__socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.bloomtown-menu__socials a {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4b2d1c;
+
+    color: #f8d878;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bloomtown-menu__socials a:hover {
+    transform: translateY(-3px);
+
+    background: #07543f;
+}
+
+
+.bloomtown-menu__socials svg {
+    width: 13px;
+    height: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .bloomtown-menu {
+        width: 55%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .bloomtown-menu {
+        width: 82%;
+    }
+
+
+    .bloomtown-menu__header {
+        padding: 15px 20px;
+    }
+
+
+    .bloomtown-menu__logo-button {
+        width: 110px;
+    }
+
+
+    .bloomtown-menu__close {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .bloomtown-menu__content {
+        width: calc(100% - 40px);
+
+        padding: 20px 0 30px;
+    }
+
+
+    .bloomtown-menu__title {
+        font-size: 3.2rem;
+
+        margin-bottom: 22px;
+    }
+
+
+    .bloomtown-menu__nav button {
+        min-height: 52px;
+    }
+
+
+    .bloomtown-menu__nav button strong {
+        font-size: 1.3rem;
+    }
+
+
+    .bloomtown-menu__nav button svg {
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    .bloomtown-menu__footer {
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .bloomtown-menu {
+        width: 88%;
+    }
+
+    .bloomtown-menu__title {
+        font-size: 2.8rem;
+    }
+
+    .bloomtown-menu__nav button strong {
+        font-size: 1.2rem;
+    }
+}

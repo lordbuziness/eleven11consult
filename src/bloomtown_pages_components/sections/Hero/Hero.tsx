@@ -1,6 +1,6 @@
 import "./Hero.css";
 
-import bloomHero from "../../asset/images/Bloomhero.jpg";
+import bloomMobileHero from "../../../assets/images/Bloommobilehero.jpg";
 import bloomLogo from "../../asset/images/bloomlogo.svg";
 
 import {
@@ -19,21 +19,58 @@ import PaintStrokes from "../../PaintStroke/PaintStroke";
 import BloomTownNavbar from "../../BloomTownNavbar/BloomTownNavbar";
 
 
+const eventDetails = [
+    {
+        label: "DATE",
+        value: "Sat, Oct 3, 2026",
+        icon: CalendarDays,
+    },
+    {
+        label: "TIME",
+        value: "1:00 PM",
+        icon: Clock3,
+    },
+    {
+        label: "VENUE",
+        value: "Sam Shonibare Playground, Surulere",
+        icon: MapPin,
+    },
+    {
+        label: "INQUIRIES",
+        value: "09166425251",
+        icon: Phone,
+    },
+];
+
+const tickets = [
+    {
+        name: "Adult",
+        price: "₦10,000",
+        link: "https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---adult-ticket-nbzfnh",
+    },
+    {
+        name: "Child (4–17)",
+        price: "₦5,000",
+        link: "https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---childrens-ticket-yctrmc",
+    },
+];
+
+
 function Hero() {
     return (
-        <section className="bloomtown-hero">
+        <section className="bloomtown-hero" id="top">
 
             {/* NAVBAR */}
             <BloomTownNavbar />
 
-            {/* HERO IMAGE */}
+            {/* BACKGROUND */}
             <img
-                src={bloomHero}
+                src={bloomMobileHero}
                 alt=""
                 className="bloomtown-hero__image"
             />
 
-            {/* HERO CONTENT */}
+            {/* CONTENT */}
             <div className="bloomtown-hero__content">
 
                 {/* SLOGAN */}
@@ -41,7 +78,7 @@ function Hero() {
                     One Day. One Community. Endless Memories.
                 </p>
 
-                {/* BLOOMTOWN LOGO */}
+                {/* LOGO */}
                 <div className="bloomtown-hero__card">
                     <img
                         src={bloomLogo}
@@ -56,7 +93,8 @@ function Hero() {
                     <PaintStrokes />
 
                     <p className="paint-strokes__description">
-                        A day of family fun, shopping, networking & unforgettable memories!
+                        A day of family fun, shopping, networking &
+                        unforgettable memories!
                     </p>
 
                     <div className="paint-strokes__social">
@@ -88,169 +126,66 @@ function Hero() {
                         </span>
 
                     </div>
-
                 </div>
 
 
-                {/* FAMILY INVITATION */}
-                <div className="bloomtown-hero__invitation">
-
-                    <span>
-                        Bring Your
-                    </span>
-
-                    <span className="bloomtown-hero__invitation-heart">
-                        ♥
-                    </span>
-
-                    <strong>
-                        Family And Friends
-                    </strong>
-
-                </div>
-
-
-                {/* =========================================
-                    EVENT + TICKETS
-                ========================================= */}
-
+                {/* EVENT + TICKETS */}
                 <div className="bloomtown-hero__event-wrapper">
 
-                    {/* EVENT INFORMATION CARD */}
-
+                    {/* EVENT INFORMATION */}
                     <div className="bloomtown-hero__event-card">
 
                         <div className="bloomtown-hero__event-details">
 
-                            <div className="bloomtown-hero__event-detail">
+                            {eventDetails.map(
+                                ({ label, value, icon: Icon }) => (
+                                    <div
+                                        className="bloomtown-hero__event-detail"
+                                        key={label}
+                                    >
+                                        <Icon className="bloomtown-hero__event-icon" />
 
-                                <CalendarDays className="bloomtown-hero__event-icon" />
+                                        <div>
+                                            <span className="bloomtown-hero__event-label">
+                                                {label}
+                                            </span>
 
-                                <div>
-                                    <span className="bloomtown-hero__event-label">
-                                        DATE
-                                    </span>
-
-                                    <strong>
-                                        Sat, Oct 3, 2026
-                                    </strong>
-                                </div>
-
-                            </div>
-
-
-                            <div className="bloomtown-hero__event-detail">
-
-                                <Clock3 className="bloomtown-hero__event-icon" />
-
-                                <div>
-                                    <span className="bloomtown-hero__event-label">
-                                        TIME
-                                    </span>
-
-                                    <strong>
-                                        1:00 PM
-                                    </strong>
-                                </div>
-
-                            </div>
-
-
-                            <div className="bloomtown-hero__event-detail">
-
-                                <MapPin className="bloomtown-hero__event-icon" />
-
-                                <div>
-                                    <span className="bloomtown-hero__event-label">
-                                        VENUE
-                                    </span>
-
-                                    <strong>
-                                        Sam Shonibare Playground, Surulere
-                                    </strong>
-                                </div>
-
-                            </div>
-
-
-                            <div className="bloomtown-hero__event-detail">
-
-                                <Phone className="bloomtown-hero__event-icon" />
-
-                                <div>
-                                    <span className="bloomtown-hero__event-label">
-                                        INQUIRIES
-                                    </span>
-
-                                    <strong>
-                                        09166425251
-                                    </strong>
-                                </div>
-
-                            </div>
+                                            <strong>{value}</strong>
+                                        </div>
+                                    </div>
+                                )
+                            )}
 
                         </div>
-
                     </div>
 
-
-                    {/* =========================================
-                        TICKET CARD
-                    ========================================= */}
-
+                    {/* TICKETS */}
                     <div className="bloomtown-hero__ticket-card">
 
                         <h3 className="bloomtown-hero__tickets-title">
                             TICKET PRICING
                         </h3>
 
-
                         <div className="bloomtown-hero__ticket-buttons">
 
-                            <a
-                                className="bloomtown-hero__ticket"
-                                href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---adult-ticket-nbzfnh"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span>
-                                    Adult
-                                </span>
-
-                                <strong>
-                                    ₦10,000
-                                </strong>
-                            </a>
-
-
-                            <a
-                                className="bloomtown-hero__ticket"
-                                href="https://paystack.shop/bloomtown-family-fest?product=bloomtown-family-fest---childrens-ticket-yctrmc"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span>
-                                    Child (4–17)
-                                </span>
-
-                                <strong>
-                                    ₦5,000
-                                </strong>
-                            </a>
+                            {tickets.map((ticket) => (
+                                <a
+                                    key={ticket.name}
+                                    className="bloomtown-hero__ticket"
+                                    href={ticket.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <span>{ticket.name}</span>
+                                    <strong>{ticket.price}</strong>
+                                </a>
+                            ))}
 
                         </div>
 
-
                         <div className="bloomtown-hero__under-four">
-
-                            <span>
-                                Children Under 4
-                            </span>
-
-                            <strong>
-                                FREE
-                            </strong>
-
+                            <span>Children Under 4</span>
+                            <strong>FREE</strong>
                         </div>
 
                     </div>
