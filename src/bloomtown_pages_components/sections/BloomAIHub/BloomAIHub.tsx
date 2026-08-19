@@ -26,7 +26,7 @@ const tools = [
 
 function BloomAIHub() {
     return (
-        <section id="fest">
+        <section id="fest" className="bloom-ai-hub">
 
             <div className="bloom-ai-hub__header">
                 <span className="bloom-ai-hub__eyebrow">

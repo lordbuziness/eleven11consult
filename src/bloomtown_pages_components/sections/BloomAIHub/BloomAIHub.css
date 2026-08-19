@@ -221,7 +221,24 @@
 
     line-height: 1.65;
 }
+.bloom-ai-hub {
+    position: relative;
 
+    width: 100%;
+
+    padding: 120px 6% 220px;
+
+    box-sizing: border-box;
+    overflow: visible;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212, 160, 23, 0.13),
+            transparent 45%
+        ),
+        #f8f3e8;
+}
 
 /* =========================================
    TABLET

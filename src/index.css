@@ -101,3 +101,7 @@ body {
 .bloomtown-page > section + section {
     margin-top: clamp(80px, 9vw, 160px);
 }
+
+.bloomtown-page > .bloomtown-footer {
+    margin-top: clamp(80px, 9vw, 160px);
+}
