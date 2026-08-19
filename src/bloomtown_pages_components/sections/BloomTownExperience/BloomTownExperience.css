@@ -1,0 +1,517 @@
+/* =========================================================
+   BLOOMTOWN EXPERIENCE
+========================================================= */
+
+.bloom-experience {
+    position: relative;
+
+    width: 100%;
+
+    padding: 110px 7% 120px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    /* IMPORTANT:
+       Let BloomTownBackground show through */
+    background: transparent;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bloom-experience__heading {
+    max-width: 760px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.bloom-experience__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #4b2d1c;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.bloom-experience__heading h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+}
+
+
+/* BLOOM */
+
+.bloom-experience__heading .bloom-word {
+    color: #07543f;
+}
+
+
+/* TOWN */
+
+.bloom-experience__heading .town-word {
+    color: #d4a017;
+}
+
+
+/* EXPERIENCE */
+
+.bloom-experience__heading .experience-word {
+    color: #4b2d1c;
+}
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
+
+.bloom-experience__video-card {
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto 55px;
+
+    padding: 9px;
+
+    box-sizing: border-box;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a8780f 0%,
+            #d4a017 18%,
+            #f8d878 32%,
+            #fff0a8 45%,
+            #d4a017 58%,
+            #f8d878 72%,
+            #a8780f 100%
+        );
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.bloom-experience__video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    background: #123f2a;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.bloom-experience__video-overlay {
+    position: absolute;
+
+    inset: 9px;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7, 84, 63, 0.12),
+            rgba(7, 84, 63, 0.45)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   VIDEO TAG
+========================================================= */
+
+.bloom-experience__video-tag {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 280px;
+
+    padding: 28px 35px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(248, 216, 120, 0.8);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7, 84, 63, 0.94),
+            rgba(13, 52, 37, 0.94)
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.28),
+        0 0 20px rgba(212, 160, 23, 0.15);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TAG EYEBROW
+========================================================= */
+
+.bloom-experience__video-tag-small {
+    color: #f8d878;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   TAG TITLE
+========================================================= */
+
+.bloom-experience__video-tag-title {
+    color: #fff0a8;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PLAY
+========================================================= */
+
+.bloom-experience__video-tag-play {
+    width: 42px;
+
+    height: 42px;
+
+    margin-top: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d4a017;
+
+    color: #07543f;
+
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   PLAYING STATE
+========================================================= */
+
+.bloom-experience__video-card--playing {
+    cursor: default;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .bloom-experience__video-card {
+        padding: 7px;
+
+        border-radius: 22px;
+
+        margin-bottom: 40px;
+    }
+
+    .bloom-experience__video {
+        border-radius: 17px;
+    }
+
+    .bloom-experience__video-overlay {
+        inset: 7px;
+
+        border-radius: 17px;
+    }
+
+    .bloom-experience__video-tag {
+        min-width: 0;
+
+        width: 80%;
+
+        padding: 20px 15px;
+
+        border-radius: 16px;
+    }
+
+    .bloom-experience__video-tag-title {
+        font-size: 1.6rem;
+    }
+
+    .bloom-experience__video-tag-play {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.bloom-experience__content {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.bloom-experience__content > p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #4b2d1c;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.bloom-experience__cta {
+    margin-top: 45px;
+
+    padding: 28px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7, 84, 63, 0.97),
+            rgba(13, 52, 37, 0.97)
+        );
+
+    box-shadow:
+        0 15px 35px rgba(75, 45, 28, 0.18);
+}
+
+
+.bloom-experience__cta h3 {
+    margin: 0 0 22px;
+
+    color: #f8d878;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TICKET BUTTONS
+========================================================= */
+
+.bloom-experience__buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.bloom-experience__buttons a {
+    min-width: 190px;
+
+    padding: 13px 22px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #f8d878;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #a8780f 0%,
+            #d4a017 18%,
+            #fff0a8 40%,
+            #d4a017 58%,
+            #f8d878 76%,
+            #a8780f 100%
+        );
+
+    color: #4b2d1c;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.bloom-experience__buttons a:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 7px 16px rgba(0, 0, 0, 0.24);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .bloom-experience {
+        padding: 85px 20px 90px;
+    }
+
+    .bloom-experience__heading {
+        margin-bottom: 40px;
+    }
+
+    .bloom-experience__heading h2 {
+        font-size: 3rem;
+    }
+
+    .bloom-experience__video-card {
+        padding: 7px;
+
+        border-radius: 22px;
+    }
+
+    .bloom-experience__video-placeholder {
+        min-height: 280px;
+
+        border-radius: 17px;
+    }
+
+    .bloom-experience__buttons {
+        flex-direction: column;
+    }
+
+    .bloom-experience__buttons a {
+        width: 100%;
+    }
+}

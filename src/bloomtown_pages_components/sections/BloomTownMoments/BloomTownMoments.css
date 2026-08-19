@@ -1,0 +1,535 @@
+/* =========================================================
+   BLOOMTOWN MOMENTS
+========================================================= */
+
+.bloomtown-moments {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 7% 140px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bloomtown-moments__header {
+    max-width: 760px;
+
+    margin: 0 auto 85px;
+
+    text-align: center;
+}
+
+
+.bloomtown-moments__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d4a017;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.bloomtown-moments__header h2 {
+    margin: 0;
+
+    color: #07543f;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    font-weight: 700;
+
+    line-height: 0.9;
+
+    letter-spacing: -1.5px;
+}
+
+
+.bloomtown-moments__header h2 span {
+    color: #d4a017;
+
+    font-weight: 400;
+}
+
+
+.bloomtown-moments__header p {
+    max-width: 560px;
+
+    margin: 28px auto 0;
+
+    color: #76553d;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDITORIAL GRID
+========================================================= */
+
+.bloomtown-moments__grid {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 0 35px;
+}
+
+
+/* =========================================================
+   MOMENT
+========================================================= */
+
+.bloomtown-moment {
+    display: grid;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-bottom: 90px;
+}
+
+
+.bloomtown-moment__image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #07543f;
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.14);
+}
+
+
+.bloomtown-moment__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+.bloomtown-moment:hover .bloomtown-moment__image img {
+    transform: scale(1.04);
+
+    filter: saturate(1.08);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.bloomtown-moment__content {
+    position: relative;
+}
+
+
+.bloomtown-moment__number {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #d4a017;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.bloomtown-moment__content h3 {
+    margin: 0 0 16px;
+
+    color: #07543f;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+}
+
+
+.bloomtown-moment__content p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #76553d;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   EDITORIAL PLACEMENT
+========================================================= */
+
+/* 01 */
+.bloomtown-moment--1 {
+    grid-column: 1 / 13;
+
+    grid-template-columns: 6fr 4fr;
+}
+
+.bloomtown-moment--1 .bloomtown-moment__image {
+    height: 500px;
+}
+
+
+/* 02 */
+.bloomtown-moment--2 {
+    grid-column: 1 / 13;
+
+    grid-template-columns: 4fr 5fr;
+}
+
+.bloomtown-moment--2 .bloomtown-moment__image {
+    height: 390px;
+
+    order: 2;
+}
+
+.bloomtown-moment--2 .bloomtown-moment__content {
+    order: 1;
+
+    padding-left: 8%;
+}
+
+
+/* 03 */
+.bloomtown-moment--3 {
+    grid-column: 2 / 12;
+
+    grid-template-columns: 5fr 4fr;
+}
+
+.bloomtown-moment--3 .bloomtown-moment__image {
+    height: 450px;
+}
+
+
+/* 04 */
+.bloomtown-moment--4 {
+    grid-column: 1 / 13;
+
+    grid-template-columns: 4fr 6fr;
+}
+
+.bloomtown-moment--4 .bloomtown-moment__image {
+    height: 520px;
+
+    order: 2;
+}
+
+.bloomtown-moment--4 .bloomtown-moment__content {
+    order: 1;
+}
+
+
+/* 05 */
+.bloomtown-moment--5 {
+    grid-column: 2 / 12;
+
+    grid-template-columns: 6fr 4fr;
+}
+
+.bloomtown-moment--5 .bloomtown-moment__image {
+    height: 400px;
+}
+
+
+/* 06 */
+.bloomtown-moment--6 {
+    grid-column: 1 / 13;
+
+    grid-template-columns: 4fr 5fr;
+}
+
+.bloomtown-moment--6 .bloomtown-moment__image {
+    height: 430px;
+
+    order: 2;
+}
+
+.bloomtown-moment--6 .bloomtown-moment__content {
+    order: 1;
+
+    padding-left: 10%;
+}
+
+
+/* 07 */
+.bloomtown-moment--7 {
+    grid-column: 2 / 12;
+
+    grid-template-columns: 5fr 4fr;
+
+    margin-bottom: 0;
+}
+
+.bloomtown-moment--7 .bloomtown-moment__image {
+    height: 460px;
+}
+
+
+/* =========================================================
+   DECORATIVE GOLD LINE
+========================================================= */
+
+.bloomtown-moment__content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -22px;
+
+    width: 2px;
+    height: 55px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d4a017,
+            rgba(212, 160, 23, 0)
+        );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .bloomtown-moments {
+        padding: 90px 25px 110px;
+    }
+
+    .bloomtown-moments__header {
+        margin-bottom: 60px;
+    }
+
+    .bloomtown-moment {
+        gap: 30px;
+    }
+
+    .bloomtown-moment--1,
+    .bloomtown-moment--2,
+    .bloomtown-moment--3,
+    .bloomtown-moment--4,
+    .bloomtown-moment--5,
+    .bloomtown-moment--6,
+    .bloomtown-moment--7 {
+        grid-column: 1 / 13;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bloomtown-moment--2 .bloomtown-moment__image,
+    .bloomtown-moment--4 .bloomtown-moment__image,
+    .bloomtown-moment--6 .bloomtown-moment__image {
+        order: 2;
+    }
+
+    .bloomtown-moment--2 .bloomtown-moment__content,
+    .bloomtown-moment--6 .bloomtown-moment__content {
+        order: 1;
+
+        padding-left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bloomtown-moments {
+        padding: 75px 22px 90px;
+    }
+
+
+    /* HEADER */
+
+    .bloomtown-moments__header {
+        margin-bottom: 45px;
+    }
+
+    .bloomtown-moments__eyebrow {
+        font-size: 0.6rem;
+
+        letter-spacing: 2.5px;
+    }
+
+    .bloomtown-moments__header h2 {
+        font-size: 3.2rem;
+
+        line-height: 0.92;
+    }
+
+    .bloomtown-moments__header p {
+        margin-top: 20px;
+
+        font-size: 0.82rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       SINGLE MOBILE COLUMN
+    ===================================================== */
+
+    .bloomtown-moments__grid {
+        display: block;
+    }
+
+
+    .bloomtown-moment,
+    .bloomtown-moment--1,
+    .bloomtown-moment--2,
+    .bloomtown-moment--3,
+    .bloomtown-moment--4,
+    .bloomtown-moment--5,
+    .bloomtown-moment--6,
+    .bloomtown-moment--7 {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin: 0;
+
+        padding: 0 0 42px;
+
+        margin-bottom: 42px;
+
+        border-bottom:
+            1px solid rgba(7, 84, 63, 0.22);
+    }
+
+
+    .bloomtown-moment:last-child {
+        margin-bottom: 0;
+
+        border-bottom: none;
+    }
+
+
+    /* =====================================================
+       MOBILE IMAGE
+    ===================================================== */
+
+    .bloomtown-moment__image,
+    .bloomtown-moment--1 .bloomtown-moment__image,
+    .bloomtown-moment--2 .bloomtown-moment__image,
+    .bloomtown-moment--3 .bloomtown-moment__image,
+    .bloomtown-moment--4 .bloomtown-moment__image,
+    .bloomtown-moment--5 .bloomtown-moment__image,
+    .bloomtown-moment--6 .bloomtown-moment__image,
+    .bloomtown-moment--7 .bloomtown-moment__image {
+
+        order: 1;
+
+        width: 100%;
+
+        height: 300px;
+
+        border-radius: 22px;
+    }
+
+
+    /* =====================================================
+       MOBILE CONTENT
+    ===================================================== */
+
+    .bloomtown-moment__content,
+    .bloomtown-moment--2 .bloomtown-moment__content,
+    .bloomtown-moment--6 .bloomtown-moment__content {
+
+        order: 2;
+
+        padding: 0;
+    }
+
+
+    .bloomtown-moment__content::before {
+        display: none;
+    }
+
+
+    .bloomtown-moment__number {
+        margin-bottom: 8px;
+
+        font-size: 0.58rem;
+    }
+
+
+    .bloomtown-moment__content h3 {
+        margin-bottom: 12px;
+
+        font-size: 2.15rem;
+    }
+
+
+    .bloomtown-moment__content p {
+        max-width: none;
+
+        font-size: 0.82rem;
+
+        line-height: 1.7;
+    }
+}

@@ -1,0 +1,656 @@
+/* =========================================================
+   BLOOM O'CLOCK
+========================================================= */
+
+.bloom-oclock {
+    position: relative;
+    width: 100%;
+
+    padding: 110px 7% 120px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background: #fffdf5;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.bloom-oclock__video {
+    position: relative;
+
+    width: min(1180px, 100%);
+    height: min(65vw, 620px);
+    min-height: 360px;
+
+    margin: 0 auto 70px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    background: #07543f;
+
+    border: 2px solid #b8860b;
+
+    box-shadow:
+        0 20px 50px rgba(75, 45, 28, 0.14);
+}
+
+
+.bloom-oclock__video-player {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   VIDEO LABEL
+========================================================= */
+
+.bloom-oclock__video-label {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background: #07543f;
+
+    border: 1px solid #d4a017;
+
+    box-shadow:
+        0 8px 20px rgba(75, 45, 28, 0.2);
+
+    white-space: nowrap;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.bloom-oclock__video-label .bloom-word {
+    color: #ffffff;
+}
+
+
+.bloom-oclock__video-label .town-word {
+    color: #d4a017;
+}
+
+
+.bloom-oclock__video-label .clock-word {
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.bloom-oclock__content {
+    width: min(1180px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   SHARED CARDS
+========================================================= */
+
+.bloom-oclock__tickets,
+.bloom-oclock__contact {
+    padding: 48px 42px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+}
+
+
+/* =========================================================
+   TICKETS
+========================================================= */
+
+.bloom-oclock__tickets {
+    background: #07543f;
+
+    border: 1px solid #d4a017;
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.16);
+}
+
+
+.bloom-oclock__eyebrow {
+    margin: 0 0 14px;
+
+    color: #d4a017;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.bloom-oclock__tickets h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+}
+
+
+.bloom-oclock__tickets h2 span {
+    color: #d4a017;
+
+    font-style: italic;
+}
+
+
+.bloom-oclock__description {
+    max-width: 500px;
+
+    margin: 24px 0 30px;
+
+    color: #ffffff;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TICKET LIST
+========================================================= */
+
+.bloom-oclock__ticket-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.bloom-oclock__ticket {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 20px;
+
+    border-radius: 14px;
+
+    background: #d4a017;
+
+    border: 1px solid #b8860b;
+
+    color: #4b2d1c;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 15px rgba(75, 45, 28, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bloom-oclock__ticket:hover {
+    transform: translateY(-3px);
+
+    background: #b8860b;
+}
+
+
+.bloom-oclock__ticket div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.bloom-oclock__ticket small {
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.bloom-oclock__ticket strong {
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1;
+}
+
+
+.bloom-oclock__ticket b {
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   FREE TICKET
+========================================================= */
+
+.bloom-oclock__free-ticket {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 8px 4px;
+
+    color: #d4a017;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+}
+
+
+.bloom-oclock__free-ticket strong {
+    color: #ffffff;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.bloom-oclock__contact {
+    background: #ffffff;
+
+    border: 1px solid #d4a017;
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.1);
+}
+
+
+.bloom-oclock__contact .bloom-oclock__eyebrow {
+    color: #07543f;
+}
+
+
+.bloom-oclock__contact h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+    line-height: 0.95;
+}
+
+
+.bloom-oclock__contact h3 span {
+    color: #07543f;
+
+    font-style: italic;
+}
+
+
+.bloom-oclock__contact-intro {
+    margin: 20px 0 25px;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.bloom-oclock__form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.bloom-oclock__form label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.bloom-oclock__form label span {
+    color: #07543f;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.67rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.bloom-oclock__form input,
+.bloom-oclock__form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fffdf5;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.85rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.bloom-oclock__form input:focus,
+.bloom-oclock__form textarea:focus {
+    border-color: #07543f;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 84, 63, 0.12);
+}
+
+
+.bloom-oclock__form textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.bloom-oclock__form button {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 14px 20px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 10px;
+
+    background: #07543f;
+
+    color: #d4a017;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bloom-oclock__form button:hover {
+    transform: translateY(-2px);
+
+    background: #0a6b50;
+}
+
+
+/* =========================================================
+   WHATSAPP NOTE
+========================================================= */
+
+.bloom-oclock__whatsapp-note {
+    margin: 15px 0 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .bloom-oclock {
+        padding: 80px 20px 90px;
+    }
+
+
+    .bloom-oclock__video {
+        height: 62vw;
+
+        min-height: 250px;
+
+        margin-bottom: 45px;
+
+        border-radius: 22px;
+    }
+
+
+    .bloom-oclock__video-label {
+        bottom: 18px;
+
+        padding: 8px 17px;
+
+        font-size: 1.25rem;
+    }
+
+
+    .bloom-oclock__content {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .bloom-oclock__tickets,
+    .bloom-oclock__contact {
+        padding: 35px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .bloom-oclock__tickets h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .bloom-oclock__contact h3 {
+        font-size: 2.6rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .bloom-oclock {
+        padding: 65px 15px 75px;
+    }
+
+
+    .bloom-oclock__video {
+        min-height: 210px;
+
+        border-radius: 18px;
+    }
+
+
+    .bloom-oclock__video-label {
+        bottom: 12px;
+
+        font-size: 1rem;
+    }
+
+
+    .bloom-oclock__tickets,
+    .bloom-oclock__contact {
+        padding: 30px 20px;
+    }
+
+
+    .bloom-oclock__tickets h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .bloom-oclock__contact h3 {
+        font-size: 2.3rem;
+    }
+
+
+    .bloom-oclock__ticket {
+        padding: 14px 15px;
+    }
+
+}

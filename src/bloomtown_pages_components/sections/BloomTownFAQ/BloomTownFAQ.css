@@ -1,0 +1,503 @@
+/* =========================================================
+   BLOOMTOWN FAQ
+========================================================= */
+
+.bloom-faqs {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 7% 130px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bloom-faqs__header {
+    max-width: 720px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.bloom-faqs__eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d4a017;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.bloom-faqs__header h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+}
+
+.bloom-faqs__header .bloom-word {
+    color: #07543f;
+}
+
+.bloom-faqs__header .town-word {
+    color: #d4a017;
+}
+
+.bloom-faqs__header .faq-word {
+    color: #4b2d1c;
+}
+
+.bloom-faqs__header > p {
+    max-width: 570px;
+
+    margin: 25px auto 0;
+
+    color: #76553d;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TWO PILES
+========================================================= */
+
+.bloom-faqs__piles {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================================================
+   PILE
+========================================================= */
+
+.bloom-faqs__pile {
+    position: relative;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PILE HEADER
+========================================================= */
+
+.bloom-faqs__pile-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.bloom-faqs__pile-number {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.bloom-faqs__pile--emerald .bloom-faqs__pile-number {
+    background: #07543f;
+
+    color: #f8d878;
+
+    border: 1px solid #d4a017;
+}
+
+.bloom-faqs__pile--gold .bloom-faqs__pile-number {
+    background: #d4a017;
+
+    color: #4b2d1c;
+
+    border: 1px solid #f8d878;
+}
+
+.bloom-faqs__pile-header p {
+    margin: 0 0 2px;
+
+    color: #a8780f;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.bloom-faqs__pile-header h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CARD STACK
+========================================================= */
+
+.bloom-faqs__stack {
+    position: relative;
+
+    width: 100%;
+
+    height: 390px;
+
+    perspective: 1000px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.bloom-faqs__card {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 42px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    background: rgba(255, 252, 240, 0.96);
+
+    border: 1px solid rgba(212, 160, 23, 0.45);
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.14);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        box-shadow 0.3s ease;
+}
+
+.bloom-faqs__card--2 {
+    transform:
+        translateY(-20px)
+        scale(0.92);
+
+    opacity: 0.35;
+
+    z-index: 1;
+}
+
+.bloom-faqs__card--1 {
+    transform:
+        translateY(-10px)
+        scale(0.96);
+
+    opacity: 0.65;
+
+    z-index: 2;
+}
+
+.bloom-faqs__card--0 {
+    transform: translateY(0) scale(1);
+
+    opacity: 1;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   CARD ACCENTS
+========================================================= */
+
+.bloom-faqs__pile--emerald
+.bloom-faqs__card--0 {
+    border-top: 5px solid #07543f;
+}
+
+.bloom-faqs__pile--gold
+.bloom-faqs__card--0 {
+    border-top: 5px solid #d4a017;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.bloom-faqs__card-label {
+    margin-bottom: 22px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #a8780f;
+
+    text-transform: uppercase;
+}
+
+.bloom-faqs__card h4 {
+    max-width: 500px;
+
+    margin: 0 0 18px;
+
+    color: #4b2d1c;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+}
+
+.bloom-faqs__card p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #76553d;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.bloom-faqs__controls {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.bloom-faqs__controls button {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #07543f;
+
+    border: 1px solid #d4a017;
+
+    color: #f8d878;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.bloom-faqs__controls button:hover {
+    transform: translateY(-2px);
+
+    background: #0a6b50;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.bloom-faqs__progress {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.bloom-faqs__progress span {
+    color: #76553d;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 900;
+}
+
+.bloom-faqs__progress-track {
+    flex: 1;
+
+    height: 3px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(7, 84, 63, 0.12);
+}
+
+.bloom-faqs__progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #d4a017;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .bloom-faqs {
+        padding: 90px 25px 100px;
+    }
+
+    .bloom-faqs__piles {
+        grid-template-columns: 1fr;
+
+        max-width: 560px;
+    }
+
+    .bloom-faqs__stack {
+        height: 360px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .bloom-faqs {
+        padding: 75px 18px 85px;
+    }
+
+    .bloom-faqs__header {
+        margin-bottom: 50px;
+    }
+
+    .bloom-faqs__header h2 {
+        font-size: 3.2rem;
+    }
+
+    .bloom-faqs__header > p {
+        font-size: 0.85rem;
+    }
+
+    .bloom-faqs__pile-header {
+        margin-bottom: 20px;
+    }
+
+    .bloom-faqs__pile-header h3 {
+        font-size: 1.7rem;
+    }
+
+    .bloom-faqs__stack {
+        height: 390px;
+    }
+
+    .bloom-faqs__card {
+        padding: 30px 25px;
+
+        border-radius: 24px;
+    }
+
+    .bloom-faqs__card h4 {
+        font-size: 1.9rem;
+    }
+
+    .bloom-faqs__card p {
+        font-size: 0.82rem;
+    }
+}
