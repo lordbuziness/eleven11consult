@@ -92,3 +92,12 @@ body {
             #D9D9D9 100%
         );
 }
+
+/* Give the BloomTown content blocks clear breathing room. */
+.bloomtown-page {
+    padding: 0 clamp(16px, 3vw, 48px) clamp(32px, 5vw, 80px);
+}
+
+.bloomtown-page > section + section {
+    margin-top: clamp(80px, 9vw, 160px);
+}
