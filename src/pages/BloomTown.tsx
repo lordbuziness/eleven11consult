@@ -1,7 +1,6 @@
 
 import BloomTownBackground from "../bloomtown_pages_components/BloomTownBackground/BloomTownBackground";
 import Hero from "../bloomtown_pages_components/sections/Hero/Hero";
-import Bloompartner from "../bloomtown_pages_components/sections/Bloompartners/Bloompartners";
 import BloomtownFooter from "../bloomtown_pages_components/sections/BloomtownFooter/BloomtownFooter";
 import BloomTownBackToTop from "../bloomtown_pages_components/sections/BloomTownBackToTop/BloomTownBackToTop";
 import BloomTownExperience from "../bloomtown_pages_components/sections/BloomTownExperience/BloomTownExperience";
@@ -20,7 +19,6 @@ function BloomTown() {
             <BloomTownExperience/>
             <BloomTownMoments/>
             <BloomTownFAQ/>
-             <Bloompartner/>
             <BloomOClock/>
             <BloomTownBackToTop/>
             <BloomtownFooter/>
