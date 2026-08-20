@@ -119,6 +119,7 @@
 
     grid-template-columns:
         1fr
+        1fr
         1fr;
 
     gap: 30px;
@@ -552,6 +553,538 @@
 
     text-align: center;
 }
+ /* =========================================================
+    VENDORS
+ ========================================================= */
+
+.bloom-oclock__vendors {
+    padding: 48px 42px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    background: #f5ead0;
+
+    border: 1px solid #d4a017;
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.10);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.bloom-oclock__vendors .bloom-oclock__eyebrow {
+    color: #07543f;
+}
+
+
+.bloom-oclock__vendors h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+}
+
+
+.bloom-oclock__vendors h3 span {
+    color: #07543f;
+
+    font-style: italic;
+}
+
+
+.bloom-oclock__vendor-intro {
+    margin: 22px 0 25px;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+}
+
+
+ /* =========================================================
+    VENDOR TYPES
+ ========================================================= */
+
+.bloom-oclock__vendor-types {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+
+.bloom-oclock__vendor-types span {
+    padding: 7px 11px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    border: 1px solid #d4a017;
+
+    color: #07543f;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+ /* =========================================================
+    VENDOR BUTTON
+ ========================================================= */
+
+.bloom-oclock__vendor-button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 10px;
+
+    background: #07543f;
+
+    color: #d4a017;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bloom-oclock__vendor-button:hover {
+    transform: translateY(-2px);
+
+    background: #0a6b50;
+}
+
+
+/* =========================================================
+   VENDORS
+========================================================= */
+
+.bloom-oclock__vendors {
+    padding: 48px 42px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    background: #f5ead0;
+
+    border: 1px solid #d4a017;
+
+    box-shadow:
+        0 20px 45px rgba(75, 45, 28, 0.10);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   VENDOR HEADING
+========================================================= */
+
+.bloom-oclock__vendors .bloom-oclock__eyebrow {
+    color: #07543f;
+}
+
+
+.bloom-oclock__vendors h3 {
+    margin: 0;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+}
+
+
+.bloom-oclock__vendors h3 span {
+    color: #07543f;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   VENDOR INTRO
+========================================================= */
+
+.bloom-oclock__vendor-intro {
+    margin: 22px 0 25px;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   VENDOR TYPES
+========================================================= */
+
+.bloom-oclock__vendor-types {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+
+.bloom-oclock__vendor-types span {
+    padding: 7px 11px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    border: 1px solid #d4a017;
+
+    color: #07543f;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   VENDOR BUTTON
+========================================================= */
+
+.bloom-oclock__vendor-button,
+.bloom-oclock__vendor-submit {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 10px;
+
+    background: #07543f;
+
+    color: #d4a017;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.bloom-oclock__vendor-button:hover,
+.bloom-oclock__vendor-submit:hover {
+    transform: translateY(-2px);
+
+    background: #0a6b50;
+}
+
+
+/* =========================================================
+   VENDOR FORM HEADER
+========================================================= */
+
+.bloom-oclock__vendor-form-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.bloom-oclock__vendor-form-top .bloom-oclock__eyebrow {
+    margin-bottom: 10px;
+}
+
+
+.bloom-oclock__vendor-form-top h3 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+/* =========================================================
+   VENDOR CLOSE BUTTON
+========================================================= */
+
+.bloom-oclock__vendor-close {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #d4a017;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #07543f;
+
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.bloom-oclock__vendor-close:hover {
+    background: #07543f;
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.bloom-oclock__vendor-close {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #07543f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.4rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.bloom-oclock__vendor-close:hover {
+    background: #07543f;
+
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   VENDOR FORM
+========================================================= */
+
+.bloom-oclock__vendor-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.bloom-oclock__vendor-form label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.bloom-oclock__vendor-form label span {
+    color: #07543f;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.bloom-oclock__vendor-form input,
+.bloom-oclock__vendor-form select,
+.bloom-oclock__vendor-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d4a017;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fffdf5;
+
+    color: #4b2d1c;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.bloom-oclock__vendor-form input:focus,
+.bloom-oclock__vendor-form select:focus,
+.bloom-oclock__vendor-form textarea:focus {
+    border-color: #07543f;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 84, 63, 0.12);
+}
+
+
+.bloom-oclock__vendor-form textarea {
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+
+/* =========================================================
+   VENDOR SUBMIT
+========================================================= */
+
+.bloom-oclock__vendor-submit {
+    margin-top: 4px;
+}
+
+
 
 
 /* =========================================================
@@ -654,3 +1187,76 @@
     }
 
 }
+
+/* =========================================================
+    VENDOR MOBILE
+ ========================================================= */
+
+@media (max-width: 800px) {
+
+    .bloom-oclock__vendors {
+        padding: 35px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .bloom-oclock__vendors h3 {
+        font-size: 2.6rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .bloom-oclock__vendors {
+        padding: 30px 20px;
+    }
+
+
+    .bloom-oclock__vendors h3 {
+        font-size: 2.3rem;
+    }
+
+}
+
+
+/* =========================================================
+   VENDOR MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .bloom-oclock__vendors {
+        padding: 35px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .bloom-oclock__vendors h3 {
+        font-size: 2.6rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .bloom-oclock__vendors {
+        padding: 30px 20px;
+    }
+
+
+    .bloom-oclock__vendors h3 {
+        font-size: 2.3rem;
+    }
+
+
+    .bloom-oclock__vendor-types {
+        margin-bottom: 24px;
+    }
+
+}
+ 
