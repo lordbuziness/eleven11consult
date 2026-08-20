@@ -1,37 +1,37 @@
 
 import "./Bloompartners.css";
 
-import logo1 from "../../../assets/images/logo1.svg";
-import logo2 from "../../../assets/images/logo2.svg";
-import logo3 from "../../../assets/images/logo3.svg";
-import logo4 from "../../../assets/images/logo4.svg";
-import logo5 from "../../../assets/images/logo5.svg";
-import logo6 from "../../../assets/images/logo6.svg";
+import gtBank from "../../asset/images/GTBank.jpeg"
+import mtn from "../../asset/images/Mtn.jpeg";
+import dangote from "../../asset/images/dangotelogo.png";
+import google from "../../../assets/images/logo2google.svg";
+import microsoft from "../../../assets/images/logo4microsoft.svg";
+import nestle from "../../asset/images/nestle.png";
 
 const partners = [
     {
         name: "GTBank",
-        logo: logo1,
+        logo: gtBank,
     },
     {
         name: "MTN",
-        logo: logo2,
+        logo: mtn,
     },
     {
         name: "Dangote",
-        logo: logo3,
+        logo: dangote,
     },
     {
         name: "Google",
-        logo: logo4,
+        logo: google,
     },
     {
         name: "Microsoft",
-        logo: logo5,
+        logo: microsoft,
     },
     {
         name: "Nestlé",
-        logo: logo6,
+        logo: nestle,
     },
 ];
 

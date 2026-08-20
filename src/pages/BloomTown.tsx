@@ -28,16 +28,8 @@ function BloomTown() {
             <BloomTownExperience/>
             <BloomTownMoments/>
             <BloomTownFAQ/>
+             <Bloompartner/>
             <BloomOClock/>
-            <About/>
-            <MonthlyBloomSessions/>
-            <SummerCamp/>
-            <Mentors/>
-            <TalentGallery/>
-            <Bloompartner/>
-            <AgeDistricts/>
-            <BloomFest/>
-            <BloomAIHub/>
             <BloomTownBackToTop/>
             <BloomtownFooter/>
             

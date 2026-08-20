@@ -31,16 +31,13 @@ function BloomTownMenu({
         return null;
     }
 
-    const handleNavigation = (
-        target: string
-    ) => {
+    const handleNavigation = (target: string) => {
         onClose();
 
         setFestOpen(false);
 
         setTimeout(() => {
-            const element =
-                document.querySelector(target);
+            const element = document.querySelector(target);
 
             if (element) {
                 element.scrollIntoView({
@@ -71,9 +68,7 @@ function BloomTownMenu({
                 <button
                     type="button"
                     className="bloomtown-menu__logo-button"
-                    onClick={() =>
-                        handleNavigation("#top")
-                    }
+                    onClick={() => handleNavigation("#top")}
                     aria-label="Back to top"
                 >
                     <img
@@ -81,7 +76,6 @@ function BloomTownMenu({
                         alt="BloomTown"
                     />
                 </button>
-
 
                 <button
                     type="button"
@@ -105,7 +99,6 @@ function BloomTownMenu({
                     BLOOMTOWN FAMILY FEST 2026
                 </span>
 
-
                 <h2 className="bloomtown-menu__title">
                     Explore
                     <em>BloomTown.</em>
@@ -118,9 +111,9 @@ function BloomTownMenu({
 
                 <nav className="bloomtown-menu__nav">
 
-
                     {/* =====================================
-                        BLOOMTOWN FAMILY FEST DROPDOWN
+                        BLOOMTOWN FAMILY FEST
+                        KEEP THIS ACTIVE
                     ===================================== */}
 
                     <div
@@ -139,7 +132,6 @@ function BloomTownMenu({
                             }
                             aria-expanded={festOpen}
                         >
-
                             <span>01</span>
 
                             <strong>
@@ -234,9 +226,14 @@ function BloomTownMenu({
 
 
                     {/* =====================================
-                        EXISTING NAVIGATION
+                        OTHER NAVIGATION
+
+                        TEMPORARILY COMMENTED OUT
+
+                        DO NOT DELETE
                     ===================================== */}
 
+                    {/*
                     <button
                         type="button"
                         onClick={() =>
@@ -247,7 +244,6 @@ function BloomTownMenu({
                         <strong>About</strong>
                         <ArrowUpRight />
                     </button>
-
 
                     <button
                         type="button"
@@ -260,7 +256,6 @@ function BloomTownMenu({
                         <ArrowUpRight />
                     </button>
 
-
                     <button
                         type="button"
                         onClick={() =>
@@ -271,7 +266,6 @@ function BloomTownMenu({
                         <strong>BloomTown Fest</strong>
                         <ArrowUpRight />
                     </button>
-
 
                     <button
                         type="button"
@@ -284,7 +278,6 @@ function BloomTownMenu({
                         <ArrowUpRight />
                     </button>
 
-
                     <button
                         type="button"
                         onClick={() =>
@@ -296,7 +289,6 @@ function BloomTownMenu({
                         <ArrowUpRight />
                     </button>
 
-
                     <button
                         type="button"
                         onClick={() =>
@@ -307,6 +299,7 @@ function BloomTownMenu({
                         <strong>Partners</strong>
                         <ArrowUpRight />
                     </button>
+                    */}
 
                 </nav>
 
@@ -347,7 +340,6 @@ function BloomTownMenu({
                         <FaFacebookF />
                     </a>
 
-
                     <a
                         href="https://www.instagram.com/bloomtownafrica"
                         target="_blank"
@@ -358,7 +350,6 @@ function BloomTownMenu({
                     </a>
 
                 </div>
-
 
                 <span>
                     #BloomTownFamilyFest2026
