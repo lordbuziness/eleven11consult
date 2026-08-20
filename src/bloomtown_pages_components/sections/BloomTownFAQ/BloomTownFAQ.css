@@ -241,6 +241,28 @@
         opacity 0.6s ease,
         box-shadow 0.3s ease;
 }
+.bloom-faqs__card {
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease;
+}
+
+.bloom-faqs__card--active {
+    animation: bloomFaqSlideIn 0.7s ease;
+}
+
+@keyframes bloomFaqSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .bloom-faqs__card--2 {
     transform:

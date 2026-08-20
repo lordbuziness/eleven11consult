@@ -6,6 +6,8 @@ type FAQ = {
     answer: string;
 };
 
+
+
 const generalFAQs: FAQ[] = [
     {
         question: "What is BloomTown Family Fest?",
@@ -127,11 +129,17 @@ function FAQStack({
     accent: "emerald" | "gold";
 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+    const [isPaused] = useState(false);
+     const [isSliding, setIsSliding] = useState(false)
 
-    const next = () => {
+   const next = () => {
+    setIsSliding(true);
+
+    window.setTimeout(() => {
         setCurrentIndex((current) => (current + 1) % faqs.length);
-    };
+        setIsSliding(false);
+    }, 500);
+};
 
     const previous = () => {
         setCurrentIndex(
@@ -142,7 +150,7 @@ function FAQStack({
     useEffect(() => {
         if (isPaused) return;
 
-        const timer = window.setInterval(next, 6000);
+        const timer = window.setInterval(next, 8500);
 
         return () => window.clearInterval(timer);
     }, [isPaused, faqs.length]);
@@ -164,32 +172,36 @@ function FAQStack({
             </div>
 
             <div
-                className="bloom-faqs__stack"
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
+    className={`bloom-faqs__stack ${
+        isSliding ? "bloom-faqs__stack--sliding" : ""
+    }`}
+>
+    {[2, 1, 0].map((offset) => {
+        const faq = faqs[getCardIndex(offset)];
+
+        return (
+            <article
+                key={`${currentIndex}-${offset}`}
+                className={`bloom-faqs__card bloom-faqs__card--${offset} ${
+                    offset === 0
+                        ? "bloom-faqs__card--active"
+                        : ""
+                }`}
             >
-                {[2, 1, 0].map((offset) => {
-                    const faq = faqs[getCardIndex(offset)];
+                <span className="bloom-faqs__card-label">
+                    FAQ{" "}
+                    {String(
+                        getCardIndex(offset) + 1
+                    ).padStart(2, "0")}
+                </span>
 
-                    return (
-                        <article
-                            key={`${currentIndex}-${offset}`}
-                            className={`bloom-faqs__card bloom-faqs__card--${offset}`}
-                        >
-                            <span className="bloom-faqs__card-label">
-                                FAQ {String(getCardIndex(offset) + 1).padStart(
-                                    2,
-                                    "0"
-                                )}
-                            </span>
+                <h4>{faq.question}</h4>
 
-                            <h4>{faq.question}</h4>
-
-                            <p>{faq.answer}</p>
-                        </article>
-                    );
-                })}
-            </div>
+                <p>{faq.answer}</p>
+            </article>
+        );
+    })}
+</div>
 
             <div className="bloom-faqs__controls">
                 <button

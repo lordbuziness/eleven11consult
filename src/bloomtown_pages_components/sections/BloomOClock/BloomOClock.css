@@ -54,7 +54,6 @@
 /* =========================================================
    VIDEO LABEL
 ========================================================= */
-
 .bloom-oclock__video-label {
     position: absolute;
 
@@ -64,6 +63,10 @@
     transform: translateX(-50%);
 
     z-index: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
 
     padding: 10px 22px;
 
@@ -91,20 +94,19 @@
 }
 
 
-.bloom-oclock__video-label .bloom-word {
+.bloom-oclock__video-label .its-word {
     color: #ffffff;
 }
 
 
-.bloom-oclock__video-label .town-word {
-    color: #d4a017;
+.bloom-oclock__video-label .bloom-word {
+    color: #ffffff;
 }
 
 
 .bloom-oclock__video-label .clock-word {
     color: #d4a017;
 }
-
 
 /* =========================================================
    CONTENT

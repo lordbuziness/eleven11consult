@@ -121,14 +121,20 @@ ${email}`;
                 </video>
 
                 <div className="bloom-oclock__video-label">
-                    <span className="bloom-word">
-                        BLOOM
-                    </span>
+    <span className="its-word">
+        IT'S
+    </span>
 
-                    <span className="clock-word">
-                        {" "}O'CLOCK
-                    </span>
-                </div>
+    <span className="bloom-word">
+        BLOOM
+    </span>
+
+    <span className="clock-word">
+        O'CLOCK
+    </span>
+</div>
+
+                
 
             </div>
 
