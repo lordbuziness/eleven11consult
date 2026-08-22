@@ -1,9 +1,19 @@
 import { useState } from "react";
 import "./BloomOClock.css";
+
 import bloomOClockVideo from "../../asset/images/The_Bloom_Experience.mp4";
+
+import {
+    Sprout,
+    Flower2,
+    Crown,
+    Sparkles,
+    X,
+} from "lucide-react";
 
 function BloomOClock() {
     const [vendorFormOpen, setVendorFormOpen] = useState(false);
+    const [vendorPackagesOpen, setVendorPackagesOpen] = useState(false);
 
     const handleWhatsApp = (
         event: React.FormEvent<HTMLFormElement>
@@ -13,15 +23,22 @@ function BloomOClock() {
         const form = event.currentTarget;
         const formData = new FormData(form);
 
-        const name = String(formData.get("name") || "").trim();
-        const phone = String(formData.get("phone") || "").trim();
-        const message = String(formData.get("message") || "").trim();
+        const name = String(
+            formData.get("name") || ""
+        ).trim();
+
+        const phone = String(
+            formData.get("phone") || ""
+        ).trim();
+
+        const message = String(
+            formData.get("message") || ""
+        ).trim();
 
         const whatsappMessage = `Hello BloomTown!
 
 Name: ${name}
 Phone: ${phone}
-
 Message:
 ${message}`;
 
@@ -35,65 +52,6 @@ ${message}`;
             "_blank",
             "noopener,noreferrer"
         );
-    };
-
-    const handleVendorSubmit = (
-        event: React.FormEvent<HTMLFormElement>
-    ) => {
-        event.preventDefault();
-
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-
-        const brandName = String(
-            formData.get("brandName") || ""
-        ).trim();
-
-        const brandOwner = String(
-            formData.get("brandOwner") || ""
-        ).trim();
-
-        const vendorType = String(
-            formData.get("vendorType") || ""
-        ).trim();
-
-        const about = String(
-            formData.get("about") || ""
-        ).trim();
-
-        const phone = String(
-            formData.get("vendorPhone") || ""
-        ).trim();
-
-        const email = String(
-            formData.get("email") || ""
-        ).trim();
-
-        const subject = `BloomTown Vendor Application — ${brandName}`;
-
-        const body = `BloomTown Vendor Application
-
-Brand Name:
-${brandName}
-
-Brand Owner:
-${brandOwner}
-
-What will be sold:
-${vendorType}
-
-About the Brand:
-${about}
-
-Phone / WhatsApp:
-${phone}
-
-Email:
-${email}`;
-
-        window.location.href =
-            `mailto:?subject=${encodeURIComponent(subject)}` +
-            `&body=${encodeURIComponent(body)}`;
     };
 
     return (
@@ -121,26 +79,26 @@ ${email}`;
                 </video>
 
                 <div className="bloom-oclock__video-label">
-    <span className="its-word">
-        IT'S
-    </span>
 
-    <span className="bloom-word">
-        BLOOM
-    </span>
+                    <span className="its-word">
+                        IT'S
+                    </span>
 
-    <span className="clock-word">
-        O'CLOCK
-    </span>
-</div>
+                    <span className="bloom-word">
+                        BLOOM
+                    </span>
 
-                
+                    <span className="clock-word">
+                        O'CLOCK
+                    </span>
+
+                </div>
 
             </div>
 
 
             {/* =====================================================
-                THREE CARDS
+                CONTENT
             ===================================================== */}
 
             <div className="bloom-oclock__content">
@@ -213,6 +171,7 @@ ${email}`;
 
 
                         <div className="bloom-oclock__free-ticket">
+
                             <span>
                                 Children Under 4
                             </span>
@@ -220,220 +179,236 @@ ${email}`;
                             <strong>
                                 FREE
                             </strong>
+
                         </div>
 
                     </div>
 
                 </div>
 
-
-                {/* =================================================
-                    2. VENDORS
-                ================================================= */}
-
+           {/* =====================================================
+                vendors
+            ===================================================== */}
                 <div className="bloom-oclock__vendors">
 
-                    {!vendorFormOpen ? (
+    <p className="bloom-oclock__eyebrow">
+        BE PART OF THE FEST
+    </p>
 
-                        <>
-                            <p className="bloom-oclock__eyebrow">
-                                BE PART OF THE FEST
-                            </p>
+    <h3>
+        BloomTown <span>Vendors.</span>
+    </h3>
 
-                            <h3>
-                                BloomTown <span>Vendors.</span>
-                            </h3>
+    <p className="bloom-oclock__vendor-intro">
+        Showcase your brand, connect with families,
+        and grow your business at BloomTown Family Fest.
+    </p>
 
-                            <p className="bloom-oclock__vendor-intro">
-                                Bring your brand, products and
-                                creativity to BloomTown Family Fest
-                                and be part of the celebration.
-                            </p>
+    <div className="bloom-oclock__vendor-types">
+        <span>Food</span>
+        <span>Fashion</span>
+        <span>Lifestyle</span>
+        <span>Kids</span>
+        <span>Creative</span>
+    </div>
 
-                            <div className="bloom-oclock__vendor-types">
+    <button
+        type="button"
+        className="bloom-oclock__vendor-button"
+        onClick={() => setVendorPackagesOpen(true)}
+    >
+        VIEW VENDOR PACKAGES ↗
+    </button>
 
-                                <span>Food</span>
-                                <span>Fashion</span>
-                                <span>Lifestyle</span>
-                                <span>Kids</span>
-                                <span>Creative</span>
-                                <span>Other</span>
+</div>
+{vendorPackagesOpen && (
+    <div
+        className="bloom-oclock__packages-overlay"
+        onClick={() => setVendorPackagesOpen(false)}
+    >
 
-                            </div>
+        <div
+            className="bloom-oclock__packages-modal"
+            onClick={(event) => event.stopPropagation()}
+        >
 
-                            <button
-                                type="button"
-                                className="bloom-oclock__vendor-button"
-                                onClick={() =>
-                                    setVendorFormOpen(true)
-                                }
-                            >
-                                APPLY TO JOIN BLOOMTOWN ↗
-                            </button>
-                        </>
-
-                    ) : (
-
-                        <>
-                            <div className="bloom-oclock__vendor-form-top">
-
-                                <div>
-                                    <p className="bloom-oclock__eyebrow">
-                                        VENDOR APPLICATION
-                                    </p>
-
-                                    <h3>
-                                        Join <span>BloomTown.</span>
-                                    </h3>
-                                </div>
-
-                                <button
-                                    type="button"
-                                    className="bloom-oclock__vendor-close"
-                                    onClick={() =>
-                                        setVendorFormOpen(false)
-                                    }
-                                    aria-label="Close vendor application"
-                                >
-                                    ×
-                                </button>
-
-                            </div>
+            <button
+                type="button"
+                className="bloom-oclock__packages-close"
+                onClick={() => setVendorPackagesOpen(false)}
+                aria-label="Close vendor packages"
+            >
+                ×
+            </button>
 
 
-                            <form
-                                className="bloom-oclock__vendor-form"
-                                onSubmit={handleVendorSubmit}
-                            >
+            <div className="bloom-oclock__packages-list">
 
-                                <label>
-                                    <span>
-                                        Brand Name
-                                    </span>
+                {/* BLOOM */}
 
-                                    <input
-                                        type="text"
-                                        name="brandName"
-                                        placeholder="Your brand name"
-                                        required
-                                    />
-                                </label>
+                <div className="bloom-package bloom-package--green">
 
+                    <div className="bloom-package__icon">
+                        ✿
+                    </div>
 
-                                <label>
-                                    <span>
-                                        Brand Owner
-                                    </span>
+                    <div className="bloom-package__info">
 
-                                    <input
-                                        type="text"
-                                        name="brandOwner"
-                                        placeholder="Your name"
-                                        required
-                                    />
-                                </label>
+                        <span className="bloom-package__name">
+                            BLOOM
+                        </span>
 
+                        <strong className="bloom-package__price">
+                            ₦40,000
+                        </strong>
 
-                                <label>
-                                    <span>
-                                        What will be sold?
-                                    </span>
+                        <small>
+                            Average product price up to ₦5,000
+                        </small>
 
-                                    <select
-                                        name="vendorType"
-                                        defaultValue=""
-                                        required
-                                    >
-                                        <option
-                                            value=""
-                                            disabled
-                                        >
-                                            Select a category
-                                        </option>
+                        <p>
+                            2 Vendor Passes · Vendor Directory · Shared Power
+                        </p>
 
-                                        <option value="Food">
-                                            Food
-                                        </option>
+                    </div>
 
-                                        <option value="Fashion">
-                                            Fashion
-                                        </option>
-
-                                        <option value="Lifestyle">
-                                            Lifestyle
-                                        </option>
-
-                                        <option value="Kids">
-                                            Kids
-                                        </option>
-
-                                        <option value="Creative">
-                                            Creative
-                                        </option>
-
-                                        <option value="Other">
-                                            Other
-                                        </option>
-                                    </select>
-                                </label>
-
-
-                                <label>
-                                    <span>
-                                        Tell us about yourself
-                                    </span>
-
-                                    <textarea
-                                        name="about"
-                                        placeholder="Tell us a little about your brand..."
-                                        rows={3}
-                                        required
-                                    />
-                                </label>
-
-
-                                <label>
-                                    <span>
-                                        Phone / WhatsApp
-                                    </span>
-
-                                    <input
-                                        type="tel"
-                                        name="vendorPhone"
-                                        placeholder="080 0000 0000"
-                                        required
-                                    />
-                                </label>
-
-
-                                <label>
-                                    <span>
-                                        Email
-                                    </span>
-
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="you@example.com"
-                                        required
-                                    />
-                                </label>
-
-
-                                <button
-                                    type="submit"
-                                    className="bloom-oclock__vendor-submit"
-                                >
-                                    APPLY TO JOIN BLOOMTOWN ↗
-                                </button>
-
-                            </form>
-                        </>
-
-                    )}
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bloom-package__button"
+                    >
+                        RESERVE ↗
+                    </a>
 
                 </div>
 
+
+                {/* FLOURISH */}
+
+                <div className="bloom-package bloom-package--orange">
+
+                    <div className="bloom-package__icon">
+                        ✦
+                    </div>
+
+                    <div className="bloom-package__info">
+
+                        <span className="bloom-package__name">
+                            FLOURISH
+                        </span>
+
+                        <strong className="bloom-package__price">
+                            ₦60,000
+                        </strong>
+
+                        <small>
+                            Average product price ₦5,001 – ₦30,000
+                        </small>
+
+                        <p>
+                            Everything in Bloom · 3 Vendor Passes · 1 Social Media Feature
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bloom-package__button"
+                    >
+                        RESERVE ↗
+                    </a>
+
+                </div>
+
+
+                {/* THRIVE */}
+
+                <div className="bloom-package bloom-package--teal">
+
+                    <div className="bloom-package__icon">
+                        ◆
+                    </div>
+
+                    <div className="bloom-package__info">
+
+                        <span className="bloom-package__name">
+                            THRIVE
+                        </span>
+
+                        <strong className="bloom-package__price">
+                            ₦80,000
+                        </strong>
+
+                        <small>
+                            Average product price ₦30,001 – ₦100,000
+                        </small>
+
+                        <p>
+                            Everything in Flourish · 4 Vendor Passes · 2 Social Features · Vendor Map · Priority Setup
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bloom-package__button"
+                    >
+                        RESERVE ↗
+                    </a>
+
+                </div>
+
+
+                {/* SIGNATURE */}
+
+                <div className="bloom-package bloom-package--gold">
+
+                    <div className="bloom-package__icon">
+                        ★
+                    </div>
+
+                    <div className="bloom-package__info">
+
+                        <span className="bloom-package__name">
+                            SIGNATURE
+                        </span>
+
+                        <strong className="bloom-package__price">
+                            ₦100,000
+                        </strong>
+
+                        <small>
+                            Average product price above ₦100,000
+                        </small>
+
+                        <p>
+                            Everything in Thrive · 5 Vendor Passes · Prime Location · Spotlight Feature · VIP Loading · Vendor Support
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bloom-package__button"
+                    >
+                        RESERVE ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+)}
 
                 {/* =================================================
                     3. TALK TO BLOOMTOWN
@@ -499,6 +474,7 @@ ${email}`;
                                 rows={4}
                                 required
                             />
+
                         </label>
 
 
@@ -514,9 +490,303 @@ ${email}`;
 
                 </div>
 
-                
-
             </div>
+
+
+            {/* =====================================================
+                VENDOR PACKAGE POPUP
+            ===================================================== */}
+
+            {vendorFormOpen && (
+
+                <div
+                    className="bloom-vendor-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="vendor-modal-title"
+                >
+
+                    <div
+                        className="bloom-vendor-modal__backdrop"
+                        onClick={() =>
+                            setVendorFormOpen(false)
+                        }
+                    />
+
+                    <div className="bloom-vendor-modal__card">
+
+                        {/* HEADER */}
+
+                        <div className="bloom-vendor-modal__header">
+
+                            <div>
+
+                                <p className="bloom-oclock__eyebrow">
+                                    VENDOR BOOKINGS
+                                </p>
+
+                                <h2 id="vendor-modal-title">
+                                    Choose your{" "}
+                                    <span>
+                                        perfect fit.
+                                    </span>
+                                </h2>
+
+                                <p>
+                                    Reserve your booth at
+                                    BloomTown Family Fest 2026.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                className="bloom-vendor-modal__close"
+                                onClick={() =>
+                                    setVendorFormOpen(false)
+                                }
+                                aria-label="Close vendor packages"
+                            >
+                                <X />
+                            </button>
+
+                        </div>
+
+
+                        {/* PACKAGES */}
+
+                        <div className="bloom-vendor-packages">
+
+
+                            {/* BLOOM */}
+
+                            <div className="bloom-vendor-package bloom-vendor-package--bloom">
+
+                                <div className="bloom-vendor-package__icon">
+                                    <Sprout />
+                                </div>
+
+                                <div className="bloom-vendor-package__info">
+
+                                    <span>
+                                        BLOOM
+                                    </span>
+
+                                    <h3>
+                                        ₦40,000
+                                    </h3>
+
+                                    <p>
+                                        Products up to ₦5,000
+                                    </p>
+
+                                </div>
+
+                                <div className="bloom-vendor-package__benefits">
+
+                                    <span>
+                                        2 Vendor Passes
+                                    </span>
+
+                                    <span>
+                                        Vendor Directory
+                                    </span>
+
+                                    <span>
+                                        Shared Power
+                                    </span>
+
+                                </div>
+
+                                {/* REPLACE # WITH PAYSTACK LINK */}
+
+                                <a
+                                    href="#"
+                                    className="bloom-vendor-package__button"
+                                >
+                                    RESERVE ↗
+                                </a>
+
+                            </div>
+
+
+                            {/* FLOURISH */}
+
+                            <div className="bloom-vendor-package bloom-vendor-package--flourish">
+
+                                <div className="bloom-vendor-package__icon">
+                                    <Flower2 />
+                                </div>
+
+                                <div className="bloom-vendor-package__info">
+
+                                    <span>
+                                        FLOURISH
+                                    </span>
+
+                                    <h3>
+                                        ₦60,000
+                                    </h3>
+
+                                    <p>
+                                        Products ₦5,001–₦30,000
+                                    </p>
+
+                                </div>
+
+                                <div className="bloom-vendor-package__benefits">
+
+                                    <span>
+                                        3 Vendor Passes
+                                    </span>
+
+                                    <span>
+                                        Everything in Bloom
+                                    </span>
+
+                                    <span>
+                                        1 Social Feature
+                                    </span>
+
+                                </div>
+
+                                {/* REPLACE # WITH PAYSTACK LINK */}
+
+                                <a
+                                    href="#"
+                                    className="bloom-vendor-package__button"
+                                >
+                                    RESERVE ↗
+                                </a>
+
+                            </div>
+
+
+                            {/* THRIVE */}
+
+                            <div className="bloom-vendor-package bloom-vendor-package--thrive">
+
+                                <div className="bloom-vendor-package__icon">
+                                    <Sparkles />
+                                </div>
+
+                                <div className="bloom-vendor-package__info">
+
+                                    <span>
+                                        THRIVE
+                                    </span>
+
+                                    <h3>
+                                        ₦80,000
+                                    </h3>
+
+                                    <p>
+                                        Products ₦30,001–₦100,000
+                                    </p>
+
+                                </div>
+
+                                <div className="bloom-vendor-package__benefits">
+
+                                    <span>
+                                        4 Vendor Passes
+                                    </span>
+
+                                    <span>
+                                        2 Social Features
+                                    </span>
+
+                                    <span>
+                                        Logo on Vendor Map
+                                    </span>
+
+                                </div>
+
+                                {/* REPLACE # WITH PAYSTACK LINK */}
+
+                                <a
+                                    href="#"
+                                    className="bloom-vendor-package__button"
+                                >
+                                    RESERVE ↗
+                                </a>
+
+                            </div>
+
+
+                            {/* SIGNATURE */}
+
+                            <div className="bloom-vendor-package bloom-vendor-package--signature">
+
+                                <div className="bloom-vendor-package__icon">
+                                    <Crown />
+                                </div>
+
+                                <div className="bloom-vendor-package__info">
+
+                                    <span>
+                                        SIGNATURE
+                                    </span>
+
+                                    <h3>
+                                        ₦100,000
+                                    </h3>
+
+                                    <p>
+                                        Products above ₦100,000
+                                    </p>
+
+                                </div>
+
+                                <div className="bloom-vendor-package__benefits">
+
+                                    <span>
+                                        5 Vendor Passes
+                                    </span>
+
+                                    <span>
+                                        Prime Booth Location
+                                    </span>
+
+                                    <span>
+                                        Vendor Support
+                                    </span>
+
+                                </div>
+
+                                {/* REPLACE # WITH PAYSTACK LINK */}
+
+                                <a
+                                    href="#"
+                                    className="bloom-vendor-package__button"
+                                >
+                                    RESERVE ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div className="bloom-vendor-modal__footer">
+
+                            <span>
+                                LIMITED SPACES AVAILABLE
+                            </span>
+
+                            <p>
+                                Need help choosing a package?
+                                Contact BloomTown on WhatsApp.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            )}
 
         </section>
     );

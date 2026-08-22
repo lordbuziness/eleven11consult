@@ -11,55 +11,64 @@ import bloomLogo from "../../asset/images/bloomlogo.svg";
 function BloomtownFooter() {
     const [showWelcome, setShowWelcome] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+
     return (
         <footer className="bloomtown-footer">
 
+            {/* =========================================
+                WELCOME POPUP
+            ========================================= */}
+
             {showWelcome && (
-    <div className="bloomtown-welcome-popup">
-        <div className="bloomtown-welcome-popup__card">
+                <div className="bloomtown-welcome-popup">
 
-            <button
-                type="button"
-                className="bloomtown-welcome-popup__close"
-                onClick={() => setShowWelcome(false)}
-                aria-label="Close"
-            >
-                ×
-            </button>
+                    <div className="bloomtown-welcome-popup__card">
 
-            <img
-                src={bloomLogo}
-                alt="BloomTown"
-                className="bloomtown-welcome-popup__logo"
-            />
+                        <button
+                            type="button"
+                            className="bloomtown-welcome-popup__close"
+                            onClick={() => setShowWelcome(false)}
+                            aria-label="Close"
+                        >
+                            ×
+                        </button>
 
-            <span className="bloomtown-welcome-popup__eyebrow">
-                WELCOME TO BLOOMTOWN
-            </span>
+                        <img
+                            src={bloomLogo}
+                            alt="BloomTown"
+                            className="bloomtown-welcome-popup__logo"
+                        />
 
-            <h2>
-                Welcome to the
-                <br />
-                <em>BloomTown Family.</em>
-            </h2>
+                        <span className="bloomtown-welcome-popup__eyebrow">
+                            WELCOME TO BLOOMTOWN
+                        </span>
 
-            <p>
-                You're officially part of the BloomTown community.
-                We'll keep you updated with our latest news,
-                events, opportunities, and experiences.
-            </p>
+                        <h2>
+                            Welcome to the
+                            <br />
+                            <em>BloomTown Family.</em>
+                        </h2>
 
-            <button
-                type="button"
-                className="bloomtown-welcome-popup__button"
-                onClick={() => setShowWelcome(false)}
-            >
-                OK
-            </button>
+                        <p>
+                            You're officially part of the BloomTown
+                            community. We'll keep you updated with our
+                            latest news, events, opportunities, and
+                            experiences.
+                        </p>
 
-        </div>
-    </div>
-)}
+                        <button
+                            type="button"
+                            className="bloomtown-welcome-popup__button"
+                            onClick={() => setShowWelcome(false)}
+                        >
+                            OK
+                        </button>
+
+                    </div>
+
+                </div>
+            )}
+
 
             {/* =========================================
                 CLOSING CTA
@@ -83,13 +92,11 @@ function BloomtownFooter() {
                 </p>
 
                 <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=bloomtown@eleven11consult.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bloomtown-footer__cta-button"
->
-    Join BloomTown
-</a>
+                    href="#bloomtown-newsletter"
+                    className="bloomtown-footer__cta-button"
+                >
+                    Join BloomTown
+                </a>
 
             </div>
 
@@ -100,15 +107,20 @@ function BloomtownFooter() {
 
             <div className="bloomtown-footer__main">
 
-                {/* BRAND */}
+
+                {/* =====================================
+                    BRAND
+                ===================================== */}
 
                 <div className="bloomtown-footer__brand">
 
                     <div className="bloomtown-footer__logo">
+
                         <img
                             src={bloomLogo}
                             alt="BloomTown"
                         />
+
                     </div>
 
                     <p>
@@ -120,7 +132,9 @@ function BloomtownFooter() {
                 </div>
 
 
-                {/* NAVIGATION */}
+                {/* =====================================
+                    NAVIGATION
+                ===================================== */}
 
                 <div className="bloomtown-footer__column">
 
@@ -128,30 +142,28 @@ function BloomtownFooter() {
                         Explore
                     </h3>
 
-                    <a href="#about">
-                        About
+                    <a href="#bloom-experience">
+                        The Bloom Experience
                     </a>
 
-                    <a href="#districts">
-                        Age Districts
+                    <a href="#bloomtownmoments">
+                        BloomTown Moments
                     </a>
 
-                    <a href="#fest">
-                        BloomTown Fest
+                    <a href="#bloomtown-faq">
+                        BloomTown FAQ
                     </a>
 
-                    <a href="#gallery">
-                        Talent Gallery
-                    </a>
-
-                    <a href="#ai-hub">
-                        Bloom AI Hub
+                    <a href="#bloom-oclock">
+                        Bloom O'Clock
                     </a>
 
                 </div>
 
 
-                {/* CONTACT */}
+                {/* =====================================
+                    CONTACT
+                ===================================== */}
 
                 <div className="bloomtown-footer__column">
 
@@ -159,8 +171,9 @@ function BloomtownFooter() {
                         Contact Us
                     </h3>
 
-                    <a href="mailto:hello@bloomtown.ng">
-                        hello@bloomtown.ng
+                    <a href="mailto:https://formsubmit.co/ajax/bloomtown@eleven11consult.com">
+                    hello@bloomtown.ng
+                        
                     </a>
 
                     <a href="tel:+2348012345678">
@@ -174,9 +187,14 @@ function BloomtownFooter() {
                 </div>
 
 
-                {/* STAY UPDATED */}
+                {/* =====================================
+                    NEWSLETTER
+                ===================================== */}
 
-                <div className="bloomtown-footer__column bloomtown-footer__newsletter">
+                <div
+                    id="bloomtown-newsletter"
+                    className="bloomtown-footer__column bloomtown-footer__newsletter"
+                >
 
                     <h3>
                         Stay Updated
@@ -187,59 +205,86 @@ function BloomtownFooter() {
                         and updates.
                     </p>
 
-                   <form
-    className="bloomtown-footer__form"
-    onSubmit={async (e) => {
-        e.preventDefault();
 
-        const form = e.currentTarget;
-        const formData = new FormData(form);
+                    <form
+                        className="bloomtown-footer__form"
+                        onSubmit={async (e) => {
 
-        setIsSubmitting(true);
+                            e.preventDefault();
 
-        try {
-            const response = await fetch(
-                "https://formsubmit.co/ajax/bloomtown@eleven11consult.com",
-                {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        Accept: "application/json",
-                    },
-                }
-            );
+                            const form = e.currentTarget;
+                            const formData = new FormData(form);
 
-            if (response.ok) {
-                form.reset();
-                setShowWelcome(true);
-            } else {
-                alert("Something went wrong. Please try again.");
-            }
-        } catch {
-            alert("Something went wrong. Please try again.");
-        } finally {
-            setIsSubmitting(false);
-        }
-    }}
->
-    <input
-        type="email"
-        name="email"
-        placeholder="Your email address"
-        aria-label="Your email address"
-        required
-    />
+                            setIsSubmitting(true);
 
-    <input
-        type="hidden"
-        name="_subject"
-        value="New BloomTown Subscriber"
-    />
+                            try {
 
-    <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Subscribe"}
-    </button>
-</form>
+                                const response = await fetch(
+                                    "https://formsubmit.co/ajax/bloomtown@eleven11consult.com",
+                                    {
+                                        method: "POST",
+                                        body: formData,
+                                        headers: {
+                                            Accept: "application/json",
+                                        },
+                                    }
+                                );
+
+                                if (response.ok) {
+
+                                    form.reset();
+
+                                    setShowWelcome(true);
+
+                                } else {
+
+                                    alert(
+                                        "Something went wrong. Please try again."
+                                    );
+
+                                }
+
+                            } catch {
+
+                                alert(
+                                    "Something went wrong. Please try again."
+                                );
+
+                            } finally {
+
+                                setIsSubmitting(false);
+
+                            }
+
+                        }}
+                    >
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your email address"
+                            aria-label="Your email address"
+                            required
+                        />
+
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New BloomTown Subscriber"
+                        />
+
+
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting
+                                ? "Sending..."
+                                : "Subscribe"}
+                        </button>
+
+                    </form>
 
                 </div>
 
@@ -250,31 +295,29 @@ function BloomtownFooter() {
                 SOCIALS
             ========================================= */}
 
-            {/* =========================================
-    SOCIALS
-========================================= */}
+            <div className="bloomtown-footer__socials">
 
-<div className="bloomtown-footer__socials">
+                <a
+                    href="https://www.facebook.com/bloomtownafrica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="BloomTown on Facebook"
+                >
+                    <FaFacebookF />
+                </a>
 
-    <a
-        href="https://www.facebook.com/bloomtownafrica"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-    >
-        <FaFacebookF />
-    </a>
 
-    <a
-        href="https://www.instagram.com/bloomtownafrica"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-    >
-        <FaInstagram />
-    </a>
+                <a
+                    href="https://www.instagram.com/bloomtownafrica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="BloomTown on Instagram"
+                >
+                    <FaInstagram />
+                </a>
 
-</div>
+            </div>
+
 
             {/* =========================================
                 BOTTOM BAR

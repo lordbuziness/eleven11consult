@@ -1262,3 +1262,518 @@
 
 }
  
+
+.bloom-package--green {
+    background: #07543f;
+    color: #ffffff;
+    border-color: #d4a017;
+}
+
+.bloom-package--orange {
+    background: #4b2d1c;
+    color: #ffffff;
+    border-color: #d4a017;
+}
+
+.bloom-package--teal {
+    background: #0a6b50;
+    color: #ffffff;
+    border-color: #d4a017;
+}
+
+.bloom-package--gold {
+    background: #d4a017;
+    color: #4b2d1c;
+    border-color: #b8860b;
+}
+.bloom-oclock__packages-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(28, 18, 10, 0.78);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    animation: bloomPackagesFade 0.25s ease;
+}
+
+.bloom-oclock__packages-modal {
+    position: relative;
+
+    width: min(1050px, 100%);
+    max-height: 90vh;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    border-radius: 28px;
+
+    background: #fffdf5;
+
+    border: 1px solid #b8860b;
+
+    box-shadow:
+        0 30px 80px rgba(75, 45, 28, 0.35);
+
+    animation: bloomPackagesUp 0.3s ease;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.bloom-oclock__packages-close {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #d4a017;
+    border-radius: 50%;
+
+    background: #07543f;
+    color: #d4a017;
+
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.bloom-oclock__packages-close:hover {
+    transform: rotate(90deg);
+    background: #4b2d1c;
+}
+
+
+/* =========================================================
+   PACKAGE LIST
+========================================================= */
+
+.bloom-oclock__packages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+
+.bloom-package {
+    display: grid;
+
+    grid-template-columns: 58px 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 125px;
+
+    padding: 20px 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(75, 45, 28, 0.18);
+
+    box-shadow:
+        0 8px 25px rgba(75, 45, 28, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.bloom-package:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 32px rgba(75, 45, 28, 0.16);
+}
+
+
+/* =========================================================
+   PACKAGE ICON
+========================================================= */
+
+.bloom-package__icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(75, 45, 28, 0.18);
+
+    color: #4b2d1c;
+
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PACKAGE INFORMATION
+========================================================= */
+
+.bloom-package__info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.bloom-package__name {
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #07543f;
+}
+
+.bloom-package__price {
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 1.9rem;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: #4b2d1c;
+}
+
+.bloom-package__info small {
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    color: #4b2d1c;
+
+    opacity: 0.82;
+}
+
+.bloom-package__info p {
+    margin: 3px 0 0;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    color: #4b2d1c;
+}
+
+
+/* =========================================================
+   RESERVE / PAYSTACK BUTTON
+========================================================= */
+
+.bloom-package__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 115px;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    background: #07543f;
+    color: #d4a017;
+
+    border: 1px solid #b8860b;
+
+    text-decoration: none;
+
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    font-size: 0.67rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.bloom-package__button:hover {
+    transform: translateY(-2px);
+
+    background: #4b2d1c;
+
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   BLOOM — GREEN
+========================================================= */
+
+.bloom-package--green {
+    background: #e3eee7;
+
+    border-color: #07543f;
+}
+
+.bloom-package--green .bloom-package__icon {
+    color: #07543f;
+}
+
+.bloom-package--green .bloom-package__name {
+    color: #07543f;
+}
+
+
+/* =========================================================
+   FLOURISH — WARM BROWN / ORANGE
+========================================================= */
+
+.bloom-package--orange {
+    background: #f1dfcf;
+
+    border-color: #9a5a32;
+}
+
+.bloom-package--orange .bloom-package__icon {
+    color: #8a4a25;
+}
+
+.bloom-package--orange .bloom-package__name {
+    color: #8a4a25;
+}
+
+
+/* =========================================================
+   THRIVE — DEEP GREEN
+========================================================= */
+
+.bloom-package--teal {
+    background: #dce9e2;
+
+    border-color: #176b55;
+}
+
+.bloom-package--teal .bloom-package__icon {
+    color: #176b55;
+}
+
+.bloom-package--teal .bloom-package__name {
+    color: #07543f;
+}
+
+
+/* =========================================================
+   SIGNATURE — GOLD
+========================================================= */
+
+.bloom-package--gold {
+    background: #f2e6c5;
+
+    border-color: #b8860b;
+}
+
+.bloom-package--gold .bloom-package__icon {
+    color: #9a7200;
+}
+
+.bloom-package--gold .bloom-package__name {
+    color: #9a7200;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes bloomPackagesFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bloomPackagesUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .bloom-oclock__packages-overlay {
+        align-items: flex-start;
+
+        padding: 15px;
+
+        overflow-y: auto;
+    }
+
+    .bloom-oclock__packages-modal {
+        width: 100%;
+
+        margin: 15px 0;
+
+        padding: 20px;
+
+        border-radius: 22px;
+
+        max-height: none;
+    }
+
+    .bloom-oclock__packages-list {
+        gap: 12px;
+    }
+
+    .bloom-package {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        min-height: auto;
+
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .bloom-package__icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .bloom-package__price {
+        font-size: 1.75rem;
+    }
+
+    .bloom-package__info p {
+        font-size: 0.7rem;
+    }
+
+    .bloom-package__button {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .bloom-oclock__packages-overlay {
+        padding: 10px;
+    }
+
+    .bloom-oclock__packages-modal {
+        margin: 10px 0;
+
+        padding: 16px;
+
+        border-radius: 20px;
+    }
+
+    .bloom-package {
+        padding: 17px;
+    }
+
+    .bloom-package__price {
+        font-size: 1.6rem;
+    }
+
+    .bloom-package__info small {
+        font-size: 0.64rem;
+    }
+
+    .bloom-package__info p {
+        font-size: 0.67rem;
+    }
+}

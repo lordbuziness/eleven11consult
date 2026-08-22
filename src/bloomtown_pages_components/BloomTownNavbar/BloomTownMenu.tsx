@@ -309,16 +309,16 @@ function BloomTownMenu({
                 ========================================= */}
 
                 <a
-                    href="#contact"
-                    className="bloomtown-menu__cta"
-                    onClick={onClose}
-                >
-                    <span>
-                        Join BloomTown
-                    </span>
+    href="#bloomtown-newsletter"
+    className="bloomtown-menu__cta"
+    onClick={onClose}
+>
+    <span>
+        Join BloomTown
+    </span>
 
-                    <ArrowUpRight />
-                </a>
+    <ArrowUpRight />
+</a>
 
             </main>
 
