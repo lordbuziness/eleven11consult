@@ -1,4 +1,5 @@
 import "./BloomtownFooter.css";
+import { useState } from "react";
 
 import {
     FaFacebookF,
@@ -8,8 +9,57 @@ import {
 import bloomLogo from "../../asset/images/bloomlogo.svg";
 
 function BloomtownFooter() {
+    const [showWelcome, setShowWelcome] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     return (
         <footer className="bloomtown-footer">
+
+            {showWelcome && (
+    <div className="bloomtown-welcome-popup">
+        <div className="bloomtown-welcome-popup__card">
+
+            <button
+                type="button"
+                className="bloomtown-welcome-popup__close"
+                onClick={() => setShowWelcome(false)}
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <img
+                src={bloomLogo}
+                alt="BloomTown"
+                className="bloomtown-welcome-popup__logo"
+            />
+
+            <span className="bloomtown-welcome-popup__eyebrow">
+                WELCOME TO BLOOMTOWN
+            </span>
+
+            <h2>
+                Welcome to the
+                <br />
+                <em>BloomTown Family.</em>
+            </h2>
+
+            <p>
+                You're officially part of the BloomTown community.
+                We'll keep you updated with our latest news,
+                events, opportunities, and experiences.
+            </p>
+
+            <button
+                type="button"
+                className="bloomtown-welcome-popup__button"
+                onClick={() => setShowWelcome(false)}
+            >
+                OK
+            </button>
+
+        </div>
+    </div>
+)}
 
             {/* =========================================
                 CLOSING CTA
@@ -139,8 +189,38 @@ function BloomtownFooter() {
 
                    <form
     className="bloomtown-footer__form"
-    action="https://formsubmit.co/bloomtown@eleven11consult.com"
-    method="POST"
+    onSubmit={async (e) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch(
+                "https://formsubmit.co/ajax/bloomtown@eleven11consult.com",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                }
+            );
+
+            if (response.ok) {
+                form.reset();
+                setShowWelcome(true);
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    }}
 >
     <input
         type="email"
@@ -156,14 +236,8 @@ function BloomtownFooter() {
         value="New BloomTown Subscriber"
     />
 
-    <input
-        type="hidden"
-        name="_next"
-        value="https://bloomtown.eleven11consult.com/"
-    />
-
-    <button type="submit">
-        Subscribe
+    <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Sending..." : "Subscribe"}
     </button>
 </form>
 
