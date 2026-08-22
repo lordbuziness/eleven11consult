@@ -33,11 +33,13 @@ function BloomtownFooter() {
                 </p>
 
                 <a
-                    href="#contact"
-                    className="bloomtown-footer__cta-button"
-                >
-                    Join BloomTown
-                </a>
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=bloomtown@eleven11consult.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bloomtown-footer__cta-button"
+>
+    Join BloomTown
+</a>
 
             </div>
 
@@ -135,19 +137,35 @@ function BloomtownFooter() {
                         and updates.
                     </p>
 
-                    <form className="bloomtown-footer__form">
+                   <form
+    className="bloomtown-footer__form"
+    action="https://formsubmit.co/bloomtown@eleven11consult.com"
+    method="POST"
+>
+    <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        aria-label="Your email address"
+        required
+    />
 
-                        <input
-                            type="email"
-                            placeholder="Your email address"
-                            aria-label="Your email address"
-                        />
+    <input
+        type="hidden"
+        name="_subject"
+        value="New BloomTown Subscriber"
+    />
 
-                        <button type="submit">
-                            Subscribe
-                        </button>
+    <input
+        type="hidden"
+        name="_next"
+        value="https://bloomtown.eleven11consult.com/"
+    />
 
-                    </form>
+    <button type="submit">
+        Subscribe
+    </button>
+</form>
 
                 </div>
 
