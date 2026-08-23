@@ -176,8 +176,8 @@ function BloomtownFooter() {
                         
                     </a>
 
-                    <a href="tel:+2348012345678">
-                        +234 801 234 5678
+                    <a href="tel:09166425251">
+                        +234 916 642 5251
                     </a>
 
                     <span>
