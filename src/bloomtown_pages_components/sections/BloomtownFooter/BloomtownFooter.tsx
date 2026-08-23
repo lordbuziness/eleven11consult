@@ -172,7 +172,7 @@ function BloomtownFooter() {
                     </h3>
 
                     <a href="mailto:https://formsubmit.co/ajax/bloomtown@eleven11consult.com">
-                    hello@bloomtown.ng
+                    bloomtown@eleven11consult.com
                         
                     </a>
 
