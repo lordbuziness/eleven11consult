@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import {
-    FaFacebookF,
+    FaTiktok,
     FaInstagram,
 } from "react-icons/fa";
 
@@ -112,13 +112,13 @@ function Hero() {
             <div className="paint-strokes__social-links">
 
                 <a
-                    href="https://www.facebook.com/bloomtownafrica"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="BloomTown Africa on Facebook"
-                >
-                    <FaFacebookF />
-                </a>
+    href="https://www.tiktok.com/@bloomtown1"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="BloomTown on TikTok"
+>
+    <FaTiktok />
+</a>
 
                 <a
                     href="https://www.instagram.com/bloomtownafrica"

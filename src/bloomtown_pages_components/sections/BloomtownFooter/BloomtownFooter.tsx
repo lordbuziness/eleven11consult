@@ -2,7 +2,7 @@ import "./BloomtownFooter.css";
 import { useState } from "react";
 
 import {
-    FaFacebookF,
+    FaTiktok,
     FaInstagram,
 } from "react-icons/fa";
 
@@ -297,14 +297,14 @@ function BloomtownFooter() {
 
             <div className="bloomtown-footer__socials">
 
-                <a
-                    href="https://www.facebook.com/bloomtownafrica"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="BloomTown on Facebook"
-                >
-                    <FaFacebookF />
-                </a>
+               <a
+    href="https://www.tiktok.com/@bloomtown1"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="BloomTown on TikTok"
+>
+    <FaTiktok />
+</a>
 
 
                 <a
