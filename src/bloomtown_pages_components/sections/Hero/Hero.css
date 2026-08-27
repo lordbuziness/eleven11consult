@@ -74,14 +74,15 @@
 
     z-index: 3;
 
-    top: 15%;
-    left: 15%;
+    top: 12%;
+    left: 6%;
 
-    transform: translateX(-50%);
+    transform: none;
 
     width: auto;
-    min-width: 280px;
-    height: 92px;
+    min-width: 260px;
+    height: auto;
+    min-height: 100px;
 
     display: flex;
     align-items: center;
@@ -93,12 +94,12 @@
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    padding: 10px 28px;
+    padding: 6px 20px;
     box-sizing: border-box;
 }
 
 .bloomtown-hero__logo {
-    width: 230px;
+    width: 200px;
     height: auto;
 
     display: block;
@@ -123,7 +124,12 @@
     width: max-content;
     margin: 0;
 
-    color: #4b2e1f;
+    color: #ffffff;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.55),
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.2);
 
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 2rem;
@@ -144,8 +150,10 @@
 
     z-index: 10;
 
-    top: 35%;
-    right: 65%;
+    top: 32%;
+    left: 6%;
+
+    right: auto;
 
     width: 350px;
 
@@ -158,19 +166,26 @@
 
 .bloomtown-hero__features .paint-strokes {
     width: 100%;
+    flex-shrink: 0;
 }
 
 .paint-strokes__description {
     width: 300px;
     margin: 12px 0 0;
+    flex-shrink: 0;
+    text-align: center;
 
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: 900;
     line-height: 1.45;
 
-    color: #4b2d1c;
+    color: #ffffff;
     text-align: center;
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.6),
+        0 2px 8px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.15);
 }
 
 .paint-strokes__social {
@@ -251,7 +266,11 @@
     font-weight: 900;
     letter-spacing: 0.7px;
 
-    color: #4b2d1c;
+    color: #ffffff;
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.6),
+        0 2px 8px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -743,27 +762,29 @@
 
 .bloomtown-hero__features .paint-strokes {
     position: relative;
+    flex-shrink: 0;
 }
 
 
-/* Description gets moved below the cards */
+/* Description centered beneath paint strokes */
 
 .paint-strokes__description {
-    position: absolute;
+    position: relative;
 
     z-index: 20;
 
-    left: 55%;
+    left: auto;
 
-    top: calc(100% + 20px);
+    top: auto;
 
     width: 300px;
 
-    margin: 0;
+    margin: 12px 0 0;
 
-    transform: translateX(-50%);
+    transform: none;
 
     text-align: center;
+    flex-shrink: 0;
 }
 
 
@@ -862,7 +883,8 @@
 
         width: auto;
         max-width: 320px;
-        height: 78px;
+        height: auto;
+        min-height: 85px;
 
         transform: none;
 
@@ -878,7 +900,7 @@
         box-shadow:
             0 10px 22px rgba(0, 0, 0, 0.16),
             inset 0 1px 0 rgba(255, 255, 255, 0.9);
-        padding: 10px 22px;
+        padding: 6px 16px;
         box-sizing: border-box;
         margin: 0 auto;
     }
@@ -1208,31 +1230,31 @@
 ========================================================= */
 @media (max-width: 700px) {
     .bloomtown-hero__slogan {
-        color: #fdf6e3 !important;
+        color: #ffffff !important;
         font-weight: 900 !important;
         text-shadow:
-            0 1px 2px rgba(0, 0, 0, 0.45),
-            0 3px 10px rgba(0, 0, 0, 0.35),
-            0 0 18px rgba(0, 0, 0, 0.25);
-        -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.15);
+            0 2px 4px rgba(0, 0, 0, 0.6),
+            0 4px 12px rgba(0, 0, 0, 0.45),
+            0 0 20px rgba(0, 0, 0, 0.35);
+        -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.2);
     }
 
     .paint-strokes__description,
     .bloomtown-hero .paint-strokes__description {
-        color: #fdf6e3 !important;
+        color: #ffffff !important;
         font-weight: 900 !important;
         text-shadow:
-            0 1px 2px rgba(0, 0, 0, 0.45),
-            0 2px 8px rgba(0, 0, 0, 0.35);
-        -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.12);
+            0 1px 3px rgba(0, 0, 0, 0.6),
+            0 2px 8px rgba(0, 0, 0, 0.45);
+        -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.15);
     }
 
     .paint-strokes__hashtag {
-        color: #fdf6e3 !important;
+        color: #ffffff !important;
         font-weight: 900 !important;
         text-shadow:
-            0 1px 2px rgba(0, 0, 0, 0.4),
-            0 2px 8px rgba(0, 0, 0, 0.3);
-        -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.1);
+            0 1px 3px rgba(0, 0, 0, 0.6),
+            0 2px 8px rgba(0, 0, 0, 0.4);
+        -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.15);
     }
 }
