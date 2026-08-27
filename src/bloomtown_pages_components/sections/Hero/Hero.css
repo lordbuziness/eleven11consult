@@ -85,6 +85,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background: #ffffff;
+    border: 1px solid rgba(212, 160, 23, 0.35);
+    border-radius: 18px;
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    padding: 10px 14px;
+    box-sizing: border-box;
 }
 
 .bloomtown-hero__logo {
@@ -851,6 +860,7 @@
         left: auto;
 
         width: 100%;
+        max-width: 320px;
         height: auto;
 
         transform: none;
@@ -860,6 +870,16 @@
         align-items: center;
 
         order: 1;
+
+        background: #ffffff;
+        border: 1px solid rgba(212, 160, 23, 0.35);
+        border-radius: 16px;
+        box-shadow:
+            0 10px 22px rgba(0, 0, 0, 0.16),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        padding: 10px 14px;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
 
     .bloomtown-hero__logo {
