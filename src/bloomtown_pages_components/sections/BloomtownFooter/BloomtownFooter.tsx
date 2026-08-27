@@ -87,8 +87,7 @@ function BloomtownFooter() {
                 </h2>
 
                 <p>
-                    Building brighter futures through talent,
-                    creativity, innovation, and community.
+                    One day, One Community, Endless memories
                 </p>
 
                 <a
