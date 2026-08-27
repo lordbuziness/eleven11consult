@@ -508,6 +508,10 @@
     letter-spacing: 0.8px;
 }
 
+.bloomtown-menu__footer span {
+    color: #6b421f;
+}
+
 
 /* =========================================
    SOCIALS
@@ -656,5 +660,15 @@
 
     .bloomtown-menu__nav button strong {
         font-size: 1.2rem;
+    }
+}
+
+/* =========================================================
+   MOBILE-ONLY WHITE HASHTAG (requested: white on mobile, brown on desktop)
+========================================================= */
+@media (max-width: 700px) {
+    .bloomtown-menu__footer,
+    .bloomtown-menu__footer span {
+        color: #ffffff !important;
     }
 }

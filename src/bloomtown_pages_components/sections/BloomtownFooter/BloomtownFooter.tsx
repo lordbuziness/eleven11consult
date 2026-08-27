@@ -124,9 +124,8 @@ function BloomtownFooter() {
                     </div>
 
                     <p>
-                        Raising tomorrow's leaders today through
-                        character development, talent discovery,
-                        and innovation.
+                        A day of family fun, shopping, networking &
+                        unforgettable memories!
                     </p>
 
                 </div>

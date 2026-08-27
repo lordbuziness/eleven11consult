@@ -477,29 +477,8 @@
 
         z-index: 0;
 
-        /* KEEP BOTTOM FADE */
-        -webkit-mask-image: linear-gradient(
-            to bottom,
-            black 0%,
-            black 65%,
-            rgba(0, 0, 0, 0.9) 75%,
-            rgba(0, 0, 0, 0.65) 85%,
-            rgba(0, 0, 0, 0.3) 93%,
-            transparent 100%
-        );
-
-        mask-image: linear-gradient(
-            to bottom,
-            black 0%,
-            black 65%,
-            rgba(0, 0, 0, 0.9) 75%,
-            rgba(0, 0, 0, 0.65) 85%,
-            rgba(0, 0, 0, 0.3) 93%,
-            transparent 100%
-        );
-
-        -webkit-mask-composite: source-in;
-        mask-composite: intersect;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 }
 
