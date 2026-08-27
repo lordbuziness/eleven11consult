@@ -103,8 +103,7 @@ function Hero() {
         <PaintStrokes />
 
         <p className="paint-strokes__description">
-            A day of family fun, shopping, networking &
-            unforgettable memories!
+            One day, One Community, Endless memories
         </p>
 
         <div className="paint-strokes__social">

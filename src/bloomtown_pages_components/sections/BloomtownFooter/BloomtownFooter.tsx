@@ -124,8 +124,7 @@ function BloomtownFooter() {
                     </div>
 
                     <p>
-                        A day of family fun, shopping, networking &
-                        unforgettable memories!
+                        One day, One Community, Endless memories
                     </p>
 
                 </div>
@@ -329,7 +328,7 @@ function BloomtownFooter() {
                 </span>
 
                 <span>
-                    Raising Tomorrow's Leaders Today.
+                    One day, One Community, Endless memories
                 </span>
 
             </div>
