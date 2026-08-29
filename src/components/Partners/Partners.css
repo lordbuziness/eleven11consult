@@ -17,86 +17,86 @@
 ========================= */
 
 .partners__header {
-    width: min(92%, 1200px);
-    margin: 0 auto 70px;
+  width: min(92%, 1200px);
+  margin: 0 auto 70px;
 
-    text-align: left;
+  text-align: left;
 }
 
 /* Eyebrow */
 
 .partners__header span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-    padding: 0.5rem 1rem;
-    margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
 
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
 
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 
-    color: var(--color-cinnabar);
+  color: var(--color-cinnabar);
 
-    border: 1px solid rgba(242, 140, 40, 0.35);
-    border-radius: 999px;
+  border: 1px solid rgba(242, 140, 40, 0.35);
+  border-radius: 999px;
 
-    background: rgba(217, 217, 217, 0.12);
+  background: rgba(217, 217, 217, 0.12);
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Cinnabar dot */
 
 .partners__header span::before {
-    content: "";
+  content: "";
 
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: var(--color-cinnabar);
+  background: var(--color-cinnabar);
 }
 
 /* Main heading */
 
 .partners__header h2 {
-    max-width: 850px;
+  max-width: 850px;
 
-    margin: 0;
+  margin: 0;
 
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 600;
 
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
 
-    color: var(--color-charcoal);
+  color: var(--color-charcoal);
 }
 
 /* Description */
 
 .partners__header p {
-    max-width: 600px;
+  max-width: 600px;
 
-    margin: 25px 0 0;
+  margin: 25px 0 0;
 
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 500;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
 
-    line-height: 1.7;
+  line-height: 1.7;
 
-    color: rgba(28, 28, 28, 0.65);
+  color: rgba(28, 28, 28, 0.65);
 }
 
 /* =========================
@@ -104,260 +104,555 @@
 ========================= */
 
 .solar-system {
-    position: relative;
+  position: relative;
 
-    width: 520px;
-    height: 520px;
+  width: 520px;
+  height: 520px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
 
 /* =========================
    Center
 ========================= */
 
 .sun {
-    position: absolute;
+  position: absolute;
 
-    top: 50%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-    width: 140px;
-    height: 140px;
+  width: 140px;
+  height: 140px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #fd7e14;
+  background: #fd7e14;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    box-shadow:
-        0 0 35px rgba(253, 126, 20, 0.22);
+  box-shadow:
+    0 0 35px rgba(253, 126, 20, 0.22);
 
-    z-index: 100;
+  z-index: 100;
 }
 
 .sun h3 {
-    margin: 0;
+  margin: 0;
 
-    font-family: "Roboto", sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
 
-    letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
 }
 
 .sun span {
-    margin-top: 7px;
+  margin-top: 7px;
 
-    font-family: "Inter", sans-serif;
-    font-size: 0.62rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.62rem;
 
-    letter-spacing: 0.15em;
+  letter-spacing: 0.15em;
 }
-
-
-
 
 /* =========================
    Orbit Rings
 ========================= */
 
 .orbit {
-    position: absolute;
+  position: absolute;
 
-    top: 50%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-    border: 1px solid rgba(28, 28, 28, 0.08);
+  border: 1px solid rgba(28, 28, 28, 0.08);
 
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-
-/* =========================
-   Inner Ring
-========================= */
+/* Inner Ring */
 
 .orbit-inner {
-    width: 230px;
-    height: 230px;
+  width: 230px;
+  height: 230px;
 
-    animation: orbitClockwise 32s linear infinite;
+  animation: orbitClockwise 32s linear infinite;
 }
 
-
-/* =========================
-   Outer Ring
-========================= */
+/* Outer Ring */
 
 .orbit-outer {
-    width: 440px;
-    height: 440px;
+  width: 440px;
+  height: 440px;
 
-    animation: orbitCounter 48s linear infinite;
+  animation: orbitCounter 48s linear infinite;
 }
-
 
 /* =========================
    Partner Logos
 ========================= */
 
 .planet {
-    position: absolute;
+  position: absolute;
 
-    width: 62px;
-    height: 62px;
+  width: 62px;
+  height: 62px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
 
-    border: 1px solid rgba(253, 126, 20, 0.28);
+  border: 1px solid rgba(253, 126, 20, 0.28);
 
-    box-shadow:
-        0 8px 20px rgba(17, 17, 17, 0.07);
+  box-shadow:
+    0 8px 20px rgba(17, 17, 17, 0.07);
 }
 
 .planet img {
-    width: 52%;
-    height: auto;
+  width: 52%;
+  height: auto;
 
-    object-fit: contain;
+  object-fit: contain;
 }
-
 
 /* =========================
    Inner Ring — 4 Logos
 ========================= */
 
 .inner-1 {
-    top: -31px;
-    left: 50%;
-    transform: translateX(-50%);
+  top: -31px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .inner-2 {
-    right: -31px;
-    top: 50%;
-    transform: translateY(-50%);
+  right: -31px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .inner-3 {
-    bottom: -31px;
-    left: 50%;
-    transform: translateX(-50%);
+  bottom: -31px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .inner-4 {
-    left: -31px;
-    top: 50%;
-    transform: translateY(-50%);
+  left: -31px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 
 /* =========================
    Outer Ring — 5 Logos
 ========================= */
 
 .outer-1 {
-    top: -31px;
-    left: 50%;
-    transform: translateX(-50%);
+  top: -31px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .outer-2 {
-    top: 18%;
-    right: 4%;
+  top: 18%;
+  right: 4%;
 }
 
 .outer-3 {
-    bottom: 8%;
-    right: 20%;
+  bottom: 8%;
+  right: 20%;
 }
 
 .outer-4 {
-    bottom: 8%;
-    left: 20%;
+  bottom: 8%;
+  left: 20%;
 }
 
 .outer-5 {
-    top: 18%;
-    left: 4%;
+  top: 18%;
+  left: 4%;
 }
-
 
 /* =========================
    Orbit Animation
 ========================= */
 
 @keyframes orbitClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes orbitCounter {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 
-    from {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
-
 
 /* =========================
    Keep Logos Upright
 ========================= */
 
 .orbit-inner .planet img {
-    animation: keepUpright 32s linear infinite;
+  animation: keepUpright 32s linear infinite;
 }
 
 .orbit-outer .planet img {
-    animation: keepUprightReverse 48s linear infinite;
+  animation: keepUprightReverse 48s linear infinite;
 }
 
 @keyframes keepUpright {
+  from {
+    transform: rotate(0deg);
+  }
 
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-360deg);
-    }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes keepUprightReverse {
+  from {
+    transform: rotate(-360deg);
+  }
 
-    from {
-        transform: rotate(-360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-    to {
-        transform: rotate(360deg);
-    }
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .partners {
+    padding: 100px 0;
+  }
+
+  .partners__header {
+    width: 90%;
+    margin-bottom: 55px;
+  }
+
+  .solar-system {
+    width: 440px;
+    height: 440px;
+  }
+
+  .orbit-inner {
+    width: 195px;
+    height: 195px;
+  }
+
+  .orbit-outer {
+    width: 370px;
+    height: 370px;
+  }
+
+  .sun {
+    width: 120px;
+    height: 120px;
+  }
+
+  .planet {
+    width: 56px;
+    height: 56px;
+  }
+
+  .inner-1 {
+    top: -28px;
+  }
+
+  .inner-2 {
+    right: -28px;
+  }
+
+  .inner-3 {
+    bottom: -28px;
+  }
+
+  .inner-4 {
+    left: -28px;
+  }
+
+  .outer-1 {
+    top: -28px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .partners {
+    width: 100%;
+    padding: 80px 0;
+
+    overflow: hidden;
+  }
+
+  /* =========================
+     Header
+  ========================= */
+
+  .partners__header {
+    width: 88%;
+    margin: 0 auto 45px;
+
+    text-align: left;
+  }
+
+  .partners__header span {
+    padding: 0.45rem 0.85rem;
+    margin-bottom: 1.2rem;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .partners__header h2 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+
+    line-height: 0.95;
+  }
+
+  .partners__header p {
+    margin-top: 18px;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     Centered Solar System
+  ========================= */
+
+  .solar-system {
+    width: min(88vw, 360px);
+    height: min(88vw, 360px);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================
+     Center Sun
+  ========================= */
+
+  .sun {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sun h3 {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .sun span {
+    margin-top: 5px;
+
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+  }
+
+
+  /* =========================
+     Orbit Rings
+  ========================= */
+
+  .orbit-inner {
+    width: 160px;
+    height: 160px;
+  }
+
+  .orbit-outer {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  /* =========================
+     Partner Logos
+  ========================= */
+
+  .planet {
+    width: 46px;
+    height: 46px;
+  }
+
+  .planet img {
+    width: 52%;
+  }
+
+
+  /* =========================
+     Inner Ring Positions
+  ========================= */
+
+  .inner-1 {
+    top: -23px;
+  }
+
+  .inner-2 {
+    right: -23px;
+  }
+
+  .inner-3 {
+    bottom: -23px;
+  }
+
+  .inner-4 {
+    left: -23px;
+  }
+
+
+  /* =========================
+     Outer Ring Positions
+  ========================= */
+
+  .outer-1 {
+    top: -23px;
+  }
+
+  .outer-2 {
+    top: 18%;
+    right: 4%;
+  }
+
+  .outer-3 {
+    bottom: 8%;
+    right: 20%;
+  }
+
+  .outer-4 {
+    bottom: 8%;
+    left: 20%;
+  }
+
+  .outer-5 {
+    top: 18%;
+    left: 4%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .partners {
+    padding: 70px 0;
+  }
+
+  .partners__header {
+    width: 90%;
+    margin-bottom: 35px;
+  }
+
+  .partners__header h2 {
+    font-size: 2.35rem;
+  }
+
+  .partners__header p {
+    font-size: 0.85rem;
+  }
+
+
+  /* =========================
+     Smaller Centered System
+  ========================= */
+
+  .solar-system {
+    width: 320px;
+    height: 320px;
+  }
+
+  .sun {
+    width: 88px;
+    height: 88px;
+  }
+
+  .sun h3 {
+    font-size: 0.62rem;
+  }
+
+  .sun span {
+    font-size: 0.42rem;
+  }
+
+  .orbit-inner {
+    width: 140px;
+    height: 140px;
+  }
+
+  .orbit-outer {
+    width: 270px;
+    height: 270px;
+  }
+
+  .planet {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  /* Inner ring */
+
+  .inner-1 {
+    top: -21px;
+  }
+
+  .inner-2 {
+    right: -21px;
+  }
+
+  .inner-3 {
+    bottom: -21px;
+  }
+
+  .inner-4 {
+    left: -21px;
+  }
+
+
+  /* Outer ring */
+
+  .outer-1 {
+    top: -21px;
+  }
 }

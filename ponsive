@@ -1,0 +1,36 @@
+[33me077086[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m hero: align logo card and paint circles at same left, center description/hashtag/socials beneath, white bold slogan/description/hashtag for desktop+mobile
+[33m1950a26[m hero card: pill 999px rounded, auto width, proper containment padding
+[33m7de89b7[m hero: restore white card behind BloomTown logo (desktop + mobile)
+[33m9afadd5[m footer cta: Building brighter futures... -> One day, One Community, Endless memories
+[33ma5b1a1c[m revert favicon F+D B -> full BloomTown wordmark transparent 95% for visibility
+[33m810c2ac[m favicon: F+D - manual pixel-perfect 16/32 simplified green B, larger sizes transparent wordmark 92%
+[33m939b40d[m BloomTown: update tagline to 'One day, One Community, Endless memories', favicon transparent bg with larger logo, bust cache v3
+[33m8c8fa5f[m favicon: fill square solid #07543f for visibility
+[33mb80afd8[m BloomTown: full-bleed hero, mobile soft-white texts, trimmed logo, 500px favicon, footer copy update
+[33m5d22e03[m changed facebook to tictok
+[33m6867655[m  changed email
+[33mbeba557[m  mobile number correction
+[33m53b741e[m Update BloomTown vendor packages
+[33m958bed4[m add BloomTown newsletter welcome popup
+[33mc3b9b7d[m connect BloomTown newsletter form
+[33m9513d48[m make BloomTown homepage
+[33m6cdaf96[m  home switched
+[33ma2bd0fc[m  removed the our partners section.
+[33m5cf4bcb[m Update Bloom O'Clock video label and FAQ timing
+[33mb0d5eeb[m Add BloomTown vendor application
+[33m6c55c00[m deleted sections
+[33m8c6011f[m adjusted
+[33m4a929ba[m Update BloomTown navigation menu
+[33m058994d[m Fix BloomTown direct routing
+[33m821d68a[m fix BloomTown direct routing
+[33med99faf[m  added sidedpadding to avoid cliping.
+[33mb2e7f54[m Add BloomTown Family Fest sections and assets
+[33m6185495[m  100% mobile responsive
+[33m0cb84b8[m  85% mobile responsive
+[33m71ce694[m  50% mobile responsive
+[33m509c200[m  complete bloomtwon site scaffold
+[33m2a7fbc1[m Build BloomTown site population
+[33m9b09f5a[m Add BloomTown about section
+[33m2940b75[m Add BloomTown about section
+[33mc4fc23a[m Update website
+[33m3547df1[m Initial commit

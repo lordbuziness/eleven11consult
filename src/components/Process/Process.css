@@ -25,41 +25,39 @@
 }
 
 .process__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-    padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
 
-    margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
 
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+  color: var(--color-cinnabar);
 
-    color: var(--color-cinnabar);
+  border: 1px solid var(--color-cinnabar);
+  border-radius: 999px;
 
-    border: 1px solid ;
-    border-radius: 999px;
+  background: rgba(217, 217, 217, 0.12);
 
-    background: rgba(217, 217, 217, 0.12);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .process__eyebrow-dot {
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    background: var(--color-cinnabar);
-
-    border-radius: 50%;
+  background: var(--color-cinnabar);
+  border-radius: 50%;
 }
 
 .process__header h2 {
@@ -68,6 +66,7 @@
   font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 600;
+
   line-height: 0.95;
   letter-spacing: -0.04em;
 
@@ -75,40 +74,28 @@
 }
 
 
-/* =========================================
-   HORIZONTAL TIMELINE
-========================================= */
+/* =============================
+   Timeline
+============================= */
 
-.bloomtown-monthly__line {
-    position: absolute;
+.process__timeline {
+  position: relative;
 
-    z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    top: 36px;
-
-    left: 0;
-    right: 0;
-
-    height: 3px;
-
-    background: linear-gradient(
-        90deg,
-        #b8860b,
-        #d4a017,
-        #f8d878,
-        #d4a017,
-        #b8860b
-    );
-
-    box-shadow:
-        0 0 12px rgba(212, 160, 23, 0.35);
+  gap: 0;
 }
 
 
-/* Timeline Line */
+/* =============================
+   Timeline Line
+============================= */
 
 .process__line {
   position: absolute;
+
+  z-index: 1;
 
   top: 24px;
   left: 0;
@@ -128,7 +115,12 @@
   position: relative;
 
   min-width: 0;
+
   padding-right: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .process__step:last-child {
@@ -142,6 +134,7 @@
 
 .process__marker {
   position: relative;
+
   z-index: 2;
 
   width: 48px;
@@ -154,7 +147,6 @@
   margin-bottom: 32px;
 
   background: var(--color-cinnabar);
-
   border-radius: 50%;
 }
 
@@ -171,6 +163,12 @@
 /* =============================
    Content
 ============================= */
+
+.process__content {
+  width: 100%;
+
+  text-align: center;
+}
 
 .process__content h3 {
   margin: 0 0 12px;
@@ -195,7 +193,8 @@
 
 .process__description {
   max-width: 250px;
-  margin: 0;
+
+  margin: 0 auto;
 
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -206,10 +205,11 @@
 
 
 /* =============================
-   Responsive
+   TABLET
 ============================= */
 
 @media (max-width: 900px) {
+
   .process {
     padding: 110px 0;
   }
@@ -220,6 +220,7 @@
 
   .process__timeline {
     grid-template-columns: repeat(2, 1fr);
+
     gap: 60px 40px;
   }
 
@@ -233,25 +234,189 @@
 }
 
 
+/* =============================
+   MOBILE — VERTICAL TIMELINE
+============================= */
+
 @media (max-width: 600px) {
+
   .process {
-    padding: 90px 0;
+    padding: 80px 0;
+  }
+
+  .process__container {
+    width: 88%;
   }
 
   .process__header {
     margin-bottom: 55px;
   }
 
-  .process__timeline {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .process__header h2 {
+    font-size: clamp(2.5rem, 11vw, 3.6rem);
   }
 
+
+  /* =========================
+     Vertical Timeline
+  ========================= */
+
+  .process__timeline {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    /*
+      Creates space before the first
+      circle and after the last circle
+      so the line starts/ends visibly.
+    */
+    padding: 18px 0;
+  }
+
+
+  /* =========================
+     Vertical Line
+  ========================= */
+
+  .process__line {
+    display: block;
+
+    position: absolute;
+
+    z-index: 1;
+
+    /*
+      The line extends through the
+      entire timeline including the
+      space before and after the circles.
+    */
+    top: 0;
+    bottom: 0;
+
+    left: 24px;
+    right: auto;
+
+    width: 1px;
+    height: auto;
+
+    background: rgba(28, 28, 28, 0.25);
+  }
+
+
+  /* =========================
+     Process Step
+  ========================= */
+
+  .process__step {
+    display: grid;
+
+    grid-template-columns: 48px 1fr;
+
+    column-gap: 22px;
+
+    align-items: start;
+
+    padding: 0 0 55px;
+  }
+
+  .process__step:last-child {
+    padding-bottom: 0;
+  }
+
+
+  /* =========================
+     Marker
+  ========================= */
+
   .process__marker {
-    margin-bottom: 24px;
+    width: 48px;
+    height: 48px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================
+     Content
+  ========================= */
+
+  .process__content {
+    width: auto;
+
+    padding-top: 2px;
+
+    text-align: left;
+  }
+
+  .process__content h3 {
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+  }
+
+  .process__content h4 {
+    font-size: 0.82rem;
+
+    margin-bottom: 14px;
   }
 
   .process__description {
-    max-width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+}
+
+
+/* =============================
+   SMALL PHONES
+============================= */
+
+@media (max-width: 380px) {
+
+  .process__container {
+    width: 90%;
+  }
+
+  .process__header h2 {
+    font-size: 2.4rem;
+  }
+
+  .process__step {
+    grid-template-columns: 42px 1fr;
+
+    column-gap: 18px;
+
+    padding-bottom: 45px;
+  }
+
+  .process__marker {
+    width: 42px;
+    height: 42px;
+  }
+
+  .process__line {
+    left: 21px;
+  }
+
+  .process__marker span {
+    font-size: 0.68rem;
+  }
+
+  .process__content h3 {
+    font-size: 1.05rem;
+  }
+
+  .process__description {
+    font-size: 0.82rem;
   }
 }

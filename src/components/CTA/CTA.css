@@ -299,3 +299,314 @@
     opacity: 0.25;
   }
 }
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .industries {
+        padding: 100px 0;
+    }
+
+    .industries__container {
+        width: 650px;
+        height: 650px;
+
+        transform: scale(0.82);
+        transform-origin: center;
+
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+
+    .industry-circle {
+        width: 130px;
+        height: 130px;
+        padding: 16px;
+    }
+
+    .industries__sector-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+
+    .industries__sector-name {
+        width: 95px;
+        font-size: 0.95rem;
+    }
+
+    .industries__main {
+        width: 260px;
+        height: 260px;
+    }
+
+    .industries__main-title {
+        font-size: 3.4rem;
+    }
+
+    .connection-line {
+        width: 270px;
+    }
+}
+
+
+/* =========================
+   Responsive — Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .cta {
+    padding: 120px 0;
+  }
+
+  .cta__container {
+    min-height: auto;
+  }
+
+  .cta__content {
+    width: min(100%, 580px);
+  }
+
+  .cta__visual {
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+
+    opacity: 0.4;
+  }
+}
+
+
+/* =========================
+   Responsive — Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+  .cta {
+    padding: 80px 0;
+  }
+
+  .cta__container {
+    width: 88%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  /* =========================
+     Content
+  ========================= */
+
+  .cta__content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__eyebrow {
+    margin-bottom: 1.25rem;
+
+    padding: 0.45rem 0.85rem;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .cta__title {
+    width: 100%;
+
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2.4rem, 10.5vw, 3.5rem);
+    line-height: 0.98;
+  }
+
+  .cta__description {
+    width: 100%;
+    max-width: 450px;
+
+    margin-bottom: 2rem;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     Buttons
+  ========================= */
+
+  .cta__buttons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .cta__button {
+    width: 100%;
+    max-width: 280px;
+
+    padding: 13px 20px;
+
+    font-size: 0.8rem;
+  }
+
+
+  /* =========================
+     Circular Visual
+  ========================= */
+
+  .cta__visual {
+  width: 240px;
+  height: 240px;
+
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-self: center;
+}
+  .cta__circle--middle {
+    inset: 35px;
+  }
+
+  .cta__circle--inner {
+    inset: 35px;
+  }
+
+  .cta__circle--inner span {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .cta__circle--inner small {
+    margin-top: 8px;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  /* =========================
+     Orbit Dots
+  ========================= */
+
+  .cta__dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .cta__dot--one {
+    top: 38px;
+    left: 60px;
+  }
+
+  .cta__dot--two {
+    top: 135px;
+    right: 8px;
+  }
+
+  .cta__dot--three {
+    bottom: 40px;
+    left: 80px;
+  }
+}
+
+
+/* =========================
+   Small Phones
+========================= */
+
+@media (max-width: 380px) {
+
+  .cta {
+    padding: 70px 0;
+  }
+
+  .cta__container {
+    width: 90%;
+  }
+
+  .cta__title {
+    font-size: 2.35rem;
+  }
+
+  .cta__description {
+    font-size: 0.85rem;
+  }
+
+  .cta__button {
+    max-width: 260px;
+  }
+
+  /* =========================
+     Centered Orbit
+  ========================= */
+
+  .cta__visual {
+    position: relative;
+
+    width: 240px;
+    height: 240px;
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    transform: none;
+
+    align-self: center;
+  }
+
+  .cta__circle--outer {
+    inset: 0;
+  }
+
+  .cta__circle--middle {
+    inset: 30px;
+  }
+
+  .cta__circle--inner {
+    inset: 30px;
+  }
+
+  .cta__circle--inner span {
+    font-size: 2.8rem;
+  }
+
+  /* Keep orbit dots positioned relative
+     to the centered visual */
+
+  .cta__dot--one {
+    top: 32px;
+    left: 52px;
+  }
+
+  .cta__dot--two {
+    top: 116px;
+    right: 5px;
+  }
+
+  .cta__dot--three {
+    bottom: 32px;
+    left: 70px;
+  }
+}
