@@ -13,9 +13,10 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
             <ul className="mobile-menu__links">
                 <li>
-                    <a href="#about" onClick={onClose}>
-                        About
-                    </a>
+                     <a href="#about" onClick={onClose}>
+        About
+    </a>
+                      
                 </li>
 
                 <li>

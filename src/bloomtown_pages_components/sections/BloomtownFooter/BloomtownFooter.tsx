@@ -91,7 +91,7 @@ function BloomtownFooter() {
                 </p>
 
                 <a
-                    href="#bloomtown-newsletter"
+                    href= "https://paystack.shop/bloomtown-family-fest?product"
                     className="bloomtown-footer__cta-button"
                 >
                     Join BloomTown

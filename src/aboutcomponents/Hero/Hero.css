@@ -1,0 +1,664 @@
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: var(--color-offwhite);
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.about-hero__container {
+    width: min(92%, 1400px);
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 150px 0 80px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    align-items: center;
+
+    gap: clamp(40px, 7vw, 110px);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-hero__content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 600px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.about-hero__eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-body);
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid rgba(230, 57, 70, 0.3);
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+.about-hero__eyebrow-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--color-cinnabar);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.about-hero h1 {
+    margin: 0;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+
+    font-weight: 600;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.055em;
+
+    color: var(--color-black);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-hero__description {
+    max-width: 480px;
+
+    margin: 2rem 0 0;
+
+    font-family: var(--font-body);
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: var(--color-charcoal);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.about-hero__buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+
+.about-hero__btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0.7rem 1.3rem;
+
+    font-family: var(--font-body);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.about-hero__btn--primary {
+    color: var(--color-offwhite);
+
+    background: var(--color-cinnabar);
+
+    border: 1px solid var(--color-cinnabar);
+}
+
+
+.about-hero__btn--primary:hover {
+    background: var(--color-black);
+
+    border-color: var(--color-black);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.about-hero__btn--secondary {
+    color: var(--color-black);
+
+    background: transparent;
+
+    border: 1px solid rgba(28, 28, 28, 0.3);
+}
+
+
+.about-hero__btn--secondary:hover {
+    color: var(--color-offwhite);
+
+    background: var(--color-black);
+
+    border-color: var(--color-black);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   IMAGE WRAPPER
+========================================= */
+
+.about-hero__image-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+
+/* =========================================
+   IMAGE CONTAINER
+========================================= */
+
+.about-hero__image {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    height: min(70vh, 650px);
+
+    overflow: hidden;
+
+    background: var(--color-offwhite);
+
+    box-shadow: none;
+
+    /*
+       Fade mask:
+       The image becomes transparent toward
+       every edge.
+    */
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 9%,
+            black 91%,
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 9%,
+            black 91%,
+            transparent 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 9%,
+            black 91%,
+            transparent 100%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 9%,
+            black 91%,
+            transparent 100%
+        );
+
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-hero__image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================
+   ADDITIONAL SOFT EDGE FADE
+========================================= */
+
+.about-hero__image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--color-offwhite) 0%,
+            transparent 12%,
+            transparent 88%,
+            var(--color-offwhite) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            var(--color-offwhite) 0%,
+            transparent 12%,
+            transparent 88%,
+            var(--color-offwhite) 100%
+        );
+}
+
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.about-hero__image-label {
+    margin-top: 12px;
+
+    font-family: var(--font-body);
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(28, 28, 28, 0.5);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-hero__container {
+        grid-template-columns: 1fr;
+
+        padding-top: 130px;
+
+        gap: 50px;
+    }
+
+
+    .about-hero__content {
+        max-width: 700px;
+    }
+
+
+    .about-hero h1 {
+        font-size: clamp(3.2rem, 9vw, 5rem);
+    }
+
+
+    .about-hero__image-wrapper {
+        align-items: stretch;
+    }
+
+
+    .about-hero__image {
+        max-width: none;
+
+        height: 55vh;
+
+        min-height: 400px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .about-hero {
+        min-height: auto;
+    }
+
+
+    /* =====================================
+       CONTAINER
+    ===================================== */
+
+    .about-hero__container {
+        width: calc(100% - 32px);
+
+        min-height: auto;
+
+        padding: 110px 0 50px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 30px;
+    }
+
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
+    .about-hero__content {
+        width: 100%;
+
+        max-width: none;
+    }
+
+
+    /* =====================================
+       EYEBROW
+    ===================================== */
+
+    .about-hero__eyebrow {
+        gap: 0.4rem;
+
+        padding: 0.45rem 0.8rem;
+
+        margin-bottom: 1.1rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.11em;
+    }
+
+
+    .about-hero__eyebrow-dot {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
+    .about-hero h1 {
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size: clamp(2.7rem, 12vw, 4rem);
+
+        line-height: 0.9;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ===================================== */
+
+    .about-hero__description {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 1.3rem;
+
+        font-size: 0.88rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================
+       BUTTONS
+    ===================================== */
+
+    .about-hero__buttons {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 0.7rem;
+
+        margin-top: 1.4rem;
+    }
+
+
+    .about-hero__btn {
+        min-height: 42px;
+
+        padding: 0.65rem 1rem;
+
+        font-size: 0.72rem;
+    }
+
+
+    /* =====================================
+       IMAGE
+    ===================================== */
+
+    .about-hero__image-wrapper {
+        width: 100%;
+
+        align-items: stretch;
+    }
+
+
+    .about-hero__image {
+        width: 100%;
+
+        height: 62vw;
+
+        min-height: 230px;
+
+        max-height: 350px;
+    }
+
+
+    /* Slightly stronger mobile fade */
+
+    .about-hero__image {
+        -webkit-mask-image:
+            linear-gradient(
+                to right,
+                transparent 0%,
+                black 12%,
+                black 88%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 10%,
+                black 90%,
+                transparent 100%
+            );
+
+        mask-image:
+            linear-gradient(
+                to right,
+                transparent 0%,
+                black 12%,
+                black 88%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 10%,
+                black 90%,
+                transparent 100%
+            );
+    }
+
+
+    .about-hero__image-label {
+        margin-top: 8px;
+
+        font-size: 0.5rem;
+
+        letter-spacing: 0.1em;
+
+        text-align: right;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .about-hero__container {
+        width: calc(100% - 28px);
+
+        padding-top: 100px;
+
+        gap: 25px;
+    }
+
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .about-hero__description {
+        font-size: 0.82rem;
+
+        line-height: 1.5;
+    }
+
+
+    .about-hero__buttons {
+        gap: 0.55rem;
+    }
+
+
+    .about-hero__btn {
+        padding: 0.6rem 0.85rem;
+
+        font-size: 0.68rem;
+    }
+
+
+    .about-hero__image {
+        min-height: 210px;
+    }
+}
+
