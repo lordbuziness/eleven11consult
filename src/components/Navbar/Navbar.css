@@ -13,6 +13,7 @@
     transform:translateX(-50%);
 
     padding:0.9rem 2rem;
+    
 
     
     font-family: inter, sans-serif;
@@ -72,8 +73,8 @@
     text-decoration:none;
    color: var(--color-charcoal);
     font-size:.99rem;
-    font-weight:800;
-    font-family: var(--font-display);
+    font-weight:600;
+    font-family: sans-serif;
 
     transition:.3s ease;
 }
@@ -129,4 +130,39 @@
 
 .navbar.scrolled{
     padding:0.75rem 2rem;
+}
+
+
+/* ===========================
+   Mobile Hamburger
+=========================== */
+
+.navbar__hamburger {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 6px;
+
+        border: none;
+        background: transparent;
+
+        color: var(--color-charcoal);
+
+        cursor: pointer;
+
+        position: relative;
+        z-index: 1002;
+    }
 }
