@@ -523,3 +523,266 @@
 
     color: rgba(28, 28, 28, 0.65);
 }
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .industries {
+        padding: 100px 0;
+    }
+
+    .industries__container {
+        width: 650px;
+        height: 650px;
+
+        transform: scale(0.82);
+        transform-origin: center;
+
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+
+    .industry-circle {
+        width: 130px;
+        height: 130px;
+        padding: 16px;
+    }
+
+    .industries__sector-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+
+    .industries__sector-name {
+        width: 95px;
+        font-size: 0.95rem;
+    }
+
+    .industries__main {
+        width: 260px;
+        height: 260px;
+    }
+
+    .industries__main-title {
+        font-size: 3.4rem;
+    }
+
+    .connection-line {
+        width: 270px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .industries {
+        padding: 70px 0 60px;
+        overflow: hidden;
+    }
+
+    .industries__heading {
+        width: 88%;
+        margin: 0 auto 35px;
+    }
+
+    .industries__eyebrow {
+        font-size: 0.62rem;
+        padding: 0.45rem 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .industries__heading h2 {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+        line-height: 0.95;
+    }
+
+    .industries__heading p {
+        margin-top: 18px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .industries__container {
+        width: 390px;
+        height: 390px;
+
+        margin: 10px auto -10px;
+
+        transform: none;
+    }
+
+    /* Center */
+
+    .industries__main {
+        width: 145px;
+        height: 145px;
+    }
+
+    .industries__main-small {
+        margin-bottom: 5px;
+        font-size: 0.5rem;
+        letter-spacing: 0.18em;
+    }
+
+    .industries__main-title {
+        font-size: 1.8rem;
+    }
+
+    .industries__main-subtitle {
+        margin-top: 12px;
+        font-size: 0.42rem;
+        letter-spacing: 0.14em;
+    }
+
+    /* Sector circles */
+
+    .industry-circle {
+        width: 90px;
+        height: 90px;
+
+        padding: 10px;
+    }
+
+    .industries__sector-icon {
+        width: 25px;
+        height: 25px;
+
+        margin-bottom: 6px;
+    }
+
+    .industries__sector-name {
+        width: 72px;
+
+        font-size: 0.65rem;
+        line-height: 1.05;
+    }
+
+    /* Mobile orbital positions */
+
+    .industry-circle--1 {
+        transform:
+            translate(-50%, -50%)
+            translateY(-150px);
+    }
+
+    .industry-circle--2 {
+        transform:
+            translate(-50%, -50%)
+            translate(130px, -75px);
+    }
+
+    .industry-circle--3 {
+        transform:
+            translate(-50%, -50%)
+            translate(130px, 75px);
+    }
+
+    .industry-circle--4 {
+        transform:
+            translate(-50%, -50%)
+            translateY(150px);
+    }
+
+    .industry-circle--5 {
+        transform:
+            translate(-50%, -50%)
+            translate(-130px, 75px);
+    }
+
+    .industry-circle--6 {
+        transform:
+            translate(-50%, -50%)
+            translate(-130px, -75px);
+    }
+
+    /* Connection lines */
+
+    .connection-line {
+        width: 150px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .industries__container {
+        width: 350px;
+        height: 350px;
+    }
+
+    .industry-circle {
+        width: 82px;
+        height: 82px;
+    }
+
+    .industries__sector-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .industries__sector-name {
+        width: 68px;
+        font-size: 0.58rem;
+    }
+
+    .industries__main {
+        width: 130px;
+        height: 130px;
+    }
+
+    .industries__main-title {
+        font-size: 1.6rem;
+    }
+
+    .industry-circle--1 {
+        transform:
+            translate(-50%, -50%)
+            translateY(-135px);
+    }
+
+    .industry-circle--2 {
+        transform:
+            translate(-50%, -50%)
+            translate(117px, -67px);
+    }
+
+    .industry-circle--3 {
+        transform:
+            translate(-50%, -50%)
+            translate(117px, 67px);
+    }
+
+    .industry-circle--4 {
+        transform:
+            translate(-50%, -50%)
+            translateY(135px);
+    }
+
+    .industry-circle--5 {
+        transform:
+            translate(-50%, -50%)
+            translate(-117px, 67px);
+    }
+
+    .industry-circle--6 {
+        transform:
+            translate(-50%, -50%)
+            translate(-117px, -67px);
+    }
+
+    .connection-line {
+        width: 135px;
+    }
+}
