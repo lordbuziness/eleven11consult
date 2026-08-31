@@ -1,0 +1,464 @@
+/* =========================================
+   MISSION STATEMENT
+========================================= */
+
+.mission {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-charcoal);
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.mission__background {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(217, 217, 217, 0.25),
+            rgba(217, 217, 217, 0.55)
+        ),
+        url("../assests/images/aboutmissionstatment.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.85;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   SOFT BLEND
+========================================= */
+
+.mission::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(217, 217, 217, 0.75),
+            rgba(217, 217, 217, 0.15) 45%,
+            rgba(217, 217, 217, 0.7)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.mission__content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(90%, 1100px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.mission__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-bottom: 55px;
+
+    padding: 0.5rem 1rem;
+
+    border: 1px solid rgba(242, 140, 40, 0.4);
+    border-radius: 999px;
+
+    background: rgba(217, 217, 217, 0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    color: var(--color-cinnabar);
+}
+
+.mission__eyebrow span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--color-cinnabar);
+}
+
+
+/* =========================================
+   MISSION LABEL
+========================================= */
+
+.mission__label {
+    align-self: flex-start;
+
+    margin: 0 0 30px;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    text-align: left;
+
+    color: var(--color-charcoal);
+
+    text-decoration: underline;
+    text-decoration-color: var(--color-cinnabar);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+
+/* =========================================
+   STATEMENT
+========================================= */
+
+.mission__statement {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.mission__statement p {
+    margin: 0;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2rem, 4.5vw, 4.2rem);
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+
+    color: var(--color-black);
+}
+
+
+/* =========================================
+   PHILOSOPHY POINTS
+========================================= */
+
+.mission__points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 45px;
+}
+
+.mission__points span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 105px;
+
+    padding: 0.7rem 1.3rem;
+
+    border-radius: 999px;
+
+    background: var(--color-cinnabar);
+
+    color: var(--color-offwhite);
+
+    font-family: var(--font-body);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.mission__points span:hover {
+    transform: translateY(-4px);
+
+    background: var(--color-black);
+}
+
+
+/* =========================================
+   LOGOS
+========================================= */
+
+.mission__logo {
+    position: absolute;
+
+    z-index: 6;
+
+    width: 85px;
+
+    opacity: 0.9;
+}
+
+.mission__logo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.mission__logo--top {
+    top: 45px;
+    right: 55px;
+}
+
+.mission__logo--bottom {
+    bottom: 45px;
+    left: 55px;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .mission {
+        min-height: 650px;
+    }
+
+    .mission__logo {
+        width: 70px;
+    }
+
+    .mission__logo--top {
+        top: 30px;
+        right: 30px;
+    }
+
+    .mission__logo--bottom {
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .mission__eyebrow {
+        margin-bottom: 40px;
+    }
+
+    .mission__statement p {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .mission {
+        min-height: 600px;
+
+        padding: 90px 0;
+    }
+
+    .mission__background {
+        background-position: center;
+    }
+
+    .mission::after {
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(217, 217, 217, 0.7),
+                rgba(217, 217, 217, 0.25) 50%,
+                rgba(217, 217, 217, 0.7)
+            );
+    }
+
+
+    /* Logos */
+
+    .mission__logo {
+        width: 52px;
+
+        opacity: 0.8;
+    }
+
+    .mission__logo--top {
+        top: 22px;
+        right: 22px;
+    }
+
+    .mission__logo--bottom {
+        bottom: 22px;
+        left: 22px;
+    }
+
+
+    /* Content */
+
+    .mission__content {
+        width: 88%;
+    }
+
+
+    /* Eyebrow */
+
+    .mission__eyebrow {
+        margin-bottom: 35px;
+
+        padding: 0.4rem 0.8rem;
+
+        font-size: 0.58rem;
+    }
+
+
+    /* Label */
+
+    .mission__label {
+        align-self: flex-start;
+
+        margin-bottom: 25px;
+
+        font-size: 2rem;
+
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+    }
+
+
+    /* Statement */
+
+    .mission__statement {
+        max-width: 100%;
+    }
+
+    .mission__statement p {
+        font-size: clamp(1.65rem, 7.5vw, 2.4rem);
+
+        line-height: 1.08;
+
+        letter-spacing: -0.025em;
+    }
+
+
+    /* Points */
+
+    .mission__points {
+        gap: 8px;
+
+        margin-top: 30px;
+    }
+
+    .mission__points span {
+        min-width: auto;
+
+        padding: 0.55rem 0.9rem;
+
+        font-size: 0.65rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .mission {
+        min-height: 560px;
+
+        padding: 75px 0;
+    }
+
+    .mission__content {
+        width: 90%;
+    }
+
+    .mission__logo {
+        width: 45px;
+    }
+
+    .mission__logo--top {
+        top: 18px;
+        right: 18px;
+    }
+
+    .mission__logo--bottom {
+        bottom: 18px;
+        left: 18px;
+    }
+
+    .mission__eyebrow {
+        margin-bottom: 28px;
+    }
+
+    .mission__label {
+        font-size: 1.7rem;
+    }
+
+    .mission__statement p {
+        font-size: 1.55rem;
+    }
+
+    .mission__points {
+        gap: 6px;
+        margin-top: 25px;
+    }
+
+    .mission__points span {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.6rem;
+    }
+}

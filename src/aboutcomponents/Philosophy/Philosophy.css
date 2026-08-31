@@ -474,47 +474,292 @@
 @media (max-width: 650px) {
 
     .philosophy {
-        padding: 90px 0;
+        padding: 80px 0 100px;
     }
 
+
+    /* =====================================
+       HEADING
+    ===================================== */
+
     .philosophy__heading {
-        margin-bottom: 50px;
+        width: 88%;
+        margin-bottom: 45px;
+    }
+
+    .philosophy__eyebrow {
+        padding: 0.4rem 0.75rem;
+        margin-bottom: 1rem;
+
+        font-size: 0.58rem;
+        letter-spacing: 0.11em;
+    }
+
+    .philosophy__eyebrow::before {
+        width: 5px;
+        height: 5px;
     }
 
     .philosophy__heading h2 {
-        font-size: clamp(2.8rem, 12vw, 4rem);
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+        line-height: 0.92;
     }
+
+    .philosophy__heading p {
+        max-width: 100%;
+
+        margin-top: 18px;
+
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+
+
+    /* =====================================
+       STAGE
+    ===================================== */
 
     .philosophy__stage {
         width: 100%;
-        height: 560px;
+        height: auto;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
     }
 
-    .philosophy__circle {
-        width: 230px;
-        height: 230px;
-    }
 
-    .philosophy__circle-title {
-        font-size: 3.2rem;
-    }
+    /* =====================================
+       ORBITS
+    ===================================== */
 
     .philosophy__orbit--outer {
-        width: 440px;
-        height: 440px;
+        width: 270px;
+        height: 270px;
     }
 
     .philosophy__orbit--inner {
-        width: 320px;
-        height: 320px;
+        width: 195px;
+        height: 195px;
     }
 
-    /*
-       Cards intentionally remain hidden
-       for the mobile slider implementation.
-    */
+    .philosophy__orbit span {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    /* =====================================
+       CARDS
+    ===================================== */
 
     .philosophy__cards {
-        display: none;
+        position: relative;
+
+        inset: auto;
+
+        width: 88%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 14px;
+
+        z-index: 10;
+
+        order: 1;
+    }
+
+    .philosophy__card {
+        position: relative;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100%;
+        min-height: 0;
+
+        padding: 20px;
+
+        border-radius: 18px;
+
+        transform: none !important;
+    }
+
+
+    /* =====================================
+       CARD CONTENT
+    ===================================== */
+
+    .philosophy__card-number {
+        margin-bottom: 12px;
+
+        font-size: 0.58rem;
+    }
+
+    .philosophy__card h3 {
+        margin-bottom: 8px;
+
+        font-size: 1.35rem;
+    }
+
+    .philosophy__card p {
+        font-size: 0.76rem;
+        line-height: 1.5;
+    }
+
+    .philosophy__card-line {
+        width: 25px;
+
+        margin-top: 14px;
+    }
+
+
+    /* =====================================
+       CARD HOVER
+    ===================================== */
+
+    .philosophy__card:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .philosophy__card:hover .philosophy__card-line {
+        width: 45px;
+    }
+
+
+    /* =====================================
+       CENTER CIRCLE
+    ===================================== */
+
+    .philosophy__circle {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        width: 190px;
+        height: 190px;
+
+        margin-top: 70px;
+
+        transform: none;
+
+        order: 2;
+    }
+
+    .philosophy__circle-small {
+        margin-bottom: 8px;
+
+        font-size: 0.55rem;
+        letter-spacing: 0.2em;
+    }
+
+    .philosophy__circle-title {
+        font-size: 2.8rem;
+    }
+
+    .philosophy__circle-subtitle {
+        margin-top: 18px;
+
+        font-size: 0.43rem;
+        letter-spacing: 0.1em;
+    }
+
+
+    /* =====================================
+       KEEP ORBITS BEHIND THE CIRCLE
+    ===================================== */
+
+    .philosophy__orbit {
+        z-index: 1;
+    }
+
+    .philosophy__circle {
+        z-index: 5;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .philosophy {
+        padding: 70px 0 90px;
+    }
+
+    .philosophy__heading {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .philosophy__heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .philosophy__heading p {
+        font-size: 0.8rem;
+    }
+
+
+    /* Cards */
+
+    .philosophy__cards {
+        width: 90%;
+        gap: 12px;
+    }
+
+    .philosophy__card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .philosophy__card h3 {
+        font-size: 1.25rem;
+    }
+
+    .philosophy__card p {
+        font-size: 0.72rem;
+        line-height: 1.45;
+    }
+
+
+    /* Circle */
+
+    .philosophy__circle {
+        width: 165px;
+        height: 165px;
+
+        margin-top: 55px;
+    }
+
+    .philosophy__circle-title {
+        font-size: 2.4rem;
+    }
+
+    .philosophy__circle-subtitle {
+        font-size: 0.38rem;
+    }
+
+
+    /* Smaller orbit */
+
+    .philosophy__orbit--outer {
+        width: 235px;
+        height: 235px;
+    }
+
+    .philosophy__orbit--inner {
+        width: 170px;
+        height: 170px;
     }
 }
