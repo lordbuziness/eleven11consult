@@ -1,5 +1,4 @@
 
-import Contact from "../components/Contact/Contact";
 import CTA from "../components/CTA/CTA";
 import FinalCTA from "../components/FinalCTA/FinalCTA";
 import Footer from "../components/Footer/Footer";
