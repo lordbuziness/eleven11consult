@@ -61,10 +61,6 @@ function Home() {
             </ScrollReveal>
 
             <ScrollReveal>
-                <Contact />
-            </ScrollReveal>
-
-            <ScrollReveal>
                 <Footer />
             </ScrollReveal>
 

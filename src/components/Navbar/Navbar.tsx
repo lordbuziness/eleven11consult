@@ -35,34 +35,50 @@ function Navbar() {
                 </div>
 
                 <ul className="navbar__links">
-                    <li>
-                     <Link to="/about">About</Link>
-                    </li>
+    <li>
+        <Link to="/about">About</Link>
+    </li>
 
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
+    <li>
+        <a href="#services">Services</a>
+    </li>
 
-                    <li>
-                        <Link to="/bloomtown">Projects</Link>
-                    </li>
+    <li>
+        <Link to="/">Projects</Link>
+    </li>
 
-                    <li>
-                        <a href="#industry">Industry</a>
-                    </li>
+    <li>
+        <Link to="/insights">Insights</Link>
+    </li>
 
-                    <li>
-                        <a href="#contact" aria-label="Contact">
-                            <Phone size={18} />
-                        </a>
-                    </li>
+    <li>
+        <Link to="/works">Works</Link>
+    </li>
 
-                    <li>
-                        <a href="#home" aria-label="Home">
-                            <House size={18} />
-                        </a>
-                    </li>
-                </ul>
+    <li>
+        <Link to="/faqs">FAQs</Link>
+    </li>
+
+    <li>
+        <Link to="/career">Career</Link>
+    </li>
+
+    <li>
+        <Link to="/process">Our Process</Link>
+    </li>
+
+    <li>
+        <Link to="/contact" aria-label="Contact">
+            <Phone size={18} />
+        </Link>
+    </li>
+
+    <li>
+        <Link to="/eleven11" aria-label="Home">
+            <House size={18} />
+        </Link>
+    </li>
+</ul>
 
                 <button
                     className="navbar__hamburger"
@@ -74,7 +90,7 @@ function Navbar() {
                 </button>
             </nav>
 
-            <MobileMenu
+           <MobileMenu
                 isOpen={menuOpen}
                 onClose={() => setMenuOpen(false)}
             />
