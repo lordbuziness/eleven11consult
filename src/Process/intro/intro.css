@@ -1,0 +1,127 @@
+/* =========================================
+   PROCESS INTRO
+========================================= */
+
+.process-intro {
+    width: 100%;
+    padding: 130px 6vw;
+    background: var(--color-offwhite);
+    color: var(--color-black);
+}
+
+.process-intro__inner {
+    width: min(1300px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: clamp(60px, 10vw, 150px);
+    align-items: start;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.process-intro__label {
+    padding-top: 0.5rem;
+}
+
+.process-intro__label span {
+    display: block;
+    margin-bottom: 0.7rem;
+
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    color: var(--color-cinnabar);
+}
+
+.process-intro__label p {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--color-charcoal);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.process-intro__content {
+    max-width: 850px;
+}
+
+.process-intro__content h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 6rem);
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+
+    color: var(--color-black);
+}
+
+.process-intro__content h2 span {
+    color: var(--color-cinnabar);
+}
+
+.process-intro__content p {
+    max-width: 650px;
+    margin: 2rem 0 0;
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.75;
+
+    color: var(--color-charcoal);
+}
+
+.process-intro__content p + p {
+    margin-top: 1rem;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+    .process-intro__inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .process-intro__label {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .process-intro {
+        padding: 85px 7vw;
+    }
+
+    .process-intro__inner {
+        gap: 30px;
+    }
+
+    .process-intro__content h2 {
+        font-size: clamp(2.7rem, 12vw, 4.5rem);
+        line-height: 0.92;
+    }
+
+    .process-intro__content p {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        line-height: 1.65;
+    }
+}

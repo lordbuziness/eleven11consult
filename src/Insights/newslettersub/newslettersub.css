@@ -1,0 +1,120 @@
+.newsletter-sub {
+    width: 100%;
+    padding: 140px 20px;
+
+    background: var(--color-black);
+    color: var(--color-offwhite);
+}
+
+.newsletter-sub__content {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-sub__eyebrow {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+}
+
+.newsletter-sub h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.newsletter-sub h2 span {
+    color: var(--color-cinnabar);
+}
+
+.newsletter-sub p {
+    max-width: 550px;
+    margin: 30px auto 45px;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: rgba(245, 243, 239, 0.7);
+}
+
+.newsletter-sub__form {
+    display: flex;
+    width: min(600px, 100%);
+    margin: 0 auto;
+}
+
+.newsletter-sub__form input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(245, 243, 239, 0.3);
+    border-right: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+
+    color: var(--color-offwhite);
+}
+
+.newsletter-sub__form input::placeholder {
+    color: rgba(245, 243, 239, 0.5);
+}
+
+.newsletter-sub__form button {
+    padding: 18px 28px;
+
+    border: 1px solid var(--color-cinnabar);
+
+    background: var(--color-cinnabar);
+
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    color: var(--color-offwhite);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.newsletter-sub__form button:hover {
+    background: var(--color-offwhite);
+    color: var(--color-cinnabar);
+}
+
+@media (max-width: 600px) {
+    .newsletter-sub {
+        padding: 100px 16px;
+    }
+
+    .newsletter-sub__form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-sub__form input {
+        border-right: 1px solid rgba(245, 243, 239, 0.3);
+    }
+
+    .newsletter-sub__form button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,217 @@
+.process-steps {
+    width: 100%;
+    padding: 130px 6vw;
+    background: var(--color-offwhite);
+    color: var(--color-black);
+}
+
+.process-steps__header {
+    width: min(1300px, 100%);
+    margin: 0 auto 70px;
+}
+
+.process-steps__header > span {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+}
+
+.process-steps__header h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.process-steps__header em {
+    color: var(--color-cinnabar);
+    font-style: normal;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.process-steps__grid {
+    width: min(1300px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.process-card {
+    position: relative;
+    min-height: 430px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid rgba(28, 28, 28, 0.16);
+    background: rgba(255, 255, 255, 0.3);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.7);
+    border-color: var(--color-cinnabar);
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.process-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.process-card__top > span {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--color-cinnabar);
+}
+
+.process-card__icon {
+    width: 90px;
+    height: 90px;
+    color: var(--color-black);
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.process-card:hover .process-card__icon {
+    color: var(--color-cinnabar);
+    transform: scale(1.08) rotate(-5deg);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.process-card__content {
+    max-width: 500px;
+}
+
+.process-card__content h3 {
+    margin: 0 0 1rem;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+}
+
+.process-card__content p {
+    max-width: 470px;
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    color: var(--color-charcoal);
+}
+
+/* =========================================
+   CARD LINE
+========================================= */
+
+.process-card__line {
+    width: 100%;
+    height: 1px;
+    margin-top: 2rem;
+
+    background: rgba(28, 28, 28, 0.15);
+
+    transition: background-color 0.35s ease;
+}
+
+.process-card:hover .process-card__line {
+    background: var(--color-cinnabar);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+    .process-steps {
+        padding: 100px 6vw;
+    }
+
+    .process-steps__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-card {
+        min-height: 380px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .process-steps {
+        padding: 85px 7vw;
+    }
+
+    .process-steps__header {
+        margin-bottom: 45px;
+    }
+
+    .process-steps__header h2 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .process-steps__grid {
+        gap: 14px;
+    }
+
+    .process-card {
+        min-height: 350px;
+        padding: 1.5rem;
+    }
+
+    .process-card__icon {
+        width: 70px;
+        height: 70px;
+     color: var(--color-cinnabar);
+    }
+
+    .process-card__content h3 {
+        font-size: 3rem;
+    }
+
+    .process-card__content p {
+        font-size: 0.82rem;
+        line-height: 1.65;
+    }
+}
