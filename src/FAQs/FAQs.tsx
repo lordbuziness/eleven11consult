@@ -1,9 +1,10 @@
 
 import "./FAQs.css";
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-
 
 interface FAQItem {
     question: string;
@@ -303,27 +304,30 @@ function FAQs() {
                 </section>
 
                 {/* CTA */}
-                <section className="faq-cta">
-                    <div className="faq-cta__content">
-                        <span>Still have questions?</span>
+               
+<section className="faq-cta">
+    <div className="faq-cta__content">
+        <span>Still have questions?</span>
 
-                        <h2>
-                            Let's talk about
-                            <br />
-                            your project.
-                        </h2>
+        <h2>
+            Let's talk about
+            <br />
+            <strong>your project.</strong>
+        </h2>
 
-                        <p>
-                            If you could not find the answer you were looking
-                            for, get in touch with our team.
-                        </p>
+        <p>
+            Couldn't find what you were looking for? Tell us what you need
+            and let's find the right way forward together.
+        </p>
 
-                        <a href="/contact" className="faq-cta__button">
-                            Contact Us
-                            <span>→</span>
-                        </a>
-                    </div>
-                </section>
+        <Link to="/contact" className="faq-cta__button">
+            Start a conversation
+            <ArrowUpRight size={18} />
+        </Link>
+    </div>
+</section>
+
+
             </main>
 
             <Footer />
