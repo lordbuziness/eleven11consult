@@ -1,3 +1,4 @@
+
 import "./intro.css";
 
 function WorksIntro() {
@@ -11,19 +12,19 @@ function WorksIntro() {
 
                 <div className="works-intro__content">
                     <h2>
-                        Ideas become
-                        <span> impact.</span>
+                        Work that
+                        <span> endures.</span>
                     </h2>
 
                     <p>
-                        We work across industries, disciplines, and challenges
-                        to create work that is useful, distinctive, and built
-                        to move things forward.
+                        Every project we take on is an expression of our
+                        philosophy: that industry expertise and compelling
+                        vision, when unified, produce outcomes that endure.
                     </p>
 
                     <p>
-                        Explore some of the projects and partnerships that
-                        represent how we think, create, and solve problems.
+                        Below is a selection of engagements across our service
+                        sectors.
                     </p>
                 </div>
             </div>
@@ -32,3 +33,4 @@ function WorksIntro() {
 }
 
 export default WorksIntro;
+

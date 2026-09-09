@@ -1,3 +1,4 @@
+
 import "./intro.css";
 
 function InsightsIntro() {
@@ -10,16 +11,16 @@ function InsightsIntro() {
 
             <div className="insights-intro__content">
                 <h2>
-                    We believe better
-                    <span> ideas create better outcomes.</span>
+                    Where our
+                    <span> thinking lives.</span>
                 </h2>
 
                 <p>
-                    Our insights explore the ideas, strategies, technologies,
-                    and trends shaping the world around us. From business and
-                    technology to agriculture, energy, construction, and
-                    media, we share perspectives designed to help businesses
-                    think differently and move with purpose.
+                    The Eleven 11 Consult Insights blog brings together expert
+                    commentary, sector analysis, and thought leadership from
+                    our team and the industries we serve. From the future of
+                    African media to the technology infrastructure driving
+                    enterprise growth — this is where our thinking lives.
                 </p>
             </div>
         </section>
@@ -27,3 +28,4 @@ function InsightsIntro() {
 }
 
 export default InsightsIntro;
+

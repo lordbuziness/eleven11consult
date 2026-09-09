@@ -20,162 +20,55 @@ interface FAQCategory {
 const faqCategories: FAQCategory[] = [
     {
         id: "general",
-        title: "General",
+        title: "Frequently Asked Questions",
         items: [
             {
-                question: "What is Eleven 11 Consult?",
+                question: "What sectors does Eleven 11 Consult work in?",
                 answer:
-                    "Eleven 11 Consult is a creative and strategic consultancy helping brands, businesses, and organizations build stronger identities, communicate effectively, and create meaningful experiences.",
-            },
-            {
-                question: "Who do you work with?",
-                answer:
-                    "We work with startups, established businesses, organizations, creative brands, and individuals looking to improve their brand presence, communication, strategy, and digital experience.",
+                    "We operate across six sectors: Media & Communications, Energy & Climate, Agriculture, Construction & Real Estate, Technology Solutions, and Training & Development.",
             },
             {
                 question: "Where is Eleven 11 Consult based?",
                 answer:
-                    "Eleven 11 Consult operates from Nigeria and works with clients both locally and remotely.",
+                    "We are headquartered in Nigeria, with the capacity to serve clients across Africa and internationally.",
             },
             {
-                question: "Can I work with you remotely?",
+                question: "Who leads Eleven 11 Consult?",
                 answer:
-                    "Yes. Our process is designed to support remote collaboration, allowing us to work effectively with clients regardless of location.",
+                    "The firm is founded and led by Krisilems, a seasoned broadcast journalist, producer, and multi-sectoral strategy consultant.",
             },
-        ],
-    },
-
-    {
-        id: "services",
-        title: "Services",
-        items: [
-            {
-                question: "What services do you offer?",
-                answer:
-                    "Our services cover strategy, branding, creative development, digital experiences, communications, and other solutions tailored to the needs of each client.",
-            },
-            {
-                question: "Can I request a custom service?",
-                answer:
-                    "Yes. If your project does not fit neatly into one of our standard services, we can create a tailored solution around your specific goals.",
-            },
-            {
-                question: "Do you handle both strategy and execution?",
-                answer:
-                    "Yes. We can support projects from the initial research and strategic thinking through creative development, implementation, and delivery.",
-            },
-            {
-                question: "Can you work with my existing team?",
-                answer:
-                    "Absolutely. We can work as an extension of your existing team, collaborating with internal staff, freelancers, agencies, or other partners.",
-            },
-        ],
-    },
-
-    {
-        id: "process",
-        title: "Our Process",
-        items: [
-            {
-                question: "How does your process work?",
-                answer:
-                    "We begin by understanding your goals, challenges, audience, and context. From there, we develop a strategy, create the appropriate solution, execute the work, and refine it based on feedback.",
-            },
-            {
-                question: "How long does a project take?",
-                answer:
-                    "Project timelines depend on the scope, complexity, deliverables, and feedback cycles. We establish a clear timeline before work begins.",
-            },
-            {
-                question: "Will I be involved during the project?",
-                answer:
-                    "Yes. Collaboration is an important part of our process. We keep clients involved at key stages so decisions stay aligned with the project's goals.",
-            },
-            {
-                question: "Can the scope change after the project begins?",
-                answer:
-                    "Yes, but significant changes to the scope may affect the timeline and cost. Any major changes are discussed and agreed upon before additional work begins.",
-            },
-        ],
-    },
-
-    {
-        id: "projects",
-        title: "Projects & Works",
-        items: [
-            {
-                question: "Can I see examples of your work?",
-                answer:
-                    "Yes. Our Projects and Works sections showcase selected work and provide insight into the type of problems we solve and the solutions we create.",
-            },
-            {
-                question: "Do you work on small projects?",
-                answer:
-                    "Yes. We consider projects based on their goals and potential impact rather than simply their size.",
-            },
-            {
-                question: "Can you redesign an existing brand or website?",
-                answer:
-                    "Yes. We can evaluate an existing identity or digital experience and develop improvements ranging from focused refinements to complete redesigns.",
-            },
-            {
-                question: "Can you work on an ongoing project?",
-                answer:
-                    "Yes. Depending on the project, we can provide ongoing creative, strategic, digital, or communications support.",
-            },
-        ],
-    },
-
-    {
-        id: "pricing",
-        title: "Pricing",
-        items: [
-            {
-                question: "How much do your services cost?",
-                answer:
-                    "Pricing depends on the scope, complexity, timeline, and requirements of each project. We provide a tailored proposal after understanding what you need.",
-            },
-            {
-                question: "Do you have fixed packages?",
-                answer:
-                    "Some services may be structured into packages, while larger or more specialized projects are priced according to their specific requirements.",
-            },
-            {
-                question: "Do you require a deposit?",
-                answer:
-                    "Payment terms depend on the project and will be clearly outlined in the proposal and agreement before work begins.",
-            },
-            {
-                question: "Can I get a quote before committing?",
-                answer:
-                    "Yes. You can contact us with your project requirements and we can discuss the appropriate scope and next steps before you make a commitment.",
-            },
-        ],
-    },
-
-    {
-        id: "working-with-us",
-        title: "Working With Us",
-        items: [
             {
                 question: "How do I start a project with Eleven 11 Consult?",
                 answer:
-                    "Start by getting in touch through our contact page. Tell us about your project, your goals, and what you need help with. We will take it from there.",
+                    "Reach out via our contact form or email us at info@eleven11consult.com. A consultant will respond within 24 hours to schedule a discovery call.",
             },
             {
-                question: "What information should I provide?",
+                question: "Do you work with startups and SMEs?",
                 answer:
-                    "Useful information includes your project goals, target audience, current challenges, desired deliverables, timeline, and any existing materials or references.",
+                    "Yes. We work with organisations at every stage — from early-stage ventures and SMEs to established corporations and government agencies.",
             },
             {
-                question: "How do we communicate during a project?",
+                question:
+                    "What makes Eleven 11 Consult different from other consultancies?",
                 answer:
-                    "Communication can take place through agreed channels such as email, calls, meetings, and collaborative project tools depending on the project's requirements.",
+                    "Our Lead Engine model means every engagement is anchored by our media and communications expertise — ensuring that strategy is not just sound, but powerfully communicated. We don't just advise. We tell the story of your success.",
             },
             {
-                question: "What happens after I contact you?",
+                question: "What technology services do you offer?",
                 answer:
-                    "We review your request, discuss the project with you, clarify requirements, determine whether we are a good fit, and then outline the appropriate next steps.",
+                    "Our Technology Solutions pillar covers custom software development, IT infrastructure design and deployment, and outsourced managed IT support and services.",
+            },
+            {
+                question:
+                    "Do you offer training programmes for organisations?",
+                answer:
+                    "Yes. We design and deliver bespoke corporate training programmes as well as youth-focused initiatives, including our signature Heritage Camp.",
+            },
+            {
+                question:
+                    "Can you handle both the strategy and the media production for a project?",
+                answer:
+                    "Absolutely. This is one of our core strengths — our Lead & Support model means we can anchor a strategic mandate with high-quality media production and communications, giving clients an end-to-end capability under one roof.",
             },
         ],
     },
@@ -186,7 +79,7 @@ function FAQs() {
 
     const toggleQuestion = (question: string) => {
         setOpenQuestion((current) =>
-            current === question ? null : question
+            current === question ? null : question,
         );
     };
 
@@ -195,7 +88,6 @@ function FAQs() {
             <Navbar />
 
             <main className="faq-page">
-                {/* Hero */}
                 <section className="faq-hero">
                     <div className="faq-hero__content">
                         <span className="faq-hero__eyebrow">
@@ -203,23 +95,21 @@ function FAQs() {
                         </span>
 
                         <h1>
-                            Questions,
+                            Frequently
                             <br />
-                            <span>Answered.</span>
+                            <span>Asked Questions</span>
                         </h1>
 
                         <p>
-                            Everything you need to know about Eleven 11
-                            Consult, our services, our process, and working
-                            with us.
+                            Answers to common questions about Eleven 11
+                            Consult, our sectors, services, and how we work
+                            with our clients.
                         </p>
                     </div>
                 </section>
 
-                {/* FAQ Content */}
                 <section className="faq-content">
                     <div className="faq-content__inner">
-                        {/* Category Navigation */}
                         <aside className="faq-categories">
                             <span className="faq-categories__label">
                                 Explore
@@ -237,16 +127,20 @@ function FAQs() {
                             </nav>
                         </aside>
 
-                        {/* Questions */}
                         <div className="faq-list">
-                            {faqCategories.map((category) => (
+                            {faqCategories.map((category, categoryIndex) => (
                                 <section
                                     className="faq-category"
                                     id={category.id}
                                     key={category.id}
                                 >
                                     <div className="faq-category__header">
-                                        <span>0{faqCategories.indexOf(category) + 1}</span>
+                                        <span>
+                                            {String(categoryIndex + 1).padStart(
+                                                2,
+                                                "0",
+                                            )}
+                                        </span>
 
                                         <h2>{category.title}</h2>
                                     </div>
@@ -254,7 +148,8 @@ function FAQs() {
                                     <div className="faq-items">
                                         {category.items.map((item) => {
                                             const isOpen =
-                                                openQuestion === item.question;
+                                                openQuestion ===
+                                                item.question;
 
                                             return (
                                                 <div
@@ -270,7 +165,7 @@ function FAQs() {
                                                         className="faq-item__question"
                                                         onClick={() =>
                                                             toggleQuestion(
-                                                                item.question
+                                                                item.question,
                                                             )
                                                         }
                                                         aria-expanded={isOpen}
@@ -280,7 +175,9 @@ function FAQs() {
                                                         </span>
 
                                                         <span className="faq-item__icon">
-                                                            {isOpen ? "−" : "+"}
+                                                            {isOpen
+                                                                ? "−"
+                                                                : "+"}
                                                         </span>
                                                     </button>
 
@@ -303,31 +200,31 @@ function FAQs() {
                     </div>
                 </section>
 
-                {/* CTA */}
-               
-<section className="faq-cta">
-    <div className="faq-cta__content">
-        <span>Still have questions?</span>
+                <section className="faq-cta">
+                    <div className="faq-cta__content">
+                        <span>Still have questions?</span>
 
-        <h2>
-            Let's talk about
-            <br />
-            <strong>your project.</strong>
-        </h2>
+                        <h2>
+                            Let's talk about
+                            <br />
+                            <strong>your project.</strong>
+                        </h2>
 
-        <p>
-            Couldn't find what you were looking for? Tell us what you need
-            and let's find the right way forward together.
-        </p>
+                        <p>
+                            Couldn't find what you were looking for? Tell us
+                            what you need and let's find the right way forward
+                            together.
+                        </p>
 
-        <Link to="/contact" className="faq-cta__button">
-            Start a conversation
-            <ArrowUpRight size={18} />
-        </Link>
-    </div>
-</section>
-
-
+                        <Link
+                            to="/contact"
+                            className="faq-cta__button"
+                        >
+                            <span>Start a conversation</span>
+                            <ArrowUpRight size={18} />
+                        </Link>
+                    </div>
+                </section>
             </main>
 
             <Footer />
@@ -336,3 +233,4 @@ function FAQs() {
 }
 
 export default FAQs;
+

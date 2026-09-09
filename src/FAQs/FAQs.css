@@ -1,3 +1,4 @@
+
 /* =========================================
    FAQ PAGE
 ========================================= */
@@ -5,12 +6,9 @@
 .faq-page {
     width: 100%;
     overflow: hidden;
-
     background: var(--color-offwhite);
-
     color: var(--color-black);
 }
-
 
 /* =========================================
    FAQ HERO
@@ -18,34 +16,23 @@
 
 .faq-hero {
     position: relative;
-
     width: 100%;
     min-height: 100vh;
-
     overflow: hidden;
-
     background: var(--color-offwhite);
 }
 
-
 .faq-hero__content {
     width: min(92%, 1400px);
-
     min-height: 100vh;
-
     margin: 0 auto;
-
     padding: 150px 0 100px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: flex-start;
 }
-
 
 /* =========================================
    EYEBROW
@@ -53,38 +40,28 @@
 
 .faq-hero__eyebrow {
     display: inline-flex;
-
     align-items: center;
-
     gap: 0.5rem;
 
     padding: 0.5rem 1rem;
-
     margin-bottom: 1.5rem;
 
     font-family: var(--font-body);
-
     font-size: 0.7rem;
-
     font-weight: 600;
-
     letter-spacing: 0.14em;
-
     text-transform: uppercase;
 
     color: var(--color-cinnabar);
 
     border: 1px solid rgba(230, 57, 70, 0.3);
-
     border-radius: 999px;
 
     background: rgba(255, 255, 255, 0.35);
 
     backdrop-filter: blur(8px);
-
     -webkit-backdrop-filter: blur(8px);
 }
-
 
 /* =========================================
    HERO HEADING
@@ -94,23 +71,17 @@
     margin: 0;
 
     font-family: var(--font-display);
-
     font-size: clamp(4rem, 8vw, 8rem);
-
     font-weight: 600;
-
     line-height: 0.88;
-
     letter-spacing: -0.055em;
 
     color: var(--color-black);
 }
 
-
 .faq-hero h1 span {
     color: var(--color-cinnabar);
 }
-
 
 /* =========================================
    HERO DESCRIPTION
@@ -122,16 +93,12 @@
     margin: 2rem 0 0;
 
     font-family: var(--font-body);
-
     font-size: 1rem;
-
     font-weight: 400;
-
     line-height: 1.7;
 
     color: var(--color-charcoal);
 }
-
 
 /* =========================================
    FAQ CONTENT
@@ -139,27 +106,21 @@
 
 .faq-content {
     width: 100%;
-
     padding: 120px 6vw;
 
     background: var(--color-offwhite);
 }
 
-
 .faq-content__inner {
     width: min(1300px, 100%);
-
     margin: 0 auto;
 
     display: grid;
-
     grid-template-columns: 230px minmax(0, 1fr);
 
     gap: clamp(60px, 8vw, 120px);
-
     align-items: start;
 }
-
 
 /* =========================================
    CATEGORY NAVIGATION
@@ -167,12 +128,9 @@
 
 .faq-categories {
     position: sticky;
-
     top: 120px;
-
     align-self: start;
 }
-
 
 .faq-categories__label {
     display: block;
@@ -180,27 +138,19 @@
     margin-bottom: 1.5rem;
 
     font-family: var(--font-body);
-
     font-size: 0.68rem;
-
     font-weight: 600;
-
     letter-spacing: 0.15em;
-
     text-transform: uppercase;
 
     color: rgba(28, 28, 28, 0.5);
 }
 
-
 .faq-categories nav {
     display: flex;
-
     flex-direction: column;
-
     gap: 0.9rem;
 }
-
 
 .faq-categories a {
     position: relative;
@@ -212,9 +162,7 @@
     text-decoration: none;
 
     font-family: var(--font-body);
-
     font-size: 0.82rem;
-
     font-weight: 600;
 
     color: var(--color-charcoal);
@@ -224,41 +172,32 @@
         transform 0.3s ease;
 }
 
-
 .faq-categories a::after {
     content: "";
 
     position: absolute;
-
     left: 0;
-
     bottom: 0;
 
     width: 100%;
-
     height: 1px;
 
     background: var(--color-cinnabar);
 
     transform: scaleX(0);
-
     transform-origin: left;
 
     transition: transform 0.3s ease;
 }
 
-
 .faq-categories a:hover {
     color: var(--color-black);
-
     transform: translateX(3px);
 }
-
 
 .faq-categories a:hover::after {
     transform: scaleX(1);
 }
-
 
 /* =========================================
    FAQ LIST
@@ -268,24 +207,19 @@
     width: 100%;
 }
 
-
 /* =========================================
    FAQ CATEGORY
 ========================================= */
 
 .faq-category {
     width: 100%;
-
     margin-bottom: 110px;
-
     scroll-margin-top: 120px;
 }
-
 
 .faq-category:last-child {
     margin-bottom: 0;
 }
-
 
 /* =========================================
    CATEGORY HEADER
@@ -293,9 +227,7 @@
 
 .faq-category__header {
     display: flex;
-
     align-items: baseline;
-
     gap: 1.5rem;
 
     padding-bottom: 1.5rem;
@@ -303,38 +235,28 @@
     border-bottom: 1px solid rgba(28, 28, 28, 0.18);
 }
 
-
 .faq-category__header span {
     flex-shrink: 0;
 
     font-family: var(--font-body);
-
     font-size: 0.68rem;
-
     font-weight: 600;
-
     letter-spacing: 0.1em;
 
     color: var(--color-cinnabar);
 }
 
-
 .faq-category__header h2 {
     margin: 0;
 
     font-family: var(--font-display);
-
     font-size: clamp(2.2rem, 4vw, 4rem);
-
     font-weight: 600;
-
     line-height: 0.95;
-
     letter-spacing: -0.045em;
 
     color: var(--color-black);
 }
-
 
 /* =========================================
    FAQ ITEMS
@@ -346,23 +268,19 @@
     border-bottom: 1px solid rgba(28, 28, 28, 0.18);
 }
 
-
 .faq-item {
     border-bottom: 1px solid rgba(28, 28, 28, 0.12);
 
     transition: background-color 0.3s ease;
 }
 
-
 .faq-item:last-child {
     border-bottom: none;
 }
 
-
 .faq-item:hover {
     background: rgba(255, 255, 255, 0.25);
 }
-
 
 /* =========================================
    QUESTION
@@ -370,21 +288,17 @@
 
 .faq-item__question {
     width: 100%;
-
     min-height: 75px;
 
     padding: 1.5rem 0;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 2rem;
 
     border: none;
-
     background: transparent;
 
     color: var(--color-black);
@@ -392,24 +306,19 @@
     text-align: left;
 
     font-family: var(--font-body);
-
     font-size: 0.95rem;
-
     font-weight: 600;
 
     cursor: pointer;
 }
 
-
 .faq-item__question span:first-child {
     transition: color 0.3s ease;
 }
 
-
 .faq-item__question:hover span:first-child {
     color: var(--color-cinnabar);
 }
-
 
 /* =========================================
    PLUS / MINUS ICON
@@ -417,25 +326,19 @@
 
 .faq-item__icon {
     width: 32px;
-
     height: 32px;
 
     flex-shrink: 0;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border: 1px solid rgba(28, 28, 28, 0.25);
-
     border-radius: 50%;
 
     font-family: var(--font-body);
-
     font-size: 1.15rem;
-
     font-weight: 400;
 
     color: var(--color-black);
@@ -447,10 +350,8 @@
         transform 0.3s ease;
 }
 
-
 .faq-item--open .faq-item__icon {
     background: var(--color-cinnabar);
-
     border-color: var(--color-cinnabar);
 
     color: var(--color-offwhite);
@@ -458,24 +359,20 @@
     transform: rotate(180deg);
 }
 
-
 /* =========================================
    ANSWER
 ========================================= */
 
 .faq-item__answer {
     display: grid;
-
     grid-template-rows: 0fr;
 
     transition: grid-template-rows 0.35s ease;
 }
 
-
 .faq-item__answer--open {
     grid-template-rows: 1fr;
 }
-
 
 .faq-item__answer p {
     max-width: 720px;
@@ -483,26 +380,19 @@
     overflow: hidden;
 
     margin: 0;
-
     padding: 0;
 
     font-family: var(--font-body);
-
     font-size: 0.9rem;
-
     font-weight: 400;
-
     line-height: 1.75;
 
     color: var(--color-charcoal);
 }
 
-
 .faq-item__answer--open p {
     padding: 0 3rem 1.8rem 0;
 }
-
-
 
 /* =========================================
    FAQ CTA
@@ -510,9 +400,11 @@
 
 .faq-cta {
     width: 100%;
+
     padding: 140px 20px;
 
     background: var(--color-black);
+
     color: var(--color-offwhite);
 }
 
@@ -529,6 +421,7 @@
     margin-bottom: 20px;
 
     color: var(--color-cinnabar);
+
     font-family: var(--font-body);
     font-size: 0.7rem;
     font-weight: 600;
@@ -540,6 +433,7 @@
     margin: 0;
 
     color: var(--color-offwhite);
+
     font-family: var(--font-display);
     font-size: clamp(3.5rem, 7vw, 7rem);
     font-weight: 600;
@@ -558,60 +452,11 @@
     margin: 30px auto 40px;
 
     color: rgba(245, 243, 239, 0.7);
+
     font-family: var(--font-body);
     font-size: 0.95rem;
     line-height: 1.7;
 }
-
-.faq-cta__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 16px 25px;
-
-    border: 1px solid var(--color-cinnabar);
-    background: transparent;
-
-    color: var(--color-cinnabar);
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
-}
-
-.faq-cta__button svg {
-    transition: transform 0.2s ease;
-}
-
-.faq-cta__button:hover {
-    background: var(--color-cinnabar);
-    color: var(--color-offwhite);
-}
-
-.faq-cta__button:hover svg {
-    transform: translate(4px, -4px);
-}
-
-@media (max-width: 600px) {
-    .faq-cta {
-        padding: 100px 16px;
-    }
-
-    .faq-cta h2 {
-        font-size: clamp(3rem, 12vw, 4.5rem);
-    }
-
-    .faq-cta p {
-        font-size: 0.9rem;
-    }
-}
-
-
 
 /* =========================================
    CTA BUTTON
@@ -619,32 +464,29 @@
 
 .faq-cta__button {
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
-    gap: 1.5rem;
+    gap: 12px;
 
-    min-height: 44px;
+    min-height: 50px;
 
-    padding: 0.7rem 1.3rem;
+    padding: 0.75rem 1.4rem;
 
-    border: 1px solid rgba(245, 243, 239, 0.5);
-
+    border: 1px solid var(--color-cinnabar);
     border-radius: 999px;
+
+    background: var(--color-cinnabar);
 
     text-decoration: none;
 
     font-family: var(--font-body);
-
     font-size: 0.82rem;
-
     font-weight: 600;
 
-    color: var(--color-offwhite);
+    color: #ffffff;
 
-    background: transparent;
+    cursor: pointer;
 
     transition:
         transform 0.3s ease,
@@ -653,19 +495,23 @@
         border-color 0.3s ease;
 }
 
-
 .faq-cta__button span {
-    color: var(--color-cinnabar);
+    color: inherit;
+}
 
-    font-size: 1.1rem;
+.faq-cta__button svg {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    color: #ffffff;
 
     transition: transform 0.3s ease;
 }
 
-
 .faq-cta__button:hover {
     background: var(--color-offwhite);
-
     border-color: var(--color-offwhite);
 
     color: var(--color-black);
@@ -673,161 +519,122 @@
     transform: translateY(-2px);
 }
 
+.faq-cta__button:hover svg {
+    color: var(--color-cinnabar);
 
-.faq-cta__button:hover span {
-    transform: translateX(5px);
+    transform: translate(4px, -4px);
 }
-
 
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 900px) {
-
     .faq-content__inner {
         grid-template-columns: 1fr;
-
         gap: 60px;
     }
-
 
     .faq-categories {
         position: static;
     }
 
-
     .faq-categories nav {
         flex-direction: row;
-
         flex-wrap: wrap;
-
         gap: 0.8rem 1.5rem;
     }
-
 
     .faq-categories__label {
         margin-bottom: 1rem;
     }
 }
 
-
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 650px) {
-
     .faq-hero {
         min-height: auto;
     }
 
-
     .faq-hero__content {
         width: calc(100% - 32px);
-
         min-height: auto;
 
         padding: 120px 0 70px;
     }
 
-
     .faq-hero__eyebrow {
         gap: 0.4rem;
 
         padding: 0.45rem 0.8rem;
-
         margin-bottom: 1.1rem;
 
         font-size: 0.58rem;
-
         letter-spacing: 0.11em;
     }
-
 
     .faq-hero h1 {
         width: 100%;
 
         font-size: clamp(3rem, 13vw, 4.5rem);
-
         line-height: 0.9;
-
         letter-spacing: -0.045em;
     }
 
-
     .faq-hero p {
         width: 100%;
-
         max-width: 100%;
 
         margin-top: 1.3rem;
 
         font-size: 0.88rem;
-
         line-height: 1.6;
     }
 
-
-    /* =====================================
-       FAQ CONTENT
-    ===================================== */
+    /* FAQ CONTENT */
 
     .faq-content {
         padding: 75px 7vw;
     }
 
-
     .faq-content__inner {
         gap: 45px;
     }
 
-
-    /* =====================================
-       CATEGORY NAV
-    ===================================== */
+    /* CATEGORY NAV */
 
     .faq-categories nav {
         gap: 0.7rem 1.2rem;
     }
 
-
     .faq-categories a {
         font-size: 0.75rem;
     }
 
-
-    /* =====================================
-       CATEGORIES
-    ===================================== */
+    /* CATEGORIES */
 
     .faq-category {
         margin-bottom: 75px;
-
         scroll-margin-top: 80px;
     }
 
-
     .faq-category__header {
         gap: 1rem;
-
         padding-bottom: 1.2rem;
     }
-
 
     .faq-category__header h2 {
         font-size: 2rem;
     }
 
-
     .faq-category__header span {
         font-size: 0.6rem;
     }
 
-
-    /* =====================================
-       QUESTIONS
-    ===================================== */
+    /* QUESTIONS */
 
     .faq-item__question {
         min-height: 65px;
@@ -839,48 +646,36 @@
         font-size: 0.85rem;
     }
 
-
     .faq-item__icon {
         width: 28px;
-
         height: 28px;
 
         font-size: 1rem;
     }
 
-
     .faq-item__answer p {
         font-size: 0.82rem;
-
         line-height: 1.65;
     }
-
 
     .faq-item__answer--open p {
         padding: 0 1.5rem 1.5rem 0;
     }
 
-
-    /* =====================================
-       CTA
-    ===================================== */
+    /* CTA */
 
     .faq-cta {
         padding: 90px 7vw;
     }
 
-
     .faq-cta h2 {
         font-size: clamp(3rem, 14vw, 5rem);
     }
 
-
     .faq-cta p {
         font-size: 0.85rem;
-
         line-height: 1.6;
     }
-
 
     .faq-cta__button {
         min-height: 42px;
@@ -891,46 +686,36 @@
     }
 }
 
-
 /* =========================================
    SMALL PHONES
 ========================================= */
 
 @media (max-width: 380px) {
-
     .faq-hero__content {
         width: calc(100% - 28px);
-
         padding-top: 105px;
     }
-
 
     .faq-hero h1 {
         font-size: 2.7rem;
     }
 
-
     .faq-hero p {
         font-size: 0.82rem;
-
         line-height: 1.5;
     }
-
 
     .faq-content {
         padding: 65px 7vw;
     }
 
-
     .faq-category__header h2 {
         font-size: 1.75rem;
     }
 
-
     .faq-item__question {
         font-size: 0.8rem;
     }
-
 
     .faq-cta h2 {
         font-size: 2.8rem;

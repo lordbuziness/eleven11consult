@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/servicetraininghero.jpg";
 
@@ -17,14 +18,14 @@ function TrainingHero() {
                 </p>
 
                 <h1>
-                    Building people
+                    Training &
                     <br />
-                    who build the future.
+                    <span>Development</span>
                 </h1>
 
                 <p className="training-hero__description">
-                    Practical learning, professional development, and capacity
-                    building designed to create lasting impact.
+                    Investing in the human capital that drives tomorrow's
+                    Africa.
                 </p>
             </div>
         </section>
@@ -32,3 +33,4 @@ function TrainingHero() {
 }
 
 export default TrainingHero;
+

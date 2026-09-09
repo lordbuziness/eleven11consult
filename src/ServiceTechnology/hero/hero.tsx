@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/servictechhero.jpg";
 
@@ -18,15 +19,13 @@ function TechnologyHero() {
                 </span>
 
                 <h1>
-                    Building what
+                    Technology
                     <br />
-                    <span>comes next.</span>
+                    <span>Solutions</span>
                 </h1>
 
                 <p>
-                    We help organizations use technology to solve problems,
-                    improve how they work, and turn ambitious ideas into
-                    practical digital solutions.
+                    The digital infrastructure your business deserves
                 </p>
             </div>
         </section>
@@ -34,3 +33,4 @@ function TechnologyHero() {
 }
 
 export default TechnologyHero;
+

@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/serviceconstructhero.jpg";
 
@@ -14,19 +15,18 @@ function ConstructionHero() {
 
             <div className="construction-hero__content">
                 <span className="construction-hero__eyebrow">
-                    Construction
+                    Construction & Real Estate
                 </span>
 
                 <h1>
-                    Building ideas
+                    Construction &
                     <br />
-                    <span>into reality.</span>
+                    <span>Real Estate</span>
                 </h1>
 
                 <p>
-                    We help construction businesses and infrastructure
-                    organizations communicate their value, strengthen their
-                    strategy, and bring ambitious projects to life.
+                    Building with purpose. Managing with precision.
+                    Communicating with clarity.
                 </p>
             </div>
         </section>
@@ -34,3 +34,4 @@ function ConstructionHero() {
 }
 
 export default ConstructionHero;
+

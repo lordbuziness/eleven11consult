@@ -1,3 +1,4 @@
+
 import "./body.css";
 import bodyImage from "../assets/images/serviceconstruct1.jpg";
 
@@ -12,22 +13,54 @@ function ConstructionBody() {
             <div className="construction-body__content">
                 <div className="construction-body__text">
                     <h2>
-                        Building a stronger
-                        <span> built environment.</span>
+                        Building Nigeria's
+                        <span> physical future.</span>
                     </h2>
 
                     <p>
-                        Construction is where strategy becomes physical
-                        reality. Every project depends on strong planning,
-                        clear communication, capable teams, and the ability to
-                        connect ideas with the people who make them happen.
+                        Infrastructure is the foundation of every thriving
+                        economy. At Eleven 11 Consult, we support the
+                        organisations building Nigeria's physical future —
+                        from residential and commercial developers to civil
+                        contractors and infrastructure investors — with the
+                        strategic and communications expertise to match their
+                        ambition.
                     </p>
 
                     <p>
-                        We work with construction companies and infrastructure
-                        organizations to strengthen their positioning,
-                        communicate complex projects, and create strategies
-                        that support sustainable growth.
+                        <strong>
+                            Our Construction & Real Estate Services:
+                        </strong>
+                    </p>
+
+                    <p>
+                        <strong>Project Management Consultancy</strong>{" "}
+                        End-to-end strategic oversight and advisory for
+                        construction and real estate projects — ensuring
+                        timely delivery, budget alignment, and stakeholder
+                        confidence.
+                    </p>
+
+                    <p>
+                        <strong>Infrastructure Media</strong> Documentary,
+                        video, and digital content that showcases your
+                        projects, builds your brand, and tells the story of
+                        what you're building — and why it matters.
+                    </p>
+
+                    <p>
+                        <strong>Real Estate Communications & PR</strong>{" "}
+                        Strategic communications for property developers, real
+                        estate investment trusts (REITs), and housing
+                        developers looking to position their projects with
+                        authority.
+                    </p>
+
+                    <p>
+                        <strong>Stakeholder & Community Engagement</strong>{" "}
+                        Communications strategy for managing community
+                        relations, government engagement, and public perception
+                        around major infrastructure projects.
                     </p>
                 </div>
 
@@ -43,3 +76,4 @@ function ConstructionBody() {
 }
 
 export default ConstructionBody;
+

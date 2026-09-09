@@ -7,22 +7,22 @@ function TrainingCTA() {
     return (
         <section className="training-cta">
             <div className="training-cta__content">
-                <span>Ready to build capability?</span>
+                <span>Invest in your people.</span>
 
                 <h2>
-                    Let's grow
+                    Invest in your people.
                     <br />
-                    <strong>together.</strong>
+                    <strong>The returns are permanent.</strong>
                 </h2>
 
                 <p>
-                    Let's develop the skills, knowledge, and capabilities your
-                    people need to perform, adapt, and create meaningful
-                    impact.
+                    Equip your people with the skills, knowledge, and
+                    capabilities they need to perform, adapt, and create
+                    meaningful impact.
                 </p>
 
                 <Link to="/contact" className="training-cta__button">
-                    Start a conversation
+                    Enquire About Training
                     <ArrowUpRight size={18} />
                 </Link>
             </div>

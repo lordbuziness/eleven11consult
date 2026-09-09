@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/insighthero.jpg";
 
@@ -18,15 +19,11 @@ function InsightsHero() {
                 </span>
 
                 <h1>
-                    Ideas that
-                    <br />
-                    <span>move business forward.</span>
+                    Insights
                 </h1>
 
                 <p>
-                    Perspectives, ideas, and practical insights on
-                    business, technology, creativity, and the industries
-                    shaping tomorrow.
+                    Perspectives from the intersection of industry and media.
                 </p>
             </div>
         </section>
@@ -34,3 +31,4 @@ function InsightsHero() {
 }
 
 export default InsightsHero;
+

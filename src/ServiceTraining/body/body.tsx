@@ -1,3 +1,4 @@
+
 import "./body.css";
 import bodyImage from "../assets/images/servicetraining1.jpg";
 
@@ -17,29 +18,102 @@ function TrainingBody() {
                 </p>
 
                 <h2>
-                    We don't just
+                    We build the
                     <br />
-                    train people.
+                    people who
                     <br />
-                    We build capability.
+                    build the future.
                 </h2>
 
                 <p>
-                    Our training programmes are designed to turn knowledge
-                    into practical skills. We work with organisations,
-                    professionals, and emerging leaders to develop the
-                    capabilities they need to perform, adapt, and create
-                    meaningful impact.
+                    Strategies succeed when people are equipped to execute
+                    them. At Eleven 11 Consult, we believe that human capital
+                    is the most critical infrastructure any organisation — or
+                    nation — can invest in.
                 </p>
 
                 <p>
-                    From professional development to specialised capacity
-                    building, we create learning experiences that are
-                    practical, relevant, and built around real-world needs.
+                    Our Training & Development pillar delivers bespoke
+                    programmes for corporate professionals, industry
+                    practitioners, and the next generation of African leaders.
                 </p>
+
+                <div className="training-body__services">
+                    <h3>Our Training Services</h3>
+
+                    <article className="training-body__service">
+                        <span className="training-body__service-number">
+                            01
+                        </span>
+
+                        <div>
+                            <h4>Corporate Training Programmes</h4>
+
+                            <p>
+                                Tailored professional development workshops and
+                                training series covering media literacy,
+                                communications strategy, digital skills,
+                                leadership, and sector-specific competencies.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="training-body__service">
+                        <span className="training-body__service-number">
+                            02
+                        </span>
+
+                        <div>
+                            <h4>Industry Skills Development</h4>
+
+                            <p>
+                                Practical, industry-focused training in media
+                                production, broadcast journalism, energy
+                                management, agricultural enterprise,
+                                construction project management, and IT
+                                operations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="training-body__service">
+                        <span className="training-body__service-number">
+                            03
+                        </span>
+
+                        <div>
+                            <h4>Youth Development — The Heritage Camp</h4>
+
+                            <p>
+                                Our flagship youth initiative — designed to
+                                equip young Nigerians with the leadership,
+                                cultural grounding, and professional skills
+                                they need to navigate and shape the modern
+                                African economy.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="training-body__service">
+                        <span className="training-body__service-number">
+                            04
+                        </span>
+
+                        <div>
+                            <h4>Facilitation & Consultancy</h4>
+
+                            <p>
+                                Design and delivery of customised training
+                                frameworks for organisations building internal
+                                capacity at scale.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     );
 }
 
 export default TrainingBody;
+

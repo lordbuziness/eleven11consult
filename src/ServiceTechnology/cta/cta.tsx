@@ -1,3 +1,4 @@
+
 import "./cta.css";
 
 function TechnologyCTA() {
@@ -9,9 +10,9 @@ function TechnologyCTA() {
                 </span>
 
                 <h2>
-                    Have a technology
+                    Ready to build your
                     <br />
-                    <strong>idea to build?</strong>
+                    <strong>digital advantage?</strong>
                 </h2>
 
                 <p>
@@ -24,7 +25,7 @@ function TechnologyCTA() {
                     href="/contact"
                     className="technology-cta__button"
                 >
-                    Start a conversation
+                    Start a Tech Conversation
                     <span>→</span>
                 </a>
             </div>
@@ -33,3 +34,5 @@ function TechnologyCTA() {
 }
 
 export default TechnologyCTA;
+
+

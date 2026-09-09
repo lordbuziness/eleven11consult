@@ -1,3 +1,4 @@
+
 .technology-body {
     width: min(1400px, 92%);
 
@@ -28,7 +29,7 @@
     grid-template-columns: 1fr 0.8fr;
 
     gap: 70px;
-    align-items: center;
+    align-items: start;
 }
 
 .technology-body__text {
@@ -61,7 +62,151 @@
     color: var(--color-charcoal);
 }
 
+/* --------------------------------
+   SERVICES
+-------------------------------- */
+
+.technology-body__services {
+    margin-top: 70px;
+}
+
+.technology-body__services > h3 {
+    margin: 0 0 30px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-body__service {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+
+    gap: 20px;
+
+    padding: 32px 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.technology-body__service-number {
+    padding-top: 4px;
+
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-body__service h4 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.035em;
+
+    color: var(--color-black);
+}
+
+.technology-body__service p {
+    margin-top: 18px;
+}
+
+/* --------------------------------
+   DEVELOPMENT APPROACH
+-------------------------------- */
+
+.technology-body__approach {
+    margin-top: 24px;
+    padding: 18px 20px;
+
+    border-left: 2px solid var(--color-cinnabar);
+
+    background: rgba(0, 0, 0, 0.035);
+}
+
+.technology-body__approach span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-body__approach p {
+    margin: 0;
+
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+/* --------------------------------
+   MANAGED IT LIST
+-------------------------------- */
+
+.technology-body__service ul {
+    margin: 22px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.technology-body__service li {
+    position: relative;
+
+    padding: 9px 0 9px 22px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    color: var(--color-charcoal);
+}
+
+.technology-body__service li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--color-cinnabar);
+}
+
+/* --------------------------------
+   IMAGE
+-------------------------------- */
+
 .technology-body__image {
+    position: sticky;
+    top: 120px;
+
     width: 100%;
 
     aspect-ratio: 4 / 5;
@@ -76,6 +221,35 @@
     object-fit: cover;
 }
 
+/* --------------------------------
+   TABLET
+-------------------------------- */
+
+@media (max-width: 1000px) {
+    .technology-body {
+        grid-template-columns: 160px 1fr;
+
+        gap: 45px;
+    }
+
+    .technology-body__content {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .technology-body__image {
+        position: relative;
+        top: auto;
+
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
 @media (max-width: 800px) {
     .technology-body {
         width: calc(100% - 32px);
@@ -88,6 +262,7 @@
 
     .technology-body__content {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
@@ -95,7 +270,43 @@
         font-size: clamp(2.8rem, 12vw, 4.5rem);
     }
 
+    .technology-body__services {
+        margin-top: 55px;
+    }
+
+    .technology-body__service {
+        grid-template-columns: 36px 1fr;
+
+        gap: 12px;
+
+        padding: 28px 0;
+    }
+
+    .technology-body__service h4 {
+        font-size: 2rem;
+    }
+
     .technology-body__image {
         aspect-ratio: 4 / 3;
     }
 }
+
+@media (max-width: 500px) {
+    .technology-body {
+        padding: 75px 0;
+    }
+
+    .technology-body__service h4 {
+        font-size: 1.75rem;
+    }
+
+    .technology-body__service p,
+    .technology-body__service li {
+        font-size: 0.85rem;
+    }
+
+    .technology-body__approach {
+        padding: 15px 16px;
+    }
+}
+

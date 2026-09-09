@@ -1,0 +1,437 @@
+
+.technology-whychoose {
+    position: relative;
+
+    width: min(1400px, 92%);
+
+    margin: 0 auto;
+    padding: 150px 0;
+
+    overflow: hidden;
+}
+
+/* --------------------------------
+   HEADER
+-------------------------------- */
+
+.technology-whychoose__header {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 80px;
+}
+
+.technology-whychoose__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-top: 10px;
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-whychoose__intro {
+    max-width: 900px;
+}
+
+.technology-whychoose__intro h2 {
+    margin: 0;
+
+    max-width: 900px;
+
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 6.5vw, 7rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+
+    color: var(--color-black);
+}
+
+.technology-whychoose__intro h2 span {
+    color: var(--color-cinnabar);
+}
+
+.technology-whychoose__intro p {
+    max-width: 680px;
+
+    margin: 38px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: var(--color-charcoal);
+}
+
+/* --------------------------------
+   INFOGRAPHIC
+-------------------------------- */
+
+.technology-whychoose__diagram {
+    position: absolute;
+
+    top: 190px;
+    right: -150px;
+
+    width: 360px;
+    height: 360px;
+
+    pointer-events: none;
+}
+
+.technology-whychoose__diagram-core {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 105px;
+    height: 105px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-cinnabar);
+    border-radius: 50%;
+
+    background: var(--color-offwhite);
+
+    z-index: 2;
+}
+
+.technology-whychoose__diagram-core span {
+    font-family: var(--font-display);
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-black);
+}
+
+.technology-whychoose__diagram-core small {
+    margin-top: 5px;
+
+    font-family: var(--font-body);
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-whychoose__diagram-orbit {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.technology-whychoose__diagram-orbit--one {
+    width: 220px;
+    height: 220px;
+}
+
+.technology-whychoose__diagram-orbit--two {
+    width: 330px;
+    height: 330px;
+
+    border-style: dashed;
+}
+
+.technology-whychoose__diagram-line {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 330px;
+    height: 1px;
+
+    background: rgba(0, 0, 0, 0.1);
+
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* --------------------------------
+   ADVANTAGE CARDS
+-------------------------------- */
+
+.technology-whychoose__grid {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1px;
+
+    margin-top: 110px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.technology-whychoose__card {
+    position: relative;
+
+    min-height: 340px;
+
+    padding: 38px 42px;
+
+    background: var(--color-offwhite);
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.technology-whychoose__card:hover {
+    background: #ffffff;
+
+    transform: translateY(-4px);
+}
+
+.technology-whychoose__card-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.technology-whychoose__number {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    color: var(--color-cinnabar);
+}
+
+.technology-whychoose__icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+
+    color: var(--color-cinnabar);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.technology-whychoose__card:hover .technology-whychoose__icon {
+    border-color: var(--color-cinnabar);
+
+    background: var(--color-cinnabar);
+
+    color: var(--color-offwhite);
+}
+
+.technology-whychoose__card-content {
+    max-width: 480px;
+
+    margin-top: 80px;
+}
+
+.technology-whychoose__card-content h3 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+
+    color: var(--color-black);
+}
+
+.technology-whychoose__card-content p {
+    max-width: 430px;
+
+    margin: 22px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    color: var(--color-charcoal);
+}
+
+.technology-whychoose__card-arrow {
+    position: absolute;
+
+    right: 42px;
+    bottom: 38px;
+
+    color: var(--color-cinnabar);
+
+    transition: transform 0.25s ease;
+}
+
+.technology-whychoose__card:hover .technology-whychoose__card-arrow {
+    transform: translate(5px, -5px);
+}
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 1000px) {
+    .technology-whychoose__diagram {
+        opacity: 0.35;
+
+        right: -190px;
+    }
+
+    .technology-whychoose__header {
+        grid-template-columns: 160px minmax(0, 1fr);
+
+        gap: 45px;
+    }
+}
+
+@media (max-width: 800px) {
+    .technology-whychoose {
+        width: calc(100% - 32px);
+
+        padding: 100px 0;
+    }
+
+    .technology-whychoose__header {
+        display: block;
+    }
+
+    .technology-whychoose__label {
+        margin-bottom: 35px;
+    }
+
+    .technology-whychoose__intro {
+        max-width: 100%;
+    }
+
+    .technology-whychoose__intro h2 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .technology-whychoose__intro p {
+        margin-top: 28px;
+
+        font-size: 0.9rem;
+    }
+
+    .technology-whychoose__diagram {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 250px;
+        height: 250px;
+
+        margin: 70px auto 0;
+
+        opacity: 1;
+    }
+
+    .technology-whychoose__diagram-orbit--one {
+        width: 160px;
+        height: 160px;
+    }
+
+    .technology-whychoose__diagram-orbit--two {
+        width: 235px;
+        height: 235px;
+    }
+
+    .technology-whychoose__diagram-line {
+        width: 235px;
+    }
+
+    .technology-whychoose__grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 70px;
+    }
+
+    .technology-whychoose__card {
+        min-height: 310px;
+
+        padding: 32px;
+    }
+
+    .technology-whychoose__card-content {
+        margin-top: 65px;
+    }
+
+    .technology-whychoose__card-arrow {
+        right: 32px;
+        bottom: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .technology-whychoose {
+        width: calc(100% - 32px);
+
+        padding: 80px 0;
+    }
+
+    .technology-whychoose__intro h2 {
+        font-size: clamp(2.8rem, 13vw, 4rem);
+    }
+
+    .technology-whychoose__diagram {
+        margin-top: 55px;
+    }
+
+    .technology-whychoose__card {
+        min-height: 290px;
+
+        padding: 28px;
+    }
+
+    .technology-whychoose__card-content {
+        margin-top: 55px;
+    }
+
+    .technology-whychoose__card-content h3 {
+        font-size: 2.1rem;
+    }
+
+    .technology-whychoose__card-content p {
+        font-size: 0.85rem;
+    }
+
+    .technology-whychoose__card-arrow {
+        right: 28px;
+        bottom: 28px;
+    }
+}
+

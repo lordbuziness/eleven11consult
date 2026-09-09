@@ -1,3 +1,4 @@
+
 import "./cta.css";
 
 function ConstructionCTA() {
@@ -9,22 +10,16 @@ function ConstructionCTA() {
                 </span>
 
                 <h2>
-                    Have a construction
+                    Building something great?
                     <br />
-                    <strong>idea to build?</strong>
+                    <strong>Let's make sure the world knows about it.</strong>
                 </h2>
-
-                <p>
-                    Let's explore how strategy, communication, and
-                    storytelling can help turn your project into lasting
-                    impact.
-                </p>
 
                 <a
                     href="/contact"
                     className="construction-cta__button"
                 >
-                    Start a conversation
+                    Start a Construction Mandate
                     <span>→</span>
                 </a>
             </div>
@@ -33,3 +28,4 @@ function ConstructionCTA() {
 }
 
 export default ConstructionCTA;
+
