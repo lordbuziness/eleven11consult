@@ -87,9 +87,9 @@
     font-family: var(--font-display);
     font-weight: 600;
 
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 
     color: var(--color-offwhite);
 }

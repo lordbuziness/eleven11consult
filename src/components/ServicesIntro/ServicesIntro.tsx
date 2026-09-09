@@ -5,6 +5,7 @@ import {
     Cpu,
     BriefcaseBusiness,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Service {
     title: string;
@@ -41,18 +42,14 @@ function ServicesIntro() {
     return (
         <section className="services-intro">
             <div className="services-intro__container">
-
                 <div className="services-intro__heading">
                     <p className="services-intro__eyebrow">
                         What We Do
                     </p>
 
                     <h2>
-                        One Firm.
-                        <br />
-                        Every Sector.
-                        <br />
-                        Limitless Potential.
+                        <span className="services-intro__heading-line">One Firm. Every Sector.</span>
+                        <span className="services-intro__heading-line">Limitless Potential.</span>
                     </h2>
 
                     <p className="services-intro__body">
@@ -79,17 +76,16 @@ function ServicesIntro() {
 
                             <p>{service.description}</p>
 
-                            <a
-                                href={service.link}
+                            <Link
+                                to={service.link}
                                 className="services-intro__explore"
                             >
                                 Explore
                                 <span>→</span>
-                            </a>
+                            </Link>
                         </article>
                     ))}
                 </div>
-
             </div>
         </section>
     );
