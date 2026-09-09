@@ -1,7 +1,6 @@
 
 .mobile-menu {
     position: fixed;
-
     top: 0;
     right: 0;
 
@@ -15,6 +14,8 @@
     transition: transform 0.35s ease;
 
     z-index: 999;
+
+    overflow-y: auto;
 }
 
 .mobile-menu--open {
@@ -55,5 +56,170 @@
     font-weight: 600;
 
     border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.mobile-menu__links a:hover {
+    color: var(--color-cinnabar);
+    padding-left: 10px;
+}
+
+/* ===========================
+   Dropdown Parent
+=========================== */
+
+.mobile-menu__dropdown {
+    width: 100%;
+}
+
+/* ===========================
+   Dropdown Button
+=========================== */
+
+.mobile-menu__dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 18px 5px;
+
+    border: none;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+
+    background: transparent;
+
+    color: var(--color-charcoal);
+
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.mobile-menu__dropdown-button:hover {
+    color: var(--color-cinnabar);
+    padding-left: 10px;
+}
+
+/* ===========================
+   Dropdown Arrow
+=========================== */
+
+.mobile-menu__dropdown-icon {
+    flex-shrink: 0;
+
+    transition: transform 0.25s ease;
+}
+
+.mobile-menu__dropdown-icon--open {
+    transform: rotate(180deg);
+}
+
+/* ===========================
+   Submenu
+=========================== */
+
+.mobile-menu__submenu {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.25s ease;
+}
+
+.mobile-menu__submenu--open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* ===========================
+   Submenu Links
+=========================== */
+
+.mobile-menu__submenu a {
+    padding: 14px 5px 14px 20px;
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(28, 28, 28, 0.07);
+}
+
+.mobile-menu__submenu a:hover {
+    padding-left: 25px;
+}
+
+/* ===========================
+   Start A Conversation
+=========================== */
+
+.mobile-menu__conversation {
+    padding-top: 22px;
+}
+
+.mobile-menu__conversation-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 18px !important;
+
+    border: 1px solid var(--color-black) !important;
+    border-radius: 999px;
+
+    background: var(--color-black);
+
+    color: #ffffff !important;
+
+    font-family: var(--font-body) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--color-black) !important;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease !important;
+}
+
+.mobile-menu__conversation-button:hover {
+    background: var(--color-cinnabar);
+    border-color: var(--color-cinnabar) !important;
+    color: #ffffff !important;
+    padding-left: 18px !important;
+}
+
+/* ===========================
+   Smaller Mobile Screens
+=========================== */
+
+@media (max-width: 480px) {
+    .mobile-menu {
+        width: 86%;
+    }
+
+    .mobile-menu__links {
+        padding: 110px 24px 24px;
+    }
 }
 
