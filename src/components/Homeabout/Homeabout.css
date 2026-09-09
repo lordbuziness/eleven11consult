@@ -1,0 +1,485 @@
+
+/* =========================================
+   HOME ABOUT
+========================================= */
+
+.homeabout {
+    width: 100%;
+    padding: 140px 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.homeabout__container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.homeabout__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    gap: 90px;
+    align-items: center;
+}
+
+.homeabout__intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.homeabout__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 25px;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid var(--color-cinnabar);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.homeabout__eyebrow::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: var(--color-cinnabar);
+}
+
+.homeabout__intro h2 {
+    max-width: 720px;
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3.4rem, 6vw, 6rem);
+    font-weight: 600;
+    line-height: 0.91;
+    letter-spacing: -0.045em;
+
+    color: var(--color-black);
+}
+
+.homeabout__intro h2 span {
+    color: var(--color-cinnabar);
+}
+
+.homeabout__subheadline {
+    max-width: 480px;
+
+    margin: 30px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+
+    color: var(--color-charcoal);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.homeabout__image-wrapper {
+    position: relative;
+
+    width: 100%;
+    min-height: 520px;
+
+    overflow: hidden;
+
+    background: var(--color-charcoal);
+}
+
+.homeabout__image {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: saturate(0.9);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.homeabout__image-wrapper:hover .homeabout__image {
+    transform: scale(1.035);
+    filter: saturate(1);
+}
+
+.homeabout__image-wrapper::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(17, 17, 17, 0.5),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+.homeabout__image-label {
+    position: absolute;
+
+    left: 22px;
+    bottom: 20px;
+
+    z-index: 2;
+
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONVICTION
+========================================= */
+
+.homeabout__conviction {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+
+    gap: 70px;
+
+    margin-top: 120px;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(28, 28, 28, 0.15);
+}
+
+.homeabout__conviction-number {
+    padding-top: 4px;
+}
+
+.homeabout__conviction-number span {
+    display: block;
+
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 0.8;
+
+    color: var(--color-cinnabar);
+}
+
+.homeabout__conviction-number p {
+    margin: 16px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-charcoal);
+}
+
+.homeabout__conviction-content {
+    max-width: 760px;
+}
+
+.homeabout__conviction-content p {
+    margin: 0 0 28px;
+
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    font-weight: 500;
+    line-height: 1.85;
+
+    color: var(--color-charcoal);
+}
+
+.homeabout__conviction-content p:last-child {
+    margin-bottom: 0;
+}
+
+.homeabout__conviction-content strong {
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+
+/* =========================================
+   MANIFESTO
+========================================= */
+
+.homeabout__manifesto {
+    margin-top: 110px;
+}
+
+.homeabout__manifesto-line {
+    width: 100%;
+    height: 1px;
+
+    background: rgba(28, 28, 28, 0.15);
+}
+
+.homeabout__manifesto-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding-top: 45px;
+}
+
+.homeabout__manifesto-copy p {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 5.4rem);
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+
+    color: var(--color-black);
+}
+
+.homeabout__manifesto-copy span {
+    color: var(--color-cinnabar);
+}
+
+.homeabout__manifesto-copy strong {
+    color: var(--color-cinnabar);
+    font-weight: 600;
+}
+
+.homeabout__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    flex-shrink: 0;
+
+    padding-bottom: 8px;
+
+    font-family: var(--font-body);
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    color: var(--color-black);
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--color-black);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.homeabout__link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-cinnabar);
+
+    transition: transform 0.25s ease;
+}
+
+.homeabout__link:hover {
+    gap: 20px;
+    color: var(--color-cinnabar);
+    border-color: var(--color-cinnabar);
+}
+
+.homeabout__link:hover .homeabout__link-icon {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .homeabout {
+        padding: 110px 0;
+    }
+
+    .homeabout__intro {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .homeabout__intro h2 {
+        max-width: 760px;
+    }
+
+    .homeabout__image-wrapper {
+        width: min(100%, 650px);
+        margin-left: auto;
+        min-height: 480px;
+    }
+
+    .homeabout__image {
+        min-height: 480px;
+    }
+
+    .homeabout__conviction {
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 45px;
+        margin-top: 90px;
+    }
+
+    .homeabout__manifesto {
+        margin-top: 90px;
+    }
+
+    .homeabout__manifesto-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .homeabout {
+        padding: 80px 0 70px;
+    }
+
+    .homeabout__container {
+        width: 88%;
+    }
+
+    .homeabout__intro {
+        gap: 40px;
+    }
+
+    .homeabout__eyebrow {
+        font-size: 0.62rem;
+        padding: 0.45rem 0.8rem;
+        margin-bottom: 20px;
+    }
+
+    .homeabout__intro h2 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+        line-height: 0.93;
+    }
+
+    .homeabout__subheadline {
+        margin-top: 22px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .homeabout__image-wrapper {
+        min-height: 390px;
+    }
+
+    .homeabout__image {
+        min-height: 390px;
+    }
+
+    .homeabout__conviction {
+        display: block;
+
+        margin-top: 70px;
+        padding-top: 28px;
+    }
+
+    .homeabout__conviction-number {
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+
+        margin-bottom: 30px;
+    }
+
+    .homeabout__conviction-number span {
+        font-size: 3rem;
+    }
+
+    .homeabout__conviction-number p {
+        margin: 0;
+        font-size: 0.6rem;
+    }
+
+    .homeabout__conviction-content p {
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .homeabout__manifesto {
+        margin-top: 70px;
+    }
+
+    .homeabout__manifesto-content {
+        padding-top: 32px;
+        gap: 35px;
+    }
+
+    .homeabout__manifesto-copy p {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        line-height: 0.94;
+    }
+
+    .homeabout__link {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+    .homeabout__intro h2 {
+        font-size: 2.6rem;
+    }
+
+    .homeabout__image-wrapper,
+    .homeabout__image {
+        min-height: 340px;
+    }
+
+    .homeabout__manifesto-copy p {
+        font-size: 2.35rem;
+    }
+}
+

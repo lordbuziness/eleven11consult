@@ -1,37 +1,43 @@
+
+/* =========================================
+   CTA
+========================================= */
+
 .cta {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-  padding: 160px 0;
+    padding: 160px 0;
 
-  background: #1c1c1c;
-  color: #ffffff;
+    background: #1c1c1c;
+    color: #ffffff;
 }
 
 .cta__container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 
-  width: min(92%, 1200px);
-  min-height: 500px;
-  margin: 0 auto;
+    width: min(92%, 1200px);
+    min-height: 500px;
+    margin: 0 auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cta__content {
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 
-  width: min(100%, 650px);
+    width: min(100%, 650px);
 }
 
-/* ===========================
-   Eyebrow
-=========================== */
+
+/* =========================================
+   EYEBROW
+========================================= */
 
 .cta__eyebrow {
     display: inline-flex;
@@ -39,19 +45,17 @@
     gap: 0.5rem;
 
     padding: 0.5rem 1rem;
-
     margin-bottom: 1.5rem;
 
     font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 600;
-
     letter-spacing: 0.14em;
     text-transform: uppercase;
 
     color: var(--color-cinnabar);
 
-    border: 1px solid ;
+    border: 1px solid var(--color-cinnabar);
     border-radius: 999px;
 
     background: rgba(217, 217, 217, 0.12);
@@ -60,33 +64,45 @@
     -webkit-backdrop-filter: blur(6px);
 }
 
-.cta__eyebrow-dot {
+.cta__eyebrow::before {
+    content: "";
+
     width: 6px;
     height: 6px;
 
     flex-shrink: 0;
 
-    background: var(--color-cinnabar);
-
     border-radius: 50%;
+    background: var(--color-cinnabar);
 }
+
+
+/* =========================================
+   TITLE
+========================================= */
+
 .cta__title {
-   margin-bottom: 2rem;
+    margin: 0 0 2rem;
 
     font-family: var(--font-display);
     font-weight: 600;
 
     font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 0.95;
+    letter-spacing: -0.04em;
 
-    color: var(--color-off-white);
+    color: var(--color-offwhite);
 }
 
 
-.cta__description {
-  max-width: 450px;
+/* =========================================
+   DESCRIPTION
+========================================= */
 
-    margin-bottom: 3rem;
+.cta__description {
+    max-width: 500px;
+
+    margin: 0 0 3rem;
 
     font-family: var(--font-body);
     font-weight: 400;
@@ -97,516 +113,385 @@
     color: var(--color-stone);
 }
 
+
+/* =========================================
+   BUTTONS
+========================================= */
+
 .cta__buttons {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .cta__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  padding: 14px 24px;
+    padding: 14px 24px;
 
-  font-family: "Roboto", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
 
-  text-decoration: none;
+    text-decoration: none;
 
-  border-radius: 999px;
+    border-radius: 999px;
 
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .cta__button:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .cta__button--primary {
-  background: #e63946;
-  color: #ffffff;
+    background: var(--color-cinnabar);
+    color: #ffffff;
 }
 
 .cta__button--primary:hover {
-  background: #ffffff;
-  color: #1c1c1c;
+    background: #ffffff;
+    color: var(--color-black);
 }
 
 .cta__button--secondary {
-  background: transparent;
-  color: #ffffff;
+    background: transparent;
+    color: #ffffff;
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .cta__button--secondary:hover {
-  background: #ffffff;
-  color: #1c1c1c;
-}
-
-
-/* =========================
-   Circular Visual
-========================= */
-
-.cta__visual {
-  position: absolute;
-
-  top: 50%;
-  right: -100px;
-
-  width: 600px;
-  height: 600px;
-
-  transform: translateY(-50%);
-}
-
-.cta__circle {
-  position: absolute;
-
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  border-radius: 50%;
-}
-
-.cta__circle--outer {
-  inset: 0;
-}
-
-.cta__circle--middle {
-  inset: 75px;
-}
-
-.cta__circle--inner {
-  inset: 75px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-color: rgba(230, 57, 70, 0.7);
-}
-
-.cta__circle--inner span {
-  font-family: "Roboto", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: 0.8;
-
-  color: #ffffff;
-}
-
-.cta__circle--inner small {
-  margin-top: 12px;
-
-  font-family: "Roboto", sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-
-  color: #e63946;
-}
-
-
-/* =========================
-   Orbit Dots
-========================= */
-
-.cta__dot {
-  position: absolute;
-
-  width: 10px;
-  height: 10px;
-
-  background: #e63946;
-  border-radius: 50%;
-}
-
-.cta__dot--one {
-  top: 80px;
-  left: 130px;
-}
-
-.cta__dot--two {
-  top: 290px;
-  right: 30px;
-}
-
-.cta__dot--three {
-  bottom: 90px;
-  left: 170px;
-}
-
-
-/* =========================
-   Responsive
-========================= */
-
-@media (max-width: 900px) {
-  .cta {
-    padding: 120px 0;
-  }
-
-  .cta__container {
-    min-height: auto;
-  }
-
-  .cta__visual {
-    right: -250px;
-    opacity: 0.5;
-  }
-}
-
-@media (max-width: 600px) {
-  .cta {
-    padding: 100px 0;
-  }
-
-  .cta__container {
-    display: block;
-  }
-
-  .cta__content {
-    width: 100%;
-  }
-
-  .cta__title {
-    font-size: clamp(2.8rem, 12vw, 4rem);
-  }
-
-  .cta__buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cta__button {
-    width: auto;
-  }
-
-  .cta__visual {
-    width: 450px;
-    height: 450px;
-
-    top: 70%;
-    right: -220px;
-
-    opacity: 0.25;
-  }
+    background: #ffffff;
+    color: var(--color-black);
+    border-color: #ffffff;
 }
 
 
 /* =========================================
-   RESPONSIVE — TABLET
+   CIRCULAR VISUAL
 ========================================= */
 
-@media (max-width: 850px) {
+.cta__visual {
+    position: absolute;
 
-    .industries {
-        padding: 100px 0;
-    }
+    top: 50%;
+    right: -100px;
 
-    .industries__container {
-        width: 650px;
-        height: 650px;
+    width: 600px;
+    height: 600px;
 
-        transform: scale(0.82);
-        transform-origin: center;
+    transform: translateY(-50%);
 
-        margin-top: -50px;
-        margin-bottom: -50px;
-    }
+    pointer-events: none;
+}
 
-    .industry-circle {
-        width: 130px;
-        height: 130px;
-        padding: 16px;
-    }
+.cta__circle {
+    position: absolute;
 
-    .industries__sector-icon {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 10px;
-    }
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+}
 
-    .industries__sector-name {
-        width: 95px;
-        font-size: 0.95rem;
-    }
+.cta__circle--outer {
+    inset: 0;
+}
 
-    .industries__main {
-        width: 260px;
-        height: 260px;
-    }
+.cta__circle--middle {
+    inset: 75px;
+}
 
-    .industries__main-title {
-        font-size: 3.4rem;
-    }
+.cta__circle--inner {
+    inset: 75px;
 
-    .connection-line {
-        width: 270px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-color: rgba(230, 57, 70, 0.7);
+}
+
+.cta__circle--inner span {
+    font-family: var(--font-body);
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 0.8;
+
+    color: #ffffff;
+}
+
+.cta__circle--inner small {
+    margin-top: 12px;
+
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+
+    color: var(--color-cinnabar);
 }
 
 
-/* =========================
-   Responsive — Tablet
-========================= */
+/* =========================================
+   ORBIT DOTS
+========================================= */
+
+.cta__dot {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: var(--color-cinnabar);
+    border-radius: 50%;
+}
+
+.cta__dot--one {
+    top: 80px;
+    left: 130px;
+}
+
+.cta__dot--two {
+    top: 290px;
+    right: 30px;
+}
+
+.cta__dot--three {
+    bottom: 90px;
+    left: 170px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
-  .cta {
-    padding: 120px 0;
-  }
+    .cta {
+        padding: 120px 0;
+    }
 
-  .cta__container {
-    min-height: auto;
-  }
+    .cta__container {
+        min-height: auto;
+    }
 
-  .cta__content {
-    width: min(100%, 580px);
-  }
+    .cta__content {
+        width: min(100%, 580px);
+    }
 
-  .cta__visual {
-    width: 500px;
-    height: 500px;
+    .cta__visual {
+        width: 500px;
+        height: 500px;
 
-    right: -250px;
+        right: -250px;
 
-    opacity: 0.4;
-  }
+        opacity: 0.4;
+    }
 }
 
 
-/* =========================
-   Responsive — Mobile
-========================= */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
+    .cta {
+        padding: 80px 0;
+    }
 
-  .cta {
-    padding: 80px 0;
-  }
+    .cta__container {
+        width: 88%;
+        min-height: auto;
 
-  .cta__container {
-    width: 88%;
-    min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        text-align: center;
+    }
 
-    text-align: center;
-  }
+    .cta__content {
+        width: 100%;
 
-  /* =========================
-     Content
-  ========================= */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .cta__content {
-    width: 100%;
+    .cta__eyebrow {
+        margin-bottom: 1.25rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+        padding: 0.45rem 0.85rem;
 
-  .cta__eyebrow {
-    margin-bottom: 1.25rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+    }
 
-    padding: 0.45rem 0.85rem;
+    .cta__title {
+        width: 100%;
 
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-  }
+        margin-bottom: 1.5rem;
 
-  .cta__title {
-    width: 100%;
+        font-size: clamp(2.4rem, 10.5vw, 3.5rem);
+        line-height: 0.98;
+    }
 
-    margin-bottom: 1.5rem;
+    .cta__description {
+        width: 100%;
+        max-width: 450px;
 
-    font-size: clamp(2.4rem, 10.5vw, 3.5rem);
-    line-height: 0.98;
-  }
+        margin-bottom: 2rem;
 
-  .cta__description {
-    width: 100%;
-    max-width: 450px;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
 
-    margin-bottom: 2rem;
+    .cta__buttons {
+        width: 100%;
 
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-  /* =========================
-     Buttons
-  ========================= */
+        gap: 12px;
+    }
 
-  .cta__buttons {
-    width: 100%;
+    .cta__button {
+        width: 100%;
+        max-width: 280px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        padding: 13px 20px;
 
-    gap: 12px;
-  }
+        font-size: 0.8rem;
+    }
 
-  .cta__button {
-    width: 100%;
-    max-width: 280px;
+    .cta__visual {
+        position: relative;
 
-    padding: 13px 20px;
+        width: 240px;
+        height: 240px;
 
-    font-size: 0.8rem;
-  }
+        margin: 50px auto 0;
 
+        top: auto;
+        right: auto;
 
-  /* =========================
-     Circular Visual
-  ========================= */
+        transform: none;
 
-  .cta__visual {
-  width: 240px;
-  height: 240px;
+        opacity: 0.25;
 
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+        align-self: center;
+    }
 
-  align-self: center;
-}
-  .cta__circle--middle {
-    inset: 35px;
-  }
+    .cta__circle--middle {
+        inset: 35px;
+    }
 
-  .cta__circle--inner {
-    inset: 35px;
-  }
+    .cta__circle--inner {
+        inset: 35px;
+    }
 
-  .cta__circle--inner span {
-    font-size: clamp(2.8rem, 13vw, 4rem);
-  }
+    .cta__circle--inner span {
+        font-size: clamp(2.8rem, 13vw, 4rem);
+    }
 
-  .cta__circle--inner small {
-    margin-top: 8px;
+    .cta__circle--inner small {
+        margin-top: 8px;
 
-    font-size: 0.5rem;
-    letter-spacing: 0.2em;
-  }
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+    }
 
-  /* =========================
-     Orbit Dots
-  ========================= */
+    .cta__dot {
+        width: 7px;
+        height: 7px;
+    }
 
-  .cta__dot {
-    width: 7px;
-    height: 7px;
-  }
+    .cta__dot--one {
+        top: 38px;
+        left: 60px;
+    }
 
-  .cta__dot--one {
-    top: 38px;
-    left: 60px;
-  }
+    .cta__dot--two {
+        top: 135px;
+        right: 8px;
+    }
 
-  .cta__dot--two {
-    top: 135px;
-    right: 8px;
-  }
-
-  .cta__dot--three {
-    bottom: 40px;
-    left: 80px;
-  }
+    .cta__dot--three {
+        bottom: 40px;
+        left: 80px;
+    }
 }
 
 
-/* =========================
-   Small Phones
-========================= */
+/* =========================================
+   SMALL PHONES
+========================================= */
 
 @media (max-width: 380px) {
+    .cta {
+        padding: 70px 0;
+    }
 
-  .cta {
-    padding: 70px 0;
-  }
+    .cta__container {
+        width: 90%;
+    }
 
-  .cta__container {
-    width: 90%;
-  }
+    .cta__title {
+        font-size: 2.35rem;
+    }
 
-  .cta__title {
-    font-size: 2.35rem;
-  }
+    .cta__description {
+        font-size: 0.85rem;
+    }
 
-  .cta__description {
-    font-size: 0.85rem;
-  }
+    .cta__button {
+        max-width: 260px;
+    }
 
-  .cta__button {
-    max-width: 260px;
-  }
+    .cta__visual {
+        width: 240px;
+        height: 240px;
 
-  /* =========================
-     Centered Orbit
-  ========================= */
+        margin-top: 50px;
+    }
 
-  .cta__visual {
-    position: relative;
+    .cta__circle--outer {
+        inset: 0;
+    }
 
-    width: 240px;
-    height: 240px;
+    .cta__circle--middle {
+        inset: 30px;
+    }
 
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    .cta__circle--inner {
+        inset: 30px;
+    }
 
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
+    .cta__circle--inner span {
+        font-size: 2.8rem;
+    }
 
-    transform: none;
+    .cta__dot--one {
+        top: 32px;
+        left: 52px;
+    }
 
-    align-self: center;
-  }
+    .cta__dot--two {
+        top: 116px;
+        right: 5px;
+    }
 
-  .cta__circle--outer {
-    inset: 0;
-  }
-
-  .cta__circle--middle {
-    inset: 30px;
-  }
-
-  .cta__circle--inner {
-    inset: 30px;
-  }
-
-  .cta__circle--inner span {
-    font-size: 2.8rem;
-  }
-
-  /* Keep orbit dots positioned relative
-     to the centered visual */
-
-  .cta__dot--one {
-    top: 32px;
-    left: 52px;
-  }
-
-  .cta__dot--two {
-    top: 116px;
-    right: 5px;
-  }
-
-  .cta__dot--three {
-    bottom: 32px;
-    left: 70px;
-  }
+    .cta__dot--three {
+        bottom: 32px;
+        left: 70px;
+    }
 }
+

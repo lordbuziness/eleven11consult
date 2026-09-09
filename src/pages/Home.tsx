@@ -3,6 +3,7 @@ import CTA from "../components/CTA/CTA";
 import FinalCTA from "../components/FinalCTA/FinalCTA";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
+import Homeabout from "../components/Homeabout/Homeabout";
 import Insights from "../components/Insights/Insights";
 import Navbar from "../components/Navbar/Navbar";
 import Partners from "../components/Partners/Partners";
@@ -25,6 +26,10 @@ function Home() {
 
             <ScrollReveal>
                 <ServicesIntro />
+            </ScrollReveal>
+
+            <ScrollReveal>
+                <Homeabout />
             </ScrollReveal>
 
             <ScrollReveal>
