@@ -1,3 +1,4 @@
+
 import "./body.css";
 import bodyImage from "../assets/images/serviceagricbody1.jpg";
 
@@ -12,21 +13,49 @@ function AgricultureBody() {
             <div className="agriculture-body__content">
                 <div className="agriculture-body__text">
                     <h2>
-                        Building a stronger
-                        <span> agricultural future.</span>
+                        Unlocking Nigeria's
+                        <span> agricultural potential.</span>
                     </h2>
 
                     <p>
-                        Agriculture is more than production. It is a network
-                        of people, businesses, technologies, markets, and
-                        communities working together.
+                        Agriculture remains the backbone of Nigeria's economy
+                        — yet its potential remains vastly underutilised.
+                        Eleven 11 Consult bridges the gap between traditional
+                        farming systems, modern agrotech solutions, and the
+                        communication strategies needed to attract investment,
+                        build markets, and drive impact.
                     </p>
 
                     <p>
-                        We work across this ecosystem to help organizations
-                        develop stronger strategies, communicate their value,
-                        adopt new ideas, and tell stories that create
-                        meaningful connections.
+                        <strong>Our Agriculture Services:</strong>
+                    </p>
+
+                    <p>
+                        <strong>Agrotech Consultancy</strong> Advisory on the
+                        adoption and integration of agricultural technology —
+                        from precision farming and data-driven crop management
+                        to agri-fintech and supply chain digitisation.
+                    </p>
+
+                    <p>
+                        <strong>Value-Chain Communication</strong> Strategic
+                        communications that connect producers, processors,
+                        distributors, and consumers — building the market
+                        linkages that unlock commercial agricultural value.
+                    </p>
+
+                    <p>
+                        <strong>Agribusiness Strategy</strong> Business
+                        development advisory for agricultural enterprises,
+                        cooperatives, and investors looking to enter or scale
+                        within Nigeria's food and farming ecosystem.
+                    </p>
+
+                    <p>
+                        <strong>Sector Media & Storytelling</strong>{" "}
+                        Documentary and digital content that positions
+                        agricultural projects, reforms, and innovations in
+                        front of the audiences that matter most.
                     </p>
                 </div>
 
@@ -42,3 +71,4 @@ function AgricultureBody() {
 }
 
 export default AgricultureBody;
+

@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import "./Stats.css";
 
@@ -11,22 +12,22 @@ const stats: Stat[] = [
     {
         value: 10,
         suffix: "+",
-        label: "Years of Strategic Experience",
+        label: "Years of Combined Expertise",
     },
     {
-        value: 25,
-        suffix: "+",
-        label: "Industries & Businesses Supported",
+        value: 6,
+        suffix: "",
+        label: "Active Service Sectors",
     },
     {
         value: 100,
         suffix: "+",
-        label: "Projects & Initiatives Delivered",
+        label: "Projects Delivered",
     },
     {
-        value: 4,
+        value: 1,
         suffix: "",
-        label: "Core Philosophy Pillars",
+        label: "Unified Vision",
     },
 ];
 
@@ -135,3 +136,4 @@ function Stats() {
 }
 
 export default Stats;
+

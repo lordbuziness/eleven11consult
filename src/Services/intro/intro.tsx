@@ -1,3 +1,4 @@
+
 import "./intro.css";
 import introImage from "../assets/images/servicesoverview1.jpg";
 
@@ -12,22 +13,22 @@ function ServicesIntro() {
             <div className="services-intro__content">
                 <div className="services-intro__text">
                     <h2>
-                        One lead engine.
-                        <span> Five supporting pillars.</span>
+                        A Lead Engine.
+                        <span> Five Supporting Pillars.</span>
                     </h2>
 
                     <p>
-                        We believe meaningful impact rarely comes from one
-                        discipline working alone. The strongest ideas emerge
-                        when strategy, communication, technology, and
-                        industry expertise work together.
+                        From broadcast studios to server rooms, from farmlands
+                        to construction sites, from renewable energy boardrooms
+                        to youth training halls — Eleven 11 Consult operates
+                        wherever precision expertise and unified vision are
+                        needed most.
                     </p>
 
                     <p>
-                        Our services are built around this approach. We bring
-                        together the capabilities organizations need to
-                        understand challenges, communicate ideas, build
-                        solutions, and create sustainable growth.
+                        We organise our services around a Lead Engine and five
+                        Supporting Pillars — each sector-specialist, each
+                        connected.
                     </p>
                 </div>
 
@@ -43,3 +44,4 @@ function ServicesIntro() {
 }
 
 export default ServicesIntro;
+

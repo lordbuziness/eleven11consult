@@ -3,7 +3,7 @@ import OurStory from "../aboutcomponents/OurStory/OurStory";
 import Philosophy from "../aboutcomponents/Philosophy/Philosophy";
 import MissionStatement from "../aboutcomponents/MissionStatement/MissionStatement";
 import Stats from "../aboutcomponents/Stats/Stats";
-import CTA from "../components/CTA/CTA";
+import CTA from "../aboutcomponents/CTA/CTA";
 import BackToTop from "../components/BackToTop/BackToTop"
 import Footer from "../components/Footer/Footer";
 import ScrollReveal from "../components/ScrollReveal/ScrollReveal";

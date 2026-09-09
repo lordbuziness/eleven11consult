@@ -1,4 +1,4 @@
-
+    
 import "./OurStory.css";
 
 import ourStory1 from "../assests/images/ourstory 1.jpg";
@@ -16,19 +16,24 @@ function OurStory() {
                 {/* Header */}
                 <div className="our-story__header">
                     <span className="our-story__eyebrow">
-                        OUR STORY
+                        Our Story
                     </span>
 
                     <h2>
-                        Built From Insight.
+                        Founded at the
                         <br />
-                        Driven by Purpose.
+                        Intersection.
+                        <br />
+                        Built for the Future.
                     </h2>
 
                     <p>
-                        Eleven 11 Consult was built around a simple belief:
-                        meaningful progress happens when deep understanding
-                        meets bold execution.
+                        Eleven 11 Consult LTD is a premier, multi-sectoral
+                        consultancy headquartered in Nigeria. We operate at
+                        the convergence of media, infrastructure, technology,
+                        and sustainable development — bridging high-level
+                        storytelling with industrial execution across some of
+                        Africa's most critical sectors.
                     </p>
                 </div>
 
@@ -44,17 +49,19 @@ function OurStory() {
                     </div>
 
                     <div className="our-story__text">
-                       
 
                         <h3>
-                            Understanding the
-                            bigger picture.
+                            Alignment,
+                            <br />
+                            clarity, and intuition.
                         </h3>
 
                         <p>
-                            We look beyond individual challenges to understand
-                            the industries, people, markets, and systems that
-                            shape every decision.
+                            Our name is intentional. The 11:11 moment
+                            represents alignment, clarity, and intuition —
+                            the instant before action when vision crystallises
+                            and strategy takes form. This is the space we
+                            occupy for every client we serve.
                         </p>
                     </div>
 
@@ -72,17 +79,18 @@ function OurStory() {
                     </div>
 
                     <div className="our-story__text">
-                        
 
                         <h3>
-                            Turning complexity
-                            into clarity.
+                            Vision that
+                            <br />
+                            becomes strategy.
                         </h3>
 
                         <p>
-                            Our approach combines strategic thinking,
-                            financial insight, technology, and communication
-                            to transform complexity into practical direction.
+                            We occupy the space between vision and action,
+                            helping organisations transform ideas into
+                            clear strategic direction and purposeful
+                            execution.
                         </p>
                     </div>
 
@@ -100,17 +108,19 @@ function OurStory() {
                     </div>
 
                     <div className="our-story__text">
-                        
 
                         <h3>
-                            Built for Africa's
-                            evolving economy.
+                            Led by experience.
+                            <br />
+                            Built across sectors.
                         </h3>
 
                         <p>
-                            We work across sectors that are shaping Africa's
-                            future, creating solutions that are grounded in
-                            local realities while thinking globally.
+                            Founded and led by Krisilems — a seasoned
+                            broadcast journalist, producer, and multi-sectoral
+                            strategist — our team brings together specialists
+                            whose expertise spans the full breadth of the
+                            African economy.
                         </p>
                     </div>
 
@@ -128,17 +138,19 @@ function OurStory() {
                     </div>
 
                     <div className="our-story__text">
-                        
 
                         <h3>
-                            Strategy that moves
-                            people forward.
+                            From stories
+                            <br />
+                            to systems.
                         </h3>
 
                         <p>
-                            We believe strategy should not remain on paper.
-                            It should create movement, unlock opportunity,
-                            and produce measurable progress.
+                            From broadcast studios and digital platforms to
+                            technology infrastructure, energy transitions, and
+                            agricultural value chains, we bring together the
+                            expertise required to navigate Africa's most
+                            critical sectors.
                         </p>
                     </div>
 

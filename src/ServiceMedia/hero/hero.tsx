@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/servicemediahero.jpg";
 
@@ -18,15 +19,14 @@ function MediaHero() {
                 </span>
 
                 <h1>
-                    Turning ideas
+                    Media &
                     <br />
-                    <span>into influence.</span>
+                    <span>Communications</span>
                 </h1>
 
                 <p>
-                    We help organizations communicate their ideas, strengthen
-                    their presence, and tell stories that connect with the
-                    people who matter.
+                    We craft narratives with authority. We produce stories
+                    with purpose.
                 </p>
             </div>
         </section>
@@ -34,3 +34,4 @@ function MediaHero() {
 }
 
 export default MediaHero;
+

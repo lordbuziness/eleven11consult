@@ -1,33 +1,31 @@
-import "./cta.css";
-import { ArrowUpRight } from "lucide-react";
 
-function ProcessCTA() {
+import "./cta.css";
+
+function MediaCTA() {
     return (
-        <section className="process-cta">
-            <div className="process-cta__content">
-                <span className="process-cta__eyebrow">
-                    Ready to begin?
+        <section className="media-cta">
+            <div className="media-cta__content">
+                <span>
+                    Start a Media Project
                 </span>
 
                 <h2>
-                    Let's build
+                    Let's tell your story
                     <br />
-                    <span>something meaningful.</span>
+                    <strong>the right way.</strong>
                 </h2>
 
-                <p>
-                    Have a project, idea, or challenge in mind? Let's talk
-                    about what you're trying to achieve and find the right way
-                    forward.
-                </p>
-
-                <a href="/contact" className="process-cta__button">
-                    Start a Project
-                    <ArrowUpRight size={18} />
+                <a
+                    href="/contact"
+                    className="media-cta__button"
+                >
+                    Start a Media Project
+                    <span>→</span>
                 </a>
             </div>
         </section>
     );
 }
 
-export default ProcessCTA;
+export default MediaCTA;
+

@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assests/images/ourprocesshero..jpg";
 
@@ -11,14 +12,13 @@ function ProcessHero() {
                     </span>
 
                     <h1>
-                        How we turn
+                        Our
                         <br />
-                        <span>ideas into impact.</span>
+                        <span>Process</span>
                     </h1>
 
                     <p>
-                        A thoughtful process built around strategy, creativity,
-                        collaboration, and execution.
+                        Strategy built on clarity. Execution built on trust.
                     </p>
                 </div>
 
@@ -34,3 +34,4 @@ function ProcessHero() {
 }
 
 export default ProcessHero;
+

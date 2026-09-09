@@ -1,3 +1,4 @@
+
 import "./body.css";
 
 function CareersBody() {
@@ -11,22 +12,51 @@ function CareersBody() {
 
                 <div className="careers-body__content">
                     <h2>
-                        Good people make
-                        <span> good work.</span>
+                        Talent is our most valuable
+                        <span> infrastructure.</span>
                     </h2>
 
                     <p>
-                        At Eleven 11 Consult, we believe meaningful work comes
-                        from people who care about what they create. We bring
-                        strategy, creativity, and different perspectives
-                        together to solve problems and build things that matter.
+                        At Eleven 11 Consult, we believe talent is the most
+                        valuable infrastructure. We are always looking for
+                        passionate, skilled professionals who bring both
+                        expertise and curiosity to their work — people who are
+                        as comfortable in a conversation about clean energy as
+                        they are in a broadcast edit suite or a cloud
+                        architecture meeting.
                     </p>
 
                     <p>
-                        We value curiosity, initiative, collaboration, and a
-                        willingness to keep learning. You do not have to fit
-                        into one particular mould. We are interested in what
-                        you can bring to the work.
+                        We are not looking for generalists. We are looking for
+                        the best in their field — who are willing to think
+                        beyond it.
+                    </p>
+
+                    <p>
+                        We are always interested in hearing from:
+                    </p>
+
+                    <p>
+                        Broadcast journalists and documentary producers
+                        <br />
+                        Digital content strategists and social media managers
+                        <br />
+                        Software developers and full-stack engineers
+                        <br />
+                        IT infrastructure and network engineers
+                        <br />
+                        Managed IT support specialists
+                        <br />
+                        Energy and sustainability consultants
+                        <br />
+                        Agricultural and agrotech advisors
+                        <br />
+                        Construction project managers
+                        <br />
+                        Training facilitators and youth development
+                        professionals
+                        <br />
+                        Corporate communications and PR professionals
                     </p>
                 </div>
             </div>
@@ -35,3 +65,4 @@ function CareersBody() {
 }
 
 export default CareersBody;
+

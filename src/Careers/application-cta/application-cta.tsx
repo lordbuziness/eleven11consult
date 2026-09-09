@@ -1,3 +1,4 @@
+
 import "./application-cta.css";
 import { ArrowUpRight } from "lucide-react";
 
@@ -10,21 +11,21 @@ function ApplicationCTA() {
                 </span>
 
                 <h2>
-                    Don't see
+                    Think you
                     <br />
-                    <span>your role?</span>
+                    <span>belong here?</span>
                 </h2>
 
                 <p>
-                    We are always interested in meeting talented people who
-                    believe they can contribute to the work we do.
+                    Send your CV and a short cover note telling us what
+                    you'd bring to the Eleven 11 team.
                 </p>
 
                 <a
                     href="mailto:careers@eleven11consult.com"
                     className="application-cta__button"
                 >
-                    Send your application
+                    Apply Now
                     <ArrowUpRight size={18} />
                 </a>
 
@@ -37,3 +38,4 @@ function ApplicationCTA() {
 }
 
 export default ApplicationCTA;
+

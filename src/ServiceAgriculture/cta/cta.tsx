@@ -1,3 +1,4 @@
+
 import "./cta.css";
 
 function AgricultureCTA() {
@@ -7,18 +8,13 @@ function AgricultureCTA() {
                 <span>Let's grow something meaningful.</span>
 
                 <h2>
-                    Have an agricultural
+                    Let's grow something
                     <br />
-                    <strong>idea to build?</strong>
+                    <strong>significant together.</strong>
                 </h2>
 
-                <p>
-                    Let's explore how strategy, technology, communication,
-                    and storytelling can turn it into impact.
-                </p>
-
                 <a href="/contact" className="agriculture-cta__button">
-                    Start a conversation
+                    Discuss Your Agricultural Project
                     <span>→</span>
                 </a>
             </div>
@@ -27,3 +23,4 @@ function AgricultureCTA() {
 }
 
 export default AgricultureCTA;
+

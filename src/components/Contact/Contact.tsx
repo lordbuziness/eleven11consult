@@ -1,189 +1,170 @@
+
 import type { FormEvent } from "react";
 import "./Contact.css";
 
 function Contact() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    };
 
-  return (
-    <section className="contact" id="contact">
-      <div className="contact__container">
+    return (
+        <section className="contact" id="contact">
+            <div className="contact__container">
 
-        {/* LEFT */}
-        <div className="contact__intro">
-          <div className="contact__eyebrow">
-            <span>01</span>
-            <span>Start a Conversation</span>
-          </div>
+                <div className="contact__header">
+                    <span className="contact__eyebrow">
+                        Let's Work Together
+                    </span>
 
-          <h2>
-            Request a
-            <br />
-            Consultation.
-          </h2>
+                    <h2>
+                        Request a
+                        <br />
+                        Consultation
+                    </h2>
 
-          <p>
-            Tell us where you are going, what you are building,
-            and where you need clarity. We will take it from there.
-          </p>
+                    <p>
+                        Tell us about your project and a member of our
+                        team will be in touch within 24 hours.
+                    </p>
+                </div>
 
-          <div className="contact__details">
-            <span>ELEVEN11 CONSULT</span>
-            <span>Strategy • Intelligence • Impact</span>
-          </div>
-        </div>
+                <div className="contact__form-card">
+                    <form
+                        className="contact__form"
+                        onSubmit={handleSubmit}
+                    >
+                        <div className="contact__field">
+                            <label htmlFor="fullName">
+                                Full Name
+                            </label>
 
-        {/* RIGHT */}
-        <form
-          className="contact__form"
-          onSubmit={handleSubmit}
-        >
+                            <input
+                                id="fullName"
+                                name="fullName"
+                                type="text"
+                                placeholder="Your name"
+                                required
+                            />
+                        </div>
 
-          <div className="contact__form-top">
-            <span>CONSULTATION REQUEST</span>
-            <span>06 FIELDS</span>
-          </div>
+                        <div className="contact__field">
+                            <label htmlFor="company">
+                                Company / Organisation
+                            </label>
 
-          {/* Full Name */}
-          <div className="contact__field">
-            <label htmlFor="fullName">
-              <span>01</span>
-              Full Name
-            </label>
+                            <input
+                                id="company"
+                                name="company"
+                                type="text"
+                                placeholder="Organisation name"
+                                required
+                            />
+                        </div>
 
-            <input
-              id="fullName"
-              name="fullName"
-              type="text"
-              placeholder="Your name"
-              required
-            />
-          </div>
+                        <div className="contact__row">
+                            <div className="contact__field">
+                                <label htmlFor="email">
+                                    Email Address
+                                </label>
 
-          {/* Company */}
-          <div className="contact__field">
-            <label htmlFor="company">
-              <span>02</span>
-              Company / Organisation
-            </label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@company.com"
+                                    required
+                                />
+                            </div>
 
-            <input
-              id="company"
-              name="company"
-              type="text"
-              placeholder="Organisation name"
-              required
-            />
-          </div>
+                            <div className="contact__field">
+                                <label htmlFor="phone">
+                                    Phone Number
+                                </label>
 
-          {/* Email / Phone */}
-          <div className="contact__row">
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    placeholder="+234"
+                                />
+                            </div>
+                        </div>
 
-            <div className="contact__field">
-              <label htmlFor="email">
-                <span>03</span>
-                Email
-              </label>
+                        <div className="contact__field">
+                            <label htmlFor="service">
+                                Service of Interest
+                            </label>
 
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@company.com"
-                required
-              />
+                            <select
+                                id="service"
+                                name="service"
+                                defaultValue=""
+                                required
+                            >
+                                <option value="" disabled>
+                                    Select a service
+                                </option>
+
+                                <option value="media">
+                                    Media & Communications
+                                </option>
+
+                                <option value="energy">
+                                    Energy & Climate
+                                </option>
+
+                                <option value="agriculture">
+                                    Agriculture
+                                </option>
+
+                                <option value="construction">
+                                    Construction & Real Estate
+                                </option>
+
+                                <option value="technology">
+                                    Technology Solutions
+                                </option>
+
+                                <option value="training">
+                                    Training & Development
+                                </option>
+
+                                <option value="general">
+                                    General Inquiry
+                                </option>
+                            </select>
+                        </div>
+
+                        <div className="contact__field">
+                            <label htmlFor="message">
+                                Your Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows={5}
+                                placeholder="Tell us about your project..."
+                                required
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="contact__submit"
+                        >
+                            <span>Send Message</span>
+                            <span className="contact__submit-arrow">
+                                ↗
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
             </div>
-
-            <div className="contact__field">
-              <label htmlFor="phone">
-                <span>04</span>
-                Phone
-              </label>
-
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="+234"
-              />
-            </div>
-
-          </div>
-
-          {/* Service */}
-          <div className="contact__field">
-            <label htmlFor="service">
-              <span>05</span>
-              Service of Interest
-            </label>
-
-            <select
-              id="service"
-              name="service"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Select a service
-              </option>
-
-              <option value="media">
-                Media & Communications
-              </option>
-
-              <option value="technology">
-                Technology Solutions
-              </option>
-
-              <option value="industry">
-                Industry Consulting
-              </option>
-
-              <option value="strategy">
-                Strategic Advisory
-              </option>
-
-              <option value="other">
-                Other
-              </option>
-            </select>
-          </div>
-
-          {/* Message */}
-          <div className="contact__field">
-            <label htmlFor="message">
-              <span>06</span>
-              Message
-            </label>
-
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="Tell us about your project..."
-              required
-            />
-          </div>
-
-          {/* Submit */}
-          <div className="contact__submit">
-            <button type="submit">
-              <span>Send Message</span>
-              <span className="contact__submit-arrow">
-                ↗
-              </span>
-            </button>
-
-            <span className="contact__submit-note">
-              We usually respond within 1–2 business days.
-            </span>
-          </div>
-
-        </form>
-      </div>
-    </section>
-  );
+        </section>
+    );
 }
 
 export default Contact;
+

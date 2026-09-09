@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/serviceenergyhero.jpg";
 
@@ -14,19 +15,18 @@ function EnergyHero() {
 
             <div className="energy-hero__content">
                 <span className="energy-hero__eyebrow">
-                    Energy
+                    Energy & Climate
                 </span>
 
                 <h1>
-                    Powering ideas
+                    Energy &
                     <br />
-                    <span>into impact.</span>
+                    <span>Climate Advisory</span>
                 </h1>
 
                 <p>
-                    We help energy businesses and organizations communicate
-                    their value, strengthen their strategy, and navigate a
-                    rapidly changing energy landscape.
+                    Powering Africa's sustainable future —
+                    strategically and narratively.
                 </p>
             </div>
         </section>
@@ -34,3 +34,4 @@ function EnergyHero() {
 }
 
 export default EnergyHero;
+

@@ -1,10 +1,11 @@
+
 import "./service-list.css";
 import {
     MessageSquare,
-    Cpu,
     Zap,
     Sprout,
     HardHat,
+    Cpu,
     GraduationCap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -15,47 +16,47 @@ const services = [
         icon: MessageSquare,
         title: "Media & Communications",
         description:
-            "Strategic communication, media production, digital presence, and storytelling that make ideas visible and understood.",
+            "High-end broadcast production, documentary filmmaking, reportorial strategy, digital content development, AI-integrated media workflows, and corporate public relations. We are storytellers in service of industry.",
         link: "/services/media",
     },
     {
         number: "02",
-        icon: Cpu,
-        title: "Technology",
-        description:
-            "Technology strategy, digital solutions, and innovation support that help organizations build and adapt for the future.",
-        link: "/services/technology",
-    },
-    {
-        number: "03",
         icon: Zap,
-        title: "Energy",
+        title: "Energy & Climate",
         description:
-            "Strategy, communication, and sector expertise for organizations navigating the changing energy landscape.",
+            "Strategic advisory on renewable energy transitions, sustainability frameworks, and climate storytelling — positioning your organisation at the forefront of Africa's green economy.",
         link: "/services/energy",
     },
     {
-        number: "04",
+        number: "03",
         icon: Sprout,
         title: "Agriculture",
         description:
-            "Agrotech, agribusiness strategy, value-chain communication, and storytelling for a stronger agricultural ecosystem.",
+            "Agrotech consultancy, value-chain communication, and strategic advisory to help agricultural businesses navigate Nigeria's evolving food and farming landscape.",
         link: "/services/agriculture",
     },
     {
-        number: "05",
+        number: "04",
         icon: HardHat,
-        title: "Construction",
+        title: "Construction & Real Estate",
         description:
-            "Consultancy, project communication, infrastructure strategy, and storytelling for the built environment.",
+            "Project management consultancy, infrastructure media, and strategic communications for developers, contractors, and real estate players building the Africa of tomorrow.",
         link: "/services/construction",
+    },
+    {
+        number: "05",
+        icon: Cpu,
+        title: "Technology Solutions",
+        description:
+            "Custom software development, IT infrastructure design and deployment, and outsourced managed IT support — the digital engine your business needs to compete and scale.",
+        link: "/services/technology",
     },
     {
         number: "06",
         icon: GraduationCap,
-        title: "Training",
+        title: "Training & Development",
         description:
-            "Practical learning and capacity development designed to equip people and organizations with useful skills.",
+            "Corporate human capital programmes and youth-focused development initiatives, including our signature Heritage Camp — investing in the people who will lead Africa forward.",
         link: "/services/training",
     },
 ];
@@ -111,3 +112,5 @@ function ServiceList() {
 }
 
 export default ServiceList;
+
+

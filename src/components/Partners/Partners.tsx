@@ -1,3 +1,4 @@
+
 import "./Partners.css";
 
 import logo1 from "../../assets/images/logo1.svg";
@@ -10,69 +11,88 @@ import logo7 from "../../assets/images/logo7.svg";
 import logo8 from "../../assets/images/logo8.svg";
 import logo9 from "../../assets/images/logo9.svg";
 
-const innerRing = [logo1, logo2, logo3, logo4];
-const outerRing = [logo5, logo6, logo7, logo8, logo9];
+interface Partner {
+    logo: string;
+    name: string;
+}
+
+const partners: Partner[] = [
+    {
+        logo: logo1,
+        name: "Partner 1",
+    },
+    {
+        logo: logo2,
+        name: "Partner 2",
+    },
+    {
+        logo: logo3,
+        name: "Partner 3",
+    },
+    {
+        logo: logo4,
+        name: "Partner 4",
+    },
+    {
+        logo: logo5,
+        name: "Partner 5",
+    },
+    {
+        logo: logo6,
+        name: "Partner 6",
+    },
+    {
+        logo: logo7,
+        name: "Partner 7",
+    },
+    {
+        logo: logo8,
+        name: "Partner 8",
+    },
+    {
+        logo: logo9,
+        name: "Partner 9",
+    },
+];
 
 function Partners() {
-  return (
-    <section className="partners">
-      <div className="partners__container">
+    const scrollingPartners = [...partners, ...partners];
 
-        <div className="partners__header">
-          <span>TRUSTED BY INDUSTRY LEADERS</span>
+    return (
+        <section className="partners">
+            <div className="partners__container">
+                <div className="partners__header">
+                    <span>Our Partners</span>
 
-          <h2>Building Strong Partnerships</h2>
+                    <h2>Trusted by Industry Leaders</h2>
 
-          <p>
-            We collaborate with organisations across industries to
-            deliver sustainable, high-impact solutions.
-          </p>
-        </div>
+                    <p>
+                        We collaborate with organisations at the forefront
+                        of Africa's economic and cultural landscape.
+                    </p>
+                </div>
 
-        <div className="solar-system">
-
-          {/* Center */}
-          <div className="sun">
-            <h3>ELEVEN11</h3>
-            <span>CONSULT</span>
-          </div>
-
-          {/* Inner orbit */}
-          <div className="orbit orbit-inner">
-            {innerRing.map((logo, index) => (
-              <div
-                key={index}
-                className={`planet inner-${index + 1}`}
-              >
-                <img
-                  src={logo}
-                  alt={`Partner logo ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-
-          
-
-          {/* Outer orbit */}
-          <div className="orbit orbit-outer">
-            {outerRing.map((logo, index) => (
-              <div
-                key={index}
-                className={`planet outer-${index + 1}`}
-              >
-                <img
-                  src={logo}
-                  alt={`Partner logo ${index + 7}`}
-                />
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
+                <div className="partners__marquee">
+                    <div className="partners__track">
+                        {scrollingPartners.map((partner, index) => (
+                            <div
+                                className="partners__card"
+                                key={`${partner.name}-${index}`}
+                            >
+                                <div className="partners__logo">
+                                    <img
+                                        src={partner.logo}
+                                        alt={partner.name}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default Partners;
+

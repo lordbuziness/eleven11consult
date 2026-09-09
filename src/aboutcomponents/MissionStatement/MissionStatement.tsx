@@ -1,11 +1,15 @@
+
 import "./MissionStatement.css";
 import logo from "../../assets/images/ELEVEN_consult_logo.png";
 
-const philosophyPoints = [
-    "Clarity",
-    "Insight",
-    "Impact",
-    "Partnership",
+const missionPoints = [
+    "Media",
+    "Agriculture",
+    "Energy",
+    "Construction",
+    "Technology",
+    "Training",
+    "Climate Advocacy",
 ];
 
 function MissionStatement() {
@@ -26,24 +30,29 @@ function MissionStatement() {
 
                 <div className="mission__eyebrow">
                     <span />
-                    OUR MISSION
+                    Our Mission
                 </div>
 
                 <h2 className="mission__label">
-                    Mission<br />
-                    Statement
+                    Insight Into
+                    <br />
+                    Meaningful
+                    <br />
+                    Progress
                 </h2>
 
                 <div className="mission__statement">
                     <p>
-                        We exist to turn insight into meaningful progress,
-                        helping organisations see clearly, think strategically,
-                        and move with confidence.
+                        To deliver precision-driven media content and
+                        strategic consultancy that empowers the Agriculture,
+                        Energy, Construction, and Technology sectors — while
+                        fostering the next generation through specialised
+                        training and climate advocacy.
                     </p>
                 </div>
 
                 <div className="mission__points">
-                    {philosophyPoints.map((point) => (
+                    {missionPoints.map((point) => (
                         <span key={point}>
                             {point}
                         </span>
@@ -57,3 +66,4 @@ function MissionStatement() {
 }
 
 export default MissionStatement;
+

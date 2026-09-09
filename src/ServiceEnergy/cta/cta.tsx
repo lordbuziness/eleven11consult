@@ -1,3 +1,4 @@
+
 import "./cta.css";
 
 function EnergyCTA() {
@@ -5,26 +6,25 @@ function EnergyCTA() {
         <section className="energy-cta">
             <div className="energy-cta__content">
                 <span>
-                    Let's power something meaningful.
+                    Energy & Climate Advisory
                 </span>
 
                 <h2>
-                    Have an energy
+                    Navigate the energy
                     <br />
-                    <strong>idea to build?</strong>
+                    <strong>transition with confidence.</strong>
                 </h2>
 
                 <p>
-                    Let's explore how strategy, communication, technology,
-                    and storytelling can help turn your energy project into
-                    lasting impact.
+                    Navigate the energy transition with a partner who
+                    understands both the strategy and the story.
                 </p>
 
                 <a
                     href="/contact"
                     className="energy-cta__button"
                 >
-                    Start a conversation
+                    Begin a Conversation
                     <span>→</span>
                 </a>
             </div>
@@ -33,3 +33,4 @@ function EnergyCTA() {
 }
 
 export default EnergyCTA;
+

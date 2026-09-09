@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/serviceoverviewhero.jpg";
 
@@ -18,15 +19,14 @@ function ServicesHero() {
                 </span>
 
                 <h1>
-                    Ideas into
+                    Our
                     <br />
-                    <span>impact.</span>
+                    <span>Services</span>
                 </h1>
 
                 <p>
-                    Strategy, communication, technology, and industry
-                    expertise working together to help organizations build
-                    what matters.
+                    A Full-Spectrum Consultancy for Africa's Most Dynamic
+                    Industries
                 </p>
             </div>
         </section>
@@ -34,3 +34,4 @@ function ServicesHero() {
 }
 
 export default ServicesHero;
+

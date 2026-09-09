@@ -12,22 +12,20 @@ function CTA() {
                 </span>
 
                 <h2>
-                    Ready to turn
+                    Ready to align your
                     <br />
-                    insight into impact?
+                    business with a
+                    <br />
+                    consultancy that
+                    <br />
+                    understands your world?
                 </h2>
 
-                <p>
-                    Whether you are navigating complexity, exploring
-                    opportunity, or building something new, we are ready
-                    to move the conversation forward.
-                </p>
-
                 <a
-                    href="#contact"
+                    href="/services"
                     className="about-cta__button"
                 >
-                    Start a Conversation
+                    Explore Our Services
                     <span>↗</span>
                 </a>
 

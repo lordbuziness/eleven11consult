@@ -3,20 +3,13 @@ import "./Hero.css";
 import aboutImage from "../assests/images/1111 aboutimage.jpg";
 import Navbar from "../../components/Navbar/Navbar";
 
-
 function Hero() {
     return (
         <section className="about-hero" id="about">
 
-        {/* ========================================= NAVBAR ========================================= */} 
-        
-        <Navbar />
+            <Navbar />
 
             <div className="about-hero__container">
-
-                {/* =========================================
-                    CONTENT
-                ========================================= */}
 
                 <div className="about-hero__content">
 
@@ -26,16 +19,13 @@ function Hero() {
                     </div>
 
                     <h1>
-                        Where Industry
+                        Who We
                         <br />
-                        Meets Insight.
+                        Are
                     </h1>
 
                     <p className="about-hero__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris.
+                        The Wise Architects of Africa's Growth Story.
                     </p>
 
                     <div className="about-hero__buttons">
@@ -57,11 +47,6 @@ function Hero() {
                     </div>
 
                 </div>
-
-
-                {/* =========================================
-                    IMAGE
-                ========================================= */}
 
                 <div className="about-hero__image-wrapper">
 

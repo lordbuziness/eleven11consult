@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/careers hero.jpg";
 
@@ -18,14 +19,13 @@ function CareersHero() {
                 </span>
 
                 <h1>
-                    Build with
+                    Join the
                     <br />
-                    <span>purpose.</span>
+                    <span>Eleven 11 Team</span>
                 </h1>
 
                 <p>
-                    We are always looking for thoughtful people who want to
-                    create meaningful work and make an impact.
+                    We're building a team as diverse as the sectors we serve.
                 </p>
             </div>
         </section>
@@ -33,3 +33,4 @@ function CareersHero() {
 }
 
 export default CareersHero;
+

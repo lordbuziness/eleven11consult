@@ -1,3 +1,4 @@
+
 import "./hero.css";
 import heroImage from "../assets/images/serviceagrichero1.jpg";
 
@@ -14,19 +15,18 @@ function AgricultureHero() {
 
             <div className="agriculture-hero__content">
                 <span className="agriculture-hero__eyebrow">
-                    Agriculture
+                    Agriculture & Agrotech
                 </span>
 
                 <h1>
-                    Growing ideas
+                    Agriculture &
                     <br />
-                    <span>into impact.</span>
+                    <span>Agrotech Consultancy</span>
                 </h1>
 
                 <p>
-                    We help agriculture businesses and organizations
-                    communicate, strategize, and build for a more productive
-                    and sustainable future.
+                    Unlocking Nigeria's most powerful and underutilised
+                    sector.
                 </p>
             </div>
         </section>
@@ -34,3 +34,4 @@ function AgricultureHero() {
 }
 
 export default AgricultureHero;
+

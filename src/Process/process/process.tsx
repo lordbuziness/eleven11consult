@@ -1,3 +1,5 @@
+
+
 import "./process.css";
 import {
     Search,
@@ -9,30 +11,30 @@ import {
 const processSteps = [
     {
         number: "01",
-        title: "Discover",
+        title: "Discovery & Intelligence",
         description:
-            "We understand your goals, audience, challenges, and the context surrounding the project.",
+            "We learn before we advise. Every engagement opens with a deep discovery phase. We study your industry dynamics, competitive landscape, stakeholder environment, and organisational goals. We listen more than we speak — because the best strategies are built on the most complete intelligence.",
         icon: Search,
     },
     {
         number: "02",
-        title: "Define",
+        title: "Strategy & Architecture",
         description:
-            "We turn research and insight into a clear strategic direction and a focused plan.",
+            "We design before we build. Our multidisciplinary team synthesises discovery insights into a clear, actionable strategic architecture. Whether the mandate is a broadcast series, a software platform, a sustainability roadmap, or an IT infrastructure plan — the blueprint is built with precision and aligned to your business objectives.",
         icon: Compass,
     },
     {
         number: "03",
-        title: "Create",
+        title: "Execution & Delivery",
         description:
-            "We develop the ideas, identities, experiences, and solutions that bring the strategy to life.",
+            "We build what we promise. Strategy without execution is only theory. Our team moves from blueprint to delivery with the same level of care — coordinating across media, technology, and sector specialists to ensure every output meets the highest standard of craft and performance.",
         icon: Lightbulb,
     },
     {
         number: "04",
-        title: "Deliver",
+        title: "Review & Optimisation",
         description:
-            "We refine, implement, and deliver the final work with attention to every detail.",
+            "We stay until it works. After delivery, we don't disappear. We measure outcomes, gather feedback, and refine our approach to ensure sustained impact. Our engagements are partnerships — not transactions.",
         icon: Rocket,
     },
 ];
@@ -42,6 +44,7 @@ function ProcessSteps() {
         <section className="process-steps">
             <div className="process-steps__header">
                 <span>02 — The Process</span>
+
                 <h2>
                     From first thought
                     <br />
@@ -54,15 +57,22 @@ function ProcessSteps() {
                     const Icon = step.icon;
 
                     return (
-                        <article className="process-card" key={step.number}>
+                        <article
+                            className="process-card"
+                            key={step.number}
+                        >
                             <div className="process-card__top">
                                 <span>{step.number}</span>
 
-                                <Icon className="process-card__icon" strokeWidth={1.2} />
+                                <Icon
+                                    className="process-card__icon"
+                                    strokeWidth={1.2}
+                                />
                             </div>
 
                             <div className="process-card__content">
                                 <h3>{step.title}</h3>
+
                                 <p>{step.description}</p>
                             </div>
 
@@ -76,3 +86,4 @@ function ProcessSteps() {
 }
 
 export default ProcessSteps;
+

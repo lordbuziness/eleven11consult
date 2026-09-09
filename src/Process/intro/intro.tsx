@@ -1,3 +1,4 @@
+
 import "./intro.css";
 
 function ProcessIntro() {
@@ -11,21 +12,16 @@ function ProcessIntro() {
 
                 <div className="process-intro__content">
                     <h2>
-                        Good work starts with
-                        <span> understanding.</span>
+                        Quality begins
+                        <span> before execution.</span>
                     </h2>
 
                     <p>
-                        Every project begins with questions. We take the time
-                        to understand the problem, the people, the context,
-                        and the ambition behind the work before we start
-                        creating.
-                    </p>
-
-                    <p>
-                        From there, strategy gives creativity direction and
-                        every decision moves the project closer to meaningful
-                        impact.
+                        At Eleven 11 Consult, we believe the quality of an
+                        outcome is determined long before execution begins.
+                        Our four-stage process ensures every engagement —
+                        regardless of sector or scale — is approached with the
+                        rigour, creativity, and precision our brand demands.
                     </p>
                 </div>
             </div>
@@ -34,3 +30,4 @@ function ProcessIntro() {
 }
 
 export default ProcessIntro;
+

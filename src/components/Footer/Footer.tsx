@@ -1,141 +1,110 @@
+
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
-  return (
-    <footer className="footer">
+    return (
+        <footer className="footer">
+            <div className="footer__container">
 
-      <div className="footer__container">
+                <div className="footer__brand">
+                    <Link to="/" className="footer__logo">
+                        ELEVEN11
+                        <span>CONSULT</span>
+                    </Link>
 
-        {/* Main Brand */}
-        <div className="footer__brand">
+                    <h2>
+                        Building the Future.
+                        <br />
+                        Telling the Story.
+                    </h2>
 
-          <div className="footer__logo">
-            ELEVEN11
-            <span>CONSULT</span>
-          </div>
+                    <p>
+                        Eleven 11 Consult LTD is a premier, multi-sectoral
+                        consultancy operating at the intersection of media,
+                        technology, and industrial development. Headquartered
+                        in Nigeria. Built for Africa.
+                    </p>
+                </div>
 
-          <h2>
-            Building the Future.
-            <br />
-            Telling the Story.
-          </h2>
+                <div className="footer__column">
+                    <span className="footer__label">
+                        Visit Us
+                    </span>
 
-          <p>
-            Strategic consulting and industry intelligence
-            for organisations shaping what comes next.
-          </p>
+                    <address>
+                        [Full Nigerian address — to be inserted]
+                    </address>
+                </div>
 
-        </div>
+                <div className="footer__column">
+                    <span className="footer__label">
+                        Contact Us
+                    </span>
 
+                    <a href="tel:+2340000000000">
+                        [Phone Number]
+                    </a>
 
-        {/* Contact */}
-        <div className="footer__column">
+                    <a href="mailto:info@eleven11consult.com">
+                        info@eleven11consult.com
+                    </a>
 
-          <span className="footer__label">
-            Contact
-          </span>
+                    <a
+                        href="https://www.eleven11consult.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        www.eleven11consult.com
+                    </a>
+                </div>
 
-          <address>
-            Abuja, Nigeria
-            <br />
-            West Africa
-          </address>
+                <div className="footer__column footer__column--links">
+                    <span className="footer__label">
+                        Quick Links
+                    </span>
 
-          <a href="mailto:hello@eleven11consult.com">
-            hello@eleven11consult.com
-          </a>
+                    <nav className="footer__links">
+                        <Link to="/about">About</Link>
+                        <Link to="/services">Services</Link>
+                        <Link to="/works">Works</Link>
+                        <Link to="/insights">Insights</Link>
+                        <Link to="/contact">Contact</Link>
+                    </nav>
+                </div>
 
-          <a href="tel:+2340000000000">
-            +234 000 000 0000
-          </a>
+            </div>
 
-        </div>
+            <div className="footer__statement">
+                <span>
+                    ELEVEN11 CONSULT
+                </span>
 
+                <h3>
+                    Diverse Expertise.
+                    <br />
+                    Unified Vision.
+                </h3>
+            </div>
 
-        {/* Quick Links */}
-        <div className="footer__column">
+            <div className="footer__bottom">
+                <p>
+                    © 2025 Eleven 11 Consult LTD. All Rights Reserved.
+                </p>
 
-          <span className="footer__label">
-            Explore
-          </span>
+                <div className="footer__bottom-links">
+                    <Link to="/privacy">
+                        Privacy Policy
+                    </Link>
 
-          <nav className="footer__links">
-
-            <a href="#about">
-              About
-            </a>
-
-            <a href="#services">
-              Services
-            </a>
-
-            <a href="#sectors">
-              Industries
-            </a>
-
-            <a href="#process">
-              Our Process
-            </a>
-
-            <a href="#team">
-              Our Team
-            </a>
-
-            <a href="#insights">
-              Insights
-            </a>
-
-            <a href="#contact">
-              Contact
-            </a>
-
-          </nav>
-
-        </div>
-
-      </div>
-
-
-      {/* Large Tagline */}
-
-      <div className="footer__statement">
-        <span>ELEVEN11</span>
-
-        <h3>
-          Ideas into
-          <br />
-          Impact.
-        </h3>
-      </div>
-
-
-      {/* Bottom */}
-
-      <div className="footer__bottom">
-
-        <p>
-          © {new Date().getFullYear()} Eleven11 Consult.
-          All rights reserved.
-        </p>
-
-        <div className="footer__bottom-links">
-          <a href="#privacy">
-            Privacy
-          </a>
-
-          <a href="#terms">
-            Terms
-          </a>
-        </div>
-
-        <span>
-          Building what comes next.
-        </span>
-
-      </div>
-
-    </footer>
-  );
+                    <Link to="/terms">
+                        Terms &amp; Conditions
+                    </Link>
+                </div>
+            </div>
+        </footer>
+    );
 }
 
 export default Footer;
+
