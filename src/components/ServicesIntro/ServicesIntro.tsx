@@ -1,88 +1,99 @@
+
 import "./ServicesIntro.css";
 import {
-  Megaphone,
-  Cpu,
-  BriefcaseBusiness,
+    Megaphone,
+    Cpu,
+    BriefcaseBusiness,
 } from "lucide-react";
 
 interface Service {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    link: string;
 }
 
 const services: Service[] = [
-  {
-    title: "Media & Communications",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    icon: <Megaphone />,
-  },
-  {
-    title: "Technology Solutions",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    icon: <Cpu />,
-  },
-  {
-    title: "Industry Consulting",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-    icon: <BriefcaseBusiness />,
-  },
+    {
+        title: "Media & Communications",
+        description:
+            "We craft the narratives that position brands and sectors with authority — from high-end broadcast production to AI-integrated digital content strategy.",
+        icon: <Megaphone />,
+        link: "/services/media",
+    },
+    {
+        title: "Technology Solutions",
+        description:
+            "From custom software and IT infrastructure to outsourced managed support, we deliver the digital backbone your enterprise needs to grow and scale.",
+        icon: <Cpu />,
+        link: "/services/technology",
+    },
+    {
+        title: "Industry Consulting",
+        description:
+            "Strategic advisory across Energy, Agriculture, Construction, and Climate — grounded in decades of field expertise and real-world execution.",
+        icon: <BriefcaseBusiness />,
+        link: "/services",
+    },
 ];
 
 function ServicesIntro() {
-  return (
-    <section className="services-intro">
-      <div className="services-intro__container">
+    return (
+        <section className="services-intro">
+            <div className="services-intro__container">
 
-        <div className="services-intro__heading">
-          <p className="services-intro__eyebrow">
-            What We Do
-          </p>
+                <div className="services-intro__heading">
+                    <p className="services-intro__eyebrow">
+                        What We Do
+                    </p>
 
-          <h2>
-            Expertise Across
-            <br />
-            Every Sector.
-          </h2>
-        </div>
+                    <h2>
+                        One Firm.
+                        <br />
+                        Every Sector.
+                        <br />
+                        Limitless Potential.
+                    </h2>
 
-        <div className="services-intro__grid">
-          {services.map((service) => (
-            <article
-              className="services-intro__card"
-              key={service.title}
-            >
-              <div className="services-intro__icon">
-                {service.icon}
-              </div>
+                    <p className="services-intro__body">
+                        At Eleven 11 Consult, we operate at the convergence
+                        of media, technology, and industrial development. Our
+                        multi-disciplinary approach ensures your business
+                        receives not just advice — but a fully integrated
+                        strategy built on authority, precision, and deep
+                        sector intelligence.
+                    </p>
+                </div>
 
-              <h3>{service.title}</h3>
+                <div className="services-intro__grid">
+                    {services.map((service) => (
+                        <article
+                            className="services-intro__card"
+                            key={service.title}
+                        >
+                            <div className="services-intro__icon">
+                                {service.icon}
+                            </div>
 
-              <p>{service.description}</p>
+                            <h3>{service.title}</h3>
 
-              <br/>
+                            <p>{service.description}</p>
 
-               
-                <a
-        href="#services"
-        className="services-intro__explore"
-    >
-        Explore
-        <span>→</span>
-    </a>
+                            <a
+                                href={service.link}
+                                className="services-intro__explore"
+                            >
+                                Explore
+                                <span>→</span>
+                            </a>
+                        </article>
+                    ))}
+                </div>
 
-            </article>
-            
-            
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
+            </div>
+        </section>
+    );
 }
 
 export default ServicesIntro;
+

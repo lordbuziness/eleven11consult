@@ -1,3 +1,4 @@
+
 /* =========================================
    INDUSTRIES
 ========================================= */
@@ -6,7 +7,88 @@
     width: 100%;
     padding: 140px 0;
     background: transparent;
+    overflow: hidden;
 }
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.industries__heading {
+    width: min(92%, 1200px);
+    margin: 0 auto 70px;
+}
+
+.industries__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    margin-bottom: 20px;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-cinnabar);
+
+    border: 1px solid var(--color-cinnabar);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.industries__eyebrow::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: var(--color-cinnabar);
+}
+
+.industries__heading h2 {
+    max-width: 900px;
+
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+
+    color: var(--color-black);
+}
+
+.industries__heading p {
+    max-width: 600px;
+
+    margin: 25px 0 0;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    color: rgba(28, 28, 28, 0.65);
+}
+
+/* =========================================
+   ORBITAL CONTAINER
+========================================= */
 
 .industries__container {
     position: relative;
@@ -17,6 +99,67 @@
     margin: 0 auto;
 }
 
+/* =========================================
+   CONNECTION LINES
+========================================= */
+
+.industries__connections {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.connection-line {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 305px;
+    height: 1px;
+
+    transform-origin: left center;
+
+    background: linear-gradient(
+        to right,
+        rgba(28, 28, 28, 0.18),
+        rgba(255, 255, 255, 0.45),
+        rgba(28, 28, 28, 0.08)
+    );
+
+    opacity: 0.55;
+}
+
+.connection-line--1 {
+    transform: rotate(-90deg);
+}
+
+.connection-line--2 {
+    transform: rotate(-30deg);
+}
+
+.connection-line--3 {
+    transform: rotate(30deg);
+}
+
+.connection-line--4 {
+    transform: rotate(90deg);
+}
+
+.connection-line--5 {
+    transform: rotate(150deg);
+}
+
+.connection-line--6 {
+    transform: rotate(210deg);
+}
 
 /* =========================================
    CENTER — ELEVEN 11
@@ -61,11 +204,6 @@
     z-index: 5;
 }
 
-
-/* =========================================
-   CENTER TYPOGRAPHY
-========================================= */
-
 .industries__main-small {
     margin-bottom: 10px;
 
@@ -97,11 +235,12 @@
 }
 
 /* =========================================
-   INDUSTRY SECTORS LAYER
+   SECTORS
 ========================================= */
 
 .industries__sectors {
     position: absolute;
+
     inset: 0;
 
     width: 100%;
@@ -111,27 +250,6 @@
 
     pointer-events: none;
 }
-
-.industries__sector-name {
-    display: block;
-    width: 105px;
-
-    font-family: var(--font-display);
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.05;
-
-    text-align: center;
-}
-
-.industry-circle {
-    pointer-events: auto;
-}
-
-
-/* =========================================
-   INDUSTRY CIRCLES
-========================================= */
 
 .industry-circle {
     position: absolute;
@@ -157,6 +275,7 @@
         0 0 25px rgba(230, 57, 70, 0.04);
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -165,23 +284,144 @@
     text-align: center;
 
     font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 600;
-
     color: var(--color-black);
+
+    cursor: pointer;
 
     z-index: 3;
 
-   
-        flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.industry-circle:hover {
+    border-color: var(--sector-accent);
+
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(17, 17, 17, 0.1),
+        0 0 30px color-mix(
+            in srgb,
+            var(--sector-accent) 20%,
+            transparent
+        );
+}
+
+/* =========================================
+   ACTIVE SECTOR
+========================================= */
+
+.industry-circle--active {
+    border: 2px solid var(--sector-accent);
+
+    background: rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 20px 45px rgba(17, 17, 17, 0.12),
+        0 0 35px color-mix(
+            in srgb,
+            var(--sector-accent) 25%,
+            transparent
+        );
+}
+
+.industry-circle--active .industries__sector-icon {
+    transform: scale(1.08);
 }
 
 
-/* =========================================
-   SIX POSITIONS
-========================================= */
 
-/* 12 o'clock */
+/* Active sector highlight */
+.industry-circle--active {
+    border: 2px solid var(--sector-accent);
+    box-shadow:
+        0 0 0 6px color-mix(
+            in srgb,
+            var(--sector-accent) 10%,
+            transparent
+        ),
+        0 0 30px color-mix(
+            in srgb,
+            var(--sector-accent) 28%,
+            transparent
+        );
+
+    animation: sectorHighlightFade 2.2s ease-in-out infinite;
+}
+
+.industry-circle--active .industries__sector-icon {
+    transform: scale(1.08);
+}
+
+@keyframes sectorHighlightFade {
+    0%,
+    100% {
+        opacity: 0.62;
+        box-shadow:
+            0 0 0 4px color-mix(
+                in srgb,
+                var(--sector-accent) 7%,
+                transparent
+            ),
+            0 0 14px color-mix(
+                in srgb,
+                var(--sector-accent) 12%,
+                transparent
+            );
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow:
+            0 0 0 8px color-mix(
+                in srgb,
+                var(--sector-accent) 13%,
+                transparent
+            ),
+            0 0 38px color-mix(
+                in srgb,
+                var(--sector-accent) 35%,
+                transparent
+            );
+    }
+}
+
+
+/* Detail text slides from right to left whenever the sector changes */
+.industries__detail-animation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    animation: sectorDetailSlideLeft 0.75s cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+    );
+}
+
+@keyframes sectorDetailSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* =========================================
+   SECTOR POSITIONS
+========================================= */
 
 .industry-circle--1 {
     transform:
@@ -189,17 +429,11 @@
         translateY(-305px);
 }
 
-
-/* 2 o'clock */
-
 .industry-circle--2 {
     transform:
         translate(-50%, -50%)
         translate(265px, -152px);
 }
-
-
-/* 4 o'clock */
 
 .industry-circle--3 {
     transform:
@@ -207,17 +441,11 @@
         translate(265px, 152px);
 }
 
-
-/* 6 o'clock */
-
 .industry-circle--4 {
     transform:
         translate(-50%, -50%)
         translateY(305px);
 }
-
-
-/* 8 o'clock */
 
 .industry-circle--5 {
     transform:
@@ -225,128 +453,14 @@
         translate(-265px, 152px);
 }
 
-
-/* 10 o'clock */
-
 .industry-circle--6 {
     transform:
         translate(-50%, -50%)
         translate(-265px, -152px);
 }
 
-
 /* =========================================
-   HOVER
-========================================= */
-
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 850px) {
-
-    .industries__container {
-        transform: scale(0.85);
-        transform-origin: center;
-        margin-top: -60px;
-        margin-bottom: -60px;
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .industries {
-        padding: 80px 0;
-    }
-
-    .industries__container {
-        width: 500px;
-        height: 500px;
-
-        transform: scale(0.7);
-    }
-
-}
-
-/* =========================================
-   CONNECTION LINES
-========================================= */
-
-.industries__connections {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    z-index: 1;
-}
-
-.connection-line {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    width: 305px;
-    height: 1px;
-
-    transform-origin: left center;
-
-    background: linear-gradient(
-        to right,
-        rgba(28, 28, 28, 0.18),
-        rgba(255, 255, 255, 0.45),
-        rgba(28, 28, 28, 0.08)
-    );
-
-    opacity: 0.55;
-}
-
-
-/* 12 o'clock */
-.connection-line--1 {
-    transform: rotate(-90deg);
-}
-
-
-/* 2 o'clock */
-.connection-line--2 {
-    transform: rotate(-30deg);
-}
-
-
-/* 4 o'clock */
-.connection-line--3 {
-    transform: rotate(30deg);
-}
-
-
-/* 6 o'clock */
-.connection-line--4 {
-    transform: rotate(90deg);
-}
-
-
-/* 8 o'clock */
-.connection-line--5 {
-    transform: rotate(150deg);
-}
-
-
-/* 10 o'clock */
-.connection-line--6 {
-    transform: rotate(210deg);
-}
-
-/* =========================================
-   INDUSTRY ICON
+   ICON
 ========================================= */
 
 .industries__sector-icon {
@@ -362,174 +476,149 @@
     stroke: currentColor;
     stroke-width: 1.8;
 
-    opacity: 1;
-
     flex-shrink: 0;
 
-    
+    transition: transform 0.3s ease;
 }
 
-/* =========================================
-   REPEATING SECTOR ANIMATION
-========================================= */
+.industries__sector-name {
+    display: block;
 
-.industry-circle {
-    opacity: 0;
+    width: 105px;
 
-    animation:
-        sectorFadeCycle 10s ease-in-out infinite;
-}
-
-/* Stagger */
-
-.industry-circle--1 {
-    animation-delay: 0s;
-}
-
-.industry-circle--2 {
-    animation-delay: 0.35s;
-}
-
-.industry-circle--3 {
-    animation-delay: 0.7s;
-}
-
-.industry-circle--4 {
-    animation-delay: 1.05s;
-}
-
-.industry-circle--5 {
-    animation-delay: 1.4s;
-}
-
-.industry-circle--6 {
-    animation-delay: 1.75s;
-}
-
-
-/* =========================================
-   ANIMATION
-========================================= */
-
-@keyframes sectorFadeCycle {
-
-    /* Fade in */
-    0% {
-        opacity: 0;
-    }
-
-    12% {
-        opacity: 1;
-    }
-
-    /* Stay visible */
-    72% {
-        opacity: 1;
-    }
-
-    /* Fade out */
-    88% {
-        opacity: 0;
-    }
-
-    /* Wait before restarting */
-    100% {
-        opacity: 0;
-    }
-}
-
-/* =========================================
-   SECTION HEADING
-========================================= */
-
-.industries__heading {
-    width: min(92%, 1200px);
-    margin: 0 auto 70px;
-
-    text-align: left;
-}
-
-.industries__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    padding: 0.5rem 1rem;
-    margin-bottom: 1.5rem;
-
-    font-family: var(--font-body);
-    font-size: 0.72rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
     font-weight: 600;
 
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    line-height: 1.05;
 
-    color: var(--color-cinnabar);
-
-    border: 1px solid rgba(242, 140, 40, 0.35);
-    border-radius: 999px;
-
-    background: rgba(217, 217, 217, 0.12);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    text-align: center;
 }
 
+/* =========================================
+   SELECTED SECTOR DETAIL
+========================================= */
 
-/* Cinnabar dot */
+.industries__detail {
+    width: min(92%, 900px);
 
-.industries__eyebrow::before {
-    content: "";
+    margin: 20px auto 0;
 
-    width: 6px;
-    height: 6px;
+    padding: 45px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    border-top: 1px solid rgba(28, 28, 28, 0.15);
+
+    color: var(--color-black);
+}
+
+.industries__detail-icon {
+    width: 64px;
+    height: 64px;
 
     flex-shrink: 0;
 
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background: var(--color-cinnabar);
+    color: var(--sector-accent);
+
+    border: 1px solid var(--sector-accent);
+    border-radius: 50%;
 }
 
+.industries__detail-icon svg {
+    width: 28px;
+    height: 28px;
+}
 
+.industries__detail-content {
+    max-width: 650px;
+}
 
-.industries__heading h2 {
-    max-width: 900px;
+.industries__detail-label {
+    display: block;
 
+    margin-bottom: 10px;
+
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: var(--sector-accent);
+}
+
+.industries__detail h3 {
     margin: 0;
 
     font-family: var(--font-display);
-    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
 
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    line-height: 1;
+
+    color: var(--color-black);
+}
+
+.industries__detail p {
+    max-width: 650px;
+
+    margin: 18px 0 24px;
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    line-height: 1.75;
 
     color: var(--color-charcoal);
 }
 
-/* Description */
-
-.industries__heading p {
-    max-width: 600px;
-
-    margin: 25px 0 0;
+.industries__detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
     font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 700;
 
-    line-height: 1.7;
+    color: var(--color-black);
 
-    color: rgba(28, 28, 28, 0.65);
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.industries__detail-link span {
+    color: var(--sector-accent);
+
+    transition: transform 0.25s ease;
+}
+
+.industries__detail-link:hover {
+    gap: 12px;
+    color: var(--sector-accent);
+}
+
+.industries__detail-link:hover span {
+    transform: translateX(4px);
 }
 
 /* =========================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 850px) {
-
     .industries {
         padding: 100px 0;
     }
@@ -548,12 +637,14 @@
     .industry-circle {
         width: 130px;
         height: 130px;
+
         padding: 16px;
     }
 
     .industries__sector-icon {
         width: 36px;
         height: 36px;
+
         margin-bottom: 10px;
     }
 
@@ -576,21 +667,18 @@
     }
 }
 
-
 /* =========================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ========================================= */
 
 @media (max-width: 650px) {
-
     .industries {
         padding: 70px 0 60px;
-        overflow: hidden;
     }
 
     .industries__heading {
         width: 88%;
-        margin: 0 auto 35px;
+        margin-bottom: 30px;
     }
 
     .industries__eyebrow {
@@ -601,7 +689,6 @@
 
     .industries__heading h2 {
         font-size: clamp(2.4rem, 11vw, 3.5rem);
-        line-height: 0.95;
     }
 
     .industries__heading p {
@@ -618,8 +705,6 @@
 
         transform: none;
     }
-
-    /* Center */
 
     .industries__main {
         width: 145px;
@@ -642,8 +727,6 @@
         letter-spacing: 0.14em;
     }
 
-    /* Sector circles */
-
     .industry-circle {
         width: 90px;
         height: 90px;
@@ -664,8 +747,6 @@
         font-size: 0.65rem;
         line-height: 1.05;
     }
-
-    /* Mobile orbital positions */
 
     .industry-circle--1 {
         transform:
@@ -703,20 +784,47 @@
             translate(-130px, -75px);
     }
 
-    /* Connection lines */
-
     .connection-line {
         width: 150px;
     }
-}
 
+    /* Selected sector information */
+
+    .industries__detail {
+        width: 88%;
+
+        margin-top: 10px;
+        padding: 30px 0;
+
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .industries__detail-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .industries__detail-icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .industries__detail h3 {
+        font-size: 2rem;
+    }
+
+    .industries__detail p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+}
 
 /* =========================================
    SMALL PHONES
 ========================================= */
 
 @media (max-width: 400px) {
-
     .industries__container {
         width: 350px;
         height: 350px;
@@ -786,3 +894,4 @@
         width: 135px;
     }
 }
+

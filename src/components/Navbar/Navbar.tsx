@@ -10,6 +10,7 @@ function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
+    const [aboutOpen, setAboutOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,15 +37,55 @@ function Navbar() {
                 </div>
 
                 <ul className="navbar__links">
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-
+                    {/* ABOUT DROPDOWN */}
                     <li className="navbar__services">
                         <button
                             type="button"
                             className="navbar__services-button"
-                            onClick={() => setServicesOpen(!servicesOpen)}
+                            onClick={() => {
+                                setAboutOpen((prev) => !prev);
+                                setServicesOpen(false);
+                            }}
+                        >
+                            About
+                            <span>⌄</span>
+                        </button>
+
+                        {aboutOpen && (
+                            <div className="navbar__dropdown">
+                                <Link
+                                    to="/about"
+                                    onClick={() => setAboutOpen(false)}
+                                >
+                                    Our Story
+                                </Link>
+
+                                <Link
+                                    to="/process"
+                                    onClick={() => setAboutOpen(false)}
+                                >
+                                    Our Process
+                                </Link>
+
+                                <Link
+                                    to="/career"
+                                    onClick={() => setAboutOpen(false)}
+                                >
+                                    Careers
+                                </Link>
+                            </div>
+                        )}
+                    </li>
+
+                    {/* SERVICES DROPDOWN */}
+                    <li className="navbar__services">
+                        <button
+                            type="button"
+                            className="navbar__services-button"
+                            onClick={() => {
+                                setServicesOpen((prev) => !prev);
+                                setAboutOpen(false);
+                            }}
                         >
                             Services
                             <span>⌄</span>
@@ -52,29 +93,59 @@ function Navbar() {
 
                         {servicesOpen && (
                             <div className="navbar__dropdown">
-                                <Link to="/services">All Services</Link>
-                                <Link to="/services/media">
+                                <Link
+                                    to="/services"
+                                    onClick={() => setServicesOpen(false)}
+                                >
+                                    All Services
+                                </Link>
+
+                                <Link
+                                    to="/services/media"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Media & Communications
                                 </Link>
-                                <Link to="/services/technology">
+
+                                <Link
+                                    to="/services/technology"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Technology
                                 </Link>
-                                <Link to="/services/energy">
+
+                                <Link
+                                    to="/services/energy"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Energy
                                 </Link>
-                                <Link to="/services/agriculture">
+
+                                <Link
+                                    to="/services/agriculture"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Agriculture
                                 </Link>
-                                <Link to="/services/construction">
+
+                                <Link
+                                    to="/services/construction"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Construction
                                 </Link>
-                                <Link to="/services/training">
+
+                                <Link
+                                    to="/services/training"
+                                    onClick={() => setServicesOpen(false)}
+                                >
                                     Training
                                 </Link>
                             </div>
                         )}
                     </li>
 
+                    {/* PROJECTS */}
                     <li>
                         <a
                             href="https://bloomtown.eleven11consult.com/"
@@ -85,6 +156,7 @@ function Navbar() {
                         </a>
                     </li>
 
+                    {/* OTHER NAVIGATION */}
                     <li>
                         <Link to="/insights">Insights</Link>
                     </li>
@@ -97,23 +169,27 @@ function Navbar() {
                         <Link to="/faqs">FAQs</Link>
                     </li>
 
-                    <li>
-                        <Link to="/career">Careers</Link>
-                    </li>
-
-                    <li>
-                        <Link to="/process">Our Process</Link>
-                    </li>
-
+                    {/* CONTACT ICON */}
                     <li>
                         <Link to="/contact" aria-label="Contact">
                             <Phone size={18} />
                         </Link>
                     </li>
 
+                    {/* HOME ICON */}
                     <li>
                         <Link to="/" aria-label="Home">
                             <House size={18} />
+                        </Link>
+                    </li>
+
+                    {/* START A CONVERSATION */}
+                    <li>
+                        <Link
+                            to="/contact"
+                            className="navbar__conversation-button"
+                        >
+                            Start a conversation
                         </Link>
                     </li>
                 </ul>
