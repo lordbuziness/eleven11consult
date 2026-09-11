@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import InsightArticle from "./Insights/InsightArticle";
 import CareersPage from "./pages/Careers";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -30,9 +30,11 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faqs" element={<FAQs />} />
                 <Route path="/insights" element={<Insights />} />
+                <Route path="/insights/:slug" element={<InsightArticle />} />
                 <Route path="/process" element={<OurProcessPage />} />
                 <Route path="/career" element={<CareersPage />} />
                 <Route path="/works" element={<WorksPage />} />
+                
 
                 <Route path="/services" element={<Services />} />
                 <Route

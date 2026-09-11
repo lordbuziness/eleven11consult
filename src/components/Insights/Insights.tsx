@@ -1,39 +1,41 @@
-
 import "./Insights.css";
 
-import article1 from "../../assets/images/article1.jpg";
-import article2 from "../../assets/images/article2.jpg";
-import article3 from "../../assets/images/article3.jpg";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { createImageUrlBuilder } from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url";
 
-interface Insight {
-    category: string;
-    title: string;
-    date: string;
-    image: string;
+import { sanityClient } from "../../lib/sanity";
+import { featuredInsightsQuery } from "../../lib/sanity/queries";
+
+const builder = createImageUrlBuilder(sanityClient);
+
+function urlFor(source: SanityImageSource) {
+    return builder.image(source);
 }
 
-const insights: Insight[] = [
-    {
-        category: "Media & Communications",
-        title: "The Future of Broadcast in Nigeria's Digital Age",
-        date: "August 2026",
-        image: article1,
-    },
-    {
-        category: "Energy & Climate",
-        title: "Building Africa's Green Economy: Opportunities in Renewable Energy",
-        date: "August 2026",
-        image: article2,
-    },
-    {
-        category: "Technology",
-        title: "Why Managed IT Services Are the Next Smart Move for Nigerian SMEs",
-        date: "July 2026",
-        image: article3,
-    },
-];
+interface Insight {
+    _id: string;
+    category: string;
+    title: string;
+    image?: SanityImageSource;
+    slug: {
+        current: string;
+    };
+}
 
 function Insights() {
+    const [insights, setInsights] = useState<Insight[]>([]);
+
+    useEffect(() => {
+        sanityClient
+            .fetch<Insight[]>(featuredInsightsQuery)
+            .then(setInsights)
+            .catch((error) => {
+                console.error("Failed to fetch featured insights:", error);
+            });
+    }, []);
+
     return (
         <section className="insights">
             <div className="insights__container">
@@ -55,13 +57,13 @@ function Insights() {
                         </p>
                     </div>
 
-                    <a
-                        href="/insights"
+                    <Link
+                        to="/insights"
                         className="insights__all"
                     >
                         View All Insights
                         <span>→</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="insights__grid">
@@ -72,32 +74,41 @@ function Insights() {
                                     ? "insight-card--featured"
                                     : ""
                             }`}
-                            key={insight.title}
+                            key={insight._id}
                         >
-                            <div className="insight-card__image">
-                                <img
-                                    src={insight.image}
-                                    alt={insight.title}
-                                />
+                            <Link
+                                to={`/insights/${insight.slug.current}`}
+                                className="insight-card__link"
+                            >
+                                <div className="insight-card__image">
+                                    {insight.image && (
+                                        <img
+                                            src={urlFor(insight.image)
+                                                .width(1200)
+                                                .quality(85)
+                                                .url()}
+                                            alt={insight.title}
+                                        />
+                                    )}
 
-                                <span className="insight-card__number">
-                                    0{index + 1}
-                                </span>
-                            </div>
-
-                            <div className="insight-card__content">
-                                <div className="insight-card__meta">
-                                    <span>{insight.category}</span>
-                                    <span>{insight.date}</span>
+                                    <span className="insight-card__number">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
                                 </div>
 
-                                <h3>{insight.title}</h3>
+                                <div className="insight-card__content">
+                                    <div className="insight-card__meta">
+                                        <span>{insight.category}</span>
+                                    </div>
 
-                                <span className="insight-card__read">
-                                    Read Insight
-                                    <span>↗</span>
-                                </span>
-                            </div>
+                                    <h3>{insight.title}</h3>
+
+                                    <span className="insight-card__read">
+                                        Read Insight
+                                        <span>↗</span>
+                                    </span>
+                                </div>
+                            </Link>
                         </article>
                     ))}
                 </div>
@@ -107,4 +118,3 @@ function Insights() {
 }
 
 export default Insights;
-

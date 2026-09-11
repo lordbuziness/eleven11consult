@@ -1,28 +1,42 @@
 import "./featured.css";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import imageUrlBuilder from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url";
 
-import agricultureImage from "../assets/images/agric 1.jpg";
-import businessImage from "../assets/images/business 1.jpg";
-import technologyImage from "../assets/images/tech 1.jpg";
+import { sanityClient } from "../../lib/sanity";
+import { featuredInsightsQuery } from "../../lib/sanity/queries";
 
-const featuredArticles = [
-    {
-        category: "Agriculture",
-        title: "The future of agriculture is smarter, connected, and more sustainable.",
-        image: agricultureImage,
-    },
-    {
-        category: "Business",
-        title: "Building businesses that are ready for what comes next.",
-        image: businessImage,
-    },
-    {
-        category: "Technology",
-        title: "Technology is changing how African businesses compete.",
-        image: technologyImage,
-    },
-];
+const builder = imageUrlBuilder(sanityClient);
+
+function urlFor(source: SanityImageSource) {
+    return builder.image(source);
+}
+
+type FeaturedArticle = {
+    _id: string;
+    category: string;
+    title: string;
+    image?: SanityImageSource;
+    slug: {
+        current: string;
+    };
+
+};
+
 
 function FeaturedArticles() {
+    const [featuredArticles, setFeaturedArticles] = useState<FeaturedArticle[]>([]);
+
+    useEffect(() => {
+        sanityClient
+            .fetch<FeaturedArticle[]>(featuredInsightsQuery)
+            .then(setFeaturedArticles)
+            .catch((error) => {
+                console.error("Failed to fetch featured insights:", error);
+            });
+    }, []);
+
     return (
         <section className="featured-articles">
             <div className="featured-articles__header">
@@ -47,13 +61,18 @@ function FeaturedArticles() {
                 {featuredArticles.map((article) => (
                     <article
                         className="featured-card"
-                        key={article.title}
+                        key={article._id}
                     >
                         <div className="featured-card__image">
-                            <img
-                                src={article.image}
-                                alt={article.title}
-                            />
+                            {article.image && (
+                                <img
+                                    src={urlFor(article.image)
+                                        .width(1200)
+                                        .quality(80)
+                                        .url()}
+                                    alt={article.title}
+                                />
+                            )}
                         </div>
 
                         <div className="featured-card__content">
@@ -61,9 +80,12 @@ function FeaturedArticles() {
 
                             <h3>{article.title}</h3>
 
-                            <button className="featured-card__link">
-                                Read article <span>→</span>
-                            </button>
+                            <Link
+    className="featured-card__link"
+    to={`/insights/${article.slug?.current}`}
+>
+    Read article <span>→</span>
+</Link>
                         </div>
                     </article>
                 ))}
