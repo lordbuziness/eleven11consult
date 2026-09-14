@@ -457,6 +457,7 @@
 }
 
 .contact-map__frame {
+    position: relative;
     width: min(1250px, 100%);
     height: 500px;
 
@@ -468,6 +469,107 @@
     border-radius: 24px;
 
     background: #e8e5df;
+}
+
+.contact-map__frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    border-radius: 24px;
+}
+
+.contact-map__pin {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(28, 28, 28, 0.1);
+    border-radius: 14px;
+
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+    pointer-events: none;
+}
+
+.contact-map__pin-icon {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+
+    background: var(--color-cinnabar);
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.contact-map__pin-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    text-align: left;
+}
+
+.contact-map__pin-text strong {
+    color: var(--color-black);
+
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.contact-map__pin-text span {
+    color: var(--color-charcoal);
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.contact-map__actions {
+    width: min(1250px, 100%);
+    margin: 16px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-map__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-cinnabar);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-map__link:hover {
+    color: var(--color-black);
+    border-color: var(--color-cinnabar);
 }
 
 .contact-map__placeholder {
@@ -610,6 +712,36 @@
     .contact-map__frame {
         height: 350px;
         border-radius: 18px;
+    }
+
+    .contact-map__frame iframe {
+        border-radius: 18px;
+    }
+
+    .contact-map__pin {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 12px;
+    }
+
+    .contact-map__pin-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contact-map__pin-text strong {
+        font-size: 0.74rem;
+    }
+
+    .contact-map__pin-text span {
+        font-size: 0.68rem;
+    }
+
+    .contact-map__actions {
+        margin-top: 14px;
     }
 }
 

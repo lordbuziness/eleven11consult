@@ -33,7 +33,9 @@ function Footer() {
                     </span>
 
                     <address>
-                        [Full Nigerian address — to be inserted]
+                        6 Okoya Thomas Close,
+                        <br />
+                        Surulere, Lagos, Nigeria
                     </address>
                 </div>
 
@@ -42,9 +44,8 @@ function Footer() {
                         Contact Us
                     </span>
 
-                    <a href="tel:+2340000000000">
-                        [Phone Number]
-                    </a>
+                    <a href="tel:+2348055463010">08055463010</a>
+                    <a href="tel:+2347089970468">07089970468</a>
 
                     <a href="mailto:info@eleven11consult.com">
                         info@eleven11consult.com

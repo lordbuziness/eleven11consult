@@ -1,5 +1,6 @@
 
 import type { FormEvent } from "react";
+import { MapPin } from "lucide-react";
 import "./Contact.css";
 
 function Contact() {
@@ -34,7 +35,9 @@ function Contact() {
                                 </span>
 
                                 <p>
-                                    [Insert Full Nigerian Address]
+                                    6 Okoya Thomas Close,
+                                    <br />
+                                    Surulere, Lagos, Nigeria
                                 </p>
                             </div>
 
@@ -53,7 +56,15 @@ function Contact() {
                                     Phone
                                 </span>
 
-                                <p>[Insert Number]</p>
+                                <p>
+                                    <a href="tel:+2348055463010">
+                                        08055463010
+                                    </a>
+                                    <br />
+                                    <a href="tel:+2347089970468">
+                                        07089970468
+                                    </a>
+                                </p>
                             </div>
 
                             <div className="contact__detail">
@@ -228,12 +239,34 @@ function Contact() {
                 </div>
 
                 <div className="contact-map__frame">
-                    <div className="contact-map__placeholder">
-                        <span>Office Location</span>
-                        <p>
-                            [Insert Nigerian office location map]
-                        </p>
+                    <iframe
+                        title="Eleven11 Consult — 6 Okoya Thomas Close, Surulere, Lagos"
+                        src="https://maps.google.com/maps?q=6%20Okoya%20Thomas%20Close%2C%20Surulere%2C%20Lagos%2C%20Nigeria&t=m&z=17&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        allowFullScreen
+                    />
+
+                    <div className="contact-map__pin" aria-label="Marked office location">
+                        <span className="contact-map__pin-icon" aria-hidden="true">
+                            <MapPin size={18} />
+                        </span>
+                        <div className="contact-map__pin-text">
+                            <strong>Eleven11 Consult HQ</strong>
+                            <span>6 Okoya Thomas Close, Surulere, Lagos</span>
+                        </div>
                     </div>
+                </div>
+
+                <div className="contact-map__actions">
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=6+Okoya+Thomas+Close,+Surulere,+Lagos,+Nigeria"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="contact-map__link"
+                    >
+                        Open in Google Maps — Get Directions →
+                    </a>
                 </div>
             </section>
         </main>
