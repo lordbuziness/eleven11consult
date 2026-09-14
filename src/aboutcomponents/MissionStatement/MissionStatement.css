@@ -1,11 +1,17 @@
+
 /* =========================================
    MISSION STATEMENT
 ========================================= */
 
 .mission {
     position: relative;
+
     width: 100%;
     min-height: 720px;
+
+    padding: 110px 0 120px;
+
+    box-sizing: border-box;
 
     overflow: hidden;
 
@@ -25,18 +31,12 @@
     position: absolute;
     inset: 0;
 
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(217, 217, 217, 0.25),
-            rgba(217, 217, 217, 0.55)
-        ),
-        url("../assests/images/aboutmissionstatment.jpg");
+    background-image: url("../assests/images/aboutmissionstatment.jpg");
 
     background-size: cover;
     background-position: center;
 
-    opacity: 0.85;
+    opacity: 1;
 
     z-index: 0;
 }
@@ -52,13 +52,7 @@
     position: absolute;
     inset: 0;
 
-    background:
-        linear-gradient(
-            to right,
-            rgba(217, 217, 217, 0.75),
-            rgba(217, 217, 217, 0.15) 45%,
-            rgba(217, 217, 217, 0.7)
-        );
+    background: rgba(217, 217, 217, 0.15);
 
     pointer-events: none;
 
@@ -75,7 +69,7 @@
 
     z-index: 5;
 
-    width: min(90%, 1100px);
+    width: min(88%, 1100px);
 
     display: flex;
     flex-direction: column;
@@ -92,11 +86,11 @@
 .mission__eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
 
-    margin-bottom: 55px;
+    margin-bottom: 38px;
 
-    padding: 0.5rem 1rem;
+    padding: 8px 15px;
 
     border: 1px solid rgba(242, 140, 40, 0.4);
     border-radius: 999px;
@@ -119,6 +113,8 @@
     width: 6px;
     height: 6px;
 
+    flex-shrink: 0;
+
     border-radius: 50%;
 
     background: var(--color-cinnabar);
@@ -132,7 +128,7 @@
 .mission__label {
     align-self: flex-start;
 
-    margin: 0 0 30px;
+    margin: 0 0 26px;
 
     font-family: var(--font-display);
 
@@ -140,7 +136,7 @@
 
     font-weight: 600;
 
-    line-height: 0.9;
+    line-height: 0.92;
 
     text-align: left;
 
@@ -182,19 +178,22 @@
 
 
 /* =========================================
-   PHILOSOPHY POINTS
+   MISSION POINTS
 ========================================= */
 
 .mission__points {
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 45px;
+    margin-top: 34px;
+
+    max-width: 900px;
 }
 
 .mission__points span {
@@ -204,7 +203,9 @@
 
     min-width: 105px;
 
-    padding: 0.7rem 1.3rem;
+    padding: 9px 17px;
+
+    box-sizing: border-box;
 
     border-radius: 999px;
 
@@ -214,10 +215,12 @@
 
     font-family: var(--font-body);
 
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
 
     letter-spacing: 0.08em;
+
+    white-space: nowrap;
 
     transition:
         transform 0.3s ease,
@@ -232,7 +235,7 @@
 
 
 /* =========================================
-   LOGOS
+   DECORATIVE LOGOS
 ========================================= */
 
 .mission__logo {
@@ -240,28 +243,57 @@
 
     z-index: 6;
 
-    width: 85px;
+    width: 62px;
+    height: 62px;
+
+    padding: 6px 7px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 22px rgba(0, 0, 0, 0.16),
+        0 1px 5px rgba(0, 0, 0, 0.1);
 
     opacity: 0.9;
+
+    filter: drop-shadow(
+        0 1px 2px rgba(0, 0, 0, 0.14)
+    );
 }
 
 .mission__logo img {
     display: block;
 
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    object-fit: contain;
 }
+
+
+/* =========================================
+   TOP LOGO
+========================================= */
 
 .mission__logo--top {
-    top: 45px;
-    right: 55px;
+    top: 40px;
+    right: 45px;
 }
 
-.mission__logo--bottom {
-    bottom: 45px;
-    left: 55px;
 
-    transform: rotate(180deg);
+/* =========================================
+   BOTTOM LOGO
+========================================= */
+
+.mission__logo--bottom {
+    bottom: 40px;
+    left: 45px;
 }
 
 
@@ -273,28 +305,39 @@
 
     .mission {
         min-height: 650px;
+
+        padding: 90px 0 100px;
+    }
+
+    .mission__content {
+        width: 88%;
     }
 
     .mission__logo {
-        width: 70px;
+        width: 56px;
+        height: 56px;
     }
 
     .mission__logo--top {
-        top: 30px;
-        right: 30px;
+        top: 28px;
+        right: 28px;
     }
 
     .mission__logo--bottom {
-        bottom: 30px;
-        left: 30px;
+        bottom: 28px;
+        left: 28px;
     }
 
     .mission__eyebrow {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
 
     .mission__statement p {
         font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    .mission__points {
+        margin-top: 30px;
     }
 }
 
@@ -306,78 +349,115 @@
 @media (max-width: 650px) {
 
     .mission {
-        min-height: 600px;
+        min-height: 0;
 
-        padding: 90px 0;
+        padding: 80px 0 90px;
     }
 
     .mission__background {
-        background-position: center;
-    }
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../assests/images/aboutmissionstatment.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 1;
+
+    z-index: 0;
+}
 
     .mission::after {
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(217, 217, 217, 0.7),
-                rgba(217, 217, 217, 0.25) 50%,
-                rgba(217, 217, 217, 0.7)
-            );
-    }
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(217, 217, 217, 0.15);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
 
 
-    /* Logos */
-
-    .mission__logo {
-        width: 52px;
-
-        opacity: 0.8;
-    }
-
-    .mission__logo--top {
-        top: 22px;
-        right: 22px;
-    }
-
-    .mission__logo--bottom {
-        bottom: 22px;
-        left: 22px;
-    }
-
-
-    /* Content */
+    /* -------------------------------------
+       CONTENT
+    ------------------------------------- */
 
     .mission__content {
         width: 88%;
     }
 
 
-    /* Eyebrow */
+    /* -------------------------------------
+       LOGOS
+    ------------------------------------- */
 
-    .mission__eyebrow {
-        margin-bottom: 35px;
+    .mission__logo {
+        width: 48px;
+        height: 48px;
 
-        padding: 0.4rem 0.8rem;
+        padding: 5px 6px;
 
-        font-size: 0.58rem;
+        border-radius: 10px;
+
+        opacity: 0.8;
+    }
+
+    .mission__logo--top {
+        top: 20px;
+        right: 20px;
+    }
+
+    .mission__logo--bottom {
+        bottom: 20px;
+        left: 20px;
     }
 
 
-    /* Label */
+    /* -------------------------------------
+       EYEBROW
+    ------------------------------------- */
+
+    .mission__eyebrow {
+        gap: 6px;
+
+        margin-bottom: 28px;
+
+        padding: 7px 12px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.11em;
+    }
+
+    .mission__eyebrow span {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    /* -------------------------------------
+       LABEL
+    ------------------------------------- */
 
     .mission__label {
-        align-self: flex-start;
-
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
         font-size: 2rem;
+
+        line-height: 0.95;
 
         text-decoration-thickness: 2px;
         text-underline-offset: 6px;
     }
 
 
-    /* Statement */
+    /* -------------------------------------
+       STATEMENT
+    ------------------------------------- */
 
     .mission__statement {
         max-width: 100%;
@@ -392,20 +472,24 @@
     }
 
 
-    /* Points */
+    /* -------------------------------------
+       POINTS
+    ------------------------------------- */
 
     .mission__points {
-        gap: 8px;
+        width: 100%;
 
-        margin-top: 30px;
+        gap: 7px;
+
+        margin-top: 26px;
     }
 
     .mission__points span {
         min-width: auto;
 
-        padding: 0.55rem 0.9rem;
+        padding: 7px 11px;
 
-        font-size: 0.65rem;
+        font-size: 0.62rem;
     }
 }
 
@@ -417,9 +501,7 @@
 @media (max-width: 380px) {
 
     .mission {
-        min-height: 560px;
-
-        padding: 75px 0;
+        padding: 70px 0 80px;
     }
 
     .mission__content {
@@ -427,24 +509,29 @@
     }
 
     .mission__logo {
-        width: 45px;
+        width: 42px;
+        height: 42px;
+
+        padding: 4px 5px;
     }
 
     .mission__logo--top {
-        top: 18px;
-        right: 18px;
+        top: 17px;
+        right: 17px;
     }
 
     .mission__logo--bottom {
-        bottom: 18px;
-        left: 18px;
+        bottom: 17px;
+        left: 17px;
     }
 
     .mission__eyebrow {
-        margin-bottom: 28px;
+        margin-bottom: 24px;
     }
 
     .mission__label {
+        margin-bottom: 18px;
+
         font-size: 1.7rem;
     }
 
@@ -453,12 +540,22 @@
     }
 
     .mission__points {
-        gap: 6px;
-        margin-top: 25px;
+        gap: 5px;
+
+        margin-top: 22px;
     }
 
     .mission__points span {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.6rem;
+        padding: 6px 9px;
+
+        font-size: 0.58rem;
     }
 }
+
+
+
+
+
+
+
+
