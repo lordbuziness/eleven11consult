@@ -52,7 +52,7 @@
     position: absolute;
     inset: 0;
 
-    background: rgba(217, 217, 217, 0.15);
+    background: rgba(223, 221, 221, 0.25);
 
     pointer-events: none;
 
@@ -374,7 +374,7 @@
     position: absolute;
     inset: 0;
 
-    background: rgba(217, 217, 217, 0.15);
+    background: rgba(255, 255, 255, 0.25);
 
     pointer-events: none;
 
@@ -551,6 +551,8 @@
         font-size: 0.58rem;
     }
 }
+
+
 
 
 

@@ -90,7 +90,7 @@ function Footer() {
 
             <div className="footer__bottom">
                 <p>
-                    © 2025 Eleven 11 Consult LTD. All Rights Reserved.
+                    © 2026 Eleven 11 Consult LTD. All Rights Reserved.
                 </p>
 
                 <div className="footer__bottom-links">
