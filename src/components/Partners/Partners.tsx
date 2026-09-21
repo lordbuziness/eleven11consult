@@ -69,6 +69,10 @@ function Partners() {
                                         alt={partner.name}
                                     />
                                 </div>
+
+                                <span className="partners__name">
+                                    {partner.name}
+                                </span>
                             </div>
                         ))}
                     </div>
