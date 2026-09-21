@@ -2,6 +2,7 @@ import "./Partners.css";
 
 import flourMills from "../../assets/images/Flour-Mills.png";
 import blueworld from "../../assets/images/blueworld.png";
+import vivon from "../../assets/images/Vivon.jpg";
 import privida from "../../assets/images/privida-logo.png";
 import henryMontego from "../../assets/images/Henry-Montego.jpg";
 import starlinkGlobal from "../../assets/images/starlinkglobalng.svg";
@@ -20,6 +21,10 @@ const partners: Partner[] = [
     {
         logo: blueworld,
         name: "Blueworld Cosmetics",
+    },
+    {
+        logo: vivon,
+        name: "VIVON",
     },
     {
         logo: privida,
