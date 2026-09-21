@@ -9,7 +9,7 @@ interface Stat {
 
 const stats: Stat[] = [
     {
-        value: 10,
+        value: 20,
         suffix: "+",
         label: "Years of Industry Experience",
     },
