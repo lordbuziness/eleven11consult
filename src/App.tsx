@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InsightArticle from "./Insights/InsightArticle";
 import CareersPage from "./pages/Careers";
@@ -17,13 +16,14 @@ import MediaCommunications from "./pages/MediaCommunications";
 import Services from "./pages/Services";
 import Technology from "./pages/Technology";
 import Training from "./pages/Training";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import ScrollToTop from "./components/ScrollToTop";
-
 
 function App() {
     return (
         <BrowserRouter>
-        <ScrollToTop />
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -34,7 +34,6 @@ function App() {
                 <Route path="/process" element={<OurProcessPage />} />
                 <Route path="/career" element={<CareersPage />} />
                 <Route path="/works" element={<WorksPage />} />
-                
 
                 <Route path="/services" element={<Services />} />
                 <Route
@@ -55,10 +54,12 @@ function App() {
                     element={<Construction />}
                 />
                 <Route path="/services/training" element={<Training />} />
+
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
             </Routes>
         </BrowserRouter>
     );
 }
 
 export default App;
-

@@ -1,44 +1,21 @@
-
 import "./Homework.css";
+
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import mediaProjectImage from "../../works/assets/images/media project.jpg";
-import energyProjectImage from "../../works/assets/images/energy project.jpg";
-import agricultureProjectImage from "../../works/assets/images/agric project.jpg";
-
-interface RecentWork {
-    title: string;
-    category: string;
-    image: string;
-}
-
-const recentWorks: RecentWork[] = [
-    {
-        title: "Media & Communications",
-        category: "Broadcast Production",
-        image: mediaProjectImage,
-    },
-    {
-        title: "Energy & Climate",
-        category: "Energy Advisory",
-        image: energyProjectImage,
-    },
-    {
-        title: "Agriculture",
-        category: "Agrotech & Value Chain",
-        image: agricultureProjectImage,
-    },
-];
+import { projects } from "../../works/projects";
+import ProjectMedia from "../../works/ProjectMedia";
 
 function Homework() {
+    const recentWorks = projects.filter((project) => project.video).slice(0, 3);
+
     return (
         <section className="homework">
             <div className="homework__container">
                 <div className="homework__header">
                     <div className="homework__intro">
                         <p className="homework__eyebrow">
-                            <span className="homework__eyebrow-dot" />
+                            <span className="homework__eyebrow-dot"></span>
                             Our Work
                         </p>
 
@@ -52,7 +29,7 @@ function Homework() {
                     <div className="homework__description">
                         <p>
                             From broadcast productions to infrastructure
-                            advisory â€” results that speak for themselves.
+                            advisory — results that speak for themselves.
                         </p>
                     </div>
                 </div>
@@ -69,9 +46,8 @@ function Homework() {
                                 aria-label={`View ${work.title} projects`}
                             >
                                 <div className="homework__image-wrapper">
-                                    <img
-                                        src={work.image}
-                                        alt={work.title}
+                                    <ProjectMedia
+                                        project={work}
                                         className="homework__image"
                                     />
 
@@ -82,7 +58,6 @@ function Homework() {
 
                                 <div className="homework__card-info">
                                     <span>{work.category}</span>
-
                                     <h3>{work.title}</h3>
                                 </div>
                             </Link>
@@ -108,4 +83,3 @@ function Homework() {
 }
 
 export default Homework;
-

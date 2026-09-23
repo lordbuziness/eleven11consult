@@ -5,6 +5,7 @@ import blueworld from "../../assets/images/blueworld.png";
 import vivon from "../../assets/images/Vivon.jpg";
 import privida from "../../assets/images/privida-logo.png";
 import henryMontego from "../../assets/images/Henry-Montego.jpg";
+import momas from "../../assets/images/MOMAS.jpeg";
 import starlinkGlobal from "../../assets/images/starlinkglobalng.svg";
 import crmi from "../../assets/images/crmi-logo.png";
 
@@ -33,6 +34,10 @@ const partners: Partner[] = [
     {
         logo: henryMontego,
         name: "Henry Montego",
+    },
+    {
+        logo: momas,
+        name: "MOMAS",
     },
     {
         logo: starlinkGlobal,

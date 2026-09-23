@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 .vercel
 .env*
+# Video files are stored externally, not in Git
+*.mp4
