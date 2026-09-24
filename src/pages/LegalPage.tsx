@@ -1,4 +1,4 @@
-﻿import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LegalPage.css";
 
@@ -19,7 +19,7 @@ function LegalPage({ title, children }: LegalPageProps) {
                     className="legal-page__back"
                     onClick={() => navigate(-1)}
                 >
-                    ← Back
+                    &larr; Back
                 </button>
 
                 <header className="legal-page__header">
