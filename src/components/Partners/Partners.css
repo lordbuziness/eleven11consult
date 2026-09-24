@@ -324,11 +324,6 @@
     }
 }
 
-(Get-Content .\src\components\Partners\Partners.tsx -Raw) `
--replace '(?s)(<div className="partners__logo">\s*<img\s+src=\{partner\.logo\}\s+alt=\{partner\.name\}\s*/>\s*</div>)', '$1
-                            <span className="partners__name">{partner.name}</span>' `
-| Set-Content .\src\components\Partners\Partners.tsx
-@'
 
 .partners__name {
     display: block;
@@ -363,3 +358,4 @@
     text-align: center;
     white-space: nowrap;
 }
+

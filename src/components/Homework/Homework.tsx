@@ -29,7 +29,7 @@ function Homework() {
                     <div className="homework__description">
                         <p>
                             From broadcast productions to infrastructure
-                            advisory — results that speak for themselves.
+                            advisory â€” results that speak for themselves.
                         </p>
                     </div>
                 </div>

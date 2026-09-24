@@ -8,7 +8,7 @@ function ProjectGrid() {
         <section className="project-grid">
             <div className="project-grid__inner">
                 <div className="project-grid__header">
-                    <span>02 — Selected Projects</span>
+                    <span>02 â€” Selected Projects</span>
                 </div>
 
                 <div className="project-grid__items">
