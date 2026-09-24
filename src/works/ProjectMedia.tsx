@@ -1,4 +1,4 @@
-import type { Project } from "../projects";
+import type { Project } from "./projects";
 
 interface ProjectMediaProps {
     project: Project;
