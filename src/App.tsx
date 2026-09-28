@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
 import OurProcessPage from "./pages/OurProcess";
 import WorksPage from "./pages/Works";
+import ProjectPage from "./works/project-page/ProjectPage";
 import Insights from "./pages/Insights";
 
 import Agriculture from "./pages/Agriculture";
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/process" element={<OurProcessPage />} />
                 <Route path="/career" element={<CareersPage />} />
                 <Route path="/works" element={<WorksPage />} />
+                <Route path="/works/:slug" element={<ProjectPage />} />
 
                 <Route path="/services" element={<Services />} />
                 <Route
@@ -63,3 +65,5 @@ function App() {
 }
 
 export default App;
+
+

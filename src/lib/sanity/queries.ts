@@ -37,3 +37,81 @@ export const allInsightsQuery = `
         featured
     }
 `;
+export const allProjectsQuery = `
+  *[
+    _type == "project"
+  ] | order(_createdAt desc) {
+    _id,
+    category,
+    description,
+    image,
+    slug,
+    "title": select(
+      category == "media" => "Media Project",
+      category == "agriculture" => "Agriculture Project",
+      category == "energy" => "Energy Project",
+      category == "construction" => "Construction Project",
+      category == "technology" => "Technology Project",
+      category == "training" => "Training Project"
+    )
+  }
+`;
+
+export const projectBySlugQuery = `
+  *[
+    _type == "project" &&
+    slug.current == $slug
+  ][0] {
+    _id,
+    category,
+    description,
+    image,
+    slug,
+    "title": select(
+      category == "media" => "Media Project",
+      category == "agriculture" => "Agriculture Project",
+      category == "energy" => "Energy Project",
+      category == "construction" => "Construction Project",
+      category == "technology" => "Technology Project",
+      category == "training" => "Training Project"
+    ),
+    "items": select(
+      category == "media" => media[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      },
+      category == "agriculture" => agriculture[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      },
+      category == "energy" => energy[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      },
+      category == "construction" => construction[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      },
+      category == "technology" => technology[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      },
+      category == "training" => training[]{
+        _key,
+        title,
+        url,
+        thumbnail
+      }
+    )
+  }
+`;

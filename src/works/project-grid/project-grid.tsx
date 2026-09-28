@@ -1,9 +1,35 @@
 ﻿import "./project-grid.css";
 import { ArrowUpRight } from "lucide-react";
-import { projects } from "../projects";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProjectMedia from "../ProjectMedia";
+import { getProjects } from "../sanity-projects";
+
+export interface SanityProject {
+    _id: string;
+    title: string;
+    category: string;
+    description?: string;
+    image?: unknown;
+    slug?: {
+        current: string;
+    };
+}
 
 function ProjectGrid() {
+    const [projects, setProjects] = useState<SanityProject[]>([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        getProjects()
+            .then((data) => {
+                setProjects(data);
+            })
+            .catch((error) => {
+                console.error("Failed to load projects from Sanity:", error);
+            });
+    }, []);
+
     return (
         <section className="project-grid">
             <div className="project-grid__inner">
@@ -19,25 +45,28 @@ function ProjectGrid() {
                                     ? "project-card--large"
                                     : ""
                             }`}
-                            key={project.title}
+                            key={project._id}
                             onClick={() => {
-                                if (project.youtubeUrl) {
-                                    window.location.href = project.youtubeUrl;
+                                if (project.slug?.current) {
+                                    navigate(
+                                        `/works/${project.slug.current}`
+                                    );
                                 }
                             }}
                             onKeyDown={(event) => {
                                 if (
-                                    project.youtubeUrl &&
+                                    project.slug?.current &&
                                     (event.key === "Enter" ||
                                         event.key === " ")
                                 ) {
                                     event.preventDefault();
-                                    window.location.href =
-                                        project.youtubeUrl;
+                                    navigate(
+                                        `/works/${project.slug.current}`
+                                    );
                                 }
                             }}
-                            role={project.youtubeUrl ? "link" : undefined}
-                            tabIndex={project.youtubeUrl ? 0 : undefined}
+                            role={project.slug?.current ? "link" : undefined}
+                            tabIndex={project.slug?.current ? 0 : undefined}
                         >
                             <div className="project-card__image">
                                 <ProjectMedia project={project} />
