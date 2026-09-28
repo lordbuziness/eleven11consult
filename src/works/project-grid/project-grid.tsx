@@ -1,4 +1,4 @@
-import "./project-grid.css";
+﻿import "./project-grid.css";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../projects";
 import ProjectMedia from "../ProjectMedia";
@@ -20,6 +20,24 @@ function ProjectGrid() {
                                     : ""
                             }`}
                             key={project.title}
+                            onClick={() => {
+                                if (project.youtubeUrl) {
+                                    window.location.href = project.youtubeUrl;
+                                }
+                            }}
+                            onKeyDown={(event) => {
+                                if (
+                                    project.youtubeUrl &&
+                                    (event.key === "Enter" ||
+                                        event.key === " ")
+                                ) {
+                                    event.preventDefault();
+                                    window.location.href =
+                                        project.youtubeUrl;
+                                }
+                            }}
+                            role={project.youtubeUrl ? "link" : undefined}
+                            tabIndex={project.youtubeUrl ? 0 : undefined}
                         >
                             <div className="project-card__image">
                                 <ProjectMedia project={project} />

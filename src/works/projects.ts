@@ -1,20 +1,17 @@
-import mediaImage from "./assets/images/media project.jpg";
+﻿import mediaImage from "./assets/images/media project.jpg";
 import techImage from "./assets/images/tech project.jpg";
 import energyImage from "./assets/images/energy project.jpg";
 import agricImage from "./assets/images/agric project.jpg";
 import constructionImage from "./assets/images/construction project.jpg";
 import trainingImage from "./assets/images/training project.jpg";
 
-import vivonVideo from "./assets/images/VIVON BODY LOTION TV AD_1080p.mp4";
-import prividaVideo from "./assets/images/PRIVIDA ENERGY MINI GRID PROJECT_1080p.mp4";
-import agricVideo from "./assets/images/SUNTI GOLDEN SUGAR FARM PROJECT DOCUMENTARY RE EDITED_720p.mp4";
-
 export interface Project {
     title: string;
     category: string;
     description: string;
     image: string;
-    video?: string;
+    video?: boolean;
+    youtubeUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -24,7 +21,8 @@ export const projects: Project[] = [
         description:
             "Creative strategy and development for a growing media brand.",
         image: mediaImage,
-        video: vivonVideo,
+        video: true,
+        youtubeUrl: "https://www.youtube.com/watch?v=hXTpXyrjVZo",
     },
     {
         title: "Technology Project",
@@ -39,7 +37,8 @@ export const projects: Project[] = [
         description:
             "Strategic communication and creative development for the energy sector.",
         image: energyImage,
-        video: prividaVideo,
+        video: true,
+        youtubeUrl: "https://youtu.be/8xVLOa0Zhys?si=pUwI87f7iAl-rBhh",
     },
     {
         title: "Agriculture Project",
@@ -47,7 +46,8 @@ export const projects: Project[] = [
         description:
             "Brand and communication solutions designed to create meaningful impact.",
         image: agricImage,
-        video: agricVideo,
+        video: true,
+        youtubeUrl: "https://youtu.be/tLLdzQKQM80?si=WIM58qEexvufbWG0",
     },
     {
         title: "Construction Project",

@@ -1,4 +1,4 @@
-import type { Project } from "./projects";
+﻿import type { Project } from "./projects";
 
 interface ProjectMediaProps {
     project: Project;
@@ -6,19 +6,6 @@ interface ProjectMediaProps {
 }
 
 function ProjectMedia({ project, className }: ProjectMediaProps) {
-    if (project.video) {
-        return (
-            <video
-                src={project.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={className}
-            />
-        );
-    }
-
     return (
         <img
             src={project.image}
