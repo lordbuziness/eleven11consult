@@ -1,7 +1,8 @@
-﻿import "./ProjectPage.css";
+import "./ProjectPage.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { sanityClient, urlFor } from "../../lib/sanity";
+import type { SanityImageSource } from "@sanity/image-url";
 import { projectBySlugQuery } from "../../lib/sanity/queries";
 
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,12 +12,12 @@ type ProjectItem = {
     _key: string;
     title?: string;
     url?: string;
-    thumbnail?: unknown;
+    thumbnail?: SanityImageSource;
 };
 
 type Project = {
     category: string;
-    image?: unknown;
+    image?: SanityImageSource;
     items?: ProjectItem[];
 };
 
@@ -50,7 +51,7 @@ function ProjectPage() {
                     className="project-page__back"
                     onClick={() => navigate("/works")}
                 >
-                    ← Back to Works
+                    ? Back to Works
                 </button>
 
                 <header className="project-page__header">
@@ -125,3 +126,5 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
+
+

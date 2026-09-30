@@ -1,8 +1,9 @@
-﻿import "./project-grid.css";
+import "./project-grid.css";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProjectMedia from "../ProjectMedia";
+import type { SanityImageSource } from "@sanity/image-url";
 import { getProjects } from "../sanity-projects";
 
 export interface SanityProject {
@@ -10,7 +11,7 @@ export interface SanityProject {
     title: string;
     category: string;
     description?: string;
-    image?: unknown;
+    image?: SanityImageSource;
     slug?: {
         current: string;
     };
@@ -90,3 +91,4 @@ function ProjectGrid() {
 }
 
 export default ProjectGrid;
+

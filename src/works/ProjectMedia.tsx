@@ -1,8 +1,11 @@
-﻿import { urlFor } from "../lib/sanity";
-import type { SanityProject } from "./project-grid/project-grid";
+import { urlFor } from "../lib/sanity";
+import type { SanityImageSource } from "@sanity/image-url";
 
 interface ProjectMediaProps {
-    project: SanityProject;
+    project: {
+        category: string;
+        image?: string | SanityImageSource;
+    };
     className?: string;
 }
 
