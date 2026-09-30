@@ -1,6 +1,6 @@
-﻿import "./ProjectPage.css";
+import "./ProjectPage.css";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { sanityClient, urlFor } from "../../lib/sanity";
 import type { SanityImageSource } from "@sanity/image-url";
 import { projectBySlugQuery } from "../../lib/sanity/queries";
@@ -23,7 +23,6 @@ type Project = {
 
 function ProjectPage() {
     const { slug } = useParams<{ slug: string }>();
-    const navigate = useNavigate();
     const [project, setProject] = useState<Project | null>(null);
 
     useEffect(() => {
