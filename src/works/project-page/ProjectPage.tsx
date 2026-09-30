@@ -1,4 +1,4 @@
-import "./ProjectPage.css";
+﻿import "./ProjectPage.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { sanityClient, urlFor } from "../../lib/sanity";
@@ -46,13 +46,6 @@ function ProjectPage() {
             <Navbar />
 
             <main className="project-page">
-                <button
-                    type="button"
-                    className="project-page__back"
-                    onClick={() => navigate("/works")}
-                >
-                    ? Back to Works
-                </button>
 
                 <header className="project-page__header">
                     <h1 className="project-page__title">
@@ -126,5 +119,6 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
+
 
 

@@ -112,3 +112,7 @@
         gap: 40px;
     }
 }
+
+.project-page__header {
+    padding-top: 80px;
+}
